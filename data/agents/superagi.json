@@ -1,0 +1,513 @@
+{
+  "id": "superagi",
+  "type": "agent",
+  "name": "SuperAGI",
+  "provider": "Community",
+  "version": "0.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Open-source autonomous AI agent framework for running and managing multiple AI agents concurrently. Features GUI-based management, tool marketplace, and agent templates for building production-ready autonomous agents.",
+  "website": "https://superagi.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 76,
+      "criteria": {
+        "autonomous_execution": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SuperAGI Documentation",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-15",
+              "value": "Autonomous agent execution with goal-oriented planning"
+            }
+          ],
+          "methodology": "Autonomous task testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_agent_orchestration": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Management",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Run multiple agents concurrently with resource management"
+            }
+          ],
+          "methodology": "Multi-agent coordination testing",
+          "last_verified": "2025-11-09"
+        },
+        "tool_integration": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tool Marketplace",
+              "url": "https://superagi.com/docs/Tools/",
+              "date": "2024-10-01",
+              "value": "Extensive tool marketplace with 40+ pre-built tools"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "planning_capability": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Planning",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-09-20",
+              "value": "Multi-step planning with goal decomposition"
+            }
+          ],
+          "methodology": "Planning effectiveness testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_management": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Memory",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-01",
+              "value": "Vector-based memory for agent context retention"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "2-15s per iteration",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Depends on LLM calls, tool usage, and planning complexity"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 70,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tool Execution",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Limited sandboxing, tools execute with agent permissions"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://superagi.com/docs/Installation/",
+              "date": "2024-10-01",
+              "value": "Full self-hosting with Docker Compose"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "authentication": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Features",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-09-15",
+              "value": "Basic authentication, requires additional hardening"
+            }
+          ],
+          "methodology": "Authentication assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-20",
+              "value": "MIT license, 15k+ stars, open source community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_security": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Documentation",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-01",
+              "value": "Basic API security, needs production hardening"
+            }
+          ],
+          "methodology": "API security review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 78,
+      "criteria": {
+        "data_retention": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Management",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Local database storage with configurable retention"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 77,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://superagi.com/",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Installation",
+              "url": "https://superagi.com/docs/Installation/",
+              "date": "2024-10-01",
+              "value": "Complete local deployment with Docker Compose"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-01",
+              "value": "Agent data sent to configured LLM providers"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "agent_logs": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Agent execution logs stored locally"
+            }
+          ],
+          "methodology": "Data storage assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 80,
+      "criteria": {
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SuperAGI Docs",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-15",
+              "value": "Good documentation but still evolving"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "gui_interface": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "UI Features",
+              "url": "https://superagi.com/",
+              "date": "2024-10-01",
+              "value": "Web-based GUI for agent management and monitoring"
+            }
+          ],
+          "methodology": "UI/UX assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-20",
+              "value": "MIT license, 15k+ stars, active community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "agent_traceability": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Logs",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-01",
+              "value": "Agent execution history and decision logs"
+            }
+          ],
+          "methodology": "Traceability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://github.com/TransformerOptimus/SuperAGI/discussions",
+              "date": "2024-10-15",
+              "value": "Growing community, Discord support"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 72,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Installation Guide",
+              "url": "https://superagi.com/docs/Installation/",
+              "date": "2024-10-01",
+              "value": "Docker Compose setup, requires technical knowledge"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Designed for small-medium scale, scaling requires work"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Free MIT license, costs only for infrastructure and LLMs"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring Features",
+              "url": "https://superagi.com/docs/",
+              "date": "2024-10-01",
+              "value": "GUI-based monitoring, limited production metrics"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "tool_marketplace": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tool Ecosystem",
+              "url": "https://superagi.com/docs/Tools/",
+              "date": "2024-10-01",
+              "value": "Growing marketplace with 40+ tools"
+            }
+          ],
+          "methodology": "Tool ecosystem assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 67,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Maturity",
+              "url": "https://github.com/TransformerOptimus/SuperAGI",
+              "date": "2024-10-01",
+              "value": "Early stage project, production use requires hardening"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "GUI-based agent management for easy monitoring and control",
+    "Open source (MIT) with growing community (15k+ stars)",
+    "Tool marketplace with 40+ pre-built tools and extensibility",
+    "Multi-agent orchestration for concurrent autonomous tasks",
+    "Self-hosted deployment for data privacy and control",
+    "Agent templates for quick start with common use cases"
+  ],
+  "limitations": [
+    "Early stage project with limited production maturity",
+    "Limited enterprise features (security, monitoring, RBAC)",
+    "Can be expensive due to multiple LLM calls in autonomous loops",
+    "Autonomous agent reliability can be unpredictable",
+    "Requires technical knowledge for setup and customization",
+    "Limited documentation compared to more mature frameworks"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI GPT-4",
+      "GPT-3.5",
+      "Claude",
+      "PaLM"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted (Docker Compose)",
+    "tool_support": [
+      "40+ marketplace tools",
+      "Custom tools",
+      "API integrations"
+    ],
+    "pricing_model": "Free open source",
+    "github_stars": "16600+",
+    "first_release": "2023",
+    "database": "PostgreSQL",
+    "agent_features": [
+      "Goal-oriented",
+      "Multi-agent",
+      "Tool marketplace",
+      "Web GUI"
+    ],
+    "pricing": "Free (MIT license)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 75,
+      "notes": "Can build support agents but better suited for autonomous tasks"
+    },
+    "code-generation": {
+      "overall": 78,
+      "notes": "Good for autonomous coding agents with tool integration"
+    },
+    "research-assistant": {
+      "overall": 80,
+      "notes": "Suitable for autonomous research and web scraping tasks"
+    },
+    "data-analysis": {
+      "overall": 76,
+      "notes": "Can integrate analysis tools for autonomous data work"
+    },
+    "content-creation": {
+      "overall": 73,
+      "notes": "Autonomous content generation possible but limited"
+    },
+    "education": {
+      "overall": 70,
+      "notes": "Better for autonomous learning tasks than tutoring"
+    },
+    "healthcare": {
+      "overall": 65,
+      "notes": "Early stage, not suitable for clinical use"
+    },
+    "financial-analysis": {
+      "overall": 68,
+      "notes": "Limited enterprise features for compliance"
+    },
+    "legal-compliance": {
+      "overall": 74,
+      "notes": "Can build document analysis agents with tools"
+    },
+    "creative-writing": {
+      "overall": 77,
+      "notes": "Good for autonomous ideation and research tasks"
+    }
+  },
+  "best_for": [
+    "Developers exploring autonomous agent frameworks",
+    "Teams building self-improving agent systems",
+    "Organizations wanting open-source AutoGPT alternative"
+  ],
+  "tags": [
+    "autonomous",
+    "self-hosted",
+    "open-source"
+  ]
+}

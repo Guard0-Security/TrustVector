@@ -1,0 +1,77 @@
+name: Feature Request
+description: Suggest a new feature for TrustVector
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! We appreciate your ideas.
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - New evaluation dimension
+        - New use case
+        - Website improvement
+        - Framework enhancement
+        - API or integration
+        - Documentation
+        - Tooling/automation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like to solve this?
+      placeholder: Describe the feature and how it works
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other solutions did you consider?
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: Who benefits from this feature?
+      placeholder: |
+        - Which users/personas?
+        - How many people would use this?
+        - What's the expected value?
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I'm willing to implement this feature
+        - label: I can help with design/planning
+        - label: I can help with testing
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Screenshots, mockups, or other helpful context

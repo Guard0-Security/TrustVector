@@ -1,0 +1,606 @@
+{
+  "id": "llama-3-1-405b",
+  "type": "model",
+  "name": "Llama 3.1 405B",
+  "provider": "Meta",
+  "version": "llama-3.1-405b",
+  "last_evaluated": "2025-11-07",
+  "evaluated_by": "TrustVector Team",
+  "description": "Meta's largest and most capable open-source model with 405 billion parameters. Offers complete transparency, self-hosting capabilities, and competitive performance with proprietary models.",
+  "website": "https://llama.meta.com",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HumanEval",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "80.5% pass rate"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-07"
+        },
+        "task_accuracy_reasoning": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "64.4% accuracy"
+            },
+            {
+              "source": "GPQA",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "51.2% on graduate-level science"
+            }
+          ],
+          "methodology": "Mathematical and scientific reasoning benchmarks",
+          "last_verified": "2025-11-07"
+        },
+        "task_accuracy_general": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "85.2% on graduate-level knowledge"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing",
+          "last_verified": "2025-11-07"
+        },
+        "output_consistency": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-405B",
+              "date": "2024-09-15",
+              "value": "Good consistency reported in community testing"
+            }
+          ],
+          "methodology": "Community evaluation and testing",
+          "last_verified": "2025-11-07"
+        },
+        "latency_p50": {
+          "value": "Varies by deployment",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Together AI",
+              "url": "https://www.together.ai/blog/llama-3-1-405b",
+              "date": "2024-08-01",
+              "value": "~3.5s via hosted API (hardware dependent for self-hosting)"
+            }
+          ],
+          "methodology": "Third-party hosting performance",
+          "last_verified": "2025-11-07",
+          "notes": "Self-hosted performance varies significantly based on infrastructure"
+        },
+        "latency_p95": {
+          "value": "Varies by deployment",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Together AI",
+              "url": "https://www.together.ai/blog/llama-3-1-405b",
+              "date": "2024-08-01",
+              "value": "~7.0s via hosted API"
+            }
+          ],
+          "methodology": "Third-party hosting performance",
+          "last_verified": "2025-11-07"
+        },
+        "uptime_sla": {
+          "value": "Deployment dependent",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "User-controlled uptime for self-hosted deployments"
+            }
+          ],
+          "methodology": "Deployment model analysis",
+          "last_verified": "2025-11-07",
+          "notes": "Self-hosting offers complete control over uptime"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Documentation",
+              "url": "https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-3/",
+              "date": "2024-07-23",
+              "value": "128K token context window"
+            }
+          ],
+          "methodology": "Official model specifications",
+          "last_verified": "2025-11-07"
+        },
+        "multimodal_support": {
+          "value": "Text-only",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Documentation",
+              "url": "https://llama.meta.com/docs/",
+              "date": "2024-07-23",
+              "value": "Text-only model"
+            }
+          ],
+          "methodology": "Official model capabilities",
+          "last_verified": "2025-11-07"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 78,
+      "criteria": {
+        "jailbreak_resistance": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Safety Report",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "Safety fine-tuning applied, but open model allows modification"
+            }
+          ],
+          "methodology": "Safety testing and red teaming",
+          "last_verified": "2025-11-07",
+          "notes": "Open weights mean users can modify safety guardrails"
+        },
+        "prompt_injection_defense": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-405B",
+              "date": "2024-09-15",
+              "value": "Standard defenses, user-configurable"
+            }
+          ],
+          "methodology": "Community security testing",
+          "last_verified": "2025-11-07"
+        },
+        "data_leakage_prevention": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Complete data isolation when self-hosted"
+            }
+          ],
+          "methodology": "Architecture review",
+          "last_verified": "2025-11-07",
+          "notes": "Self-hosting provides complete control over data"
+        },
+        "adversarial_robustness": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Safety Testing",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "Robust to common adversarial attacks in testing"
+            }
+          ],
+          "methodology": "Adversarial testing by Meta",
+          "last_verified": "2025-11-07"
+        },
+        "content_filtering": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Llama Guard",
+              "url": "https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/",
+              "date": "2024-07-23",
+              "value": "Llama Guard available for content moderation"
+            }
+          ],
+          "methodology": "Safety tooling review",
+          "last_verified": "2025-11-07",
+          "notes": "Requires separate Llama Guard deployment"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 96,
+      "criteria": {
+        "data_retention": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Complete control over data retention when self-hosted"
+            }
+          ],
+          "methodology": "Deployment model analysis",
+          "last_verified": "2025-11-07",
+          "notes": "Zero external data transmission in self-hosted deployments"
+        },
+        "gdpr_compliance": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Full GDPR compliance control in self-hosted setup"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-07"
+        },
+        "hipaa_eligible": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "HIPAA compliance possible with proper self-hosted infrastructure"
+            }
+          ],
+          "methodology": "Healthcare compliance assessment",
+          "last_verified": "2025-11-07"
+        },
+        "soc2_certified": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "SOC 2 depends on hosting infrastructure"
+            }
+          ],
+          "methodology": "Deployment architecture review",
+          "last_verified": "2025-11-07",
+          "notes": "Users responsible for their own SOC 2 compliance"
+        },
+        "data_sovereignty": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Complete data sovereignty with self-hosting"
+            }
+          ],
+          "methodology": "Deployment model analysis",
+          "last_verified": "2025-11-07",
+          "notes": "Best-in-class data sovereignty"
+        },
+        "encryption_at_rest": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "User-controlled encryption at rest"
+            }
+          ],
+          "methodology": "Deployment architecture review",
+          "last_verified": "2025-11-07"
+        },
+        "encryption_in_transit": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "User-controlled TLS configuration"
+            }
+          ],
+          "methodology": "Deployment architecture review",
+          "last_verified": "2025-11-07"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 95,
+      "criteria": {
+        "model_documentation": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Model Card",
+              "url": "https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-3/",
+              "date": "2024-07-23",
+              "value": "Comprehensive model card with detailed documentation"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-07"
+        },
+        "training_data_transparency": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Documentation",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "Training data composition and size disclosed (15T tokens)"
+            }
+          ],
+          "methodology": "Public documentation review",
+          "last_verified": "2025-11-07",
+          "notes": "Good transparency on data size and composition"
+        },
+        "safety_testing_transparency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Safety Report",
+              "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+              "date": "2024-07-23",
+              "value": "Detailed safety evaluations published"
+            }
+          ],
+          "methodology": "Safety documentation review",
+          "last_verified": "2025-11-07"
+        },
+        "bias_evaluation": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Model Card",
+              "url": "https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-3/",
+              "date": "2024-07-23",
+              "value": "Bias testing results disclosed"
+            }
+          ],
+          "methodology": "Bias benchmarks review",
+          "last_verified": "2025-11-07"
+        },
+        "decision_explainability": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Weights",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Complete model transparency with open weights"
+            }
+          ],
+          "methodology": "Model accessibility assessment",
+          "last_verified": "2025-11-07",
+          "notes": "Full model inspection possible"
+        },
+        "versioning_changelog": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Releases",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Clear versioning with detailed release notes"
+            }
+          ],
+          "methodology": "Version management review",
+          "last_verified": "2025-11-07"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 82,
+      "criteria": {
+        "deployment_flexibility": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "Self-host anywhere, cloud, on-prem, edge, or via APIs"
+            }
+          ],
+          "methodology": "Deployment options review",
+          "last_verified": "2025-11-07",
+          "notes": "Maximum deployment flexibility"
+        },
+        "api_reliability": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Third-party APIs",
+              "url": "https://www.together.ai",
+              "date": "2024-10-01",
+              "value": "~99.5% uptime via major providers"
+            }
+          ],
+          "methodology": "Third-party API monitoring",
+          "last_verified": "2025-11-07",
+          "notes": "Varies by API provider"
+        },
+        "rate_limits": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "No rate limits when self-hosted"
+            }
+          ],
+          "methodology": "Deployment model analysis",
+          "last_verified": "2025-11-07"
+        },
+        "cost_efficiency": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Together AI Pricing",
+              "url": "https://www.together.ai/pricing",
+              "date": "2024-10-01",
+              "value": "$3.00 per 1M input tokens via API, infrastructure costs for self-hosting"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-11-07",
+          "notes": "Free to use, but requires significant infrastructure for self-hosting (8x H100 GPUs minimum)"
+        },
+        "monitoring_observability": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-hosted Model",
+              "url": "https://llama.meta.com",
+              "date": "2024-07-23",
+              "value": "User-implemented monitoring for self-hosted"
+            }
+          ],
+          "methodology": "Tooling availability assessment",
+          "last_verified": "2025-11-07",
+          "notes": "Requires custom monitoring implementation"
+        },
+        "support_quality": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Support",
+              "url": "https://github.com/meta-llama/llama",
+              "date": "2024-09-15",
+              "value": "Community support via GitHub and forums, no official support"
+            }
+          ],
+          "methodology": "Support channels review",
+          "last_verified": "2025-11-07",
+          "notes": "Relies on community support"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Complete transparency with open weights",
+    "Best-in-class data sovereignty and privacy control",
+    "Maximum deployment flexibility (cloud, on-prem, edge)",
+    "No vendor lock-in or rate limits when self-hosted",
+    "Excellent documentation and model cards",
+    "Competitive performance with proprietary models",
+    "Strong community support and ecosystem"
+  ],
+  "limitations": [
+    "Requires significant infrastructure for self-hosting (8x H100 GPUs minimum)",
+    "No official commercial support",
+    "Text-only (no native vision)",
+    "Safety guardrails can be modified (security consideration)",
+    "Higher latency compared to smaller models",
+    "Complex deployment and maintenance"
+  ],
+  "metadata": {
+    "license": "Llama 3.1 Community License (open for commercial use)",
+    "architecture": "Transformer with Grouped-Query Attention",
+    "parameters": "405 billion",
+    "training_cutoff": "December 2023",
+    "languages_supported": "Multilingual (8 languages optimized)",
+    "function_calling": true,
+    "json_mode": true,
+    "streaming": true
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 84,
+      "notes": "Strong coding capabilities with complete control",
+      "alternatives": []
+    },
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good performance, self-hosting ideal for sensitive data",
+      "alternatives": []
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Strong creative capabilities with full customization",
+      "alternatives": []
+    },
+    "data-analysis": {
+      "overall": 83,
+      "notes": "Good analytical capabilities",
+      "alternatives": []
+    },
+    "research-assistant": {
+      "overall": 84,
+      "notes": "128K context with complete data privacy",
+      "alternatives": []
+    },
+    "healthcare": {
+      "overall": 88,
+      "notes": "Self-hosting ideal for HIPAA compliance and sensitive data",
+      "alternatives": []
+    },
+    "legal-compliance": {
+      "overall": 87,
+      "notes": "Complete confidentiality with self-hosting",
+      "alternatives": []
+    },
+    "education": {
+      "overall": 83,
+      "notes": "Good capabilities with full control over content",
+      "alternatives": []
+    },
+    "creative-writing": {
+      "overall": 84,
+      "notes": "Good creative capabilities with customization options",
+      "alternatives": []
+    }
+  },
+  "best_for": [
+    "Organizations requiring maximum data sovereignty and privacy control",
+    "Self-hosted deployments with complete infrastructure control",
+    "Highly regulated industries requiring on-premises solutions",
+    "Developers seeking open-weights models with commercial use",
+    "Applications requiring no vendor lock-in or rate limits"
+  ],
+  "tags": [
+    "meta",
+    "open-source"
+  ]
+}

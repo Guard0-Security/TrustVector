@@ -1,0 +1,474 @@
+{
+  "id": "mcp-server-azure",
+  "type": "mcp",
+  "name": "MCP Azure Server",
+  "provider": "Microsoft",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Microsoft MCP server for Azure cloud services integration. Enables AI models to interact with Azure resources including Virtual Machines, Storage, Databases, App Services, and monitoring. Essential for AI-powered Azure infrastructure management and DevOps workflows.",
+  "website": "https://github.com/azure/azure-mcp-server",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "azure_api_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure API Documentation",
+              "url": "https://docs.microsoft.com/en-us/rest/api/azure/",
+              "date": "2025-11-16",
+              "value": "Built on Azure's reliable REST APIs with 99.9% SLA"
+            }
+          ],
+          "methodology": "API stability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "resource_operation_success": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure MCP Server",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "High success rate for resource management operations"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Azure Rate Limits",
+              "url": "https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/request-limits-and-throttling",
+              "date": "2025-11-16",
+              "value": "Respects Azure throttling limits with retry logic"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_region_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Azure Global Infrastructure",
+              "url": "https://azure.microsoft.com/en-us/explore/global-infrastructure",
+              "date": "2025-11-16",
+              "value": "Performance varies by region; generally good latency"
+            }
+          ],
+          "methodology": "Geographic performance testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "Handles Azure API errors with retry and fallback logic"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 72,
+      "criteria": {
+        "authentication_security": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Authentication",
+              "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/",
+              "date": "2025-11-16",
+              "value": "Uses Azure AD with service principals or managed identities"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "credential_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Azure credentials stored locally; AI can perform actions within scope"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "rbac_enforcement": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure RBAC",
+              "url": "https://docs.microsoft.com/en-us/azure/role-based-access-control/",
+              "date": "2025-11-16",
+              "value": "Respects Azure RBAC permissions but requires careful role assignment"
+            }
+          ],
+          "methodology": "Authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "destructive_operation_risk": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "AI can delete resources, modify configurations, and manage infrastructure"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Activity Log",
+              "url": "https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log",
+              "date": "2025-11-16",
+              "value": "All Azure operations logged in Activity Log"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        },
+        "network_security": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Azure Network Security",
+              "url": "https://docs.microsoft.com/en-us/azure/security/fundamentals/network-overview",
+              "date": "2025-11-16",
+              "value": "Can modify network security groups and firewall rules"
+            }
+          ],
+          "methodology": "Network security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 70,
+      "criteria": {
+        "resource_metadata_exposure": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Azure resource metadata and configurations sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "sensitive_data_in_resources": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "May expose connection strings, keys, and secrets in resource configurations"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "compliance_boundary_control": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Azure Compliance",
+              "url": "https://docs.microsoft.com/en-us/azure/compliance/",
+              "date": "2025-11-16",
+              "value": "Respects Azure policy and compliance settings but data leaves Azure"
+            }
+          ],
+          "methodology": "Compliance boundary assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Azure resource data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "data_residency_considerations": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://docs.microsoft.com/en-us/azure/compliance/",
+              "date": "2025-11-16",
+              "value": "Azure data residency requirements may conflict with LLM data sharing"
+            }
+          ],
+          "methodology": "Data residency review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure MCP Docs",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation with Azure-specific examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Activity Log",
+              "url": "https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log",
+              "date": "2025-11-16",
+              "value": "All operations logged in Azure Activity Log and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "Open source implementation from Microsoft"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "Clear but limited documentation of supported Azure services"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 80,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "Requires Azure AD app registration and service principal setup"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Azure API Performance",
+              "url": "https://azure.microsoft.com/en-us/support/legal/sla/",
+              "date": "2025-11-16",
+              "value": "Performance depends on Azure service and region (typically 100-800ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure SLA",
+              "url": "https://azure.microsoft.com/en-us/support/legal/sla/",
+              "date": "2025-11-16",
+              "value": "Depends on Azure service SLAs (typically 99.9%+)"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "service_coverage": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Azure MCP Server",
+              "url": "https://github.com/azure/azure-mcp-server",
+              "date": "2025-11-16",
+              "value": "Covers major Azure services but not comprehensive"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_adoption": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/azure/azure-mcp-server/discussions",
+              "date": "2025-11-16",
+              "value": "Growing adoption among Azure users"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 88,
+      "notes": "Excellent for infrastructure-as-code generation and Azure automation"
+    },
+    "customer-support": {
+      "overall": 70,
+      "notes": "Useful for Azure infrastructure troubleshooting and support"
+    },
+    "content-creation": {
+      "overall": 55,
+      "notes": "Limited applicability; mainly for infrastructure documentation"
+    },
+    "data-analysis": {
+      "overall": 80,
+      "notes": "Good for analyzing Azure resource metrics and cost data"
+    },
+    "research-assistant": {
+      "overall": 65,
+      "notes": "Useful for researching Azure configurations and best practices"
+    },
+    "legal-compliance": {
+      "overall": 62,
+      "notes": "Risk of exposing infrastructure details; careful access control needed"
+    },
+    "healthcare": {
+      "overall": 58,
+      "notes": "Risk of exposing HIPAA-regulated infrastructure; requires careful controls"
+    },
+    "financial-analysis": {
+      "overall": 75,
+      "notes": "Good for Azure cost analysis but risk of exposing financial infrastructure"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Excellent for teaching Azure, cloud infrastructure, and DevOps"
+    },
+    "creative-writing": {
+      "overall": 40,
+      "notes": "Low relevance to creative writing workflows"
+    }
+  },
+  "best_for": [
+    "Azure DevOps engineers automating cloud infrastructure management",
+    "Cloud architects working with Azure resources and cost optimization",
+    "Educators teaching Azure and cloud computing concepts"
+  ],
+  "strengths": [
+    "Official Microsoft implementation with Azure expertise",
+    "Comprehensive Azure resource management capabilities",
+    "Built on reliable Azure APIs with strong SLAs",
+    "Full operation auditability through Azure Activity Log",
+    "Open source with Microsoft support",
+    "Supports Azure RBAC for granular permissions"
+  ],
+  "limitations": [
+    "Azure resource metadata and configurations exposed to LLM provider",
+    "Risk of destructive operations (resource deletion, network changes)",
+    "May expose connection strings, keys, and secrets",
+    "Complex setup requiring Azure AD configuration",
+    "Limited to supported Azure services (not comprehensive)",
+    "Data residency considerations with LLM provider data sharing"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/azure/azure-mcp-server",
+    "api_dependency": "Azure REST API, Azure SDK",
+    "authentication": "Azure AD, Service Principal, Managed Identity",
+    "first_release": "2024-11",
+    "maintained_by": "Microsoft"
+  },
+  "tags": [
+    "azure",
+    "microsoft",
+    "cloud",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

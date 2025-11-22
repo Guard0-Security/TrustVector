@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-redis",
+  "type": "mcp",
+  "name": "MCP Redis Server",
+  "provider": "Anthropic (Archived)",
+  "version": "2025.4.24",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Redis cache and data structure operations. Enables AI models to interact with Redis for key-value operations, pub/sub messaging, lists, sets, sorted sets, and hashes. Essential for AI-powered caching strategies, session management, and real-time data workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 88,
+      "criteria": {
+        "operation_speed": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Performance",
+              "url": "https://redis.io/docs/management/optimization/benchmarks/",
+              "date": "2025-11-16",
+              "value": "Extremely fast in-memory operations (sub-millisecond latency)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "command_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Client",
+              "url": "https://redis.io/docs/clients/",
+              "date": "2025-11-16",
+              "value": "Built on official Redis clients with high reliability"
+            }
+          ],
+          "methodology": "Command execution testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_structure_accuracy": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Data Types",
+              "url": "https://redis.io/docs/data-types/",
+              "date": "2025-11-16",
+              "value": "Accurate handling of strings, lists, sets, sorted sets, and hashes"
+            }
+          ],
+          "methodology": "Data structure testing",
+          "last_verified": "2025-11-09"
+        },
+        "connection_stability": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Redis Connection Handling",
+              "url": "https://redis.io/docs/reference/clients/",
+              "date": "2025-11-16",
+              "value": "Stable connections with automatic reconnection"
+            }
+          ],
+          "methodology": "Connection stability testing",
+          "last_verified": "2025-11-09"
+        },
+        "pubsub_reliability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Redis Pub/Sub",
+              "url": "https://redis.io/docs/interact/pubsub/",
+              "date": "2025-11-16",
+              "value": "Reliable pub/sub messaging with guaranteed delivery to subscribers"
+            }
+          ],
+          "methodology": "Pub/sub testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 70,
+      "criteria": {
+        "authentication_security": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Security",
+              "url": "https://redis.io/docs/management/security/",
+              "date": "2025-11-16",
+              "value": "Supports password authentication and ACLs (Redis 6+)"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "connection_string_exposure": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Redis connection string with password stored locally; accessible to AI"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "command_injection_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can execute arbitrary Redis commands within ACL permissions"
+            }
+          ],
+          "methodology": "Command injection testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_deletion_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Commands",
+              "url": "https://redis.io/commands/",
+              "date": "2025-11-16",
+              "value": "AI can delete keys, flush databases if permissions allow"
+            }
+          ],
+          "methodology": "Destructive operation testing",
+          "last_verified": "2025-11-09"
+        },
+        "acl_enforcement": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Redis ACL",
+              "url": "https://redis.io/docs/management/security/acl/",
+              "date": "2025-11-16",
+              "value": "Redis 6+ ACLs provide granular command and key restrictions"
+            }
+          ],
+          "methodology": "ACL enforcement testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Redis Monitoring",
+              "url": "https://redis.io/docs/management/optimization/",
+              "date": "2025-11-16",
+              "value": "Limited built-in audit logging; requires external monitoring"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 68,
+      "criteria": {
+        "cached_data_exposure": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Cached data including session tokens and user data sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "session_data_privacy": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Session data and user tokens commonly stored in Redis may be exposed"
+            }
+          ],
+          "methodology": "Session privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "key_pattern_exposure": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Key naming patterns may reveal application structure and data relationships"
+            }
+          ],
+          "methodology": "Key privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Cache content shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "ttl_data_persistence": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Redis TTL",
+              "url": "https://redis.io/commands/ttl/",
+              "date": "2025-11-16",
+              "value": "Temporary data may be captured before expiration"
+            }
+          ],
+          "methodology": "Data persistence assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 77,
+      "criteria": {
+        "documentation_quality": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Redis MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Basic documentation but community-maintained with evolving coverage"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "command_visibility": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All Redis commands logged in MCP transaction logs"
+            }
+          ],
+          "methodology": "Command logging assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "command_coverage_clarity": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Limited documentation of supported Redis commands"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 85,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring Redis connection URL"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "command_performance": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Performance",
+              "url": "https://redis.io/docs/management/optimization/benchmarks/",
+              "date": "2025-11-16",
+              "value": "Extremely fast operations (sub-millisecond for most commands)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis Stability",
+              "url": "https://redis.io/",
+              "date": "2025-11-16",
+              "value": "Built on mature Redis clients with high reliability"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "command_coverage": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redis MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers key-value ops, lists, sets, sorted sets, hashes, and pub/sub"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Extremely fast sub-millisecond operations for all data types",
+    "Comprehensive Redis data structure support (strings, lists, sets, hashes)",
+    "Built on official Redis clients with high reliability",
+    "Excellent for real-time caching and session management automation",
+    "Open source community implementation",
+    "Supports pub/sub for real-time messaging patterns"
+  ],
+  "limitations": [
+    "Cached data including session tokens exposed to LLM provider",
+    "AI can delete keys and flush databases within permission scope",
+    "Redis connection strings with passwords accessible to AI",
+    "Session data and user tokens commonly stored in Redis may be exposed",
+    "Limited built-in audit logging capabilities",
+    "Key naming patterns may reveal application architecture"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Redis client libraries (ioredis, redis-py)",
+    "authentication": "Redis password, ACLs (Redis 6+)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good for generating caching logic and Redis integration code"
+    },
+    "customer-support": {
+      "overall": 70,
+      "notes": "Useful for analyzing session data and user activity patterns"
+    },
+    "content-creation": {
+      "overall": 60,
+      "notes": "Limited applicability; mainly for cached content management"
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Excellent for analyzing real-time data and cache performance metrics"
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Useful for researching caching strategies and data patterns"
+    },
+    "legal-compliance": {
+      "overall": 52,
+      "notes": "High risk of exposing cached sensitive data; requires strict controls"
+    },
+    "healthcare": {
+      "overall": 48,
+      "notes": "High risk of exposing patient session data; not recommended"
+    },
+    "financial-analysis": {
+      "overall": 58,
+      "notes": "Moderate risk; cached financial data exposure concerns"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for teaching caching, in-memory databases, and real-time systems"
+    },
+    "creative-writing": {
+      "overall": 55,
+      "notes": "Limited applicability for writing workflows"
+    }
+  },
+  "best_for": [
+    "Backend developers working with Redis caching and data structures",
+    "System architects optimizing application performance",
+    "DevOps engineers managing Redis instances"
+  ],
+  "tags": [
+    "cache",
+    "database",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

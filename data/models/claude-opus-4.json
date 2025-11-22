@@ -1,0 +1,652 @@
+{
+  "id": "claude-opus-4",
+  "type": "model",
+  "name": "Claude Opus 4",
+  "provider": "Anthropic",
+  "version": "20250522",
+  "last_evaluated": "2025-11-17",
+  "evaluated_by": "TrustVector Team",
+  "description": "Anthropic's most powerful model released May 2025. Exceptional reasoning, coding (72.5-79.4% SWE-bench in high-compute), and agentic capabilities.",
+  "website": "https://www.anthropic.com/claude",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 95,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "72.5% standard, 79.4% in high-compute mode"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "task_accuracy_reasoning": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GPQA Diamond",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "79.6% (83.3% high-compute)"
+            },
+            {
+              "source": "AIME Math",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "75.5% (90.0% high-compute)"
+            }
+          ],
+          "methodology": "PhD-level reasoning benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "task_accuracy_general": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "88.8%"
+            },
+            {
+              "source": "MMMU Visual Reasoning",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "76.5%"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing",
+          "last_verified": "2025-11-17"
+        },
+        "output_consistency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-05-22",
+              "value": "Highly consistent with extended thinking"
+            }
+          ],
+          "methodology": "Internal testing",
+          "last_verified": "2025-11-17"
+        },
+        "latency_p50": {
+          "value": "2.5s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic API Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-05-22",
+              "value": "~2.5s for standard prompts"
+            }
+          ],
+          "methodology": "Median latency",
+          "last_verified": "2025-11-17"
+        },
+        "latency_p95": {
+          "value": "5.5s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/claude-opus-4",
+              "date": "2025-06-01",
+              "value": "p95 ~5.5s"
+            }
+          ],
+          "methodology": "95th percentile",
+          "last_verified": "2025-11-17"
+        },
+        "context_window": {
+          "value": "200,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-05-22",
+              "value": "200K context, 32K max output"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-17"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Status Page",
+              "url": "https://status.anthropic.com/",
+              "date": "2025-06-01",
+              "value": "99.95% uptime"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Best-in-class performance. 79.4% SWE-bench in high-compute mode (highest). 90% AIME in high-compute. Exceptional for complex reasoning."
+    },
+
+    "security": {
+      "overall_score": 91,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Safety Research",
+              "url": "https://www.anthropic.com/news/evaluating-ai-systems",
+              "date": "2025-05-22",
+              "value": "Superior resistance via Constitutional AI"
+            }
+          ],
+          "methodology": "OWASP LLM01 testing",
+          "last_verified": "2025-11-17"
+        },
+        "jailbreak_resistance": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Constitutional AI",
+              "url": "https://www.anthropic.com/news/claudes-constitution",
+              "date": "2025-05-22",
+              "value": "Strongest jailbreak resistance"
+            }
+          ],
+          "methodology": "Adversarial prompt testing",
+          "last_verified": "2025-11-17"
+        },
+        "data_leakage_prevention": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy Statement",
+              "url": "https://www.anthropic.com/legal/privacy",
+              "date": "2025-05-22",
+              "value": "No training on user data"
+            }
+          ],
+          "methodology": "Privacy policy analysis",
+          "last_verified": "2025-11-17"
+        },
+        "output_safety": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Safety Evaluations",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "ASL-3 safety standard"
+            }
+          ],
+          "methodology": "Comprehensive safety testing",
+          "last_verified": "2025-11-17"
+        },
+        "api_security": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Documentation",
+              "url": "https://docs.anthropic.com/en/api/getting-started",
+              "date": "2025-05-22",
+              "value": "Enterprise-grade API security"
+            }
+          ],
+          "methodology": "Security features review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Flagship security with ASL-3 standard and Constitutional AI. Strongest safety guardrails."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 93,
+      "criteria": {
+        "data_residency": {
+          "value": "US, EU (customer choice)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Enterprise",
+              "url": "https://www.anthropic.com/claude/enterprise",
+              "date": "2025-05-22",
+              "value": "Data residency options"
+            }
+          ],
+          "methodology": "Enterprise documentation review",
+          "last_verified": "2025-11-17"
+        },
+        "training_data_optout": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy Policy",
+              "url": "https://www.anthropic.com/legal/privacy",
+              "date": "2025-05-22",
+              "value": "No API data training by default"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-17"
+        },
+        "data_retention": {
+          "value": "0 days (ephemeral)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Terms of Service",
+              "url": "https://www.anthropic.com/legal/terms",
+              "date": "2025-05-22",
+              "value": "Ephemeral processing"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2025-11-17"
+        },
+        "pii_handling": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy Docs",
+              "url": "https://docs.anthropic.com/en/docs/resources/data-protection",
+              "date": "2025-05-22",
+              "value": "Customer responsible for PII redaction"
+            }
+          ],
+          "methodology": "Data protection review",
+          "last_verified": "2025-11-17"
+        },
+        "compliance_certifications": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Trust Center",
+              "url": "https://trust.anthropic.com/",
+              "date": "2025-05-22",
+              "value": "SOC 2 Type II, GDPR, HIPAA eligible"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2025-11-17"
+        },
+        "zero_data_retention": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Docs",
+              "url": "https://docs.anthropic.com/en/docs/resources/data-protection",
+              "date": "2025-05-22",
+              "value": "Ephemeral data processing"
+            }
+          ],
+          "methodology": "Data handling review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Exceptional privacy. Ephemeral data handling, HIPAA eligible, strongest compliance for regulated industries."
+    },
+
+    "trust_transparency": {
+      "overall_score": 89,
+      "criteria": {
+        "explainability": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Extended Thinking",
+              "url": "https://www.anthropic.com/news/claude-4",
+              "date": "2025-05-22",
+              "value": "Extended thinking exposes reasoning"
+            }
+          ],
+          "methodology": "Reasoning transparency evaluation",
+          "last_verified": "2025-11-17"
+        },
+        "hallucination_rate": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SimpleQA Benchmark",
+              "url": "https://www.anthropic.com/news/claude-4-evaluation",
+              "date": "2025-05-22",
+              "value": "Strong factual accuracy"
+            }
+          ],
+          "methodology": "Factual QA testing",
+          "last_verified": "2025-11-17"
+        },
+        "bias_fairness": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Responsible Scaling",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "date": "2025-05-22",
+              "value": "Regular bias testing"
+            }
+          ],
+          "methodology": "Bias benchmark evaluation",
+          "last_verified": "2025-11-17"
+        },
+        "uncertainty_quantification": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-05-22",
+              "value": "Excellent uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-17"
+        },
+        "model_card_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Claude 4 System Card",
+              "url": "https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf",
+              "date": "2025-05-22",
+              "value": "Comprehensive system card"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-17"
+        },
+        "training_data_transparency": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Public Statements",
+              "url": "https://www.anthropic.com/news",
+              "date": "2025-05-22",
+              "value": "General description, cutoff March 2025"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2025-11-17"
+        },
+        "guardrails": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Constitutional AI",
+              "url": "https://www.anthropic.com/news/claudes-constitution",
+              "date": "2025-05-22",
+              "value": "Strongest Constitutional AI guardrails"
+            }
+          ],
+          "methodology": "Safety mechanism analysis",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Excellent transparency with extended thinking and comprehensive system card. Best-in-class guardrails."
+    },
+
+    "operational_excellence": {
+      "overall_score": 92,
+      "criteria": {
+        "api_design_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API",
+              "url": "https://docs.anthropic.com/en/api",
+              "date": "2025-05-22",
+              "value": "Enterprise-grade RESTful API"
+            }
+          ],
+          "methodology": "API design review",
+          "last_verified": "2025-11-17"
+        },
+        "sdk_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic SDKs",
+              "url": "https://github.com/anthropics",
+              "date": "2025-05-22",
+              "value": "High-quality Python, TypeScript SDKs"
+            }
+          ],
+          "methodology": "SDK quality review",
+          "last_verified": "2025-11-17"
+        },
+        "versioning_policy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Versioning",
+              "url": "https://docs.anthropic.com/en/api/versioning",
+              "date": "2025-05-22",
+              "value": "6-month deprecation notice"
+            }
+          ],
+          "methodology": "Versioning policy review",
+          "last_verified": "2025-11-17"
+        },
+        "monitoring_observability": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Console",
+              "url": "https://console.anthropic.com/",
+              "date": "2025-05-22",
+              "value": "Comprehensive usage dashboard"
+            }
+          ],
+          "methodology": "Monitoring tools review",
+          "last_verified": "2025-11-17"
+        },
+        "support_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Support",
+              "url": "https://support.anthropic.com/",
+              "date": "2025-05-22",
+              "value": "Priority support for Opus users"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2025-11-17"
+        },
+        "ecosystem_maturity": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Integration Ecosystem",
+              "url": "https://github.com/topics/claude-ai",
+              "date": "2025-06-01",
+              "value": "Mature ecosystem, Bedrock, Vertex AI"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2025-11-17"
+        },
+        "license_terms": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Commercial Terms",
+              "url": "https://www.anthropic.com/legal/commercial-terms",
+              "date": "2025-05-22",
+              "value": "Clear enterprise terms"
+            }
+          ],
+          "methodology": "License review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Flagship operational excellence. Available on API, Amazon Bedrock, and Google Vertex AI."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 97,
+      "notes": "Best-in-class coding. 79.4% SWE-bench in high-compute mode. Exceptional for complex software engineering.",
+      "alternatives": ["claude-sonnet-4-5", "claude-haiku-4-5"]
+    },
+    "customer-support": {
+      "overall": 90,
+      "notes": "Excellent but potentially over-powered and expensive for standard customer support.",
+      "alternatives": ["claude-sonnet-4", "claude-haiku-4-5"]
+    },
+    "content-creation": {
+      "overall": 94,
+      "notes": "Exceptional creative writing with nuanced understanding and natural style.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "data-analysis": {
+      "overall": 93,
+      "notes": "Superior analytical capabilities with extended thinking for complex analysis.",
+      "alternatives": ["openai-o3", "claude-sonnet-4"]
+    },
+    "research-assistant": {
+      "overall": 95,
+      "notes": "Outstanding for research. Extended thinking enables deep analysis. 200K context for long documents.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "legal-compliance": {
+      "overall": 95,
+      "notes": "Best for legal work. HIPAA eligible, ephemeral data, ASL-3 security. Careful reasoning.",
+      "alternatives": ["claude-opus-4-1"]
+    },
+    "healthcare": {
+      "overall": 94,
+      "notes": "Flagship for healthcare. HIPAA eligible, strongest privacy, careful medical reasoning.",
+      "alternatives": ["claude-opus-4-1", "claude-sonnet-4"]
+    },
+    "financial-analysis": {
+      "overall": 92,
+      "notes": "Exceptional for complex financial modeling and analysis. 90% AIME math in high-compute.",
+      "alternatives": ["openai-o3", "claude-opus-4-1"]
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for education with patient, detailed explanations and strong knowledge base.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "creative-writing": {
+      "overall": 93,
+      "notes": "Outstanding creative capabilities with nuanced character development and storytelling.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    }
+  },
+
+  "strengths": [
+    "Highest performance: 79.4% SWE-bench in high-compute (best overall)",
+    "90% AIME math in high-compute mode (exceptional reasoning)",
+    "Extended thinking for complex multi-step reasoning",
+    "Strongest privacy: ephemeral data, HIPAA eligible, ASL-3 security",
+    "200K context window for large documents",
+    "Best-in-class Constitutional AI safety guardrails"
+  ],
+
+  "limitations": [
+    "Premium pricing ($15/$75 per 1M tokens)",
+    "Higher latency (~2.5s p50, 5.5s p95)",
+    "Training cutoff March 2025",
+    "Overkill for simple tasks (cost and latency)",
+    "32K max output vs 64K for Sonnet 4"
+  ],
+
+  "best_for": [
+    "Mission-critical complex coding and software engineering",
+    "Healthcare and legal applications requiring HIPAA compliance",
+    "Research requiring deep reasoning and extended thinking",
+    "Organizations prioritizing maximum safety and privacy",
+    "Complex agentic applications"
+  ],
+
+  "not_recommended_for": [
+    "Latency-sensitive real-time applications",
+    "High-volume cost-sensitive workloads",
+    "Simple tasks better handled by smaller models",
+    "Tasks requiring latest training data (post-March 2025)"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "$15.00 per 1M tokens",
+      "output": "$75.00 per 1M tokens",
+      "notes": "Flagship pricing. Batch API 50% discount. Prompt caching up to 90% savings.",
+      "last_verified": "2025-11-17"
+    },
+    "context_window": 200000,
+    "max_output_tokens": 32000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic",
+      "Hindi"
+    ],
+    "modalities": ["text", "image (input)", "document"],
+    "api_endpoint": "https://api.anthropic.com/v1/messages",
+    "open_source": false,
+    "architecture": "Transformer-based with Constitutional AI and extended thinking",
+    "parameters": "Not disclosed",
+    "training_cutoff": "March 2025",
+    "safety_level": "ASL-3"
+  },
+
+  "related_entities": ["claude-opus-4-1", "claude-sonnet-4-5", "claude-sonnet-4", "gpt-5"],
+
+  "tags": [
+    "flagship",
+    "coding",
+    "reasoning",
+    "hipaa-eligible",
+    "privacy",
+    "enterprise",
+    "extended-thinking",
+    "asl-3",
+    "research"
+  ]
+}

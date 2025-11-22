@@ -1,0 +1,433 @@
+{
+  "id": "mcp-server-brave-search",
+  "type": "mcp",
+  "name": "MCP Brave Search Server",
+  "provider": "Anthropic (Archived)",
+  "version": "2025.4.24",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server providing AI models with web search capabilities through Brave Search API. Enables real-time information retrieval, fact-checking, and research augmentation through the Model Context Protocol. Privacy-focused alternative to traditional search APIs.",
+  "website": "https://brave.com/search/api/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "search_result_quality": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Search API Documentation",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Independent search index with high-quality results"
+            }
+          ],
+          "methodology": "Search quality benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "api_response_time": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Search Performance",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Fast response times, typically 200-800ms"
+            }
+          ],
+          "methodology": "API latency testing",
+          "last_verified": "2025-11-09"
+        },
+        "result_freshness": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Search Index",
+              "url": "https://brave.com/search/",
+              "date": "2025-11-16",
+              "value": "Independent crawling with frequent index updates"
+            }
+          ],
+          "methodology": "Content freshness testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Rate Limits",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Rate limits vary by plan (2000-15000 queries/month typical)"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Graceful error handling with retry logic for failed requests"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 84,
+      "criteria": {
+        "api_key_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave API Authentication",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "API key-based authentication with secure key management"
+            }
+          ],
+          "methodology": "Authentication security review",
+          "last_verified": "2025-11-09"
+        },
+        "query_sanitization": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Search Query Processing",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Query parameters properly sanitized before API calls"
+            }
+          ],
+          "methodology": "Input sanitization testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_exposure_risk": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Search Query Logging",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Search queries logged by Brave; potential for sensitive query exposure"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "malicious_content_protection": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Brave Search Safety",
+              "url": "https://brave.com/search/",
+              "date": "2025-11-16",
+              "value": "Basic SafeSearch filtering available"
+            }
+          ],
+          "methodology": "Content safety assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 88,
+      "criteria": {
+        "privacy_focus": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Privacy Policy",
+              "url": "https://brave.com/privacy/",
+              "date": "2025-11-16",
+              "value": "Privacy-focused search engine with no user profiling or tracking"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "data_retention": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Search Privacy",
+              "url": "https://brave.com/privacy/",
+              "date": "2025-11-16",
+              "value": "Minimal data retention, no personalization or user tracking"
+            }
+          ],
+          "methodology": "Data retention policy review",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_sharing": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Independence",
+              "url": "https://brave.com/search/",
+              "date": "2025-11-16",
+              "value": "Independent search index, minimal third-party data sharing"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "query_anonymization": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Brave API",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Queries not linked to individual users, API key-based access only"
+            }
+          ],
+          "methodology": "Anonymization assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave API Documentation",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Clear API documentation with examples and parameters"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "search_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Brave Search About",
+              "url": "https://brave.com/search/",
+              "date": "2025-11-16",
+              "value": "Independent index with transparent ranking approach"
+            }
+          ],
+          "methodology": "Algorithmic transparency assessment",
+          "last_verified": "2025-11-09"
+        },
+        "query_logging": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All search queries visible in MCP logs"
+            }
+          ],
+          "methodology": "Query visibility assessment",
+          "last_verified": "2025-11-09"
+        },
+        "implementation_clarity": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source MCP server implementation available"
+            }
+          ],
+          "methodology": "Code transparency review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 84,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "API Setup",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Simple API key setup with minimal configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave Search Uptime",
+              "url": "https://brave.com/search/",
+              "date": "2025-11-16",
+              "value": "High availability with reliable infrastructure"
+            }
+          ],
+          "methodology": "Uptime monitoring",
+          "last_verified": "2025-11-09"
+        },
+        "cost_efficiency": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Brave API Pricing",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Competitive pricing with free tier available"
+            }
+          ],
+          "methodology": "Pricing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "result_formatting": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Response Format",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Well-structured JSON responses with metadata"
+            }
+          ],
+          "methodology": "Response format assessment",
+          "last_verified": "2025-11-09"
+        },
+        "feature_coverage": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Features",
+              "url": "https://brave.com/search/api/",
+              "date": "2025-11-16",
+              "value": "Supports web search, news, and image search"
+            }
+          ],
+          "methodology": "Feature completeness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Useful for researching documentation, finding code examples, and checking syntax"
+    },
+    "customer-support": {
+      "overall": 85,
+      "notes": "Excellent for finding answers to customer questions and product information"
+    },
+    "content-creation": {
+      "overall": 90,
+      "notes": "Great for research, fact-checking, and gathering content ideas"
+    },
+    "data-analysis": {
+      "overall": 75,
+      "notes": "Useful for finding public datasets and research, but limited direct analysis"
+    },
+    "research-assistant": {
+      "overall": 95,
+      "notes": "Excellent for academic research, literature discovery, and information gathering"
+    },
+    "legal-compliance": {
+      "overall": 78,
+      "notes": "Good for legal research and finding regulations, but verify sources"
+    },
+    "healthcare": {
+      "overall": 80,
+      "notes": "Useful for medical research, but not for PHI handling"
+    },
+    "financial-analysis": {
+      "overall": 83,
+      "notes": "Good for market research and financial news gathering"
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for educational research and learning resources"
+    },
+    "creative-writing": {
+      "overall": 88,
+      "notes": "Great for research, inspiration, and fact-checking for creative works"
+    }
+  },
+  "best_for": [
+    "Researchers needing privacy-focused web search for literature discovery",
+    "Content creators gathering ideas and fact-checking information",
+    "Educators finding learning resources without user tracking",
+    "Students conducting academic research with enhanced privacy"
+  ],
+  "strengths": [
+    "Privacy-focused search with no user tracking or profiling",
+    "Independent search index not reliant on Google or Bing",
+    "Fast response times and high-quality search results",
+    "Minimal data retention and third-party sharing",
+    "Simple API integration with clear documentation",
+    "Cost-effective with competitive pricing and free tier"
+  ],
+  "limitations": [
+    "Rate limits may be restrictive for high-volume applications",
+    "Search queries still logged by Brave (potential privacy concern)",
+    "Smaller index compared to Google, may miss some niche content",
+    "API costs can accumulate with heavy usage",
+    "Limited advanced search features compared to Google",
+    "Community-maintained MCP server (not official Anthropic release)"
+  ],
+  "metadata": {
+    "license": "Proprietary API, MCP server varies",
+    "supported_platforms": [
+      "All platforms with HTTP support"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python",
+      "Any language with HTTP"
+    ],
+    "mcp_version": "1.0",
+    "api_provider": "Brave Software",
+    "authentication": "API key",
+    "rate_limits": "Varies by plan (2000-15000 queries/month)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "tags": [
+    "search",
+    "web",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

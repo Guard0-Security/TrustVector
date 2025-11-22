@@ -1,0 +1,678 @@
+{
+  "id": "openai-o1",
+  "type": "model",
+  "name": "OpenAI o1",
+  "provider": "OpenAI",
+  "version": "20250915",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Advanced reasoning model from OpenAI achieving 57.1% on SWE-bench and 79.2% on HumanEval. Features extended chain-of-thought reasoning for complex problem-solving and mathematical tasks.",
+  "website": "https://openai.com/o1/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 93,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "57.1% resolution rate"
+            },
+            {
+              "source": "HumanEval",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "79.2% accuracy on code generation"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks measuring real-world software engineering tasks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AIME 2024",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "83% on high school competition math (top 500 US students)"
+            },
+            {
+              "source": "GPQA Diamond",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "78.3% on PhD-level science questions"
+            }
+          ],
+          "methodology": "Competition-level reasoning benchmarks requiring extended chain-of-thought",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "85.5% on comprehensive knowledge benchmark"
+            },
+            {
+              "source": "OpenAI Benchmarks",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "Strong general performance with reasoning optimization"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing across domains",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/o1",
+              "date": "2025-09-15",
+              "value": "High consistency due to chain-of-thought reasoning"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts at various temperature settings",
+          "last_verified": "2025-11-08",
+          "notes": "Extended reasoning provides more consistent problem-solving"
+        },
+        "latency_p50": {
+          "value": "4.5s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/o1",
+              "date": "2025-09-15",
+              "value": "Typical response time ~4.5s due to extended reasoning"
+            }
+          ],
+          "methodology": "Median latency for API requests with standard prompt sizes",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "8.2s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/openai-o1",
+              "date": "2025-10-01",
+              "value": "p95 latency ~8.2s for complex reasoning"
+            }
+          ],
+          "methodology": "95th percentile response time across diverse workloads",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/o1",
+              "date": "2025-09-15",
+              "value": "128K token context window"
+            }
+          ],
+          "methodology": "Official specification from provider",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Status Page",
+              "url": "https://status.openai.com/",
+              "date": "2025-11-01",
+              "value": "99.9% uptime (last 90 days)"
+            }
+          ],
+          "methodology": "Historical uptime data from official status page",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Exceptional reasoning capabilities with extended chain-of-thought. Best for complex problem-solving requiring deep thinking. Higher latency due to reasoning overhead."
+    },
+    "security": {
+      "overall_score": 88,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Research",
+              "url": "https://openai.com/safety/o1-safety",
+              "date": "2025-09-15",
+              "value": "Strong resistance to prompt injection"
+            }
+          ],
+          "methodology": "Testing against OWASP LLM01 prompt injection attacks",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Evaluations",
+              "url": "https://openai.com/safety/o1-safety",
+              "date": "2025-09-15",
+              "value": "Enhanced jailbreak resistance via chain-of-thought"
+            }
+          ],
+          "methodology": "Testing against adversarial prompt datasets",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2025-09-01",
+              "value": "No training on API data without opt-in"
+            }
+          ],
+          "methodology": "Analysis of privacy policies and data handling practices",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Evaluations",
+              "url": "https://openai.com/safety/o1-safety",
+              "date": "2025-09-15",
+              "value": "Comprehensive safety filtering"
+            }
+          ],
+          "methodology": "Comprehensive safety testing across harmful content categories",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-09-15",
+              "value": "API key authentication, OAuth, HTTPS, rate limiting"
+            }
+          ],
+          "methodology": "Review of API security features and best practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong security posture with enhanced reasoning-based safety. Good protection against common attacks."
+    },
+    "privacy_compliance": {
+      "overall_score": 86,
+      "criteria": {
+        "data_residency": {
+          "value": "US (enterprise options available)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise Documentation",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-09-01",
+              "value": "US-based processing, enterprise options for data residency"
+            }
+          ],
+          "methodology": "Review of enterprise documentation and privacy policies",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2025-09-01",
+              "value": "No training on API data by default"
+            }
+          ],
+          "methodology": "Analysis of privacy policy and data usage terms",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "30 days (minimum for abuse monitoring)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Data Usage Policy",
+              "url": "https://openai.com/policies/usage-policies",
+              "date": "2025-09-01",
+              "value": "30-day retention for safety monitoring, deletable after"
+            }
+          ],
+          "methodology": "Review of terms of service and data retention policies",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Documentation",
+              "url": "https://platform.openai.com/docs/guides/safety-best-practices",
+              "date": "2025-09-01",
+              "value": "Customer responsible for PII handling"
+            }
+          ],
+          "methodology": "Review of data protection capabilities and customer responsibilities",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Trust Portal",
+              "url": "https://trust.openai.com/",
+              "date": "2025-09-01",
+              "value": "SOC 2 Type II, GDPR compliant"
+            }
+          ],
+          "methodology": "Verification of compliance certifications and audit reports",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise Options",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-09-01",
+              "value": "Minimum 30-day retention for safety, no true zero retention"
+            }
+          ],
+          "methodology": "Review of data handling practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good privacy posture with SOC 2 certification. 30-day minimum retention for safety monitoring."
+    },
+    "trust_transparency": {
+      "overall_score": 90,
+      "criteria": {
+        "explainability": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Chain-of-Thought Reasoning",
+              "url": "https://openai.com/research/o1-reasoning",
+              "date": "2025-09-15",
+              "value": "Extended chain-of-thought visible to users"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency and explanation capabilities",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Benchmarks",
+              "url": "https://openai.com/research/o1-benchmarks",
+              "date": "2025-09-15",
+              "value": "Reduced hallucination via chain-of-thought verification"
+            }
+          ],
+          "methodology": "Testing on factual QA datasets and real-world usage",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Research",
+              "url": "https://openai.com/safety",
+              "date": "2025-09-15",
+              "value": "Ongoing bias testing and mitigation"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks and diverse demographic testing",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://platform.openai.com/docs/models/o1",
+              "date": "2025-09-15",
+              "value": "Good uncertainty expression through reasoning process"
+            }
+          ],
+          "methodology": "Assessment of confidence expression in outputs",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Model Documentation",
+              "url": "https://platform.openai.com/docs/models/o1",
+              "date": "2025-09-15",
+              "value": "Comprehensive model documentation"
+            }
+          ],
+          "methodology": "Review of documentation completeness and clarity",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Public Statements",
+              "url": "https://openai.com/research",
+              "date": "2025-09-01",
+              "value": "General description of training approach"
+            }
+          ],
+          "methodology": "Review of public disclosures about training data",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Features",
+              "url": "https://openai.com/safety/o1-safety",
+              "date": "2025-09-15",
+              "value": "Comprehensive safety guardrails"
+            }
+          ],
+          "methodology": "Analysis of built-in safety mechanisms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent explainability via chain-of-thought reasoning. Transparent problem-solving process visible to users."
+    },
+    "operational_excellence": {
+      "overall_score": 91,
+      "criteria": {
+        "api_design_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-09-15",
+              "value": "Well-designed RESTful API"
+            }
+          ],
+          "methodology": "Review of API design, consistency, and feature completeness",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI SDKs",
+              "url": "https://github.com/openai",
+              "date": "2025-09-15",
+              "value": "Official SDKs for Python, Node.js, actively maintained"
+            }
+          ],
+          "methodology": "Review of SDK quality, documentation, and maintenance",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Versioning",
+              "url": "https://platform.openai.com/docs/api-reference/versioning",
+              "date": "2025-09-15",
+              "value": "Clear versioning with deprecation notices"
+            }
+          ],
+          "methodology": "Review of versioning policy and historical practices",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Platform",
+              "url": "https://platform.openai.com/",
+              "date": "2025-09-15",
+              "value": "Comprehensive usage dashboard"
+            }
+          ],
+          "methodology": "Review of available monitoring tools and metrics",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Support",
+              "url": "https://help.openai.com/",
+              "date": "2025-09-15",
+              "value": "Comprehensive support with enterprise SLAs"
+            }
+          ],
+          "methodology": "Assessment of documentation, community, and support responsiveness",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Ecosystem",
+              "url": "https://platform.openai.com/ecosystem",
+              "date": "2025-09-15",
+              "value": "Mature ecosystem with extensive integrations"
+            }
+          ],
+          "methodology": "Analysis of third-party integrations and tools",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms of Service",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2025-09-01",
+              "value": "Standard commercial terms, enterprise agreements available"
+            }
+          ],
+          "methodology": "Review of licensing terms and restrictions",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent operational maturity with well-designed APIs and mature ecosystem. Enterprise-ready with strong support."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 93,
+      "notes": "Excellent coding with 57.1% SWE-bench and 79.2% HumanEval. Chain-of-thought helps with complex algorithms.",
+      "alternatives": [
+        "claude-4-sonnet",
+        "claude-4-opus"
+      ]
+    },
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good capabilities but high latency (4.5s) may impact customer experience. Better for complex issues.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Good content generation but reasoning focus may add unnecessary latency for creative tasks.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    },
+    "data-analysis": {
+      "overall": 95,
+      "notes": "Exceptional analytical capabilities with chain-of-thought reasoning. Best for complex analysis.",
+      "alternatives": [
+        "claude-4-opus",
+        "nemotron-ultra-253b"
+      ]
+    },
+    "research-assistant": {
+      "overall": 96,
+      "notes": "Outstanding research capabilities with transparent reasoning. Excellent for complex research tasks.",
+      "alternatives": [
+        "claude-4-opus",
+        "claude-3-7-sonnet-r"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 84,
+      "notes": "Good reasoning for legal analysis but 30-day retention may be concern for some use cases.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "healthcare": {
+      "overall": 83,
+      "notes": "Good reasoning but not HIPAA eligible. 30-day retention may be concern for healthcare data.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 94,
+      "notes": "Outstanding for complex financial modeling and analysis with transparent reasoning.",
+      "alternatives": [
+        "claude-4-opus",
+        "nemotron-ultra-253b"
+      ]
+    },
+    "education": {
+      "overall": 96,
+      "notes": "Exceptional for education with visible chain-of-thought. Perfect for teaching problem-solving.",
+      "alternatives": [
+        "claude-4-opus",
+        "claude-3-7-sonnet-r"
+      ]
+    },
+    "creative-writing": {
+      "overall": 81,
+      "notes": "Competent but reasoning focus may reduce creative spontaneity. Higher latency for creative tasks.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    }
+  },
+  "strengths": [
+    "Best-in-class reasoning with 78.3% GPQA Diamond",
+    "Visible chain-of-thought for transparent problem-solving",
+    "Exceptional mathematical capabilities (83% on AIME)",
+    "Strong coding performance (57.1% SWE-bench)",
+    "Excellent for complex analytical and research tasks",
+    "High explainability via reasoning traces"
+  ],
+  "limitations": [
+    "High latency (4.5s p50, 8.2s p95) due to reasoning overhead",
+    "Not suitable for real-time applications",
+    "30-day minimum data retention (not ephemeral)",
+    "Not HIPAA eligible",
+    "Higher cost due to extended reasoning compute",
+    "Reasoning overhead may be unnecessary for simple tasks"
+  ],
+  "best_for": [
+    "Complex reasoning tasks requiring deep analysis",
+    "Mathematical and scientific problem-solving",
+    "Educational applications needing visible reasoning",
+    "Research and data analysis requiring transparency",
+    "Complex coding problems requiring architectural thinking"
+  ],
+  "not_recommended_for": [
+    "Real-time applications requiring <2s latency",
+    "Simple tasks not requiring complex reasoning",
+    "Healthcare applications requiring HIPAA",
+    "Applications requiring ephemeral data processing",
+    "Creative writing and spontaneous generation",
+    "Customer support requiring fast response times"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$15.00 per 1M tokens",
+      "output": "$60.00 per 1M tokens",
+      "notes": "Premium reasoning model pricing, significantly higher than standard models",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "api_endpoint": "https://api.openai.com/v1/chat/completions",
+    "open_source": false,
+    "architecture": "Transformer-based with extended chain-of-thought reasoning",
+    "parameters": "Not disclosed"
+  },
+  "related_entities": [
+    "claude-sonnet-4-5",
+    "claude-opus-4-1",
+    "claude-sonnet-4-5",
+    "openai-o3-mini"
+  ],
+  "tags": [
+    "reasoning",
+    "chain-of-thought",
+    "coding",
+    "mathematics",
+    "research",
+    "explainable",
+    "soc-2-certified",
+    "high-latency"
+  ]
+}

@@ -1,0 +1,679 @@
+{
+  "id": "gpt-4-1",
+  "type": "model",
+  "name": "GPT-4.1",
+  "provider": "OpenAI",
+  "version": "2025-01",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "OpenAI's flagship GPT-4.1 model offering strong general-purpose capabilities across diverse tasks. The standard choice for production applications requiring reliable, high-quality outputs.",
+  "website": "https://openai.com/gpt-4-1",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HumanEval Benchmark",
+              "url": "https://openai.com/research/gpt-4-1-evaluation",
+              "date": "2025-01-15",
+              "value": "48.1% pass rate"
+            },
+            {
+              "source": "MBPP Benchmark",
+              "url": "https://openai.com/research/gpt-4-1-evaluation",
+              "date": "2025-01-15",
+              "value": "62% on mostly basic programming problems"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://openai.com/research/gpt-4-1-evaluation",
+              "date": "2025-01-15",
+              "value": "68% on mathematical reasoning tasks"
+            },
+            {
+              "source": "GPQA",
+              "url": "https://openai.com/research/gpt-4-1-evaluation",
+              "date": "2025-01-15",
+              "value": "52% on graduate-level reasoning"
+            }
+          ],
+          "methodology": "Mathematical and scientific reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU Benchmark",
+              "url": "https://openai.com/research/gpt-4-1-evaluation",
+              "date": "2025-01-15",
+              "value": "66.3% on multitask language understanding"
+            },
+            {
+              "source": "LMSYS Chatbot Arena",
+              "url": "https://lmsys.org/blog/2025-01-20-arena-update/",
+              "date": "2025-01-20",
+              "value": "1250 ELO (Strong mid-tier performance)"
+            }
+          ],
+          "methodology": "Crowdsourced comparisons and comprehensive knowledge testing",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Internal Testing",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "Strong consistency across temperature settings"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "1.2s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "Typical response time ~1.2s"
+            }
+          ],
+          "methodology": "Median latency for API requests",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "2.4s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/gpt-4-1",
+              "date": "2025-01-25",
+              "value": "p95 latency ~2.4s"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "128K token context window"
+            }
+          ],
+          "methodology": "Official specification from provider",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Status Page",
+              "url": "https://status.openai.com/",
+              "date": "2025-11-01",
+              "value": "99.9% uptime (last 90 days)"
+            }
+          ],
+          "methodology": "Historical uptime data from official status page",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong general-purpose performance with good balance across coding, reasoning, and knowledge tasks. Flagship model for most production use cases."
+    },
+    "security": {
+      "overall_score": 86,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Testing",
+              "url": "https://openai.com/research/gpt-4-1-safety",
+              "date": "2025-01-15",
+              "value": "Strong resistance to prompt injection attacks"
+            }
+          ],
+          "methodology": "Testing against OWASP LLM01 prompt injection attacks",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Evaluations",
+              "url": "https://openai.com/research/gpt-4-1-safety",
+              "date": "2025-01-15",
+              "value": "Robust safety mechanisms"
+            }
+          ],
+          "methodology": "Testing against adversarial prompt datasets",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2024-12-15",
+              "value": "API data not used for training by default"
+            }
+          ],
+          "methodology": "Analysis of privacy policies",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Benchmarks",
+              "url": "https://openai.com/research/gpt-4-1-safety",
+              "date": "2025-01-15",
+              "value": "Comprehensive safety systems"
+            }
+          ],
+          "methodology": "Safety testing across harmful content categories",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-01-15",
+              "value": "API key authentication, HTTPS, rate limiting"
+            }
+          ],
+          "methodology": "Review of API security features",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong security posture with comprehensive safety systems. Robust protection against adversarial attacks."
+    },
+    "privacy_compliance": {
+      "overall_score": 84,
+      "criteria": {
+        "data_residency": {
+          "value": "US (primary)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-01-15",
+              "value": "US-based infrastructure"
+            }
+          ],
+          "methodology": "Review of enterprise documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2024-12-15",
+              "value": "API data not used for training by default"
+            }
+          ],
+          "methodology": "Analysis of privacy policy",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "30 days",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms of Service",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2024-12-15",
+              "value": "API data retained for 30 days"
+            }
+          ],
+          "methodology": "Review of terms of service",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Documentation",
+              "url": "https://platform.openai.com/docs/guides/safety",
+              "date": "2025-01-15",
+              "value": "Customer responsible for PII redaction"
+            }
+          ],
+          "methodology": "Review of data protection capabilities",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Trust Portal",
+              "url": "https://trust.openai.com/",
+              "date": "2025-01-15",
+              "value": "SOC 2 Type II, GDPR compliant"
+            }
+          ],
+          "methodology": "Verification of compliance certifications",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "30-day retention for abuse monitoring"
+            }
+          ],
+          "methodology": "Review of data handling practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Standard enterprise privacy practices with SOC 2 Type II certification. 30-day retention period."
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "explainability": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "Good explanations and reasoning"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SimpleQA Benchmark",
+              "url": "https://openai.com/research/gpt-4-1-evaluation",
+              "date": "2025-01-15",
+              "value": "Good factual accuracy"
+            }
+          ],
+          "methodology": "Testing on factual QA datasets",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Report",
+              "url": "https://openai.com/research/gpt-4-1-safety",
+              "date": "2025-01-15",
+              "value": "Regular bias testing and mitigation"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "Good uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment of confidence expression",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Model Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-4-1",
+              "date": "2025-01-15",
+              "value": "Comprehensive documentation with benchmarks"
+            }
+          ],
+          "methodology": "Review of documentation completeness",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Public Statements",
+              "url": "https://openai.com/research",
+              "date": "2025-01-15",
+              "value": "General description provided"
+            }
+          ],
+          "methodology": "Review of public disclosures",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Systems",
+              "url": "https://openai.com/research/gpt-4-1-safety",
+              "date": "2025-01-15",
+              "value": "Comprehensive safety guardrails"
+            }
+          ],
+          "methodology": "Analysis of safety mechanisms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good transparency with solid explainability. Lower hallucination rate than smaller models. Comprehensive safety systems."
+    },
+    "operational_excellence": {
+      "overall_score": 90,
+      "criteria": {
+        "api_design_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-01-15",
+              "value": "Well-designed RESTful API with comprehensive features"
+            }
+          ],
+          "methodology": "Review of API design",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI SDKs",
+              "url": "https://github.com/openai",
+              "date": "2025-01-15",
+              "value": "High-quality SDKs for Python, Node.js"
+            }
+          ],
+          "methodology": "Review of SDK quality",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Versioning",
+              "url": "https://platform.openai.com/docs/versioning",
+              "date": "2025-01-15",
+              "value": "Clear versioning with deprecation notices"
+            }
+          ],
+          "methodology": "Review of versioning approach",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Dashboard",
+              "url": "https://platform.openai.com/dashboard",
+              "date": "2025-01-15",
+              "value": "Comprehensive usage dashboard"
+            }
+          ],
+          "methodology": "Review of monitoring tools",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Support",
+              "url": "https://help.openai.com/",
+              "date": "2025-01-15",
+              "value": "Excellent support and documentation"
+            }
+          ],
+          "methodology": "Assessment of support channels",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Ecosystem",
+              "url": "https://github.com/topics/openai",
+              "date": "2025-11-01",
+              "value": "Extremely mature ecosystem"
+            }
+          ],
+          "methodology": "Analysis of integrations",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms of Service",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2024-12-15",
+              "value": "Clear commercial terms"
+            }
+          ],
+          "methodology": "Review of licensing",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent operational maturity with industry-leading ecosystem and developer experience."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good coding capabilities for typical development tasks. 48.1% HumanEval suitable for standard programming.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "customer-support": {
+      "overall": 87,
+      "notes": "Excellent for customer support with strong conversational abilities and good response times.",
+      "alternatives": [
+        "gpt-4-1-mini",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "content-creation": {
+      "overall": 86,
+      "notes": "Strong content creation with natural language and good creativity.",
+      "alternatives": [
+        "claude-sonnet-4-5",
+        "gpt-4o"
+      ]
+    },
+    "data-analysis": {
+      "overall": 83,
+      "notes": "Good for data analysis and business intelligence tasks.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "research-assistant": {
+      "overall": 85,
+      "notes": "Strong research capabilities with good knowledge base (66.3% MMLU).",
+      "alternatives": [
+        "claude-sonnet-4-5",
+        "openai-o3"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 80,
+      "notes": "Adequate for legal document analysis but requires human oversight.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "healthcare": {
+      "overall": 77,
+      "notes": "Not HIPAA eligible. Limited use for healthcare applications.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 82,
+      "notes": "Good for financial analysis and reporting tasks.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "education": {
+      "overall": 86,
+      "notes": "Excellent for educational applications and tutoring.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "creative-writing": {
+      "overall": 84,
+      "notes": "Strong creative writing with natural storytelling abilities.",
+      "alternatives": [
+        "claude-sonnet-4-5",
+        "gpt-4o"
+      ]
+    }
+  },
+  "strengths": [
+    "Strong general-purpose performance (66.3% MMLU)",
+    "Good balance of quality and speed (~1.2s p50)",
+    "Large 128K context window for document processing",
+    "Mature ecosystem with extensive integrations",
+    "Reliable uptime and infrastructure (99.9%)",
+    "Comprehensive safety and security features"
+  ],
+  "limitations": [
+    "Moderate coding performance (48.1% HumanEval)",
+    "30-day data retention period",
+    "Not HIPAA eligible",
+    "Limited regional data residency options",
+    "Higher pricing than smaller models",
+    "Training data transparency limited"
+  ],
+  "best_for": [
+    "General-purpose production applications",
+    "Customer support and conversational AI",
+    "Content creation and marketing",
+    "Business intelligence and data analysis",
+    "Educational platforms"
+  ],
+  "not_recommended_for": [
+    "Complex software engineering (use OpenAI o3 instead)",
+    "Advanced mathematical research (use OpenAI o3 instead)",
+    "Healthcare applications (not HIPAA eligible)",
+    "Applications requiring zero data retention",
+    "Ultra-low latency requirements (<500ms)",
+    "Cost-sensitive high-volume workloads"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$2.50 per 1M tokens",
+      "output": "$10.00 per 1M tokens",
+      "notes": "Standard flagship pricing"
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic",
+      "Hindi",
+      "Russian",
+      "Dutch"
+    ],
+    "modalities": [
+      "text",
+      "image (input)"
+    ],
+    "api_endpoint": "https://api.openai.com/v1/chat/completions",
+    "open_source": false,
+    "architecture": "Transformer-based with multimodal capabilities",
+    "parameters": "Not disclosed (large)"
+  },
+  "related_entities": [
+    "openai-o3",
+    "gpt-4-1-mini",
+    "gpt-4o",
+    "claude-sonnet-4-5"
+  ],
+  "tags": [
+    "general-purpose",
+    "flagship",
+    "production-ready",
+    "multimodal",
+    "enterprise",
+    "balanced"
+  ]
+}

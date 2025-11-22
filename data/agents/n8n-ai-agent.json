@@ -1,0 +1,517 @@
+{
+  "id": "n8n-ai-agent",
+  "type": "agent",
+  "name": "n8n AI Agent",
+  "provider": "n8n",
+  "version": "1.113.3",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Fair-code workflow automation platform with AI agent capabilities. Visual workflow builder integrating AI models, tools, and 400+ app integrations for building intelligent automation and agentic workflows.",
+  "website": "https://n8n.io/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 83,
+      "criteria": {
+        "workflow_execution": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "n8n Documentation",
+              "url": "https://docs.n8n.io/",
+              "date": "2024-10-20",
+              "value": "Reliable workflow execution with error handling and retries"
+            }
+          ],
+          "methodology": "Workflow reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "ai_agent_nodes": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AI Nodes",
+              "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.agent/",
+              "date": "2024-10-15",
+              "value": "LangChain agent nodes with tool calling and memory"
+            }
+          ],
+          "methodology": "AI agent capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "integration_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Integrations",
+              "url": "https://n8n.io/integrations/",
+              "date": "2024-10-01",
+              "value": "400+ pre-built integrations with apps and services"
+            }
+          ],
+          "methodology": "Integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "llm_support": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Nodes",
+              "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.lmchatopenai/",
+              "date": "2024-10-01",
+              "value": "Supports OpenAI, Anthropic, Google, Azure, local models"
+            }
+          ],
+          "methodology": "LLM integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Error Workflows",
+              "url": "https://docs.n8n.io/workflows/error-handling/",
+              "date": "2024-09-20",
+              "value": "Comprehensive error handling with retry logic and error workflows"
+            }
+          ],
+          "methodology": "Error recovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Variable (100ms-10s)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://docs.n8n.io/",
+              "date": "2024-10-01",
+              "value": "Depends on workflow complexity and external services"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 81,
+      "criteria": {
+        "credential_management": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Credentials",
+              "url": "https://docs.n8n.io/credentials/",
+              "date": "2024-10-01",
+              "value": "Encrypted credential storage with access controls"
+            }
+          ],
+          "methodology": "Credential security review",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://docs.n8n.io/hosting/",
+              "date": "2024-10-01",
+              "value": "Self-hosting with Docker, npm, Kubernetes"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "authentication": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Authentication",
+              "url": "https://docs.n8n.io/user-management/",
+              "date": "2024-10-01",
+              "value": "User authentication with RBAC in enterprise version"
+            }
+          ],
+          "methodology": "Authentication testing",
+          "last_verified": "2025-11-09"
+        },
+        "fair_code_license": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "License",
+              "url": "https://github.com/n8n-io/n8n",
+              "date": "2024-10-20",
+              "value": "Fair-code (Sustainable Use License), source available"
+            }
+          ],
+          "methodology": "License assessment",
+          "last_verified": "2025-11-09"
+        },
+        "webhook_security": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Webhooks",
+              "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/",
+              "date": "2024-10-01",
+              "value": "Webhook authentication options available"
+            }
+          ],
+          "methodology": "Webhook security review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 84,
+      "criteria": {
+        "data_retention": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Execution Data",
+              "url": "https://docs.n8n.io/workflows/executions/",
+              "date": "2024-10-01",
+              "value": "Configurable execution data retention policies"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://docs.n8n.io/hosting/",
+              "date": "2024-10-01",
+              "value": "GDPR compliance achievable with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Installation",
+              "url": "https://docs.n8n.io/hosting/installation/",
+              "date": "2024-10-01",
+              "value": "Full local deployment with Docker or npm"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_processing": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Flow",
+              "url": "https://docs.n8n.io/",
+              "date": "2024-10-01",
+              "value": "Data processed locally or sent to integrated services"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "execution_logging": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Logging",
+              "url": "https://docs.n8n.io/workflows/executions/",
+              "date": "2024-10-01",
+              "value": "Execution logs with configurable retention and privacy controls"
+            }
+          ],
+          "methodology": "Logging privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 87,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "n8n Documentation",
+              "url": "https://docs.n8n.io/",
+              "date": "2024-10-20",
+              "value": "Excellent comprehensive documentation with examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "visual_workflow_editor": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Editor",
+              "url": "https://n8n.io/",
+              "date": "2024-10-01",
+              "value": "Intuitive visual workflow editor with debugging"
+            }
+          ],
+          "methodology": "UI/UX assessment",
+          "last_verified": "2025-11-09"
+        },
+        "source_available": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/n8n-io/n8n",
+              "date": "2024-10-20",
+              "value": "Fair-code license, 48k+ stars, source code available"
+            }
+          ],
+          "methodology": "Source availability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "execution_history": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Execution Logs",
+              "url": "https://docs.n8n.io/workflows/executions/",
+              "date": "2024-10-01",
+              "value": "Detailed execution history with step-by-step tracing"
+            }
+          ],
+          "methodology": "Traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://community.n8n.io/",
+              "date": "2024-10-20",
+              "value": "Active forum and community support"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 85,
+      "criteria": {
+        "ease_of_use": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "User Experience",
+              "url": "https://n8n.io/",
+              "date": "2024-10-01",
+              "value": "Extremely user-friendly visual workflow builder"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Scaling",
+              "url": "https://docs.n8n.io/hosting/scaling/",
+              "date": "2024-10-01",
+              "value": "Queue mode for horizontal scaling with Redis"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://n8n.io/pricing/",
+              "date": "2024-10-01",
+              "value": "Free self-hosted, cloud pricing starts at $20/month"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Monitoring",
+              "url": "https://docs.n8n.io/hosting/logging-monitoring/",
+              "date": "2024-10-01",
+              "value": "Built-in execution monitoring and external integrations"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "integration_ecosystem": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Integrations",
+              "url": "https://n8n.io/integrations/",
+              "date": "2024-10-01",
+              "value": "400+ integrations with major apps and services"
+            }
+          ],
+          "methodology": "Integration ecosystem assessment",
+          "last_verified": "2025-11-09"
+        },
+        "template_library": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Templates",
+              "url": "https://n8n.io/workflows/",
+              "date": "2024-10-01",
+              "value": "1000+ pre-built workflow templates"
+            }
+          ],
+          "methodology": "Template availability assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Extremely intuitive visual workflow builder for non-developers",
+    "400+ pre-built integrations with apps and services",
+    "Fair-code licensed with 48k+ GitHub stars and active community",
+    "Self-hosting option for complete data control",
+    "AI agent nodes with LangChain integration for intelligent workflows",
+    "1000+ workflow templates and excellent documentation"
+  ],
+  "limitations": [
+    "Fair-code license (not pure open source), commercial restrictions",
+    "AI agent capabilities less advanced than specialized frameworks",
+    "Can become expensive at scale with cloud hosting",
+    "Learning curve for complex workflow logic",
+    "Limited specialized AI/ML features compared to dedicated platforms",
+    "Performance can degrade with very complex workflows"
+  ],
+  "metadata": {
+    "license": "Sustainable Use License (Fair-code)",
+    "supported_models": [
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Azure OpenAI",
+      "Ollama"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "deployment_type": "Self-hosted (Docker, npm, Kubernetes) or n8n Cloud",
+    "tool_support": [
+      "400+ app integrations",
+      "LangChain tools",
+      "Custom functions"
+    ],
+    "pricing_model": "Fair-code license - Free self-hosted for personal/internal use, Cloud with unlimited workflows/steps/users (all plans), no active workflow limits as of Aug 2025",
+    "github_stars": "146956+",
+    "latest_version": "1.113.3 (September 26, 2025)",
+    "valuation": "$2.3B (August 2025)",
+    "annual_revenue": "$40M+",
+    "first_release": "2019",
+    "workflow_templates": "1000+",
+    "ai_features": [
+      "LangChain agents",
+      "AI nodes",
+      "Vector stores",
+      "Memory"
+    ]
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 89,
+      "notes": "Excellent for automating support workflows with AI agents"
+    },
+    "code-generation": {
+      "overall": 76,
+      "notes": "Can automate code workflows but not specialized for development"
+    },
+    "research-assistant": {
+      "overall": 84,
+      "notes": "Good for automated research and content aggregation"
+    },
+    "data-analysis": {
+      "overall": 87,
+      "notes": "Strong for data pipeline automation and analysis workflows"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Good for automating content generation and publishing"
+    },
+    "education": {
+      "overall": 79,
+      "notes": "Suitable for automated educational workflows"
+    },
+    "healthcare": {
+      "overall": 78,
+      "notes": "Can automate healthcare workflows with proper compliance setup"
+    },
+    "financial-analysis": {
+      "overall": 82,
+      "notes": "Self-hosted option suitable for financial automation"
+    },
+    "legal-compliance": {
+      "overall": 81,
+      "notes": "Good for document workflow automation"
+    },
+    "creative-writing": {
+      "overall": 80,
+      "notes": "Suitable for creative workflow automation"
+    }
+  },
+  "best_for": [
+    "Teams needing self-hosted workflow automation with AI",
+    "Developers wanting open-source alternative to Zapier with LLMs",
+    "Organizations requiring data privacy through self-hosting",
+    "Technical users building complex AI-powered workflows"
+  ],
+  "tags": [
+    "automation",
+    "workflow"
+  ]
+}

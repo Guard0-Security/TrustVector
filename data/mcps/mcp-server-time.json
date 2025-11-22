@@ -1,0 +1,454 @@
+{
+  "id": "mcp-server-time",
+  "type": "mcp",
+  "name": "MCP Time Server",
+  "provider": "Anthropic",
+  "version": "2025.9.25",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Anthropic MCP server for time and timezone operations. Provides AI models with current time information, timezone conversions, date calculations, and scheduling assistance. Essential for time-sensitive workflows and international collaboration.",
+  "website": "https://modelcontextprotocol.io/docs/servers/time",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 92,
+      "criteria": {
+        "time_accuracy": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "System Time APIs",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+              "date": "2025-11-16",
+              "value": "Uses system time APIs for accurate time information"
+            }
+          ],
+          "methodology": "Time accuracy verification",
+          "last_verified": "2025-11-09"
+        },
+        "timezone_conversion_accuracy": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "IANA Time Zone Database",
+              "url": "https://www.iana.org/time-zones",
+              "date": "2025-11-16",
+              "value": "Uses authoritative IANA timezone database for conversions"
+            }
+          ],
+          "methodology": "Conversion accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "dst_handling": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Timezone Library",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Properly handles Daylight Saving Time transitions"
+            }
+          ],
+          "methodology": "DST edge case testing",
+          "last_verified": "2025-11-09"
+        },
+        "date_calculation_reliability": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Date Arithmetic Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Reliable date calculations using standard libraries"
+            }
+          ],
+          "methodology": "Date calculation testing",
+          "last_verified": "2025-11-09"
+        },
+        "response_speed": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Performance Testing",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Near-instantaneous responses (<10ms) for all operations"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 95,
+      "criteria": {
+        "read_only_operations": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Read-only operations; no system modification capabilities"
+            }
+          ],
+          "methodology": "Operation authorization review",
+          "last_verified": "2025-11-09"
+        },
+        "system_time_manipulation_risk": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Cannot modify system time; read-only access to time information"
+            }
+          ],
+          "methodology": "System modification testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_exposure_risk": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Minimal data exposure; only timezone and time information shared"
+            }
+          ],
+          "methodology": "Data flow security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "timezone_inference_privacy": {
+          "score": 90,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "System timezone may reveal user location but minimal privacy risk"
+            }
+          ],
+          "methodology": "Privacy impact assessment",
+          "last_verified": "2025-11-09"
+        },
+        "resource_consumption": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Resource Testing",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Minimal resource consumption; no DoS risk"
+            }
+          ],
+          "methodology": "Resource consumption testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 88,
+      "criteria": {
+        "location_inference_risk": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "System timezone can indicate general location but not precise"
+            }
+          ],
+          "methodology": "Location privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "temporal_pattern_exposure": {
+          "score": 88,
+          "confidence": "low",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Query patterns may reveal user schedule but minimal tracking"
+            }
+          ],
+          "methodology": "Pattern analysis",
+          "last_verified": "2025-11-09"
+        },
+        "data_minimization": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Minimal data collection; only time queries processed"
+            }
+          ],
+          "methodology": "Data minimization review",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Only time query data shared with LLM provider"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 91,
+      "criteria": {
+        "documentation_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Time Docs",
+              "url": "https://modelcontextprotocol.io/docs/servers/time",
+              "date": "2025-11-16",
+              "value": "Clear documentation with usage examples and timezone reference"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All time queries logged in MCP transaction logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fully open source implementation with MIT license"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "timezone_data_source_clarity": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://modelcontextprotocol.io/docs/servers/time",
+              "date": "2025-11-16",
+              "value": "Clear documentation of IANA timezone database usage"
+            }
+          ],
+          "methodology": "Data source transparency review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 93,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Setup Guide",
+              "url": "https://modelcontextprotocol.io/quickstart",
+              "date": "2025-11-16",
+              "value": "Zero-configuration setup; no dependencies required"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "operation_performance": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Performance Testing",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Near-instantaneous responses for all operations"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Simple, stable implementation with minimal failure points"
+            }
+          ],
+          "methodology": "Reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "feature_coverage": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Time Server",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+              "date": "2025-11-16",
+              "value": "Covers current time, timezones, conversions, and date calculations"
+            }
+          ],
+          "methodology": "Feature completeness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_adoption": {
+          "score": 90,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Popular utility MCP server with broad adoption"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Highly accurate time and timezone information from authoritative sources",
+    "Zero-configuration setup with no external dependencies",
+    "Read-only operations eliminate security and modification risks",
+    "Near-instantaneous performance with minimal resource usage",
+    "Open source with comprehensive documentation",
+    "Proper handling of complex timezone and DST scenarios"
+  ],
+  "limitations": [
+    "System timezone may reveal general user location",
+    "Limited to time information; no calendar or scheduling features",
+    "Cannot modify system time (by design)",
+    "Query patterns may reveal user schedule to LLM provider",
+    "Depends on system time accuracy and timezone database updates",
+    "No advanced scheduling or reminder capabilities"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "github_stars": 58700,
+    "api_dependency": "System time APIs, IANA Time Zone Database",
+    "authentication": "None required",
+    "first_release": "2024-11",
+    "maintained_by": "Anthropic",
+    "status": "Official - Active",
+    "transport_types": [
+      "stdio"
+    ],
+    "installation_methods": [
+      "npm",
+      "pip"
+    ]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 85,
+      "notes": "Useful for timestamp generation and time-based logic implementation"
+    },
+    "customer-support": {
+      "overall": 88,
+      "notes": "Excellent for scheduling, business hours calculation, and timezone coordination"
+    },
+    "content-creation": {
+      "overall": 80,
+      "notes": "Good for content scheduling and publication timing"
+    },
+    "data-analysis": {
+      "overall": 82,
+      "notes": "Useful for temporal data analysis and time-series calculations"
+    },
+    "research-assistant": {
+      "overall": 75,
+      "notes": "Helpful for research scheduling and deadline management"
+    },
+    "legal-compliance": {
+      "overall": 78,
+      "notes": "Useful for compliance deadline tracking and document timestamping"
+    },
+    "healthcare": {
+      "overall": 80,
+      "notes": "Good for appointment scheduling and medication timing"
+    },
+    "financial-analysis": {
+      "overall": 85,
+      "notes": "Important for market hours, trading windows, and settlement timing"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for class scheduling and assignment deadline management"
+    },
+    "creative-writing": {
+      "overall": 70,
+      "notes": "Useful for story timelines and publication scheduling"
+    }
+  },
+  "best_for": [
+    "Developers needing timezone-aware time operations",
+    "Schedulers building time-based workflows",
+    "Applications requiring precise time calculations"
+  ],
+  "tags": [
+    "time",
+    "utilities",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "id": "rasa",
+  "type": "agent",
+  "name": "Rasa Open Source",
+  "provider": "Rasa Technologies",
+  "version": "3.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Leading open-source conversational AI framework for building contextual assistants and chatbots. Provides full control over NLU, dialogue management, and deployment with on-premises and cloud options.",
+  "website": "https://rasa.com/docs/rasa/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 82,
+      "criteria": {
+        "intent_classification": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Rasa NLU",
+              "url": "https://rasa.com/docs/rasa/nlu-training-data/",
+              "date": "2024-10-20",
+              "value": "Customizable NLU pipeline with multiple classifiers"
+            }
+          ],
+          "methodology": "Intent accuracy benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "dialogue_management": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Rasa Core",
+              "url": "https://rasa.com/docs/rasa/dialogue-elements/",
+              "date": "2024-10-15",
+              "value": "Machine learning-based dialogue policies and story-based training"
+            }
+          ],
+          "methodology": "Conversation flow testing",
+          "last_verified": "2025-11-09"
+        },
+        "entity_extraction": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Entity Extractors",
+              "url": "https://rasa.com/docs/rasa/components/",
+              "date": "2024-10-01",
+              "value": "Multiple entity extractors (CRF, DIET, SpaCy, Duckling)"
+            }
+          ],
+          "methodology": "Entity extraction testing",
+          "last_verified": "2025-11-09"
+        },
+        "custom_actions": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Custom Actions",
+              "url": "https://rasa.com/docs/rasa/custom-actions/",
+              "date": "2024-10-01",
+              "value": "Full Python SDK for custom business logic and API calls"
+            }
+          ],
+          "methodology": "Custom action testing",
+          "last_verified": "2025-11-09"
+        },
+        "context_handling": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slot Management",
+              "url": "https://rasa.com/docs/rasa/domain/#slots",
+              "date": "2024-09-20",
+              "value": "Slot-based context tracking with influence on dialogue"
+            }
+          ],
+          "methodology": "Context retention testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "100-500ms (self-hosted)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://rasa.com/docs/rasa/",
+              "date": "2024-10-01",
+              "value": "Latency depends on infrastructure and model complexity"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 78,
+      "criteria": {
+        "self_hosted_control": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment Options",
+              "url": "https://rasa.com/docs/rasa/installation/",
+              "date": "2024-10-01",
+              "value": "Full control with on-premises or private cloud deployment"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "authentication": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Features",
+              "url": "https://rasa.com/docs/rasa/http-api/#authentication",
+              "date": "2024-10-01",
+              "value": "Token-based authentication, requires custom implementation"
+            }
+          ],
+          "methodology": "Authentication capabilities review",
+          "last_verified": "2025-11-09"
+        },
+        "data_privacy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/RasaHQ/rasa",
+              "date": "2024-10-20",
+              "value": "All data stays on your infrastructure, no third-party sharing"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/RasaHQ/rasa",
+              "date": "2024-10-20",
+              "value": "Apache 2.0 license, 18k+ stars, full source code available"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "encryption": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://rasa.com/docs/rasa/",
+              "date": "2024-10-01",
+              "value": "Encryption implementation is user's responsibility"
+            }
+          ],
+          "methodology": "Security features review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 87,
+      "criteria": {
+        "data_retention": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tracker Store",
+              "url": "https://rasa.com/docs/rasa/tracker-stores/",
+              "date": "2024-10-01",
+              "value": "Full control over conversation storage and retention"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://rasa.com/docs/rasa/",
+              "date": "2024-10-01",
+              "value": "GDPR compliance achievable with proper configuration"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "on_premise_deployment": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://rasa.com/docs/rasa/installation/",
+              "date": "2024-10-01",
+              "value": "Complete on-premises deployment with no external dependencies"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "pii_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "PIIEntityExtractor",
+              "url": "https://rasa.com/docs/rasa/components/",
+              "date": "2024-09-20",
+              "value": "PII detection available, anonymization requires custom actions"
+            }
+          ],
+          "methodology": "PII protection assessment",
+          "last_verified": "2025-11-09"
+        },
+        "no_data_sharing": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source Model",
+              "url": "https://github.com/RasaHQ/rasa",
+              "date": "2024-10-01",
+              "value": "No telemetry or data sharing with third parties"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 86,
+      "criteria": {
+        "documentation_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Rasa Docs",
+              "url": "https://rasa.com/docs/rasa/",
+              "date": "2024-10-20",
+              "value": "Excellent documentation with tutorials and best practices"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/RasaHQ/rasa",
+              "date": "2024-10-20",
+              "value": "Apache 2.0, 18k+ stars, active community contributions"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "conversation_debugging": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Debug Mode",
+              "url": "https://rasa.com/docs/rasa/debugging-your-assistant/",
+              "date": "2024-10-01",
+              "value": "Interactive learning and conversation debugging tools"
+            }
+          ],
+          "methodology": "Debugging tools assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://forum.rasa.com/",
+              "date": "2024-10-20",
+              "value": "Active forum, Discord, and community contributions"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        },
+        "explainability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Policy Insights",
+              "url": "https://rasa.com/docs/rasa/policies/",
+              "date": "2024-10-01",
+              "value": "Policy confidence scores available but limited explainability"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 77,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Connectors",
+              "url": "https://rasa.com/docs/rasa/connectors/",
+              "date": "2024-10-01",
+              "value": "Built-in connectors for Slack, Facebook, Telegram, REST API"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Scaling Guide",
+              "url": "https://rasa.com/docs/rasa/deploy/deploy-rasa/",
+              "date": "2024-10-01",
+              "value": "Horizontal scaling possible with container orchestration"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/RasaHQ/rasa",
+              "date": "2024-10-01",
+              "value": "Free open source, costs only for infrastructure"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring",
+              "url": "https://rasa.com/docs/rasa/monitoring/",
+              "date": "2024-10-01",
+              "value": "Basic metrics endpoint, requires external monitoring tools"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Deployment Guide",
+              "url": "https://rasa.com/docs/rasa/deploy/introduction/",
+              "date": "2024-10-01",
+              "value": "Requires DevOps expertise for production deployment"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "training_pipeline": {
+          "score": 81,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Training",
+              "url": "https://rasa.com/docs/rasa/training-data-format/",
+              "date": "2024-10-01",
+              "value": "Flexible training pipeline with customizable components"
+            }
+          ],
+          "methodology": "Training capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Open source (Apache 2.0) with complete control over code and data",
+    "On-premises deployment option for maximum privacy and compliance",
+    "No vendor lock-in or usage-based pricing, only infrastructure costs",
+    "Highly customizable NLU pipeline and dialogue policies",
+    "Active community with 18k+ GitHub stars and extensive resources",
+    "Machine learning-based dialogue management for contextual conversations"
+  ],
+  "limitations": [
+    "Requires significant ML and DevOps expertise for deployment",
+    "Limited enterprise features out-of-box (auth, monitoring, analytics)",
+    "Steeper learning curve compared to managed cloud services",
+    "Production deployment and scaling requires infrastructure knowledge",
+    "No built-in analytics dashboard, requires external tools",
+    "Training data quality critical for good performance"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_models": [
+      "DIET",
+      "TED Policy",
+      "Transformer Embedding Dialogue"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted (on-premises, cloud, containers)",
+    "tool_support": [
+      "Custom actions (Python)",
+      "REST API",
+      "Webhooks"
+    ],
+    "pricing_model": "Free open source (Rasa Pro available for enterprise)",
+    "github_stars": "20700+",
+    "first_release": "2016",
+    "supported_channels": "Slack, Facebook, Telegram, Web, Custom REST",
+    "enterprise_version": "Rasa Pro (commercial license available)",
+    "pricing": "Free Developer Edition (1,000 conversations/month), Entry-level from $100-500, Rasa Pro from $35,000+",
+    "version": "3.x"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 88,
+      "notes": "Excellent for custom support bots with full control"
+    },
+    "code-generation": {
+      "overall": 61,
+      "notes": "Not designed for code generation use cases"
+    },
+    "research-assistant": {
+      "overall": 67,
+      "notes": "Conversational focus, limited research capabilities"
+    },
+    "data-analysis": {
+      "overall": 72,
+      "notes": "Can integrate with analytics via custom actions"
+    },
+    "content-creation": {
+      "overall": 64,
+      "notes": "Focused on conversations, not content generation"
+    },
+    "education": {
+      "overall": 80,
+      "notes": "Good for educational chatbots with customization"
+    },
+    "healthcare": {
+      "overall": 86,
+      "notes": "On-premises deployment ideal for HIPAA compliance"
+    },
+    "financial-analysis": {
+      "overall": 85,
+      "notes": "Self-hosted option meets compliance requirements"
+    },
+    "legal-compliance": {
+      "overall": 70,
+      "notes": "Would need significant custom development"
+    },
+    "creative-writing": {
+      "overall": 60,
+      "notes": "Not optimized for creative tasks"
+    }
+  },
+  "best_for": [
+    "Teams building fully self-hosted conversational AI",
+    "Organizations requiring complete control over training data",
+    "Developers needing customizable dialogue management",
+    "Enterprises with strict data privacy requirements"
+  ],
+  "tags": [
+    "nlp",
+    "conversational",
+    "open-source"
+  ]
+}

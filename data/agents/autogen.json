@@ -1,0 +1,482 @@
+{
+  "id": "autogen",
+  "type": "agent",
+  "name": "Microsoft AutoGen",
+  "provider": "Microsoft Research",
+  "version": "0.4",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Multi-agent conversation framework enabling next-gen LLM applications with conversable agents that can operate in various modes combining LLMs, human inputs, and tools. Supports complex workflows through agent conversations.",
+  "website": "https://microsoft.github.io/autogen/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AutoGen Research Paper",
+              "url": "https://arxiv.org/abs/2308.08155",
+              "date": "2024-08-15",
+              "value": "Demonstrated high accuracy on complex multi-agent tasks"
+            }
+          ],
+          "methodology": "Based on research benchmarks and model performance",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AutoGen Code Execution",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/code-executors",
+              "date": "2024-10-01",
+              "value": "Robust code execution with Docker sandboxing support"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Conversational Patterns",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns",
+              "date": "2024-10-01",
+              "value": "Multiple conversation patterns for complex task decomposition"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Context",
+              "url": "https://microsoft.github.io/autogen/docs/topics/groupchat/",
+              "date": "2024-09-20",
+              "value": "Conversation history maintained within sessions"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Human-in-the-Loop",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/human-in-the-loop",
+              "date": "2024-10-01",
+              "value": "Strong human-in-the-loop capabilities for error correction"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "conversation_quality": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AutoGen Paper",
+              "url": "https://arxiv.org/abs/2308.08155",
+              "date": "2024-08-15",
+              "value": "Conversational framework produces coherent multi-turn interactions"
+            }
+          ],
+          "methodology": "Conversation quality assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 83,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker Code Executor",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/code-executors",
+              "date": "2024-10-01",
+              "value": "Docker-based sandboxing for code execution"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Configuration",
+              "url": "https://microsoft.github.io/autogen/docs/reference/agentchat/conversable_agent",
+              "date": "2024-10-01",
+              "value": "Agent-level access control via configuration"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "System Messages",
+              "url": "https://microsoft.github.io/autogen/docs/topics/non-openai-models/about-models",
+              "date": "2024-09-15",
+              "value": "System message separation provides some protection"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Agent Conversations",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns",
+              "date": "2024-10-01",
+              "value": "Separate conversation contexts for different agent groups"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AutoGen GitHub",
+              "url": "https://github.com/microsoft/autogen",
+              "date": "2024-10-20",
+              "value": "Apache 2.0 license, 30k+ stars, backed by Microsoft Research"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 84,
+      "criteria": {
+        "data_retention": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Architecture",
+              "url": "https://microsoft.github.io/autogen/",
+              "date": "2024-10-01",
+              "value": "Full control over data retention in self-hosted deployments"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Microsoft Open Source",
+              "url": "https://github.com/microsoft/autogen",
+              "date": "2024-10-01",
+              "value": "GDPR compliance achievable with proper deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Integration",
+              "url": "https://microsoft.github.io/autogen/docs/topics/non-openai-models/about-models",
+              "date": "2024-10-01",
+              "value": "Data sent to configured LLM provider (OpenAI, Azure, etc.)"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment_option": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Local Model Support",
+              "url": "https://microsoft.github.io/autogen/docs/topics/non-openai-models/local-llms",
+              "date": "2024-10-01",
+              "value": "Supports local LLMs via Ollama, LM Studio, and vLLM"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AutoGen Documentation",
+              "url": "https://microsoft.github.io/autogen/",
+              "date": "2024-10-20",
+              "value": "Excellent documentation with tutorials, examples, and research papers"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Logging Features",
+              "url": "https://microsoft.github.io/autogen/docs/topics/observability/logging",
+              "date": "2024-10-01",
+              "value": "Built-in logging with conversation history tracking"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Conversation Logs",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns",
+              "date": "2024-10-01",
+              "value": "Full conversation history provides context for decisions"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/microsoft/autogen",
+              "date": "2024-10-20",
+              "value": "Apache 2.0, 30k+ stars, Microsoft Research backing"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "research_foundation": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Academic Publications",
+              "url": "https://arxiv.org/abs/2308.08155",
+              "date": "2024-08-15",
+              "value": "Strong research foundation with published papers"
+            }
+          ],
+          "methodology": "Academic backing assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 85,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AutoGen Quickstart",
+              "url": "https://microsoft.github.io/autogen/docs/Getting-Started",
+              "date": "2024-10-15",
+              "value": "Clear quickstart but requires understanding of agent concepts"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Agent Orchestration",
+              "url": "https://microsoft.github.io/autogen/docs/tutorial/conversation-patterns",
+              "date": "2024-10-01",
+              "value": "Designed for scalable multi-agent systems"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source Framework",
+              "url": "https://github.com/microsoft/autogen",
+              "date": "2024-10-01",
+              "value": "Free framework, costs limited to LLM API usage"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring_capabilities": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Observability",
+              "url": "https://microsoft.github.io/autogen/docs/topics/observability/logging",
+              "date": "2024-10-01",
+              "value": "Good logging support, integrates with external monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/microsoft/autogen",
+              "date": "2024-10-20",
+              "value": "Very active community with Microsoft backing"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 88,
+      "notes": "Multi-agent conversations excellent for complex support scenarios"
+    },
+    "code-generation": {
+      "overall": 94,
+      "notes": "Outstanding with code execution, testing, and review agents"
+    },
+    "research-assistant": {
+      "overall": 89,
+      "notes": "Multi-agent research teams work well for comprehensive analysis"
+    },
+    "data-analysis": {
+      "overall": 91,
+      "notes": "Code execution capabilities excellent for data analysis"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Good for collaborative content creation workflows"
+    },
+    "education": {
+      "overall": 87,
+      "notes": "Human-in-the-loop features ideal for interactive tutoring"
+    },
+    "healthcare": {
+      "overall": 79,
+      "notes": "Requires healthcare-specific security and compliance setup"
+    },
+    "financial-analysis": {
+      "overall": 82,
+      "notes": "Self-hosted with good security, suitable with proper configuration"
+    },
+    "legal-compliance": {
+      "overall": 84,
+      "notes": "Multi-agent analysis from different legal perspectives"
+    },
+    "creative-writing": {
+      "overall": 90,
+      "notes": "Agent debates and discussions excellent for creative ideation"
+    }
+  },
+  "best_for": [
+    "Developers building complex multi-agent systems with code execution",
+    "Research teams needing collaborative AI workflows",
+    "Organizations requiring self-hosted agent orchestration",
+    "Teams with advanced Python development capabilities"
+  ],
+  "strengths": [
+    "Strong research foundation from Microsoft Research",
+    "Excellent code execution with Docker sandboxing",
+    "Flexible multi-agent conversation patterns",
+    "Outstanding documentation and examples",
+    "Powerful human-in-the-loop capabilities",
+    "Large active community with Microsoft backing"
+  ],
+  "limitations": [
+    "Can be complex to orchestrate many agents effectively",
+    "Conversation costs can accumulate quickly with many agents",
+    "Requires careful prompt engineering for agent roles",
+    "Limited built-in persistence for long-running workflows",
+    "Some learning curve for advanced features",
+    "Performance depends heavily on LLM quality"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_models": [
+      "OpenAI",
+      "Azure OpenAI",
+      "Anthropic",
+      "Local LLMs",
+      "Any OpenAI-compatible API"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted",
+    "tool_support": [
+      "Code execution",
+      "Function calling",
+      "Custom tools"
+    ],
+    "github_stars": "50400+",
+    "first_release": "2023",
+    "pricing": "Free (Apache 2.0) - Costs only from LLM API usage",
+    "python_requirement": "Python 3.10+",
+    "contributors": "559+",
+    "transition_notice": "Microsoft Agent Framework is the recommended path forward; AutoGen receives maintenance and critical patches only"
+  },
+  "tags": [
+    "multi-agent",
+    "microsoft",
+    "open-source"
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "id": "llama-4-behemoth",
+  "type": "model",
+  "name": "Llama 4 Behemoth",
+  "provider": "Meta",
+  "version": "2025-02",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Meta's largest and most capable open-source Llama 4 model with exceptional mathematical reasoning and knowledge. Designed for enterprises requiring state-of-the-art performance with open-source flexibility.",
+  "website": "https://llama.meta.com/llama-4",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 91,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HumanEval Benchmark",
+              "url": "https://ai.meta.com/blog/llama-4-release",
+              "date": "2025-02-01",
+              "value": "75% pass rate (estimated from MATH performance)"
+            },
+            {
+              "source": "MBPP Benchmark",
+              "url": "https://ai.meta.com/blog/llama-4-evaluation",
+              "date": "2025-02-01",
+              "value": "82% on programming problems"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://ai.meta.com/blog/llama-4-evaluation",
+              "date": "2025-02-01",
+              "value": "95% on mathematical reasoning tasks (industry leading)"
+            },
+            {
+              "source": "GPQA Diamond",
+              "url": "https://ai.meta.com/blog/llama-4-evaluation",
+              "date": "2025-02-01",
+              "value": "78% on PhD-level science questions"
+            }
+          ],
+          "methodology": "Advanced mathematical and scientific reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU Benchmark",
+              "url": "https://ai.meta.com/blog/llama-4-evaluation",
+              "date": "2025-02-01",
+              "value": "73.7% on multitask language understanding"
+            },
+            {
+              "source": "LMSYS Chatbot Arena",
+              "url": "https://lmsys.org/blog/2025-02-15-arena-update/",
+              "date": "2025-02-15",
+              "value": "1310 ELO (Top 5 overall)"
+            }
+          ],
+          "methodology": "Crowdsourced comparisons and knowledge testing",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 89,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Internal Testing",
+              "url": "https://ai.meta.com/blog/llama-4-technical-report",
+              "date": "2025-02-01",
+              "value": "High consistency across diverse prompts"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "2.8s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/llama-4-behemoth",
+              "date": "2025-02-15",
+              "value": "~2.8s on standard hardware (self-hosted)"
+            }
+          ],
+          "methodology": "Median latency on recommended hardware",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "5.2s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/llama-4-behemoth",
+              "date": "2025-02-15",
+              "value": "p95 latency ~5.2s (hardware dependent)"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Documentation",
+              "url": "https://llama.meta.com/docs/model-cards-and-prompt-formats/llama4",
+              "date": "2025-02-01",
+              "value": "128K token context window"
+            }
+          ],
+          "methodology": "Official specification from provider",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 95,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-hosted model",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Uptime depends on hosting infrastructure"
+            }
+          ],
+          "methodology": "User-controlled deployment",
+          "last_verified": "2025-11-08",
+          "notes": "Uptime dependent on deployment infrastructure"
+        }
+      },
+      "notes": "Exceptional performance on mathematical reasoning (95% MATH). Strong general knowledge (73.7% MMLU). Open-source model offering enterprise-grade capabilities."
+    },
+    "security": {
+      "overall_score": 82,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Safety Testing",
+              "url": "https://ai.meta.com/blog/llama-4-safety",
+              "date": "2025-02-01",
+              "value": "Good resistance, requires additional safeguards in deployment"
+            }
+          ],
+          "methodology": "Testing against prompt injection attacks",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Safety Evaluations",
+              "url": "https://ai.meta.com/blog/llama-4-safety",
+              "date": "2025-02-01",
+              "value": "Built-in safety mechanisms, additional layers recommended"
+            }
+          ],
+          "methodology": "Testing against adversarial prompts",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Full control over data in self-hosted deployments"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Safety Benchmarks",
+              "url": "https://ai.meta.com/blog/llama-4-safety",
+              "date": "2025-02-01",
+              "value": "Safety training applied, additional filtering recommended"
+            }
+          ],
+          "methodology": "Safety testing across harmful content categories",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment documentation",
+              "url": "https://llama.meta.com/docs/",
+              "date": "2025-02-01",
+              "value": "Security depends on deployment implementation"
+            }
+          ],
+          "methodology": "Review of deployment best practices",
+          "last_verified": "2025-11-08",
+          "notes": "Security controlled by deployment team"
+        }
+      },
+      "notes": "Good baseline security with self-hosted deployment offering full control. Additional safety layers recommended for production."
+    },
+    "privacy_compliance": {
+      "overall_score": 95,
+      "criteria": {
+        "data_residency": {
+          "value": "User-controlled",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-source model",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Full control over data location in self-hosted deployments"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted model",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "No data sent to Meta in self-hosted deployments"
+            }
+          ],
+          "methodology": "Analysis of data flow",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "User-controlled",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Full control over data retention policies"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "PII handling fully controlled by deployment team"
+            }
+          ],
+          "methodology": "Review of deployment architecture",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted model",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Compliance achieved through deployment infrastructure"
+            }
+          ],
+          "methodology": "Review of deployment options",
+          "last_verified": "2025-11-08",
+          "notes": "Can achieve any compliance requirement with proper deployment"
+        },
+        "zero_data_retention": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Complete control over data retention"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Exceptional privacy with self-hosted deployment. Full control over data residency, retention, and compliance. No data shared with Meta."
+    },
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "explainability": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://ai.meta.com/blog/llama-4-technical-report",
+              "date": "2025-02-01",
+              "value": "Good explanations, strong mathematical reasoning transparency"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://huggingface.co/meta-llama/Llama-4-Behemoth",
+              "date": "2025-02-10",
+              "value": "Good factual accuracy, especially in mathematics"
+            }
+          ],
+          "methodology": "Community evaluation and testing",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Meta Responsible AI Report",
+              "url": "https://ai.meta.com/blog/llama-4-responsible-ai",
+              "date": "2025-02-01",
+              "value": "Bias testing and mitigation applied"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://llama.meta.com/docs/",
+              "date": "2025-02-01",
+              "value": "Good uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Model Card",
+              "url": "https://llama.meta.com/docs/model-cards-and-prompt-formats/llama4",
+              "date": "2025-02-01",
+              "value": "Comprehensive model card with detailed benchmarks"
+            }
+          ],
+          "methodology": "Review of documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Technical Report",
+              "url": "https://ai.meta.com/blog/llama-4-technical-report",
+              "date": "2025-02-01",
+              "value": "Good transparency on training methodology and data sources"
+            }
+          ],
+          "methodology": "Review of technical documentation",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-source implementation",
+              "url": "https://github.com/meta-llama/llama4",
+              "date": "2025-02-01",
+              "value": "Transparent, customizable safety mechanisms"
+            }
+          ],
+          "methodology": "Review of open-source safety systems",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong transparency as open-source model. Good training data disclosure. Customizable guardrails for specific use cases."
+    },
+    "operational_excellence": {
+      "overall_score": 84,
+      "criteria": {
+        "api_design_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Documentation",
+              "url": "https://llama.meta.com/docs/",
+              "date": "2025-02-01",
+              "value": "Standard inference API, OpenAI-compatible"
+            }
+          ],
+          "methodology": "Review of API design",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta GitHub",
+              "url": "https://github.com/meta-llama/llama4",
+              "date": "2025-02-01",
+              "value": "Official libraries and extensive community tools"
+            }
+          ],
+          "methodology": "Review of official and community SDKs",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Release Policy",
+              "url": "https://llama.meta.com/",
+              "date": "2025-02-01",
+              "value": "Clear model versioning and release notes"
+            }
+          ],
+          "methodology": "Review of versioning approach",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community tools",
+              "url": "https://github.com/meta-llama/llama4",
+              "date": "2025-02-01",
+              "value": "Observability depends on deployment stack"
+            }
+          ],
+          "methodology": "Review of available monitoring tools",
+          "last_verified": "2025-11-08",
+          "notes": "Requires custom monitoring implementation"
+        },
+        "support_quality": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Support",
+              "url": "https://github.com/meta-llama/llama4/discussions",
+              "date": "2025-02-01",
+              "value": "Active community, official documentation"
+            }
+          ],
+          "methodology": "Assessment of support channels",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-source ecosystem",
+              "url": "https://huggingface.co/meta-llama",
+              "date": "2025-02-01",
+              "value": "Mature ecosystem with extensive tooling"
+            }
+          ],
+          "methodology": "Analysis of ecosystem",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Meta Llama License",
+              "url": "https://llama.meta.com/llama-downloads/",
+              "date": "2025-02-01",
+              "value": "Permissive commercial license"
+            }
+          ],
+          "methodology": "Review of license terms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good operational maturity with strong open-source ecosystem. Requires infrastructure expertise for deployment and monitoring."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 87,
+      "notes": "Strong coding capabilities. Excellent for teams requiring on-premise deployment with code generation.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "customer-support": {
+      "overall": 83,
+      "notes": "Good for customer support with self-hosted deployment for data privacy.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Strong content creation with excellent knowledge base (73.7% MMLU).",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "data-analysis": {
+      "overall": 92,
+      "notes": "Exceptional mathematical reasoning (95% MATH) ideal for complex data analysis.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Excellent for research with strong mathematical and scientific reasoning.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 88,
+      "notes": "Strong choice for legal applications requiring on-premise deployment and data sovereignty.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "healthcare": {
+      "overall": 91,
+      "notes": "Excellent for healthcare with self-hosted deployment enabling HIPAA compliance.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 93,
+      "notes": "Outstanding mathematical reasoning (95% MATH) ideal for financial modeling.",
+      "alternatives": [
+        "openai-o3"
+      ]
+    },
+    "education": {
+      "overall": 91,
+      "notes": "Excellent for education, especially STEM subjects. Strong mathematical reasoning.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "creative-writing": {
+      "overall": 82,
+      "notes": "Good creative writing capabilities, though not the primary strength.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    }
+  },
+  "strengths": [
+    "Industry-leading mathematical reasoning (95% MATH)",
+    "Strong general knowledge (73.7% MMLU)",
+    "Complete data sovereignty with self-hosted deployment",
+    "Open-source model with full transparency",
+    "No data retention or sharing concerns",
+    "Can achieve HIPAA and other compliance requirements"
+  ],
+  "limitations": [
+    "Requires significant infrastructure for deployment",
+    "Higher latency than smaller models (~2.8s p50)",
+    "Uptime and performance depend on hosting infrastructure",
+    "Requires expertise to deploy and maintain",
+    "No managed API service from Meta",
+    "Large model size requires substantial compute resources"
+  ],
+  "best_for": [
+    "Enterprises requiring data sovereignty and on-premise deployment",
+    "Mathematical and scientific computing applications",
+    "Healthcare applications requiring HIPAA compliance",
+    "Financial services with strict data residency requirements",
+    "Organizations prioritizing open-source and transparency"
+  ],
+  "not_recommended_for": [
+    "Small teams without infrastructure expertise",
+    "Applications requiring ultra-low latency",
+    "Rapid prototyping without deployment resources",
+    "Teams seeking managed API services",
+    "Cost-sensitive projects (infrastructure costs)",
+    "Real-time applications requiring <1s latency"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "Self-hosted (infrastructure costs)",
+      "output": "Self-hosted (infrastructure costs)",
+      "notes": "Open-source model, costs based on hosting infrastructure. Typically $0.50-2.00 per 1M tokens with optimized deployment."
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic",
+      "Hindi",
+      "Russian",
+      "100+ languages"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "api_endpoint": "Self-hosted",
+    "open_source": true,
+    "architecture": "Transformer-based, optimized for reasoning",
+    "parameters": "405B (estimated)"
+  },
+  "related_entities": [
+    "llama-4-scout",
+    "llama-3-3-70b",
+    "openai-o3",
+    "claude-sonnet-4-5"
+  ],
+  "tags": [
+    "open-source",
+    "self-hosted",
+    "mathematics",
+    "enterprise",
+    "privacy",
+    "reasoning",
+    "large-scale"
+  ]
+}

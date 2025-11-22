@@ -1,0 +1,236 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-11-07",
+  "use_cases": [
+    {
+      "id": "code-generation",
+      "name": "Code Generation",
+      "category": "Development",
+      "description": "Writing, debugging, and explaining code across multiple programming languages",
+      "requirements": {
+        "critical_dimensions": ["performance_reliability", "trust_transparency"],
+        "minimum_scores": {
+          "performance_reliability": 75,
+          "trust_transparency": 70
+        }
+      },
+      "examples": [
+        "Python script generation",
+        "API endpoint creation",
+        "Bug fixing and refactoring",
+        "Code explanation and documentation"
+      ]
+    },
+    {
+      "id": "customer-support",
+      "name": "Customer Support",
+      "category": "Business",
+      "description": "Handling customer inquiries, support tickets, and communication",
+      "requirements": {
+        "critical_dimensions": ["performance_reliability", "security", "trust_transparency"],
+        "minimum_scores": {
+          "performance_reliability": 70,
+          "security": 75,
+          "trust_transparency": 75
+        }
+      },
+      "examples": [
+        "Chat support automation",
+        "Email response generation",
+        "FAQ answering",
+        "Escalation routing"
+      ]
+    },
+    {
+      "id": "content-creation",
+      "name": "Content Creation",
+      "category": "Creative",
+      "description": "Generating marketing copy, blog posts, and creative writing",
+      "requirements": {
+        "critical_dimensions": ["performance_reliability", "trust_transparency"],
+        "minimum_scores": {
+          "performance_reliability": 70,
+          "trust_transparency": 65
+        }
+      },
+      "examples": [
+        "Blog post writing",
+        "Marketing copy",
+        "Social media content",
+        "Product descriptions"
+      ]
+    },
+    {
+      "id": "data-analysis",
+      "name": "Data Analysis",
+      "category": "Analytics",
+      "description": "Analyzing datasets, generating insights, and creating visualizations",
+      "requirements": {
+        "critical_dimensions": ["performance_reliability", "trust_transparency"],
+        "minimum_scores": {
+          "performance_reliability": 75,
+          "trust_transparency": 80
+        }
+      },
+      "examples": [
+        "SQL query generation",
+        "Data interpretation",
+        "Trend analysis",
+        "Report generation"
+      ]
+    },
+    {
+      "id": "research-assistant",
+      "name": "Research Assistant",
+      "category": "Knowledge Work",
+      "description": "Summarizing papers, synthesizing information, and literature review",
+      "requirements": {
+        "critical_dimensions": ["trust_transparency", "performance_reliability"],
+        "minimum_scores": {
+          "trust_transparency": 85,
+          "performance_reliability": 70
+        }
+      },
+      "examples": [
+        "Paper summarization",
+        "Literature review",
+        "Citation finding",
+        "Knowledge synthesis"
+      ]
+    },
+    {
+      "id": "legal-compliance",
+      "name": "Legal & Compliance",
+      "category": "Regulated",
+      "description": "Document review, contract analysis, and compliance checking",
+      "requirements": {
+        "critical_dimensions": ["trust_transparency", "privacy_compliance", "security"],
+        "minimum_scores": {
+          "trust_transparency": 85,
+          "privacy_compliance": 85,
+          "security": 80
+        }
+      },
+      "examples": [
+        "Contract review",
+        "Compliance checking",
+        "Risk assessment",
+        "Policy drafting"
+      ]
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "category": "Regulated",
+      "description": "Clinical notes, patient communication, and medical documentation",
+      "requirements": {
+        "critical_dimensions": ["privacy_compliance", "security", "trust_transparency"],
+        "minimum_scores": {
+          "privacy_compliance": 90,
+          "security": 85,
+          "trust_transparency": 85
+        }
+      },
+      "examples": [
+        "Clinical note generation",
+        "Patient communication",
+        "Medical coding assistance",
+        "Documentation"
+      ]
+    },
+    {
+      "id": "financial-analysis",
+      "name": "Financial Analysis",
+      "category": "Regulated",
+      "description": "Financial reporting, forecasting, and investment analysis",
+      "requirements": {
+        "critical_dimensions": ["security", "privacy_compliance", "trust_transparency"],
+        "minimum_scores": {
+          "security": 85,
+          "privacy_compliance": 85,
+          "trust_transparency": 80
+        }
+      },
+      "examples": [
+        "Financial report generation",
+        "Market analysis",
+        "Risk modeling",
+        "Investment research"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education & Tutoring",
+      "category": "Learning",
+      "description": "Tutoring, curriculum design, and educational content creation",
+      "requirements": {
+        "critical_dimensions": ["trust_transparency", "performance_reliability"],
+        "minimum_scores": {
+          "trust_transparency": 80,
+          "performance_reliability": 70
+        }
+      },
+      "examples": [
+        "Personalized tutoring",
+        "Curriculum development",
+        "Assessment creation",
+        "Learning path design"
+      ]
+    },
+    {
+      "id": "creative-writing",
+      "name": "Creative Writing",
+      "category": "Creative",
+      "description": "Fiction, storytelling, and narrative generation",
+      "requirements": {
+        "critical_dimensions": ["performance_reliability"],
+        "minimum_scores": {
+          "performance_reliability": 70
+        }
+      },
+      "examples": [
+        "Story generation",
+        "Character development",
+        "Dialogue writing",
+        "Plot assistance"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Software development and engineering tasks"
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "description": "Business operations and customer-facing applications"
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "description": "Creative and content generation tasks"
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "description": "Data analysis and insights generation"
+    },
+    {
+      "id": "knowledge-work",
+      "name": "Knowledge Work",
+      "description": "Research, analysis, and knowledge synthesis"
+    },
+    {
+      "id": "regulated",
+      "name": "Regulated Industries",
+      "description": "Healthcare, legal, financial, and other regulated sectors"
+    },
+    {
+      "id": "learning",
+      "name": "Learning",
+      "description": "Education and training applications"
+    }
+  ]
+}

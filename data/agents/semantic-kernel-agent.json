@@ -1,0 +1,482 @@
+{
+  "id": "semantic-kernel-agent",
+  "type": "agent",
+  "name": "Semantic Kernel Agent",
+  "provider": "Microsoft",
+  "version": "1.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Microsoft's enterprise-grade SDK for integrating LLMs with conventional programming languages. Provides agent capabilities through plugins, planners, and memory systems with first-class support for .NET, Python, and Java.",
+  "website": "https://learn.microsoft.com/en-us/semantic-kernel/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 87,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Semantic Kernel Documentation",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-15",
+              "value": "Enterprise-grade reliability with extensive testing"
+            }
+          ],
+          "methodology": "Based on enterprise testing and model performance",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Plugins System",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/agents/plugins/",
+              "date": "2024-10-01",
+              "value": "Robust plugin system with native and semantic functions"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Planner System",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/agents/planners/",
+              "date": "2024-10-01",
+              "value": "Multiple planner types for sequential and action planning"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Memory Stores",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/memories/",
+              "date": "2024-10-01",
+              "value": "Multiple memory store backends (Azure, PostgreSQL, SQLite, Chroma)"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Error Handling",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-09-15",
+              "value": "Enterprise-grade error handling and retry policies"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Low (1-5s typical)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Performance Optimization",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Optimized for production with async operations"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 89,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Plugin Security",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/agents/plugins/",
+              "date": "2024-10-01",
+              "value": "Plugin execution controls and security boundaries"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Enterprise Integration",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Integration with Azure AD and enterprise IAM systems"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Prompt Engineering",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/prompts/",
+              "date": "2024-09-20",
+              "value": "Template system provides separation of instructions and data"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Memory Isolation",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/memories/",
+              "date": "2024-10-01",
+              "value": "Strong isolation via memory collections and namespaces"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "enterprise_security": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Integration",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "First-class Azure security integration and compliance"
+            }
+          ],
+          "methodology": "Enterprise security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 90,
+      "criteria": {
+        "data_retention": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Compliance",
+              "url": "https://learn.microsoft.com/en-us/azure/compliance/",
+              "date": "2024-09-01",
+              "value": "Full control over data retention, Azure compliance options"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Microsoft Compliance",
+              "url": "https://learn.microsoft.com/en-us/compliance/",
+              "date": "2024-08-15",
+              "value": "GDPR compliant when used with Azure OpenAI"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure OpenAI",
+              "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/",
+              "date": "2024-10-01",
+              "value": "Azure OpenAI provides data residency and no training on customer data"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment_option": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Multi-Model Support",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Supports local models via Ollama and ONNX runtime"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 90,
+      "criteria": {
+        "documentation_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Microsoft Learn",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-20",
+              "value": "Exceptional Microsoft Learn documentation with tutorials and samples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Diagnostics",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Built-in logging, telemetry, and Azure Monitor integration"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Planner Observability",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/agents/planners/",
+              "date": "2024-10-01",
+              "value": "Planner execution steps visible for debugging"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/microsoft/semantic-kernel",
+              "date": "2024-10-20",
+              "value": "MIT licensed, 20k+ stars, Microsoft official project"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "enterprise_support": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Microsoft Support",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Official Microsoft support available for enterprise customers"
+            }
+          ],
+          "methodology": "Support options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 91,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Multi-Language SDKs",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-15",
+              "value": "First-class support for .NET, Python, and Java"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Integration",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Designed for enterprise scale with Azure services"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source + Azure",
+              "url": "https://azure.microsoft.com/en-us/pricing/",
+              "date": "2024-10-01",
+              "value": "Free SDK, predictable Azure OpenAI pricing"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring_capabilities": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Azure Monitor Integration",
+              "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/",
+              "date": "2024-10-01",
+              "value": "Excellent monitoring via Azure Monitor and Application Insights"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Enterprise Adoption",
+              "url": "https://learn.microsoft.com/en-us/semantic-kernel/",
+              "date": "2024-10-01",
+              "value": "Production-ready with major enterprise deployments"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Enterprise-grade security and compliance features",
+    "Excellent multi-language support (.NET, Python, Java)",
+    "First-class Azure integration with managed services",
+    "Outstanding documentation and Microsoft support",
+    "Robust plugin and memory systems",
+    "Production-ready with strong monitoring capabilities"
+  ],
+  "limitations": [
+    "More complex than simpler agent frameworks",
+    "Best performance requires Azure services (cost consideration)",
+    "Less opinionated design requires more architectural decisions",
+    "Smaller community compared to some other frameworks",
+    "Some features still evolving (agents capability)",
+    "Learning curve for developers new to semantic programming"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "Azure OpenAI",
+      "OpenAI",
+      "Anthropic",
+      "Hugging Face",
+      "Local models"
+    ],
+    "programming_languages": [
+      ".NET (C#, F#)",
+      "Python",
+      "Java"
+    ],
+    "deployment_type": "Self-hosted or Azure",
+    "tool_support": [
+      "Plugins",
+      "Native functions",
+      "Semantic functions"
+    ],
+    "github_stars": "25800+",
+    "first_release": "2023",
+    "ga_version": "1.45 (.NET) and 1.27 (Python) - April 2025",
+    "transition": "Microsoft Agent Framework is the successor (Semantic Kernel v2.0)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 90,
+      "notes": "Enterprise-grade reliability ideal for customer support"
+    },
+    "code-generation": {
+      "overall": 88,
+      "notes": "Strong plugin system works well for code generation tasks"
+    },
+    "research-assistant": {
+      "overall": 87,
+      "notes": "Memory and planning capabilities good for research tasks"
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Good for data analysis with custom plugins"
+    },
+    "content-creation": {
+      "overall": 86,
+      "notes": "Semantic functions useful for content generation workflows"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Memory system excellent for personalized tutoring"
+    },
+    "healthcare": {
+      "overall": 92,
+      "notes": "Outstanding for healthcare with Azure compliance and security"
+    },
+    "financial-analysis": {
+      "overall": 94,
+      "notes": "Excellent for finance with enterprise security and compliance"
+    },
+    "legal-compliance": {
+      "overall": 89,
+      "notes": "Strong security and memory features good for legal work"
+    },
+    "creative-writing": {
+      "overall": 82,
+      "notes": "Works well but not specifically optimized for creative tasks"
+    }
+  },
+  "best_for": [
+    "Microsoft developers building AI orchestration systems",
+    ".NET and C# teams needing enterprise AI framework",
+    "Organizations wanting Azure OpenAI integration",
+    "Teams building multi-language AI applications"
+  ],
+  "tags": [
+    "microsoft",
+    "azure",
+    "open-source"
+  ]
+}

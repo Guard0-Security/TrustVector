@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-calendar",
+  "type": "mcp",
+  "name": "MCP Google Calendar Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Google Calendar integration. Enables AI models to create, read, update, and delete calendar events, manage attendees, set reminders, and query availability. Essential for AI-powered scheduling, meeting coordination, and calendar automation workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "event_operation_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Calendar API",
+              "url": "https://developers.google.com/calendar/api/v3/reference",
+              "date": "2025-11-16",
+              "value": "Highly reliable event CRUD operations"
+            }
+          ],
+          "methodology": "Operation success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "availability_search_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Calendar Freebusy API",
+              "url": "https://developers.google.com/calendar/api/v3/reference/freebusy",
+              "date": "2025-11-16",
+              "value": "Accurate availability and free/busy time calculations"
+            }
+          ],
+          "methodology": "Availability accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "sync_reliability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Calendar Sync",
+              "url": "https://developers.google.com/calendar/api/guides/sync",
+              "date": "2025-11-16",
+              "value": "Reliable event synchronization with incremental sync support"
+            }
+          ],
+          "methodology": "Sync reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "recurring_event_handling": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Recurring Events",
+              "url": "https://developers.google.com/calendar/api/concepts/events-calendars#recurring_events",
+              "date": "2025-11-16",
+              "value": "Accurate handling of recurring events and exceptions"
+            }
+          ],
+          "methodology": "Recurrence pattern testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles API errors with retry and conflict resolution"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 73,
+      "criteria": {
+        "authentication_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google OAuth 2.0",
+              "url": "https://developers.google.com/identity/protocols/oauth2",
+              "date": "2025-11-16",
+              "value": "Uses OAuth 2.0 with scoped calendar access"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "OAuth tokens stored locally; AI can perform calendar operations"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "event_modification_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can create, modify, and delete calendar events"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "attendee_invitation_risk": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Calendar Events API",
+              "url": "https://developers.google.com/calendar/api/v3/reference/events",
+              "date": "2025-11-16",
+              "value": "Can send meeting invitations to arbitrary attendees"
+            }
+          ],
+          "methodology": "Invitation risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "calendar_sharing_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Calendar ACL",
+              "url": "https://developers.google.com/calendar/api/v3/reference/acl",
+              "date": "2025-11-16",
+              "value": "Respects calendar sharing permissions"
+            }
+          ],
+          "methodology": "ACL enforcement testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Workspace Audit",
+              "url": "https://support.google.com/a/answer/4579579",
+              "date": "2025-11-16",
+              "value": "Calendar operations logged in Google Workspace audit logs"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 68,
+      "criteria": {
+        "event_details_exposure": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Event titles, descriptions, locations, and attendees sent to LLM"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "attendee_privacy": {
+          "score": 63,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Attendee email addresses and names exposed"
+            }
+          ],
+          "methodology": "Attendee privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "schedule_pattern_exposure": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Calendar patterns may reveal personal routines and habits"
+            }
+          ],
+          "methodology": "Pattern privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Calendar data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "location_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Calendar Events",
+              "url": "https://developers.google.com/calendar/api/v3/reference/events",
+              "date": "2025-11-16",
+              "value": "Event locations and conference links may be exposed"
+            }
+          ],
+          "methodology": "Location privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 80,
+      "criteria": {
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Calendar MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All calendar operations logged in MCP transaction logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "privacy_risk_disclosure": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Limited privacy risk warnings for calendar data"
+            }
+          ],
+          "methodology": "Privacy disclosure review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 83,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires Google Cloud project setup and OAuth consent"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Calendar API Performance",
+              "url": "https://developers.google.com/calendar/api/",
+              "date": "2025-11-16",
+              "value": "Fast operations for most calendar queries (typically 50-300ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Calendar API Stability",
+              "url": "https://developers.google.com/calendar/api/",
+              "date": "2025-11-16",
+              "value": "Built on reliable Google Calendar API with high uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Calendar MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers events, availability, reminders, and attendee management"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 72,
+      "notes": "Useful for calendar integration code generation"
+    },
+    "customer-support": {
+      "overall": 85,
+      "notes": "Excellent for appointment scheduling and meeting coordination"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Useful for content calendar management and publication scheduling"
+    },
+    "data-analysis": {
+      "overall": 75,
+      "notes": "Good for analyzing meeting patterns and time utilization"
+    },
+    "research-assistant": {
+      "overall": 78,
+      "notes": "Useful for research event tracking and deadline management"
+    },
+    "legal-compliance": {
+      "overall": 55,
+      "notes": "Risk of exposing confidential meeting details"
+    },
+    "healthcare": {
+      "overall": 60,
+      "notes": "Moderate risk for patient appointment scheduling"
+    },
+    "financial-analysis": {
+      "overall": 62,
+      "notes": "Moderate risk for financial meeting scheduling"
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Excellent for class scheduling and academic calendar management"
+    },
+    "creative-writing": {
+      "overall": 68,
+      "notes": "Useful for deadline and writing session scheduling"
+    }
+  },
+  "best_for": [
+    "Customer support teams automating appointment scheduling",
+    "Educators managing class schedules and academic calendars",
+    "Executive assistants coordinating complex meeting schedules"
+  ],
+  "strengths": [
+    "Comprehensive calendar operations (events, availability, reminders)",
+    "Built on reliable Google Calendar API with high uptime",
+    "Accurate availability and free/busy time calculations",
+    "OAuth 2.0 authentication with granular scope controls",
+    "Open source community implementation",
+    "Excellent for scheduling automation and meeting coordination"
+  ],
+  "limitations": [
+    "Event details including titles, locations, and attendees exposed to LLM",
+    "AI can create, modify, and delete calendar events",
+    "Can send meeting invitations to arbitrary attendees",
+    "Calendar patterns may reveal personal routines and habits",
+    "Requires Google Cloud project and OAuth configuration",
+    "Attendee email addresses and names exposed"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Google Calendar API, Google APIs Client Library",
+    "authentication": "OAuth 2.0 with Google",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "tags": [
+    "calendar",
+    "scheduling",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

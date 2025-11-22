@@ -1,0 +1,93 @@
+name: New Evaluation Request
+description: Request an evaluation for a new AI model, agent, or MCP
+title: "[Evaluation]: "
+labels: ["evaluation-request", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a new evaluation! This helps us prioritize what the community wants to see.
+
+  - type: dropdown
+    id: entity-type
+    attributes:
+      label: Entity Type
+      description: What type of entity should be evaluated?
+      options:
+        - AI Model (LLM, embedding, vision, etc.)
+        - AI Agent (framework or service)
+        - MCP Server
+      multiple: false
+    validations:
+      required: true
+
+  - type: input
+    id: entity-name
+    attributes:
+      label: Entity Name
+      description: What is the name of the entity?
+      placeholder: "e.g., Claude Sonnet 4.5, GPT-5, LangGraph Agent"
+    validations:
+      required: true
+
+  - type: input
+    id: provider
+    attributes:
+      label: Provider/Organization
+      description: Who develops/maintains this entity?
+      placeholder: "e.g., Anthropic, OpenAI, Meta"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Specific version to evaluate (if applicable)
+      placeholder: "e.g., v4.5, 2024-10-22, latest"
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be evaluated?
+      description: Why is this entity important to the community?
+      placeholder: |
+        - Widely used in production
+        - New release with significant improvements
+        - Requested by multiple users
+        - Important for specific use case
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Helpful Resources
+      description: Links to documentation, benchmarks, or other resources
+      placeholder: |
+        - Official docs: https://...
+        - Model card: https://...
+        - Benchmarks: https://...
+        - Pricing: https://...
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Can you help with this evaluation?
+      options:
+        - label: I can contribute to this evaluation
+        - label: I can provide evidence and sources
+        - label: I can help with peer review
+
+  - type: checkboxes
+    id: coi
+    attributes:
+      label: Conflicts of Interest
+      options:
+        - label: I work for the provider/organization
+        - label: I have no conflicts of interest
+      validations:
+        required: true

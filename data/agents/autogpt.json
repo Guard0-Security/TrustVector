@@ -1,0 +1,478 @@
+{
+  "id": "autogpt",
+  "type": "agent",
+  "name": "AutoGPT",
+  "provider": "Significant Gravitas",
+  "version": "0.6.36",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Autonomous AI agent that attempts to achieve user-defined goals by breaking them into sub-tasks, using internet access, memory management, and file operations. Pioneered the autonomous agent paradigm.",
+  "website": "https://docs.agpt.co/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 68,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Reports",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT/discussions",
+              "date": "2024-09-25",
+              "value": "Task completion highly variable, works better for well-defined goals"
+            }
+          ],
+          "methodology": "Based on community feedback and testing",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AutoGPT Plugins",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Plugin system for tools, reliability varies by plugin"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Autonomous Planning",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-09-15",
+              "value": "Can plan multi-step tasks but may lose focus on complex goals"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory System",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Vector-based long-term memory with local storage"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "User Feedback",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT/issues",
+              "date": "2024-09-20",
+              "value": "Limited error recovery, can get stuck in loops"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "autonomy_level": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Autonomous Operation",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "High autonomy with continuous mode for unattended operation"
+            }
+          ],
+          "methodology": "Autonomy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 62,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 58,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture Review",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-10-01",
+              "value": "Limited sandboxing, can execute arbitrary code and file operations"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Configuration",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Basic access controls via configuration, requires careful setup"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 60,
+          "confidence": "low",
+          "evidence": [
+            {
+              "source": "Security Concerns",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT/issues",
+              "date": "2024-09-15",
+              "value": "Vulnerable to prompt injection due to autonomous nature"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Local Storage",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Data stored locally per agent instance"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-10-15",
+              "value": "MIT licensed, 165k+ stars, fully transparent code"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 70,
+      "criteria": {
+        "data_retention": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Local Operation",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Data stored locally, full user control"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible but requires careful configuration"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Data sent to OpenAI API and potentially web services accessed"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment_option": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Local LLM Support",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Can work with local LLMs but optimized for OpenAI"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 76,
+      "criteria": {
+        "documentation_quality": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AutoGPT Docs",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-15",
+              "value": "Documentation available but can be sparse for advanced features"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging Features",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Basic logging of agent actions and thoughts"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Thoughts",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Agent 'thoughts' provide some insight into reasoning"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-10-15",
+              "value": "MIT licensed, 165k+ stars, pioneering autonomous agent project"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_activity": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Activity",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-10-15",
+              "value": "Activity has decreased from peak, focus shifting to AutoGPT Platform"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 65,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Setup Guide",
+              "url": "https://docs.agpt.co/setup/",
+              "date": "2024-10-01",
+              "value": "Setup can be complex with multiple dependencies"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture Limitations",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-09-15",
+              "value": "Not designed for high-scale production deployments"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Token Usage",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT/discussions",
+              "date": "2024-09-20",
+              "value": "Autonomous operation can lead to unpredictable token consumption"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-11-09",
+          "notes": "Can rack up significant API costs in continuous mode"
+        },
+        "monitoring_capabilities": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring Features",
+              "url": "https://docs.agpt.co/",
+              "date": "2024-10-01",
+              "value": "Basic monitoring through logs, limited production tooling"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 58,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Project Status",
+              "url": "https://github.com/Significant-Gravitas/AutoGPT",
+              "date": "2024-10-01",
+              "value": "More experimental than production-ready, better for research"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Pioneered the autonomous agent paradigm and concept",
+    "High level of autonomy for unattended task execution",
+    "Massive community interest and open source transparency",
+    "Good for experimentation and research into agent capabilities",
+    "Local deployment with full user control",
+    "Internet access and file operation capabilities"
+  ],
+  "limitations": [
+    "Unpredictable behavior and task completion reliability",
+    "Significant security concerns with broad permissions",
+    "High and unpredictable API costs in autonomous mode",
+    "Can get stuck in loops or lose focus on goals",
+    "Not production-ready for critical applications",
+    "Limited enterprise features and compliance capabilities"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI GPT-4",
+      "GPT-3.5",
+      "Local LLMs (experimental)"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted",
+    "tool_support": [
+      "Web browsing",
+      "File operations",
+      "Code execution",
+      "Plugins"
+    ],
+    "github_stars": "180000+",
+    "first_release": "2023",
+    "latest_release": "autogpt-platform-beta-v0.6.36 (November 2025)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 62,
+      "notes": "Too autonomous and unpredictable for customer-facing applications"
+    },
+    "code-generation": {
+      "overall": 68,
+      "notes": "Can generate code but may lack consistency and quality controls"
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Can perform research tasks but results quality varies"
+    },
+    "data-analysis": {
+      "overall": 65,
+      "notes": "Limited data analysis capabilities, better tools available"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Can create content but quality control challenging"
+    },
+    "education": {
+      "overall": 58,
+      "notes": "Too unpredictable for educational applications"
+    },
+    "healthcare": {
+      "overall": 35,
+      "notes": "Not suitable for healthcare due to security and reliability concerns"
+    },
+    "financial-analysis": {
+      "overall": 40,
+      "notes": "Insufficient security and compliance features for financial services"
+    },
+    "legal-compliance": {
+      "overall": 45,
+      "notes": "Too unpredictable and lacks necessary security for legal work"
+    },
+    "creative-writing": {
+      "overall": 75,
+      "notes": "Experimental nature can be useful for creative exploration"
+    }
+  },
+  "best_for": [
+    "Developers experimenting with autonomous agent concepts",
+    "AI enthusiasts exploring AGI-like task completion",
+    "Researchers testing autonomous planning systems"
+  ],
+  "tags": [
+    "autonomous",
+    "experimental",
+    "open-source"
+  ]
+}

@@ -1,0 +1,477 @@
+{
+  "id": "google-agent-builder",
+  "type": "agent",
+  "name": "Google Vertex AI Agent Builder",
+  "provider": "Google Cloud",
+  "version": "2024",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Google Cloud's managed platform for building conversational AI agents and search applications. Provides no-code and low-code options for agent creation with enterprise search, grounding, and Google services integration.",
+  "website": "https://cloud.google.com/generative-ai-app-builder/docs/agent-intro",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 87,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Vertex AI Documentation",
+              "url": "https://cloud.google.com/vertex-ai/docs",
+              "date": "2024-10-10",
+              "value": "Built on Gemini models with high task accuracy"
+            }
+          ],
+          "methodology": "Based on Gemini model performance and managed service reliability",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Function Calling",
+              "url": "https://cloud.google.com/vertex-ai/docs/generative-ai/multimodal/function-calling",
+              "date": "2024-10-01",
+              "value": "Native function calling with OpenAPI integration"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Orchestration",
+              "url": "https://cloud.google.com/generative-ai-app-builder/docs/agent-intro",
+              "date": "2024-09-20",
+              "value": "Multi-step task handling through conversation design"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Session Management",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/session",
+              "date": "2024-10-01",
+              "value": "Session state management with context persistence"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Managed Service",
+              "url": "https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview",
+              "date": "2024-10-01",
+              "value": "Automatic error handling and retries as managed service"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "grounding_accuracy": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Vertex AI Search",
+              "url": "https://cloud.google.com/generative-ai-app-builder/docs/grounding",
+              "date": "2024-10-01",
+              "value": "Advanced grounding with Google Search and enterprise data"
+            }
+          ],
+          "methodology": "Grounding capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 92,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloud Functions Integration",
+              "url": "https://cloud.google.com/functions",
+              "date": "2024-10-01",
+              "value": "Tools execute in isolated Cloud Functions environment"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud IAM",
+              "url": "https://cloud.google.com/iam/docs",
+              "date": "2024-10-01",
+              "value": "Full IAM integration with fine-grained access control"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Safety Settings",
+              "url": "https://cloud.google.com/vertex-ai/docs/generative-ai/learn/responsible-ai",
+              "date": "2024-09-25",
+              "value": "Safety filters and content moderation built-in"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Security",
+              "url": "https://cloud.google.com/security/data-protection",
+              "date": "2024-10-01",
+              "value": "Strong data isolation with VPC and encryption at rest/transit"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "enterprise_security": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Compliance",
+              "url": "https://cloud.google.com/security/compliance",
+              "date": "2024-09-01",
+              "value": "Comprehensive compliance certifications (SOC, ISO, HIPAA, etc.)"
+            }
+          ],
+          "methodology": "Enterprise security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 91,
+      "criteria": {
+        "data_retention": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Data Privacy",
+              "url": "https://cloud.google.com/terms/data-processing-addendum",
+              "date": "2024-08-01",
+              "value": "Customer data not used for model training, configurable retention"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud GDPR",
+              "url": "https://cloud.google.com/privacy/gdpr",
+              "date": "2024-07-15",
+              "value": "GDPR compliant with data processing agreements"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Vertex AI Privacy",
+              "url": "https://cloud.google.com/vertex-ai/docs/generative-ai/data-governance",
+              "date": "2024-10-01",
+              "value": "Data stays within Google Cloud, not shared with third parties"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "regional_deployment": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Regions",
+              "url": "https://cloud.google.com/about/locations",
+              "date": "2024-10-01",
+              "value": "Deploy in specific regions for data residency compliance"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Docs",
+              "url": "https://cloud.google.com/generative-ai-app-builder/docs",
+              "date": "2024-10-15",
+              "value": "Comprehensive documentation with examples and tutorials"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloud Logging",
+              "url": "https://cloud.google.com/logging/docs",
+              "date": "2024-10-01",
+              "value": "Full Cloud Logging and Cloud Trace integration"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Grounding Citations",
+              "url": "https://cloud.google.com/generative-ai-app-builder/docs/grounding",
+              "date": "2024-10-01",
+              "value": "Grounding provides source citations for responses"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "managed_service_sla": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud SLA",
+              "url": "https://cloud.google.com/vertex-ai/sla",
+              "date": "2024-08-01",
+              "value": "99.9% monthly uptime SLA"
+            }
+          ],
+          "methodology": "SLA review",
+          "last_verified": "2025-11-09"
+        },
+        "proprietary_service": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Managed Service",
+              "url": "https://cloud.google.com/vertex-ai",
+              "date": "2024-10-01",
+              "value": "Proprietary managed service, not open source"
+            }
+          ],
+          "methodology": "Transparency assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 90,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Agent Builder UI",
+              "url": "https://cloud.google.com/generative-ai-app-builder/docs/agent-usage",
+              "date": "2024-10-01",
+              "value": "No-code/low-code interface plus API access"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Scale",
+              "url": "https://cloud.google.com/vertex-ai/docs",
+              "date": "2024-10-01",
+              "value": "Fully managed with automatic scaling on Google infrastructure"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Vertex AI Pricing",
+              "url": "https://cloud.google.com/vertex-ai/pricing",
+              "date": "2024-10-01",
+              "value": "Usage-based pricing with cost controls and quotas"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09",
+          "notes": "Costs can vary with grounding and search usage"
+        },
+        "monitoring_capabilities": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloud Monitoring",
+              "url": "https://cloud.google.com/monitoring/docs",
+              "date": "2024-10-01",
+              "value": "Comprehensive monitoring via Cloud Monitoring and dashboards"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Enterprise Adoption",
+              "url": "https://cloud.google.com/customers#/products=AI_/_Machine_Learning",
+              "date": "2024-10-01",
+              "value": "Production-ready with enterprise customer deployments"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "No-code/low-code interface makes agent building accessible",
+    "Advanced grounding with Google Search and enterprise data",
+    "Outstanding security and compliance on Google Cloud",
+    "Seamless Google Cloud ecosystem integration",
+    "Automatic scaling with managed infrastructure",
+    "Multimodal capabilities with Gemini models"
+  ],
+  "limitations": [
+    "Google Cloud vendor lock-in with proprietary service",
+    "Limited to Gemini and PaLM models",
+    "Higher costs for grounding and search features",
+    "Less code-level flexibility than open frameworks",
+    "Requires Google Cloud expertise for optimization",
+    "Not open source, limited customization of orchestration"
+  ],
+  "metadata": {
+    "license": "Proprietary (Google Cloud)",
+    "supported_models": [
+      "Gemini Pro",
+      "Gemini Ultra",
+      "PaLM 2"
+    ],
+    "programming_languages": [
+      "Google Cloud SDK (Python, Java, Node.js, etc.)",
+      "REST API",
+      "No-code UI"
+    ],
+    "deployment_type": "Google Cloud managed service",
+    "tool_support": [
+      "Function calling",
+      "Enterprise Search",
+      "Vertex AI extensions"
+    ],
+    "regions_available": "Multiple Google Cloud regions",
+    "sla": "99.9%"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 95,
+      "notes": "Outstanding for customer support with conversational AI expertise"
+    },
+    "code-generation": {
+      "overall": 85,
+      "notes": "Gemini Code models capable but less specialized tooling"
+    },
+    "research-assistant": {
+      "overall": 93,
+      "notes": "Excellent with grounding from Google Search and enterprise data"
+    },
+    "data-analysis": {
+      "overall": 88,
+      "notes": "Good integration with BigQuery and Google Cloud data services"
+    },
+    "content-creation": {
+      "overall": 87,
+      "notes": "Capable for content workflows with appropriate configuration"
+    },
+    "education": {
+      "overall": 89,
+      "notes": "Conversational design and session management good for education"
+    },
+    "healthcare": {
+      "overall": 91,
+      "notes": "Strong with HIPAA compliance and healthcare partnerships"
+    },
+    "financial-analysis": {
+      "overall": 93,
+      "notes": "Excellent for financial services with compliance certifications"
+    },
+    "legal-compliance": {
+      "overall": 89,
+      "notes": "Enterprise search and grounding useful for legal analysis"
+    },
+    "creative-writing": {
+      "overall": 84,
+      "notes": "Gemini's multimodal capabilities support creative workflows"
+    }
+  },
+  "best_for": [
+    "Google Cloud customers building conversational AI",
+    "Enterprises needing Vertex AI integration",
+    "Teams wanting managed agent development platform",
+    "Organizations requiring Google Workspace integration"
+  ],
+  "tags": [
+    "google"
+  ]
+}

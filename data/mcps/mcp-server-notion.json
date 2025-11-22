@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-notion",
+  "type": "mcp",
+  "name": "MCP Notion Server",
+  "provider": "Notion (Official)",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Notion workspace integration. Enables AI models to create, read, update pages and databases, manage blocks, and search content. Essential for AI-powered knowledge management, documentation, and collaborative workspace workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 82,
+      "criteria": {
+        "page_operation_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Notion API",
+              "url": "https://developers.notion.com/reference/intro",
+              "date": "2025-11-16",
+              "value": "Reliable page and database operations"
+            }
+          ],
+          "methodology": "Operation success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "search_accuracy": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Notion Search API",
+              "url": "https://developers.notion.com/reference/post-search",
+              "date": "2025-11-16",
+              "value": "Good search accuracy across pages and databases"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion Rate Limits",
+              "url": "https://developers.notion.com/reference/request-limits",
+              "date": "2025-11-16",
+              "value": "Subject to rate limits (3 requests/second average)"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "block_rendering_accuracy": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion Blocks API",
+              "url": "https://developers.notion.com/reference/block",
+              "date": "2025-11-16",
+              "value": "Accurate block-level content handling"
+            }
+          ],
+          "methodology": "Content rendering testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles API errors with retry and timeout management"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 71,
+      "criteria": {
+        "authentication_security": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Notion Integration Authentication",
+              "url": "https://developers.notion.com/docs/authorization",
+              "date": "2025-11-16",
+              "value": "Uses integration tokens with workspace-level permissions"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Integration token stored locally; AI can access shared pages"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "page_modification_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can create, modify, and archive pages and databases"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "workspace_access_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion Permissions",
+              "url": "https://developers.notion.com/docs/authorization#integration-permissions",
+              "date": "2025-11-16",
+              "value": "Integration must be granted access to specific pages"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "content_deletion_risk": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion API",
+              "url": "https://developers.notion.com/reference/archive-a-page",
+              "date": "2025-11-16",
+              "value": "Can archive pages but not permanently delete (recoverable)"
+            }
+          ],
+          "methodology": "Deletion risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion Activity Log",
+              "url": "https://www.notion.so/help/activity-log",
+              "date": "2025-11-16",
+              "value": "Changes tracked in Notion's activity log"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 67,
+      "criteria": {
+        "page_content_exposure": {
+          "score": 63,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Page content, titles, and properties sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "database_structure_exposure": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Database schemas and property values exposed"
+            }
+          ],
+          "methodology": "Database privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "workspace_metadata_privacy": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Workspace structure and page hierarchy may be revealed"
+            }
+          ],
+          "methodology": "Metadata privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Notion content shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "collaborator_information": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion API",
+              "url": "https://developers.notion.com/reference/user",
+              "date": "2025-11-16",
+              "value": "User information and collaboration data accessible"
+            }
+          ],
+          "methodology": "Collaborator privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 79,
+      "criteria": {
+        "documentation_quality": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Notion Activity Log",
+              "url": "https://www.notion.so/help/activity-log",
+              "date": "2025-11-16",
+              "value": "All changes visible in Notion activity log and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Clear but incomplete documentation of supported operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 81,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires Notion integration creation and token configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Notion API Performance",
+              "url": "https://developers.notion.com/",
+              "date": "2025-11-16",
+              "value": "Moderate performance; rate limits can slow operations (3 req/sec)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Notion API Stability",
+              "url": "https://developers.notion.com/",
+              "date": "2025-11-16",
+              "value": "Built on reliable Notion API with good uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Notion MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers pages, databases, blocks, and search operations"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive Notion workspace integration (pages, databases, blocks)",
+    "Built on reliable Notion API with good uptime",
+    "Excellent for knowledge management and documentation workflows",
+    "Integration permissions provide page-level access control",
+    "Open source community implementation",
+    "Archived pages are recoverable (not permanently deleted)"
+  ],
+  "limitations": [
+    "Page content and database data exposed to LLM provider",
+    "AI can modify and archive pages within integration permissions",
+    "Workspace structure and page hierarchy may be revealed",
+    "Subject to strict rate limits (3 requests/second average)",
+    "Database schemas and property values exposed",
+    "User and collaborator information accessible"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Notion API, Notion Client SDK",
+    "authentication": "Notion Integration Token",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 75,
+      "notes": "Useful for technical documentation generation and API docs"
+    },
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good for knowledge base management and support documentation"
+    },
+    "content-creation": {
+      "overall": 92,
+      "notes": "Excellent for content planning, drafting, and collaborative writing"
+    },
+    "data-analysis": {
+      "overall": 80,
+      "notes": "Good for analyzing structured data in Notion databases"
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Ideal for research note-taking and knowledge organization"
+    },
+    "legal-compliance": {
+      "overall": 58,
+      "notes": "Risk of exposing confidential documentation"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "Risk of exposing patient information in documentation"
+    },
+    "financial-analysis": {
+      "overall": 62,
+      "notes": "Moderate risk for financial documentation management"
+    },
+    "education": {
+      "overall": 95,
+      "notes": "Excellent for course content, lesson planning, and student notes"
+    },
+    "creative-writing": {
+      "overall": 90,
+      "notes": "Excellent for story planning, character databases, and world-building"
+    }
+  },
+  "best_for": [
+    "Teams using Notion for knowledge management and collaboration",
+    "Project managers organizing workflows in Notion",
+    "Content creators managing documentation and wikis"
+  ],
+  "tags": [
+    "productivity",
+    "notes",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

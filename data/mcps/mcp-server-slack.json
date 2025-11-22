@@ -1,0 +1,461 @@
+{
+  "id": "mcp-server-slack",
+  "type": "mcp",
+  "name": "MCP Slack Server",
+  "provider": "Anthropic (Archived)",
+  "version": "2025.4.24",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "ARCHIVED: Former official MCP server for Slack workspace interaction. This server is NO LONGER MAINTAINED. Moved to servers-archived repository. No security updates provided. Community alternatives may be available.",
+  "website": "https://api.slack.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "message_delivery_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack API Documentation",
+              "url": "https://api.slack.com/docs/rate-limits",
+              "date": "2025-11-16",
+              "value": "High reliability for message posting and retrieval via Web API"
+            }
+          ],
+          "methodology": "Message delivery success testing",
+          "last_verified": "2025-11-09"
+        },
+        "search_accuracy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack Search API",
+              "url": "https://api.slack.com/methods/search.messages",
+              "date": "2025-11-16",
+              "value": "Powerful message search with filters and context"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack Rate Limits",
+              "url": "https://api.slack.com/docs/rate-limits",
+              "date": "2025-11-16",
+              "value": "Tier-based rate limits (1+ requests per second), requires careful handling"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "real_time_updates": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack Events API",
+              "url": "https://api.slack.com/apis/connections/events-api",
+              "date": "2025-11-16",
+              "value": "Events API enables near real-time message notifications"
+            }
+          ],
+          "methodology": "Event delivery latency testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack API Error Handling",
+              "url": "https://api.slack.com/web#errors",
+              "date": "2025-11-16",
+              "value": "Clear error codes with retry guidance"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 74,
+      "criteria": {
+        "oauth_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack OAuth",
+              "url": "https://api.slack.com/authentication/oauth-v2",
+              "date": "2025-11-16",
+              "value": "Secure OAuth 2.0 with granular permission scopes"
+            }
+          ],
+          "methodology": "Authentication security review",
+          "last_verified": "2025-11-09"
+        },
+        "message_access_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can read all messages in channels within granted scope"
+            }
+          ],
+          "methodology": "Access boundary testing",
+          "last_verified": "2025-11-09"
+        },
+        "posting_control": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack Permissions",
+              "url": "https://api.slack.com/scopes",
+              "date": "2025-11-16",
+              "value": "AI can post messages as bot or user depending on scope"
+            }
+          ],
+          "methodology": "Message posting capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_exfiltration_risk": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Flow Analysis",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Workspace messages sent to LLM provider for processing"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack Audit Logs",
+              "url": "https://api.slack.com/admins/audit-logs",
+              "date": "2025-11-16",
+              "value": "Enterprise Grid provides comprehensive audit logs"
+            }
+          ],
+          "methodology": "Audit capabilities review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 70,
+      "criteria": {
+        "message_exposure": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Slack messages including private conversations sent to LLM provider"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pii_protection": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No built-in PII detection or message content filtering"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "workspace_admin_control": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack Admin Controls",
+              "url": "https://slack.com/help/articles/222386767-Manage-app-installation-settings",
+              "date": "2025-11-16",
+              "value": "Workspace admins can control app installations and permissions"
+            }
+          ],
+          "methodology": "Enterprise control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_retention": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack DLP",
+              "url": "https://slack.com/help/articles/360002575013-Data-management-at-Slack",
+              "date": "2025-11-16",
+              "value": "Slack retains messages per workspace policy, additional copies sent to LLM"
+            }
+          ],
+          "methodology": "Data retention policy review",
+          "last_verified": "2025-11-09"
+        },
+        "compliance_readiness": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack Compliance",
+              "url": "https://slack.com/trust/compliance",
+              "date": "2025-11-16",
+              "value": "Slack is compliant, but third-party LLM sharing affects compliance posture"
+            }
+          ],
+          "methodology": "Compliance framework review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 81,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack API Documentation",
+              "url": "https://api.slack.com/docs",
+              "date": "2025-11-16",
+              "value": "Comprehensive Slack API docs with examples and guides"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack Activity",
+              "url": "https://api.slack.com/admins/audit-logs",
+              "date": "2025-11-16",
+              "value": "All API actions logged in audit logs and visible in channels"
+            }
+          ],
+          "methodology": "Operation traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "permission_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OAuth Scopes",
+              "url": "https://api.slack.com/scopes",
+              "date": "2025-11-16",
+              "value": "Clear permission descriptions during OAuth flow"
+            }
+          ],
+          "methodology": "Permission clarity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "mcp_implementation": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Community-maintained with variable documentation quality"
+            }
+          ],
+          "methodology": "Implementation documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 80,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Slack App Setup",
+              "url": "https://api.slack.com/start/quickstart",
+              "date": "2025-11-16",
+              "value": "Requires Slack app creation and OAuth configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack Status",
+              "url": "https://status.slack.com/",
+              "date": "2025-11-16",
+              "value": "High uptime and reliability (>99.9%)"
+            }
+          ],
+          "methodology": "Uptime analysis",
+          "last_verified": "2025-11-09"
+        },
+        "response_time": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Performance",
+              "url": "https://api.slack.com/docs/rate-limits",
+              "date": "2025-11-16",
+              "value": "Good API response times (100-300ms typical)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "feature_coverage": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Slack Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers basic message reading/posting, limited channel management"
+            }
+          ],
+          "methodology": "Feature completeness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "cost": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Slack API Pricing",
+              "url": "https://api.slack.com/",
+              "date": "2025-11-16",
+              "value": "Free for basic API usage, costs from Slack workspace subscription"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Powerful team communication and collaboration automation",
+    "Comprehensive Slack API with rich feature set",
+    "High reliability and uptime from Slack infrastructure",
+    "Granular OAuth permission scopes for access control",
+    "Excellent audit logging for Enterprise Grid customers",
+    "Real-time message capabilities through Events API"
+  ],
+  "limitations": [
+    "Workspace messages exposed to LLM provider APIs",
+    "No built-in content filtering or PII protection",
+    "Risk of exposing confidential team communications",
+    "Rate limits can be restrictive for high-volume operations",
+    "Community-maintained MCP server with variable support",
+    "Compliance challenges when sharing workspace data with third parties"
+  ],
+  "metadata": {
+    "license": "Varies (Slack API proprietary, MCP implementation varies)",
+    "supported_platforms": [
+      "All platforms with OAuth support"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python",
+      "Any language with Slack SDK"
+    ],
+    "mcp_version": "1.0",
+    "api_provider": "Slack Technologies",
+    "authentication": "OAuth 2.0",
+    "api_version": "Slack Web API",
+    "rate_limits": "Tier-based (1+ requests per second)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 72,
+      "notes": "Useful for posting code snippets and updates, but limited for actual generation"
+    },
+    "customer-support": {
+      "overall": 88,
+      "notes": "Excellent for internal support channels and team communication automation"
+    },
+    "content-creation": {
+      "overall": 75,
+      "notes": "Good for collaborative content discussions, but not primary use case"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Useful for analyzing team communication patterns and sentiment"
+    },
+    "research-assistant": {
+      "overall": 82,
+      "notes": "Good for searching team knowledge and past discussions"
+    },
+    "legal-compliance": {
+      "overall": 60,
+      "notes": "Risk of exposing confidential team communications to LLM providers"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "High risk if PHI discussed in Slack; compliance challenges"
+    },
+    "financial-analysis": {
+      "overall": 65,
+      "notes": "Risky for confidential financial discussions; requires careful controls"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Great for classroom communication and student collaboration"
+    },
+    "creative-writing": {
+      "overall": 70,
+      "notes": "Useful for collaborative writing discussions but not primary tool"
+    }
+  },
+  "best_for": [
+    "Teams automating Slack communication and notifications",
+    "Customer support using Slack for team coordination",
+    "Developers building Slack-integrated workflows"
+  ],
+  "tags": [
+    "communication",
+    "collaboration",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "id": "flowise",
+  "type": "agent",
+  "name": "Flowise",
+  "provider": "FlowiseAI",
+  "version": "2.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Open-source low-code platform for building customized LLM orchestration flows and AI agents. Visual node-based editor for creating RAG pipelines, chatbots, and autonomous agents without extensive coding.",
+  "website": "https://flowiseai.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 78,
+      "criteria": {
+        "node_execution": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Flowise Documentation",
+              "url": "https://docs.flowiseai.com/",
+              "date": "2024-10-20",
+              "value": "Node-based execution with sequential and parallel flows"
+            }
+          ],
+          "methodology": "Flow execution testing",
+          "last_verified": "2025-11-09"
+        },
+        "llm_chain_support": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangChain Integration",
+              "url": "https://docs.flowiseai.com/integrations",
+              "date": "2024-10-15",
+              "value": "Built on LangChain with support for chains and agents"
+            }
+          ],
+          "methodology": "LLM chain testing",
+          "last_verified": "2025-11-09"
+        },
+        "chatflow_management": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Chatflows",
+              "url": "https://docs.flowiseai.com/chatflows",
+              "date": "2024-10-01",
+              "value": "Multiple chatflows with API endpoints and embeddings"
+            }
+          ],
+          "methodology": "Chatflow capability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "vector_store_support": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Vector Stores",
+              "url": "https://docs.flowiseai.com/vector-stores",
+              "date": "2024-10-01",
+              "value": "Multiple vector stores: Pinecone, Weaviate, Qdrant, Chroma"
+            }
+          ],
+          "methodology": "Vector store integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 71,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Error Management",
+              "url": "https://docs.flowiseai.com/",
+              "date": "2024-09-20",
+              "value": "Basic error handling with visual feedback"
+            }
+          ],
+          "methodology": "Error recovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "500ms-8s (varies)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://github.com/FlowiseAI/Flowise",
+              "date": "2024-10-01",
+              "value": "Depends on LLM calls, vector searches, and chain complexity"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 73,
+      "criteria": {
+        "api_authentication": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Security",
+              "url": "https://docs.flowiseai.com/configuration/authorization",
+              "date": "2024-10-01",
+              "value": "API key authentication for chatflows and predictions"
+            }
+          ],
+          "methodology": "Authentication testing",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://docs.flowiseai.com/deployment",
+              "date": "2024-10-01",
+              "value": "Self-hosting via Docker, npm, or cloud platforms"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "credential_management": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Credentials",
+              "url": "https://docs.flowiseai.com/configuration/credentials",
+              "date": "2024-10-01",
+              "value": "Encrypted credential storage with environment variables"
+            }
+          ],
+          "methodology": "Credential security review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/FlowiseAI/Flowise",
+              "date": "2024-10-20",
+              "value": "Apache 2.0 license, 32k+ stars, active development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture",
+              "url": "https://docs.flowiseai.com/",
+              "date": "2024-10-01",
+              "value": "Basic isolation, enterprise features limited"
+            }
+          ],
+          "methodology": "Data isolation assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 79,
+      "criteria": {
+        "data_retention": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Chat History",
+              "url": "https://docs.flowiseai.com/features/chat-history",
+              "date": "2024-10-01",
+              "value": "Configurable chat history storage and retention"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://github.com/FlowiseAI/Flowise",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Local Installation",
+              "url": "https://docs.flowiseai.com/getting-started",
+              "date": "2024-10-01",
+              "value": "Easy local deployment with Docker or npm"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://docs.flowiseai.com/integrations/langchain/llms",
+              "date": "2024-10-01",
+              "value": "Data sent to configured LLM providers"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "embedding_storage": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Stores",
+              "url": "https://docs.flowiseai.com/vector-stores",
+              "date": "2024-10-01",
+              "value": "Control over vector store selection and data storage"
+            }
+          ],
+          "methodology": "Data storage assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "documentation_quality": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Flowise Docs",
+              "url": "https://docs.flowiseai.com/",
+              "date": "2024-10-20",
+              "value": "Comprehensive docs with examples and video tutorials"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "visual_interface": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "UI Features",
+              "url": "https://flowiseai.com/",
+              "date": "2024-10-01",
+              "value": "Intuitive drag-and-drop visual interface"
+            }
+          ],
+          "methodology": "UI/UX assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/FlowiseAI/Flowise",
+              "date": "2024-10-20",
+              "value": "Apache 2.0, 32k+ stars, very active community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://github.com/FlowiseAI/Flowise/discussions",
+              "date": "2024-10-20",
+              "value": "Active Discord and GitHub discussions"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        },
+        "chatflow_export": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Import/Export",
+              "url": "https://docs.flowiseai.com/",
+              "date": "2024-10-01",
+              "value": "Export chatflows as JSON for portability"
+            }
+          ],
+          "methodology": "Portability assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 76,
+      "criteria": {
+        "ease_of_use": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "User Experience",
+              "url": "https://flowiseai.com/",
+              "date": "2024-10-01",
+              "value": "Very intuitive for non-technical users"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Scaling",
+              "url": "https://docs.flowiseai.com/deployment",
+              "date": "2024-10-01",
+              "value": "Basic scaling support, requires container orchestration"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/FlowiseAI/Flowise",
+              "date": "2024-10-01",
+              "value": "Free Apache 2.0, costs only for hosting and LLM APIs"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring Features",
+              "url": "https://docs.flowiseai.com/",
+              "date": "2024-10-01",
+              "value": "Basic chat history and logs, limited monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_deployment": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "API Endpoints",
+              "url": "https://docs.flowiseai.com/api-reference",
+              "date": "2024-10-01",
+              "value": "Chatflows auto-generate API endpoints"
+            }
+          ],
+          "methodology": "API capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "marketplace": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Templates",
+              "url": "https://docs.flowiseai.com/use-cases",
+              "date": "2024-10-01",
+              "value": "Growing marketplace of pre-built chatflows"
+            }
+          ],
+          "methodology": "Template ecosystem assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Extremely user-friendly visual interface for building AI agents",
+    "Open source (Apache 2.0) with very active community (32k+ stars)",
+    "Easy deployment with Docker, npm, or cloud platforms",
+    "Built-in support for multiple vector stores and LLM providers",
+    "Auto-generates API endpoints for chatflows",
+    "Growing marketplace of pre-built templates and use cases"
+  ],
+  "limitations": [
+    "Limited enterprise features (advanced auth, monitoring, RBAC)",
+    "Primarily designed for prototyping and small-scale deployment",
+    "Performance optimization requires technical knowledge",
+    "Security features less mature than enterprise platforms",
+    "Scaling to high-volume production requires additional infrastructure",
+    "Limited debugging capabilities for complex flows"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_models": [
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Azure OpenAI",
+      "HuggingFace",
+      "Ollama"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "deployment_type": "Self-hosted (Docker, npm) or cloud",
+    "tool_support": [
+      "LangChain tools",
+      "Custom nodes",
+      "API integrations"
+    ],
+    "pricing_model": "Free open source (FlowiseAI Cloud managed service available)",
+    "github_stars": "42000+",
+    "first_release": "2023",
+    "vector_stores": "Pinecone, Weaviate, Qdrant, Chroma, Supabase, Postgres",
+    "ui_technology": "React-based visual node editor",
+    "acquisition": "Acquired by Workday in August 2025",
+    "version": "3.0.1+"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 84,
+      "notes": "Excellent for building support chatbots with visual interface"
+    },
+    "code-generation": {
+      "overall": 70,
+      "notes": "Can build code agents but limited specialized capabilities"
+    },
+    "research-assistant": {
+      "overall": 86,
+      "notes": "Strong for RAG-based document Q&A and summarization"
+    },
+    "data-analysis": {
+      "overall": 73,
+      "notes": "Can integrate analysis tools via LangChain nodes"
+    },
+    "content-creation": {
+      "overall": 79,
+      "notes": "Good for building content generation workflows"
+    },
+    "education": {
+      "overall": 87,
+      "notes": "Ideal for educators building AI tutors without coding"
+    },
+    "healthcare": {
+      "overall": 72,
+      "notes": "Prototyping suitable, production needs hardening"
+    },
+    "financial-analysis": {
+      "overall": 70,
+      "notes": "Self-hosted option but limited enterprise features"
+    },
+    "legal-compliance": {
+      "overall": 81,
+      "notes": "Good for document analysis with vector search"
+    },
+    "creative-writing": {
+      "overall": 77,
+      "notes": "Suitable for creative prompt engineering workflows"
+    }
+  },
+  "best_for": [
+    "No-code users building LangChain workflows visually",
+    "Teams prototyping LLM applications quickly",
+    "Business analysts creating AI workflows without coding",
+    "Developers wanting visual LangChain orchestration"
+  ],
+  "tags": [
+    "visual",
+    "low-code",
+    "open-source"
+  ]
+}

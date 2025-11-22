@@ -1,0 +1,507 @@
+{
+  "id": "activepieces",
+  "type": "agent",
+  "name": "Activepieces",
+  "provider": "Activepieces",
+  "version": "0.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Open-source no-code business automation platform with AI capabilities. Self-hostable alternative to Zapier with visual workflow builder, 200+ app integrations, and LLM integration for intelligent automation.",
+  "website": "https://www.activepieces.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 78,
+      "criteria": {
+        "flow_execution": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Activepieces Documentation",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-20",
+              "value": "Reliable flow execution with queue-based processing"
+            }
+          ],
+          "methodology": "Workflow reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "ai_integration": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AI Pieces",
+              "url": "https://www.activepieces.com/pieces",
+              "date": "2024-10-15",
+              "value": "OpenAI and AI model integrations available"
+            }
+          ],
+          "methodology": "AI capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "app_integrations": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pieces Catalog",
+              "url": "https://www.activepieces.com/pieces",
+              "date": "2024-10-01",
+              "value": "200+ app integrations (pieces) with active development"
+            }
+          ],
+          "methodology": "Integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Error Management",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-09-20",
+              "value": "Basic error handling with retry capabilities"
+            }
+          ],
+          "methodology": "Error recovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "performance": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://github.com/activepieces/activepieces",
+              "date": "2024-10-01",
+              "value": "Performance depends on self-hosted infrastructure"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Variable (self-hosted)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://www.activepieces.com/docs/install",
+              "date": "2024-10-01",
+              "value": "Latency depends on hosting environment and flow complexity"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 77,
+      "criteria": {
+        "self_hosting": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosting",
+              "url": "https://www.activepieces.com/docs/install",
+              "date": "2024-10-01",
+              "value": "Full self-hosting with Docker and Docker Compose"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "authentication": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Auth Features",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Basic authentication, SSO in enterprise edition"
+            }
+          ],
+          "methodology": "Authentication testing",
+          "last_verified": "2025-11-09"
+        },
+        "credential_storage": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Connections",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Encrypted credential storage in database"
+            }
+          ],
+          "methodology": "Credential security review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/activepieces/activepieces",
+              "date": "2024-10-20",
+              "value": "MIT license, 9k+ stars, open source community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_security": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-09-15",
+              "value": "API key authentication, requires additional hardening"
+            }
+          ],
+          "methodology": "API security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 82,
+      "criteria": {
+        "data_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Control",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Full control over data retention with self-hosting"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://www.activepieces.com/",
+              "date": "2024-10-01",
+              "value": "GDPR compliance achievable with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Installation",
+              "url": "https://www.activepieces.com/docs/install",
+              "date": "2024-10-01",
+              "value": "Complete local deployment with Docker"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_processing": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Flow",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Data processed locally when self-hosted"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "no_telemetry": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy",
+              "url": "https://github.com/activepieces/activepieces",
+              "date": "2024-10-01",
+              "value": "No telemetry in self-hosted deployments"
+            }
+          ],
+          "methodology": "Telemetry assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-20",
+              "value": "Good documentation, still growing"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "visual_builder": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Flow Builder",
+              "url": "https://www.activepieces.com/",
+              "date": "2024-10-01",
+              "value": "Clean visual flow builder interface"
+            }
+          ],
+          "methodology": "UI/UX assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/activepieces/activepieces",
+              "date": "2024-10-20",
+              "value": "MIT license, 9k+ stars, active development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "execution_logs": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Execution history with basic logging"
+            }
+          ],
+          "methodology": "Traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://discord.gg/activepieces",
+              "date": "2024-10-15",
+              "value": "Growing community on Discord and GitHub"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 75,
+      "criteria": {
+        "ease_of_use": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "User Experience",
+              "url": "https://www.activepieces.com/",
+              "date": "2024-10-01",
+              "value": "User-friendly no-code interface"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Scaling",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Horizontal scaling possible with queue workers"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://www.activepieces.com/pricing",
+              "date": "2024-10-01",
+              "value": "Free MIT open source, cloud from $250/month"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring",
+              "url": "https://www.activepieces.com/docs",
+              "date": "2024-10-01",
+              "value": "Basic monitoring, requires external tools for production"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "piece_ecosystem": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pieces",
+              "url": "https://www.activepieces.com/pieces",
+              "date": "2024-10-01",
+              "value": "200+ pieces (integrations), growing ecosystem"
+            }
+          ],
+          "methodology": "Integration ecosystem assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Maturity",
+              "url": "https://github.com/activepieces/activepieces",
+              "date": "2024-10-01",
+              "value": "Active development, production use requires configuration"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 81,
+      "notes": "Good for support automation with self-hosting option"
+    },
+    "code-generation": {
+      "overall": 68,
+      "notes": "Can integrate AI but not specialized for code"
+    },
+    "research-assistant": {
+      "overall": 76,
+      "notes": "Suitable for automated research workflows"
+    },
+    "data-analysis": {
+      "overall": 79,
+      "notes": "Good for data integration and automation"
+    },
+    "content-creation": {
+      "overall": 78,
+      "notes": "Suitable for content automation workflows"
+    },
+    "education": {
+      "overall": 74,
+      "notes": "Can build educational automation"
+    },
+    "healthcare": {
+      "overall": 76,
+      "notes": "Self-hosted option suitable with proper setup"
+    },
+    "financial-analysis": {
+      "overall": 77,
+      "notes": "Self-hosting enables compliance control"
+    },
+    "legal-compliance": {
+      "overall": 75,
+      "notes": "Can automate document workflows"
+    },
+    "creative-writing": {
+      "overall": 73,
+      "notes": "Suitable for creative automation"
+    }
+  },
+  "best_for": [
+    "Teams needing self-hosted Zapier alternative with no vendor lock-in",
+    "Business users wanting no-code automation with AI capabilities",
+    "Organizations requiring data privacy through self-hosting",
+    "Developers seeking open-source workflow automation platform"
+  ],
+  "strengths": [
+    "Open source (MIT) self-hostable alternative to Zapier",
+    "No vendor lock-in with full data control",
+    "Clean visual no-code interface for business users",
+    "Free to use with only infrastructure costs",
+    "200+ app integrations with active development",
+    "Growing community and active GitHub development"
+  ],
+  "limitations": [
+    "Smaller integration ecosystem than commercial alternatives",
+    "Requires self-hosting infrastructure and DevOps knowledge",
+    "Limited enterprise features compared to mature platforms",
+    "Production deployment requires additional configuration",
+    "Documentation and community still maturing",
+    "Performance optimization requires technical expertise"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI",
+      "Custom AI APIs"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "deployment_type": "Self-hosted (Docker) or Activepieces Cloud",
+    "tool_support": [
+      "200+ app pieces",
+      "Custom pieces",
+      "Webhooks"
+    ],
+    "pricing_model": "Free open source, Cloud from $250/month",
+    "github_stars": "9000+",
+    "first_release": "2022",
+    "database": "PostgreSQL",
+    "queue_system": "Redis (optional for scaling)",
+    "pricing": "Free self-hosted (MIT license), Cloud: $1 per 1,000 tasks. 300+ integrations, 280+ MCP servers"
+  },
+  "tags": [
+    "automation",
+    "open-source"
+  ]
+}

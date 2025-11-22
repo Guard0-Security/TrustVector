@@ -1,0 +1,650 @@
+{
+  "id": "nova-pro",
+  "type": "model",
+  "name": "Nova Pro",
+  "provider": "Amazon",
+  "version": "2025-01",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Amazon's Nova Pro model integrated with AWS services. Designed for enterprise customers requiring seamless AWS integration with good general capabilities.",
+  "website": "https://aws.amazon.com/bedrock/nova/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 73,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "~38% HumanEval (estimated)"
+            }
+          ],
+          "methodology": "Coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Benchmarks",
+              "url": "https://aws.amazon.com/bedrock/nova/benchmarks",
+              "date": "2025-01-15",
+              "value": "~50% MATH"
+            }
+          ],
+          "methodology": "Mathematical reasoning",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 74,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU Benchmark",
+              "url": "https://aws.amazon.com/bedrock/nova/benchmarks",
+              "date": "2025-01-15",
+              "value": "46.9% on multitask understanding"
+            }
+          ],
+          "methodology": "Knowledge testing",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Internal Testing",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "Good consistency"
+            }
+          ],
+          "methodology": "Internal testing",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "1.0s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "~1.0s typical"
+            }
+          ],
+          "methodology": "AWS infrastructure",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "2.0s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS CloudWatch",
+              "url": "https://docs.aws.amazon.com/bedrock/monitoring",
+              "date": "2025-01-15",
+              "value": "p95 ~2.0s"
+            }
+          ],
+          "methodology": "CloudWatch metrics",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "300,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "300K context"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SLA",
+              "url": "https://aws.amazon.com/bedrock/sla/",
+              "date": "2025-01-15",
+              "value": "99.9% SLA"
+            }
+          ],
+          "methodology": "AWS service SLA",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Moderate performance with excellent AWS integration. Large 300K context window. Reliable AWS infrastructure."
+    },
+    "security": {
+      "overall_score": 89,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Security Testing",
+              "url": "https://docs.aws.amazon.com/bedrock/security",
+              "date": "2025-01-15",
+              "value": "Strong resistance"
+            }
+          ],
+          "methodology": "AWS security testing",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Safety",
+              "url": "https://aws.amazon.com/bedrock/responsible-ai",
+              "date": "2025-01-15",
+              "value": "Robust guardrails"
+            }
+          ],
+          "methodology": "Safety testing",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Privacy",
+              "url": "https://aws.amazon.com/bedrock/data-privacy",
+              "date": "2025-01-15",
+              "value": "No training on customer data"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Guardrails",
+              "url": "https://aws.amazon.com/bedrock/guardrails",
+              "date": "2025-01-15",
+              "value": "Comprehensive content filtering"
+            }
+          ],
+          "methodology": "Safety benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS IAM",
+              "url": "https://docs.aws.amazon.com/bedrock/security",
+              "date": "2025-01-15",
+              "value": "AWS IAM integration, VPC support"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent security leveraging AWS infrastructure. Strong IAM and VPC integration."
+    },
+    "privacy_compliance": {
+      "overall_score": 93,
+      "criteria": {
+        "data_residency": {
+          "value": "Multi-region (AWS)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Regions",
+              "url": "https://aws.amazon.com/bedrock/pricing",
+              "date": "2025-01-15",
+              "value": "Available in all major AWS regions"
+            }
+          ],
+          "methodology": "AWS infrastructure review",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Privacy",
+              "url": "https://aws.amazon.com/bedrock/data-privacy",
+              "date": "2025-01-15",
+              "value": "No training on customer data"
+            }
+          ],
+          "methodology": "Privacy policy",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "0 days (ephemeral)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/data-protection",
+              "date": "2025-01-15",
+              "value": "Ephemeral processing"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Guardrails",
+              "url": "https://aws.amazon.com/bedrock/guardrails",
+              "date": "2025-01-15",
+              "value": "PII detection and redaction available"
+            }
+          ],
+          "methodology": "Feature review",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Compliance",
+              "url": "https://aws.amazon.com/compliance/bedrock",
+              "date": "2025-01-15",
+              "value": "SOC 2, GDPR, HIPAA, FedRAMP"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/data-protection",
+              "date": "2025-01-15",
+              "value": "Zero retention model"
+            }
+          ],
+          "methodology": "Architecture review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Exceptional privacy with AWS infrastructure. HIPAA eligible, FedRAMP authorized. Zero data retention."
+    },
+    "trust_transparency": {
+      "overall_score": 81,
+      "criteria": {
+        "explainability": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "Reasonable explanations"
+            }
+          ],
+          "methodology": "Reasoning evaluation",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Benchmarks",
+              "url": "https://aws.amazon.com/bedrock/nova/benchmarks",
+              "date": "2025-01-15",
+              "value": "Moderate accuracy"
+            }
+          ],
+          "methodology": "Factual QA testing",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Responsible AI",
+              "url": "https://aws.amazon.com/bedrock/responsible-ai",
+              "date": "2025-01-15",
+              "value": "Bias testing applied"
+            }
+          ],
+          "methodology": "Bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "Basic uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/nova-pro",
+              "date": "2025-01-15",
+              "value": "Good documentation"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Statements",
+              "url": "https://aws.amazon.com/bedrock/nova",
+              "date": "2025-01-15",
+              "value": "Limited disclosure"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Guardrails",
+              "url": "https://aws.amazon.com/bedrock/guardrails",
+              "date": "2025-01-15",
+              "value": "Configurable guardrails"
+            }
+          ],
+          "methodology": "Feature review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good transparency with AWS Guardrails. Comprehensive documentation."
+    },
+    "operational_excellence": {
+      "overall_score": 94,
+      "criteria": {
+        "api_design_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Bedrock API",
+              "url": "https://docs.aws.amazon.com/bedrock/api-reference",
+              "date": "2025-01-15",
+              "value": "Well-designed AWS API"
+            }
+          ],
+          "methodology": "API review",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SDKs",
+              "url": "https://aws.amazon.com/tools",
+              "date": "2025-01-15",
+              "value": "Comprehensive AWS SDKs"
+            }
+          ],
+          "methodology": "SDK review",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Versioning",
+              "url": "https://docs.aws.amazon.com/bedrock/versioning",
+              "date": "2025-01-15",
+              "value": "AWS standard versioning"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS CloudWatch",
+              "url": "https://docs.aws.amazon.com/bedrock/monitoring",
+              "date": "2025-01-15",
+              "value": "Full CloudWatch integration"
+            }
+          ],
+          "methodology": "Observability review",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Support",
+              "url": "https://aws.amazon.com/support",
+              "date": "2025-01-15",
+              "value": "Enterprise AWS support available"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Ecosystem",
+              "url": "https://aws.amazon.com/bedrock",
+              "date": "2025-01-15",
+              "value": "Full AWS service integration"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Terms",
+              "url": "https://aws.amazon.com/service-terms",
+              "date": "2025-01-15",
+              "value": "Standard AWS terms"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Exceptional operational excellence with full AWS integration. Best-in-class monitoring and support."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 72,
+      "notes": "Basic coding. Better integrated with AWS CodeWhisperer.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "customer-support": {
+      "overall": 78,
+      "notes": "Good for AWS-integrated customer support applications.",
+      "alternatives": [
+        "gpt-4-1-mini"
+      ]
+    },
+    "content-creation": {
+      "overall": 76,
+      "notes": "Adequate content creation with large context (300K).",
+      "alternatives": [
+        "gpt-4-1"
+      ]
+    },
+    "data-analysis": {
+      "overall": 75,
+      "notes": "Basic analysis integrated with AWS data services.",
+      "alternatives": [
+        "openai-o3"
+      ]
+    },
+    "research-assistant": {
+      "overall": 74,
+      "notes": "Adequate for research with large context window.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 88,
+      "notes": "Excellent for legal with AWS compliance (HIPAA, FedRAMP).",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "healthcare": {
+      "overall": 90,
+      "notes": "Excellent for healthcare with HIPAA eligibility and AWS integration.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 82,
+      "notes": "Good for finance with AWS FinOps integration.",
+      "alternatives": [
+        "openai-o3"
+      ]
+    },
+    "education": {
+      "overall": 76,
+      "notes": "Adequate for education, better options for STEM.",
+      "alternatives": [
+        "gpt-4-1"
+      ]
+    },
+    "creative-writing": {
+      "overall": 74,
+      "notes": "Basic creative writing capabilities.",
+      "alternatives": [
+        "gpt-4-1"
+      ]
+    }
+  },
+  "strengths": [
+    "Seamless AWS ecosystem integration (CloudWatch, IAM, VPC)",
+    "Exceptional compliance (HIPAA, FedRAMP, SOC 2)",
+    "Very large context window (300K tokens)",
+    "Zero data retention with AWS privacy",
+    "Enterprise-grade AWS support and SLA",
+    "Built-in PII detection and redaction"
+  ],
+  "limitations": [
+    "Moderate performance (46.9% MMLU)",
+    "Limited coding capabilities",
+    "AWS vendor lock-in",
+    "Higher costs within AWS ecosystem",
+    "Performance lags behind specialized models",
+    "Best value only for existing AWS customers"
+  ],
+  "best_for": [
+    "AWS-native applications requiring tight integration",
+    "Healthcare applications needing HIPAA compliance",
+    "Government applications (FedRAMP authorized)",
+    "Enterprise customers already on AWS",
+    "Applications requiring extensive compliance"
+  ],
+  "not_recommended_for": [
+    "Complex software engineering tasks",
+    "Organizations not using AWS",
+    "Advanced mathematical or scientific research",
+    "Applications requiring best-in-class accuracy",
+    "Multi-cloud strategies",
+    "Cost-sensitive projects outside AWS"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$0.80 per 1M tokens (on-demand), $0.40 per 1M tokens (batch)",
+      "output": "$3.20 per 1M tokens (on-demand), $1.60 per 1M tokens (batch)",
+      "notes": "AWS Bedrock pricing with 50% batch discount, volume discounts available",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 300000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese"
+    ],
+    "modalities": [
+      "text",
+      "image (input)"
+    ],
+    "api_endpoint": "https://bedrock.{region}.amazonaws.com",
+    "open_source": false,
+    "architecture": "Transformer-based",
+    "parameters": "Not disclosed"
+  },
+  "related_entities": [
+    "claude-sonnet-4-5",
+    "gpt-4-1",
+    "amazon-bedrock-agents"
+  ],
+  "tags": [
+    "aws",
+    "enterprise",
+    "hipaa-eligible",
+    "fedramp",
+    "compliance",
+    "integrated"
+  ]
+}

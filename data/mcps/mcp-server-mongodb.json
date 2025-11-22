@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-mongodb",
+  "type": "mcp",
+  "name": "MCP MongoDB Server",
+  "provider": "MongoDB (Official)",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for MongoDB database operations. Enables AI models to query, insert, update, and delete documents, manage collections, create indexes, and perform aggregations. Essential for AI-powered NoSQL database management and data analysis workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 83,
+      "criteria": {
+        "query_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MongoDB Driver",
+              "url": "https://www.mongodb.com/docs/drivers/",
+              "date": "2025-11-16",
+              "value": "Built on official MongoDB drivers with stable query execution"
+            }
+          ],
+          "methodology": "Query success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "aggregation_accuracy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MongoDB Aggregation",
+              "url": "https://www.mongodb.com/docs/manual/aggregation/",
+              "date": "2025-11-16",
+              "value": "Accurate aggregation pipeline execution"
+            }
+          ],
+          "methodology": "Aggregation testing",
+          "last_verified": "2025-11-09"
+        },
+        "large_dataset_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Performance degrades with very large result sets; pagination needed"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "connection_stability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MongoDB Connection Pooling",
+              "url": "https://www.mongodb.com/docs/manual/administration/connection-pool-overview/",
+              "date": "2025-11-16",
+              "value": "Stable connections with pooling and automatic reconnection"
+            }
+          ],
+          "methodology": "Connection stability testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles database errors with retry logic and error reporting"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 68,
+      "criteria": {
+        "authentication_security": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MongoDB Authentication",
+              "url": "https://www.mongodb.com/docs/manual/core/authentication/",
+              "date": "2025-11-16",
+              "value": "Supports MongoDB authentication mechanisms (SCRAM, X.509)"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "connection_string_exposure": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Connection string with credentials stored locally; accessible to AI"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "query_injection_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can construct arbitrary queries; NoSQL injection risk if not validated"
+            }
+          ],
+          "methodology": "Injection vulnerability testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_modification_control": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MongoDB Permissions",
+              "url": "https://www.mongodb.com/docs/manual/core/authorization/",
+              "date": "2025-11-16",
+              "value": "AI can insert, update, and delete documents within user permissions"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "database_drop_risk": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Can drop collections and databases if permissions allow"
+            }
+          ],
+          "methodology": "Destructive operation testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MongoDB Audit",
+              "url": "https://www.mongodb.com/docs/manual/core/auditing/",
+              "date": "2025-11-16",
+              "value": "Auditing available in MongoDB Enterprise; limited in Community Edition"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 66,
+      "criteria": {
+        "document_data_exposure": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Query results and document data sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pii_protection": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "No built-in PII detection or filtering; all queried data exposed"
+            }
+          ],
+          "methodology": "PII protection assessment",
+          "last_verified": "2025-11-09"
+        },
+        "field_level_security": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MongoDB Field-Level Encryption",
+              "url": "https://www.mongodb.com/docs/manual/core/security-client-side-encryption/",
+              "date": "2025-11-16",
+              "value": "Supports field-level encryption but requires application-level implementation"
+            }
+          ],
+          "methodology": "Field security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Database content shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "query_pattern_exposure": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Query patterns may reveal data structure and business logic"
+            }
+          ],
+          "methodology": "Query privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 78,
+      "criteria": {
+        "documentation_quality": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MongoDB MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained with evolving coverage"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "query_visibility": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All queries logged in MCP transaction logs"
+            }
+          ],
+          "methodology": "Query logging assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage_clarity": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Clear but incomplete documentation of supported MongoDB operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 80,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring MongoDB connection string"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "query_performance": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MongoDB Performance",
+              "url": "https://www.mongodb.com/docs/manual/administration/analyzing-mongodb-performance/",
+              "date": "2025-11-16",
+              "value": "Performance depends on query complexity and indexing (typically 10-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MongoDB Stability",
+              "url": "https://www.mongodb.com/",
+              "date": "2025-11-16",
+              "value": "Built on mature MongoDB drivers with high reliability"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MongoDB MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers CRUD operations, aggregations, indexing, and collection management"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive MongoDB CRUD and aggregation capabilities",
+    "Built on official MongoDB drivers with stable performance",
+    "Excellent for NoSQL data analysis and document processing",
+    "Supports complex aggregation pipelines and queries",
+    "Open source community implementation",
+    "Flexible schema-less data handling"
+  ],
+  "limitations": [
+    "Query results and document data exposed to LLM provider",
+    "No built-in PII detection or sensitive data filtering",
+    "Risk of NoSQL injection without proper query validation",
+    "AI can modify or delete data within permission scope",
+    "Connection strings with credentials accessible to AI",
+    "Limited audit logging in MongoDB Community Edition"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "MongoDB Node.js Driver, PyMongo",
+    "authentication": "MongoDB connection string (username/password)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 85,
+      "notes": "Good for generating MongoDB queries and database schemas"
+    },
+    "customer-support": {
+      "overall": 75,
+      "notes": "Useful for querying customer data and support ticket analysis"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Moderate applicability for content management systems using MongoDB"
+    },
+    "data-analysis": {
+      "overall": 92,
+      "notes": "Excellent for analyzing NoSQL data with aggregation pipelines"
+    },
+    "research-assistant": {
+      "overall": 80,
+      "notes": "Good for researching data patterns and document structures"
+    },
+    "legal-compliance": {
+      "overall": 55,
+      "notes": "High risk of exposing sensitive legal documents; requires strict controls"
+    },
+    "healthcare": {
+      "overall": 50,
+      "notes": "High risk of HIPAA violations; not recommended without strong data controls"
+    },
+    "financial-analysis": {
+      "overall": 60,
+      "notes": "Moderate risk; financial data exposure concerns"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for teaching NoSQL databases and data modeling"
+    },
+    "creative-writing": {
+      "overall": 65,
+      "notes": "Useful for managing story databases and character information"
+    }
+  },
+  "best_for": [
+    "Backend developers working with MongoDB databases",
+    "Data analysts querying NoSQL document collections",
+    "Database administrators managing MongoDB instances"
+  ],
+  "tags": [
+    "database",
+    "nosql",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

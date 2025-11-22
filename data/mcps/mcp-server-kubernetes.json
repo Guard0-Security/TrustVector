@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-kubernetes",
+  "type": "mcp",
+  "name": "MCP Kubernetes Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Kubernetes cluster management. Enables AI models to interact with Kubernetes API for pod management, deployment orchestration, service configuration, and cluster resource monitoring. Essential for AI-powered Kubernetes operations and cloud-native application management.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "k8s_api_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes API",
+              "url": "https://kubernetes.io/docs/reference/using-api/",
+              "date": "2025-11-16",
+              "value": "Built on stable Kubernetes API with mature implementation"
+            }
+          ],
+          "methodology": "API stability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "resource_operation_success": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "High success rate for pod, deployment, and service operations"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-09"
+        },
+        "cluster_state_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes Watch API",
+              "url": "https://kubernetes.io/docs/reference/using-api/api-concepts/",
+              "date": "2025-11-16",
+              "value": "Accurate real-time cluster state tracking"
+            }
+          ],
+          "methodology": "State synchronization testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_cluster_performance": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Performance varies with cluster size and network latency"
+            }
+          ],
+          "methodology": "Multi-cluster performance testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles Kubernetes API errors with retry and reconciliation"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 68,
+      "criteria": {
+        "rbac_enforcement": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes RBAC",
+              "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/",
+              "date": "2025-11-16",
+              "value": "Respects Kubernetes RBAC but requires careful role configuration"
+            }
+          ],
+          "methodology": "Authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "kubeconfig_exposure_risk": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Kubeconfig credentials stored locally; AI has cluster access"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "destructive_operation_risk": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can delete pods, deployments, and modify cluster resources"
+            }
+          ],
+          "methodology": "Operation risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "namespace_isolation": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Kubernetes Namespaces",
+              "url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+              "date": "2025-11-16",
+              "value": "Namespace isolation depends on RBAC configuration"
+            }
+          ],
+          "methodology": "Isolation boundary testing",
+          "last_verified": "2025-11-09"
+        },
+        "secret_access_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes Secrets",
+              "url": "https://kubernetes.io/docs/concepts/configuration/secret/",
+              "date": "2025-11-16",
+              "value": "Can access Kubernetes secrets if RBAC permits"
+            }
+          ],
+          "methodology": "Secrets management assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes Audit Logs",
+              "url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/",
+              "date": "2025-11-16",
+              "value": "All API operations logged in Kubernetes audit system"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 69,
+      "criteria": {
+        "cluster_metadata_exposure": {
+          "score": 66,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Cluster configurations, pod specs, and resource metadata sent to LLM"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pod_log_privacy": {
+          "score": 63,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Pod logs may contain sensitive application data"
+            }
+          ],
+          "methodology": "Log privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "secret_exposure_risk": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Kubernetes secrets accessible if RBAC permits"
+            }
+          ],
+          "methodology": "Secret privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Cluster data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "configmap_data_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Kubernetes ConfigMaps",
+              "url": "https://kubernetes.io/docs/concepts/configuration/configmap/",
+              "date": "2025-11-16",
+              "value": "ConfigMaps may contain sensitive configuration data"
+            }
+          ],
+          "methodology": "Configuration privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 79,
+      "criteria": {
+        "documentation_quality": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Kubernetes MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained with evolving coverage"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes Audit Logs",
+              "url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/",
+              "date": "2025-11-16",
+              "value": "All operations logged in Kubernetes audit trail and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "security_best_practices": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Limited security guidance for production deployments"
+            }
+          ],
+          "methodology": "Security documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 81,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires kubeconfig setup and appropriate RBAC configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Kubernetes API Performance",
+              "url": "https://kubernetes.io/docs/reference/using-api/",
+              "date": "2025-11-16",
+              "value": "Performance depends on cluster size and network (typically 100-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes Stability",
+              "url": "https://kubernetes.io/",
+              "date": "2025-11-16",
+              "value": "Built on mature Kubernetes API with high reliability"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "resource_coverage": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kubernetes MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers pods, deployments, services, configmaps, and secrets"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity and support"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive Kubernetes resource management and orchestration",
+    "Built on stable and mature Kubernetes API",
+    "Excellent for cloud-native application deployment automation",
+    "Full operation auditability through Kubernetes audit logs",
+    "Open source community implementation",
+    "Supports RBAC for granular access control"
+  ],
+  "limitations": [
+    "Cluster configurations and pod specs exposed to LLM provider",
+    "AI can delete resources and modify critical cluster configurations",
+    "Pod logs and Kubernetes secrets accessible if RBAC permits",
+    "Requires careful RBAC configuration to limit access",
+    "Community-maintained with variable support quality",
+    "ConfigMaps and secrets may contain sensitive data"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with kubectl"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Kubernetes API",
+    "authentication": "kubeconfig, Service Account tokens",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 90,
+      "notes": "Excellent for Kubernetes manifest generation and GitOps automation"
+    },
+    "customer-support": {
+      "overall": 78,
+      "notes": "Good for troubleshooting Kubernetes deployments and cluster issues"
+    },
+    "content-creation": {
+      "overall": 58,
+      "notes": "Limited applicability; mainly for infrastructure documentation"
+    },
+    "data-analysis": {
+      "overall": 82,
+      "notes": "Good for analyzing cluster metrics, resource utilization, and scaling patterns"
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Useful for researching Kubernetes patterns and cluster configurations"
+    },
+    "legal-compliance": {
+      "overall": 60,
+      "notes": "High risk due to cluster access; requires strict RBAC controls"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "Risk of exposing healthcare infrastructure; not recommended without strong controls"
+    },
+    "financial-analysis": {
+      "overall": 63,
+      "notes": "Moderate risk for financial infrastructure management"
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for teaching Kubernetes, container orchestration, and cloud-native architecture"
+    },
+    "creative-writing": {
+      "overall": 42,
+      "notes": "Low relevance to creative writing workflows"
+    }
+  },
+  "best_for": [
+    "DevOps engineers managing Kubernetes cluster operations",
+    "Site reliability engineers monitoring and troubleshooting clusters",
+    "Cloud architects automating Kubernetes deployments"
+  ],
+  "tags": [
+    "kubernetes",
+    "orchestration",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

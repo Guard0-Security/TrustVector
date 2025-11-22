@@ -1,0 +1,477 @@
+{
+  "id": "amazon-bedrock-agents",
+  "type": "agent",
+  "name": "Amazon Bedrock Agents",
+  "provider": "Amazon Web Services",
+  "version": "2024",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Fully managed AWS service for building and deploying generative AI agents. Handles orchestration, memory, knowledge bases, and action groups with enterprise security and scalability built-in.",
+  "website": "https://aws.amazon.com/bedrock/agents/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 88,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Bedrock Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html",
+              "date": "2024-10-01",
+              "value": "Built on AWS-managed foundation models with high reliability"
+            }
+          ],
+          "methodology": "Based on managed service SLA and model performance",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Action Groups",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-action-groups.html",
+              "date": "2024-10-01",
+              "value": "Robust action group integration with AWS Lambda and API Gateway"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Agent Orchestration",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-how.html",
+              "date": "2024-10-01",
+              "value": "Automatic task decomposition and multi-step orchestration"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Session Management",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-session-state.html",
+              "date": "2024-10-01",
+              "value": "Built-in session state management with DynamoDB persistence"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Managed Service",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html",
+              "date": "2024-10-01",
+              "value": "Automatic retries and error handling as managed service"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Medium (2-6s typical)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Performance Benchmarks",
+              "url": "https://aws.amazon.com/bedrock/",
+              "date": "2024-09-15",
+              "value": "Optimized for production workloads with global deployment"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 94,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Lambda Integration",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-action-groups.html",
+              "date": "2024-10-01",
+              "value": "Action groups execute in isolated Lambda functions"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS IAM Integration",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/security-iam.html",
+              "date": "2024-10-01",
+              "value": "Full AWS IAM integration with fine-grained permissions"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Guardrails",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html",
+              "date": "2024-10-01",
+              "value": "AWS Guardrails provide content filtering and safety controls"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Security",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html",
+              "date": "2024-10-01",
+              "value": "Strong data isolation with VPC and encryption"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "enterprise_security": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Compliance",
+              "url": "https://aws.amazon.com/compliance/",
+              "date": "2024-09-01",
+              "value": "Comprehensive AWS compliance certifications (SOC, ISO, HIPAA, etc.)"
+            }
+          ],
+          "methodology": "Enterprise security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 93,
+      "criteria": {
+        "data_retention": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Data Privacy",
+              "url": "https://aws.amazon.com/bedrock/data-privacy/",
+              "date": "2024-10-01",
+              "value": "Customer data not used for model training, full retention control"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS GDPR",
+              "url": "https://aws.amazon.com/compliance/gdpr-center/",
+              "date": "2024-08-15",
+              "value": "GDPR compliant with DPA and data residency options"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Bedrock Data Privacy",
+              "url": "https://aws.amazon.com/bedrock/data-privacy/",
+              "date": "2024-10-01",
+              "value": "Data stays within AWS, not shared with third parties or model providers"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "regional_deployment": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Regions",
+              "url": "https://aws.amazon.com/about-aws/global-infrastructure/",
+              "date": "2024-10-01",
+              "value": "Deploy in specific AWS regions for data residency requirements"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 85,
+      "criteria": {
+        "documentation_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html",
+              "date": "2024-10-15",
+              "value": "Comprehensive AWS documentation with examples and best practices"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CloudWatch Integration",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/monitoring.html",
+              "date": "2024-10-01",
+              "value": "Full CloudWatch logging and tracing integration"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Traces",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-test.html",
+              "date": "2024-10-01",
+              "value": "Trace information shows agent reasoning steps"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "managed_service_sla": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SLA",
+              "url": "https://aws.amazon.com/bedrock/sla/",
+              "date": "2024-09-01",
+              "value": "99.9% uptime SLA with AWS support"
+            }
+          ],
+          "methodology": "SLA review",
+          "last_verified": "2025-11-09"
+        },
+        "proprietary_service": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Managed Service",
+              "url": "https://aws.amazon.com/bedrock/",
+              "date": "2024-10-01",
+              "value": "Proprietary managed service, not open source"
+            }
+          ],
+          "methodology": "Transparency assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 92,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SDK Integration",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api.html",
+              "date": "2024-10-01",
+              "value": "Integrates via AWS SDKs and API, familiar to AWS users"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Scale",
+              "url": "https://aws.amazon.com/bedrock/",
+              "date": "2024-10-01",
+              "value": "Fully managed with automatic scaling to enterprise workloads"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Pricing",
+              "url": "https://aws.amazon.com/bedrock/pricing/",
+              "date": "2024-10-01",
+              "value": "Usage-based pricing with cost allocation tags"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09",
+          "notes": "Costs can accumulate with heavy use"
+        },
+        "monitoring_capabilities": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS CloudWatch",
+              "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/monitoring.html",
+              "date": "2024-10-01",
+              "value": "Comprehensive monitoring via CloudWatch and X-Ray"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Enterprise Deployments",
+              "url": "https://aws.amazon.com/bedrock/customers/",
+              "date": "2024-10-01",
+              "value": "Production-ready managed service with enterprise customers"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 94,
+      "notes": "Excellent for enterprise customer support with AWS scalability"
+    },
+    "code-generation": {
+      "overall": 82,
+      "notes": "Works but less specialized for code compared to other tools"
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Knowledge bases integration excellent for research tasks"
+    },
+    "data-analysis": {
+      "overall": 87,
+      "notes": "Good integration with AWS data services"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Capable for content workflows with appropriate prompting"
+    },
+    "education": {
+      "overall": 86,
+      "notes": "Session management good for personalized learning"
+    },
+    "healthcare": {
+      "overall": 95,
+      "notes": "Outstanding for healthcare with HIPAA compliance and security"
+    },
+    "financial-analysis": {
+      "overall": 96,
+      "notes": "Excellent for financial services with comprehensive compliance"
+    },
+    "legal-compliance": {
+      "overall": 91,
+      "notes": "Knowledge bases and security features suitable for legal work"
+    },
+    "creative-writing": {
+      "overall": 80,
+      "notes": "Works but not optimized for creative workflows"
+    }
+  },
+  "best_for": [
+    "Enterprises requiring HIPAA, SOC2, or GDPR compliant AI agents",
+    "AWS customers wanting fully managed agent infrastructure",
+    "Financial services and healthcare organizations needing maximum security",
+    "Teams preferring managed services over self-hosted solutions"
+  ],
+  "strengths": [
+    "Fully managed service with enterprise-grade reliability and SLA",
+    "Outstanding security and compliance (HIPAA, SOC, ISO, GDPR)",
+    "Seamless AWS ecosystem integration (Lambda, DynamoDB, S3)",
+    "Automatic scaling to handle enterprise workloads",
+    "Built-in knowledge bases with vector search",
+    "No infrastructure management required"
+  ],
+  "limitations": [
+    "AWS vendor lock-in with proprietary service",
+    "Higher costs compared to self-hosted solutions",
+    "Limited to AWS Bedrock foundation models",
+    "Less flexibility than code-based frameworks",
+    "Requires AWS expertise for optimal configuration",
+    "Not open source, limited customization of core orchestration"
+  ],
+  "metadata": {
+    "license": "Proprietary (AWS)",
+    "supported_models": [
+      "Claude (Anthropic)",
+      "Titan (Amazon)",
+      "Llama (Meta)",
+      "Command (Cohere)"
+    ],
+    "programming_languages": [
+      "AWS SDK (Python, JavaScript, Java, .NET, etc.)",
+      "REST API"
+    ],
+    "deployment_type": "AWS managed cloud service",
+    "tool_support": [
+      "Action Groups (Lambda)",
+      "Knowledge Bases",
+      "API integrations"
+    ],
+    "regions_available": "Multiple AWS regions",
+    "sla": "99.9%"
+  },
+  "tags": [
+    "aws"
+  ]
+}

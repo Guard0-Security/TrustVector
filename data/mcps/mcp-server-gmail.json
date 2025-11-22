@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-gmail",
+  "type": "mcp",
+  "name": "MCP Gmail Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Gmail email operations. Enables AI models to read, send, search, label, and manage emails through the Gmail API. Includes support for attachments, threading, and advanced search. Essential for AI-powered email automation and communication workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 83,
+      "criteria": {
+        "email_search_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gmail API",
+              "url": "https://developers.google.com/gmail/api/guides/filtering",
+              "date": "2025-11-16",
+              "value": "Powerful search with Gmail's query language"
+            }
+          ],
+          "methodology": "Search accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "send_reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gmail Send API",
+              "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send",
+              "date": "2025-11-16",
+              "value": "High reliability for email sending with delivery confirmation"
+            }
+          ],
+          "methodology": "Send success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Gmail API Quotas",
+              "url": "https://developers.google.com/gmail/api/reference/quota",
+              "date": "2025-11-16",
+              "value": "Subject to Gmail API rate limits (250 quota units/user/second)"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "attachment_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Gmail Attachments",
+              "url": "https://developers.google.com/gmail/api/guides/uploads",
+              "date": "2025-11-16",
+              "value": "Reliable attachment upload and download with size limits (25MB)"
+            }
+          ],
+          "methodology": "Attachment processing testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles Gmail API errors with retry logic"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 70,
+      "criteria": {
+        "authentication_security": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google OAuth 2.0",
+              "url": "https://developers.google.com/identity/protocols/oauth2",
+              "date": "2025-11-16",
+              "value": "Uses OAuth 2.0 with scoped access tokens"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "OAuth tokens stored locally; AI can perform email operations"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "email_send_risk": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can send emails on user's behalf, potential for misuse"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "email_deletion_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gmail API",
+              "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/trash",
+              "date": "2025-11-16",
+              "value": "Can delete or trash emails if permissions granted"
+            }
+          ],
+          "methodology": "Destructive operation testing",
+          "last_verified": "2025-11-09"
+        },
+        "scope_limitation": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Gmail API Scopes",
+              "url": "https://developers.google.com/gmail/api/auth/scopes",
+              "date": "2025-11-16",
+              "value": "Granular OAuth scopes available but requires careful configuration"
+            }
+          ],
+          "methodology": "Permission scope testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Workspace Audit",
+              "url": "https://support.google.com/a/answer/4579579",
+              "date": "2025-11-16",
+              "value": "Operations logged in Google Workspace audit logs (for Workspace accounts)"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 64,
+      "criteria": {
+        "email_content_exposure": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Email content including body and headers sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "contact_information_exposure": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Email addresses, names, and contact information exposed"
+            }
+          ],
+          "methodology": "PII exposure assessment",
+          "last_verified": "2025-11-09"
+        },
+        "attachment_privacy": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Email attachments can be downloaded and sent to LLM provider"
+            }
+          ],
+          "methodology": "Attachment privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Email content shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "conversation_history_privacy": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Email threads and conversation history accessible"
+            }
+          ],
+          "methodology": "History privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 78,
+      "criteria": {
+        "documentation_quality": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Gmail MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All operations logged in MCP transaction logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "privacy_risk_disclosure": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Limited privacy risk warnings in documentation"
+            }
+          ],
+          "methodology": "Privacy disclosure review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 80,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires Google Cloud project setup and OAuth consent configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Gmail API Performance",
+              "url": "https://developers.google.com/gmail/api/",
+              "date": "2025-11-16",
+              "value": "Good performance for most operations (typically 100-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gmail API Stability",
+              "url": "https://developers.google.com/gmail/api/",
+              "date": "2025-11-16",
+              "value": "Built on reliable Gmail API with high uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gmail MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers read, send, search, label, and attachment operations"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive Gmail operations (read, send, search, label, attachments)",
+    "Built on reliable Gmail API with high uptime",
+    "Powerful email search with Gmail query language",
+    "OAuth 2.0 authentication with granular scope controls",
+    "Open source community implementation",
+    "Good for email automation and customer support workflows"
+  ],
+  "limitations": [
+    "Email content including body and attachments exposed to LLM provider",
+    "AI can send emails on user's behalf, risk of impersonation",
+    "Email addresses and contact information exposed",
+    "Can delete or trash emails if permissions granted",
+    "Subject to Gmail API rate limits (250 quota units/user/second)",
+    "Complex OAuth setup requiring Google Cloud project configuration"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Gmail API, Google APIs Client Library",
+    "authentication": "OAuth 2.0 with Google",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 70,
+      "notes": "Moderate applicability for email automation code generation"
+    },
+    "customer-support": {
+      "overall": 90,
+      "notes": "Excellent for email support automation and ticket processing"
+    },
+    "content-creation": {
+      "overall": 75,
+      "notes": "Useful for email newsletter creation and distribution"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Good for analyzing email patterns and communication metrics"
+    },
+    "research-assistant": {
+      "overall": 82,
+      "notes": "Useful for email research and contact organization"
+    },
+    "legal-compliance": {
+      "overall": 48,
+      "notes": "High risk of exposing privileged communications; not recommended"
+    },
+    "healthcare": {
+      "overall": 42,
+      "notes": "High risk of HIPAA violations with patient communications"
+    },
+    "financial-analysis": {
+      "overall": 55,
+      "notes": "Risk of exposing financial communications and sensitive data"
+    },
+    "education": {
+      "overall": 80,
+      "notes": "Good for educational email management and communication automation"
+    },
+    "creative-writing": {
+      "overall": 68,
+      "notes": "Moderate applicability for writer correspondence management"
+    }
+  },
+  "best_for": [
+    "Knowledge workers automating email workflows and responses",
+    "Customer support teams managing email communications",
+    "Professionals needing AI-powered email organization and search"
+  ],
+  "tags": [
+    "email",
+    "google",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

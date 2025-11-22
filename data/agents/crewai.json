@@ -1,0 +1,480 @@
+{
+  "id": "crewai",
+  "type": "agent",
+  "name": "CrewAI",
+  "provider": "CrewAI Inc.",
+  "version": "1.2.1",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Role-playing multi-agent framework for orchestrating collaborative autonomous agents. Agents work together as a crew with defined roles, goals, and backstories to tackle complex tasks through delegation and collaboration.",
+  "website": "https://www.crewai.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 81,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "CrewAI Documentation",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-20",
+              "value": "Task completion depends on agent collaboration and delegation"
+            }
+          ],
+          "methodology": "Based on multi-agent coordination testing",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CrewAI Tools",
+              "url": "https://docs.crewai.com/core-concepts/Tools/",
+              "date": "2024-10-15",
+              "value": "Supports LangChain tools and custom tool creation"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CrewAI Process Types",
+              "url": "https://docs.crewai.com/core-concepts/Processes/",
+              "date": "2024-10-01",
+              "value": "Sequential and hierarchical processes for complex task decomposition"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "CrewAI Memory",
+              "url": "https://docs.crewai.com/core-concepts/Memory/",
+              "date": "2024-10-01",
+              "value": "Short-term, long-term, and entity memory support"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Reports",
+              "url": "https://github.com/joaomdmoura/crewAI/issues",
+              "date": "2024-09-20",
+              "value": "Basic error handling, agent delegation can help recovery"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "agent_collaboration": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CrewAI Core Concepts",
+              "url": "https://docs.crewai.com/core-concepts/Agents/",
+              "date": "2024-10-15",
+              "value": "Purpose-built for multi-agent collaboration and delegation"
+            }
+          ],
+          "methodology": "Multi-agent coordination testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 74,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "CrewAI Architecture",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-01",
+              "value": "No built-in sandboxing, relies on tool implementation"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted Framework",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-01",
+              "value": "Access control implementation is developer's responsibility"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Role System",
+              "url": "https://docs.crewai.com/core-concepts/Agents/",
+              "date": "2024-10-01",
+              "value": "Role-based constraints provide some protection"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Crew Isolation",
+              "url": "https://docs.crewai.com/core-concepts/Crews/",
+              "date": "2024-10-01",
+              "value": "Crews operate independently with separate contexts"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CrewAI GitHub",
+              "url": "https://github.com/joaomdmoura/crewAI",
+              "date": "2024-10-20",
+              "value": "Open source MIT license, 20k+ stars, active community"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 80,
+      "criteria": {
+        "data_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Architecture",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-01",
+              "value": "Full control over data retention when self-hosted"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Open Source Framework",
+              "url": "https://github.com/joaomdmoura/crewAI",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with proper configuration"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://docs.crewai.com/core-concepts/LLMs/",
+              "date": "2024-10-01",
+              "value": "Data sent to configured LLM provider (OpenAI default)"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment_option": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Local LLM Support",
+              "url": "https://docs.crewai.com/how-to/LLM-Connections/",
+              "date": "2024-10-01",
+              "value": "Supports local LLMs via Ollama and LM Studio"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CrewAI Docs",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-20",
+              "value": "Good documentation with examples and tutorials"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging Features",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-01",
+              "value": "Basic logging of agent interactions and task execution"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Roles",
+              "url": "https://docs.crewai.com/core-concepts/Agents/",
+              "date": "2024-10-01",
+              "value": "Agent roles and goals provide context for decisions"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/joaomdmoura/crewAI",
+              "date": "2024-10-20",
+              "value": "MIT licensed, 20k+ stars, very active development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_activity": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Activity",
+              "url": "https://github.com/joaomdmoura/crewAI",
+              "date": "2024-10-20",
+              "value": "Very active community with frequent updates"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 79,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CrewAI Quickstart",
+              "url": "https://docs.crewai.com/getting-started/Start-here/",
+              "date": "2024-10-15",
+              "value": "Simple API with intuitive role-based design"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Discussions",
+              "url": "https://github.com/joaomdmoura/crewAI/discussions",
+              "date": "2024-09-15",
+              "value": "Scalability depends on infrastructure and LLM rate limits"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source Pricing",
+              "url": "https://github.com/joaomdmoura/crewAI",
+              "date": "2024-10-01",
+              "value": "Free framework, costs only from LLM API calls"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring_capabilities": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Built-in Features",
+              "url": "https://docs.crewai.com/",
+              "date": "2024-10-01",
+              "value": "Basic logging, requires external tools for comprehensive monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Framework Maturity",
+              "url": "https://github.com/joaomdmoura/crewAI",
+              "date": "2024-10-20",
+              "value": "Rapidly evolving framework, some API changes between versions"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 84,
+      "notes": "Multiple specialized agents can handle different support aspects"
+    },
+    "code-generation": {
+      "overall": 86,
+      "notes": "Separate agents for coding, reviewing, and testing works well"
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Excellent for multi-agent research teams (researcher, analyst, writer)"
+    },
+    "data-analysis": {
+      "overall": 83,
+      "notes": "Good for collaborative data analysis with specialized roles"
+    },
+    "content-creation": {
+      "overall": 92,
+      "notes": "Ideal for content teams (writer, editor, SEO specialist)"
+    },
+    "education": {
+      "overall": 81,
+      "notes": "Multi-agent teaching team concept works for complex topics"
+    },
+    "healthcare": {
+      "overall": 75,
+      "notes": "Requires significant security hardening for healthcare use"
+    },
+    "financial-analysis": {
+      "overall": 77,
+      "notes": "Self-hosted option suitable but needs compliance features"
+    },
+    "legal-compliance": {
+      "overall": 82,
+      "notes": "Multiple specialized legal agents can analyze different aspects"
+    },
+    "creative-writing": {
+      "overall": 94,
+      "notes": "Outstanding for creative teams with different perspectives"
+    }
+  },
+  "best_for": [
+    "Content creators needing collaborative AI writing teams",
+    "Developers building role-based agent systems",
+    "Teams wanting intuitive multi-agent orchestration",
+    "Startups seeking rapid agent development with simple API"
+  ],
+  "strengths": [
+    "Intuitive role-playing paradigm makes agent design natural",
+    "Excellent for complex tasks requiring specialized expertise",
+    "Strong multi-agent collaboration and delegation capabilities",
+    "Open source with very active community and rapid development",
+    "Easy to get started with simple, clean API",
+    "Good integration with LangChain tools ecosystem"
+  ],
+  "limitations": [
+    "Can be expensive with multiple agents making LLM calls",
+    "Agent coordination overhead can increase latency",
+    "Rapidly evolving API may require code updates",
+    "Limited built-in security and sandboxing features",
+    "Monitoring and observability require external tools",
+    "Performance can be unpredictable with complex crews"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI GPT-4",
+      "Anthropic Claude",
+      "Local LLMs via Ollama",
+      "Azure OpenAI"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted",
+    "tool_support": [
+      "LangChain tools",
+      "Custom tools",
+      "Built-in tools"
+    ],
+    "github_stars": "39900+",
+    "first_release": "2023",
+    "pricing": "Free (MIT license) - Costs only from LLM API calls",
+    "python_requirement": "Python >=3.10 <3.14",
+    "adoption": "Powers 1.4B+ agentic automations globally"
+  },
+  "tags": [
+    "multi-agent",
+    "collaborative",
+    "open-source"
+  ]
+}

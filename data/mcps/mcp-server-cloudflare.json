@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-cloudflare",
+  "type": "mcp",
+  "name": "MCP Cloudflare Server",
+  "provider": "Cloudflare",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Cloudflare MCP server for managing CDN, DNS, Workers, Pages, and security services. Enables AI models to configure edge computing, manage domains, deploy serverless functions, and control security policies. Essential for AI-powered edge infrastructure and web performance optimization.",
+  "website": "https://github.com/cloudflare/cloudflare-mcp-server",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "api_reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare API Documentation",
+              "url": "https://developers.cloudflare.com/api/",
+              "date": "2025-11-16",
+              "value": "Built on Cloudflare's highly reliable API with 99.95%+ uptime"
+            }
+          ],
+          "methodology": "API stability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "dns_operation_success": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare MCP Server",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "High success rate for DNS, CDN, and Workers operations"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Cloudflare Rate Limits",
+              "url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+              "date": "2025-11-16",
+              "value": "Respects Cloudflare rate limits (1200 requests/5 minutes)"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "global_edge_performance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare Network",
+              "url": "https://www.cloudflare.com/network/",
+              "date": "2025-11-16",
+              "value": "Excellent global performance with 300+ edge locations"
+            }
+          ],
+          "methodology": "Geographic performance testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Handles API errors with retry logic and fallback"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 70,
+      "criteria": {
+        "authentication_security": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare API Authentication",
+              "url": "https://developers.cloudflare.com/fundamentals/api/get-started/keys/",
+              "date": "2025-11-16",
+              "value": "Uses API tokens with scoped permissions or legacy API keys"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Cloudflare API token stored locally; AI can perform actions within scope"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "dns_manipulation_risk": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "AI can modify DNS records, potentially causing service disruption"
+            }
+          ],
+          "methodology": "Operation risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "security_policy_modification": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Can modify firewall rules, WAF settings, and security policies"
+            }
+          ],
+          "methodology": "Security policy testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare Audit Logs",
+              "url": "https://developers.cloudflare.com/logs/reference/audit-logs/",
+              "date": "2025-11-16",
+              "value": "All operations logged in Cloudflare audit system"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        },
+        "zone_access_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Cloudflare Permissions",
+              "url": "https://developers.cloudflare.com/fundamentals/setup/manage-members/roles/",
+              "date": "2025-11-16",
+              "value": "Token scoping limits zone access but requires careful configuration"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 72,
+      "criteria": {
+        "infrastructure_metadata_exposure": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Zone configurations, DNS records, and Workers code sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "domain_information_disclosure": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Domain names, origins, and infrastructure details may be exposed"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "analytics_data_privacy": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Cloudflare Analytics",
+              "url": "https://developers.cloudflare.com/analytics/",
+              "date": "2025-11-16",
+              "value": "May access traffic analytics and user behavior data"
+            }
+          ],
+          "methodology": "Data privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Infrastructure data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "secrets_in_workers": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Workers code may contain secrets or sensitive configuration"
+            }
+          ],
+          "methodology": "Secrets exposure assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "documentation_quality": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare MCP Docs",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation with Cloudflare-specific examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare Audit Logs",
+              "url": "https://developers.cloudflare.com/logs/reference/audit-logs/",
+              "date": "2025-11-16",
+              "value": "All operations logged in Cloudflare audit trail and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Open source implementation from Cloudflare"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Clear but limited documentation of supported Cloudflare services"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 83,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Requires Cloudflare API token with appropriate zone permissions"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare API Performance",
+              "url": "https://www.cloudflarestatus.com/",
+              "date": "2025-11-16",
+              "value": "Excellent API performance (typically 50-200ms globally)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloudflare Status",
+              "url": "https://www.cloudflarestatus.com/",
+              "date": "2025-11-16",
+              "value": "Highly reliable with 99.95%+ uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "service_coverage": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Cloudflare MCP Server",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server",
+              "date": "2025-11-16",
+              "value": "Covers DNS, Workers, Pages, CDN, and security features"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_adoption": {
+          "score": 77,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/cloudflare/cloudflare-mcp-server/discussions",
+              "date": "2025-11-16",
+              "value": "Growing adoption among Cloudflare users and edge developers"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 90,
+      "notes": "Excellent for Workers code generation and infrastructure-as-code"
+    },
+    "customer-support": {
+      "overall": 75,
+      "notes": "Useful for troubleshooting edge infrastructure and CDN issues"
+    },
+    "content-creation": {
+      "overall": 65,
+      "notes": "Moderate applicability for CDN and Pages documentation"
+    },
+    "data-analysis": {
+      "overall": 82,
+      "notes": "Good for analyzing traffic patterns, performance metrics, and security data"
+    },
+    "research-assistant": {
+      "overall": 70,
+      "notes": "Useful for researching edge computing patterns and Cloudflare configurations"
+    },
+    "legal-compliance": {
+      "overall": 60,
+      "notes": "Risk of exposing infrastructure details; careful access control needed"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "Risk of exposing infrastructure for regulated healthcare applications"
+    },
+    "financial-analysis": {
+      "overall": 68,
+      "notes": "Moderate risk for financial infrastructure management"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Excellent for teaching edge computing, CDN, and serverless concepts"
+    },
+    "creative-writing": {
+      "overall": 50,
+      "notes": "Low relevance to creative writing workflows"
+    }
+  },
+  "best_for": [
+    "Edge computing developers building Cloudflare Workers applications",
+    "DevOps engineers managing CDN configurations and security policies",
+    "Educators teaching serverless and edge computing concepts"
+  ],
+  "strengths": [
+    "Official Cloudflare implementation with edge computing expertise",
+    "Comprehensive edge infrastructure management (DNS, CDN, Workers, security)",
+    "Excellent global API performance with 300+ edge locations",
+    "Full operation auditability through Cloudflare audit logs",
+    "Open source with Cloudflare support",
+    "High reliability with 99.95%+ uptime"
+  ],
+  "limitations": [
+    "Infrastructure configurations and Workers code exposed to LLM provider",
+    "Risk of DNS manipulation causing service disruption",
+    "Can modify security policies and firewall rules",
+    "Domain names and infrastructure details may be disclosed",
+    "Workers code may contain secrets or sensitive configuration",
+    "Requires careful API token scoping to limit access"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/cloudflare/cloudflare-mcp-server",
+    "api_dependency": "Cloudflare API v4",
+    "authentication": "Cloudflare API Token or API Key",
+    "first_release": "2024-11",
+    "maintained_by": "Cloudflare"
+  },
+  "tags": [
+    "cloudflare",
+    "cdn",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

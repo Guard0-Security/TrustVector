@@ -1,0 +1,88 @@
+name: Evaluation Update
+description: Suggest updates to an existing evaluation
+title: "[Update]: "
+labels: ["evaluation-update", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep evaluations current! TrustVector aims to re-review evaluations every 6 months.
+
+  - type: input
+    id: entity
+    attributes:
+      label: Entity Name
+      description: Which entity needs updating?
+      placeholder: "e.g., Claude Sonnet 4.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: Update Type
+      description: What kind of update is needed?
+      options:
+        - New version available
+        - Evidence is outdated
+        - Score needs revision
+        - New benchmarks available
+        - Pricing changed
+        - Compliance certifications updated
+        - Security issue discovered
+        - Other
+      multiple: true
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Update Details
+      description: What specifically needs to be updated?
+      placeholder: |
+        - Which dimension or criteria?
+        - What changed?
+        - What's the new evidence?
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: New Evidence
+      description: Links to new benchmarks, documentation, or sources
+      placeholder: |
+        - Source: [Name]
+        - URL: https://...
+        - Date: YYYY-MM-DD
+        - Key findings: ...
+    validations:
+      required: true
+
+  - type: input
+    id: suggested-score
+    attributes:
+      label: Suggested Score Change
+      description: If proposing a score change, what should it be?
+      placeholder: "e.g., Security: 85 → 92"
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I can submit a PR with these updates
+        - label: I need help from maintainers
+
+  - type: checkboxes
+    id: coi
+    attributes:
+      label: Conflicts of Interest
+      options:
+        - label: I work for the provider/organization
+        - label: I have no conflicts of interest
+      validations:
+        required: true

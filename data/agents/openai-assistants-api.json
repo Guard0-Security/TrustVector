@@ -1,0 +1,411 @@
+{
+  "id": "openai-assistants-api",
+  "type": "agent",
+  "name": "OpenAI Assistants API",
+  "provider": "OpenAI",
+  "version": "v2",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "OpenAI's managed agent framework with native tool use, code interpreter, file search, and persistent threads. Ideal for building stateful conversational applications.",
+  "website": "https://platform.openai.com/docs/assistants/overview",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 89,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/assistants/overview",
+              "date": "2024-10-01",
+              "value": "Built on GPT-4 models with high task completion rates"
+            }
+          ],
+          "methodology": "Based on underlying model performance",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Assistants Tools",
+              "url": "https://platform.openai.com/docs/assistants/tools",
+              "date": "2024-10-01",
+              "value": "Native support for function calling, code interpreter, and file search"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://community.openai.com",
+              "date": "2024-09-15",
+              "value": "Good multi-step task execution via threads"
+            }
+          ],
+          "methodology": "Complex task testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Threads",
+              "url": "https://platform.openai.com/docs/assistants/how-it-works/managing-threads",
+              "date": "2024-10-01",
+              "value": "Native thread persistence with message history"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/assistants/how-it-works",
+              "date": "2024-10-01",
+              "value": "Automatic retries and error handling"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Variable (3-10s typical)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Reports",
+              "url": "https://community.openai.com",
+              "date": "2024-09-15",
+              "value": "Latency depends on tools used and complexity"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 87,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Code Interpreter",
+              "url": "https://platform.openai.com/docs/assistants/tools/code-interpreter",
+              "date": "2024-10-01",
+              "value": "Code execution in sandboxed environment"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Keys",
+              "url": "https://platform.openai.com/docs/api-reference/authentication",
+              "date": "2024-10-01",
+              "value": "API key-based authentication with project isolation"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety",
+              "url": "https://platform.openai.com/docs/guides/safety-best-practices",
+              "date": "2024-10-01",
+              "value": "System instructions separated from user messages"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise",
+              "url": "https://openai.com/enterprise-privacy",
+              "date": "2024-06-01",
+              "value": "Per-assistant data isolation"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 86,
+      "criteria": {
+        "data_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Data Usage",
+              "url": "https://openai.com/enterprise-privacy",
+              "date": "2024-06-01",
+              "value": "Thread data retained until deleted, not used for training (enterprise)"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI GDPR",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2024-01-15",
+              "value": "GDPR compliant with data processing agreement"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        },
+        "file_handling_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI File API",
+              "url": "https://platform.openai.com/docs/api-reference/files",
+              "date": "2024-10-01",
+              "value": "Encrypted file storage with access controls"
+            }
+          ],
+          "methodology": "File security testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Docs",
+              "url": "https://platform.openai.com/docs/assistants",
+              "date": "2024-10-01",
+              "value": "Comprehensive documentation with examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Runs",
+              "url": "https://platform.openai.com/docs/assistants/how-it-works/runs",
+              "date": "2024-10-01",
+              "value": "Run steps logged with status tracking"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Assistants",
+              "url": "https://platform.openai.com/docs/assistants",
+              "date": "2024-10-01",
+              "value": "Limited native explainability, relies on model responses"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 88,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI SDKs",
+              "url": "https://platform.openai.com/docs/libraries",
+              "date": "2024-10-01",
+              "value": "Official SDKs for Python, Node.js, and REST API"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Platform",
+              "url": "https://platform.openai.com/docs/guides/rate-limits",
+              "date": "2024-09-01",
+              "value": "Scales with API tier, enterprise support available"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Pricing",
+              "url": "https://openai.com/api/pricing",
+              "date": "2024-10-01",
+              "value": "Token-based pricing, additional costs for tools and storage"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09",
+          "notes": "Costs can vary significantly based on tool usage"
+        },
+        "monitoring_capabilities": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Usage Dashboard",
+              "url": "https://platform.openai.com/usage",
+              "date": "2024-10-01",
+              "value": "Usage tracking and cost monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Native tool integration (function calling, code interpreter, file search)",
+    "Persistent thread management for stateful conversations",
+    "Excellent documentation and SDK support",
+    "Managed infrastructure (no server maintenance)",
+    "Built on powerful GPT-4 models",
+    "Good scalability with enterprise support"
+  ],
+  "limitations": [
+    "Higher costs compared to custom agent implementations",
+    "Limited control over agent execution flow",
+    "Latency can be high for complex multi-tool operations",
+    "Vendor lock-in to OpenAI platform",
+    "Limited native explainability features",
+    "Code interpreter limited to Python only"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_models": [
+      "GPT-4o",
+      "GPT-4 Turbo",
+      "GPT-4",
+      "GPT-3.5 Turbo"
+    ],
+    "programming_languages": [
+      "Python",
+      "Node.js",
+      "REST API"
+    ],
+    "deployment_type": "Managed cloud service",
+    "tool_support": [
+      "Function calling",
+      "Code Interpreter",
+      "File Search"
+    ],
+    "max_files_per_assistant": 10000,
+    "max_file_size": "512 MB",
+    "pricing": "Token-based (model pricing) + $0.03/session for Code Interpreter + $0.10/GB/day for File Search (first GB free)",
+    "deprecation_notice": "Being replaced by Responses API and Agents SDK in H1 2026"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 93,
+      "notes": "Excellent for stateful support conversations with file handling"
+    },
+    "code-generation": {
+      "overall": 90,
+      "notes": "Code interpreter enables powerful code execution and analysis"
+    },
+    "research-assistant": {
+      "overall": 91,
+      "notes": "File search tool ideal for document analysis"
+    },
+    "data-analysis": {
+      "overall": 92,
+      "notes": "Code interpreter excellent for data analysis workflows"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Good for iterative content creation with memory"
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Persistent threads ideal for personalized tutoring"
+    },
+    "healthcare": {
+      "overall": 82,
+      "notes": "HIPAA-eligible, but limited specialized medical tools"
+    },
+    "financial-analysis": {
+      "overall": 84,
+      "notes": "Good security, but requires careful tool access control"
+    },
+    "legal-compliance": {
+      "overall": 88,
+      "notes": "File search tool useful for contract analysis"
+    },
+    "creative-writing": {
+      "overall": 87,
+      "notes": "Thread persistence good for iterative brainstorming"
+    }
+  },
+  "best_for": [
+    "Developers building on OpenAI's managed infrastructure",
+    "Teams wanting quick deployment with OpenAI models",
+    "Startups needing rapid prototyping of AI assistants",
+    "Organizations comfortable with OpenAI's platform"
+  ],
+  "tags": [
+    "openai",
+    "assistants"
+  ]
+}

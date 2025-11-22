@@ -1,0 +1,55 @@
+name: Question
+description: Ask a question about TrustVector
+title: "[Question]: "
+labels: ["question", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before asking:** Please check [Discussions](https://github.com/JBAhire/trust-vector/discussions) and [Documentation](https://github.com/JBAhire/trust-vector/blob/main/docs) first.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What is your question about?
+      options:
+        - Methodology and scoring
+        - How to contribute
+        - Using the data/API
+        - Specific evaluation
+        - Website or framework
+        - General question
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Any additional context that helps us answer
+      placeholder: |
+        - What are you trying to accomplish?
+        - What have you already tried?
+        - Links to relevant pages/docs
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I searched existing issues and discussions
+        - label: I checked the documentation
+        - label: This is not a bug report or feature request
+      validations:
+        required: true

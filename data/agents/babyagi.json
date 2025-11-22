@@ -1,0 +1,476 @@
+{
+  "id": "babyagi",
+  "type": "agent",
+  "name": "BabyAGI",
+  "provider": "Yohei Nakajima",
+  "version": "Classic",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Minimalist autonomous task-driven AI agent that creates, prioritizes, and executes tasks based on results of previous tasks and a predefined objective. Demonstrates AGI concepts in under 200 lines of code.",
+  "website": "https://github.com/yoheinakajima/babyagi",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 64,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Experiments",
+              "url": "https://github.com/yoheinakajima/babyagi/discussions",
+              "date": "2024-08-20",
+              "value": "Task completion highly dependent on goal clarity and complexity"
+            }
+          ],
+          "methodology": "Based on community testing and demonstrations",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tool Integration",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Limited tool support in classic version, extensions add capabilities"
+            }
+          ],
+          "methodology": "Tool integration assessment",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Task Management System",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Creates and manages task list based on objective"
+            }
+          ],
+          "methodology": "Planning capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pinecone Integration",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Vector database (Pinecone) for task context storage"
+            }
+          ],
+          "methodology": "Memory system evaluation",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 55,
+          "confidence": "low",
+          "evidence": [
+            {
+              "source": "Code Review",
+              "url": "https://github.com/yoheinakajima/babyagi/blob/main/babyagi.py",
+              "date": "2024-09-01",
+              "value": "Minimal error handling, can fail or loop indefinitely"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "task_generation": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Task Creation",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Can generate new tasks based on results, sometimes overgenerates"
+            }
+          ],
+          "methodology": "Task generation assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 58,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 52,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture Review",
+              "url": "https://github.com/yoheinakajima/babyagi/blob/main/babyagi.py",
+              "date": "2024-09-01",
+              "value": "No sandboxing in classic version, executes tasks via LLM only"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Simple Architecture",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Minimal access control, relies on API key security"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 55,
+          "confidence": "low",
+          "evidence": [
+            {
+              "source": "Security Concerns",
+              "url": "https://github.com/yoheinakajima/babyagi/issues",
+              "date": "2024-08-15",
+              "value": "Vulnerable to injection through objective and task results"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Database",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Namespace-based isolation in Pinecone"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-15",
+              "value": "MIT licensed, 20k+ stars, extremely simple and transparent code"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 67,
+      "criteria": {
+        "data_retention": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pinecone Storage",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Data retention controlled by Pinecone configuration"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Third-Party Dependencies",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "GDPR compliance depends on Pinecone and OpenAI configurations"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "External Services",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Data sent to OpenAI API and Pinecone vector database"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment_option": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Code Variants",
+              "url": "https://github.com/yoheinakajima/babyagi/tree/main/classic",
+              "date": "2024-09-01",
+              "value": "Variants exist for local LLMs but require code modifications"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "README Documentation",
+              "url": "https://github.com/yoheinakajima/babyagi/blob/main/README.md",
+              "date": "2024-09-15",
+              "value": "Basic README, code is self-documenting due to simplicity"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Console Output",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Prints task execution to console with results"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Task Visibility",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Task list and results visible, shows reasoning for new tasks"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-15",
+              "value": "MIT licensed, 20k+ stars, under 200 lines of highly readable code"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "code_simplicity": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Source Code",
+              "url": "https://github.com/yoheinakajima/babyagi/blob/main/babyagi.py",
+              "date": "2024-09-01",
+              "value": "Remarkably simple implementation, easy to understand and modify"
+            }
+          ],
+          "methodology": "Code complexity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 61,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Instructions",
+              "url": "https://github.com/yoheinakajima/babyagi#how-to-use",
+              "date": "2024-09-01",
+              "value": "Very simple setup, just API keys and Python dependencies"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 55,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture Limitations",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Not designed for production scale, single-threaded execution"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 58,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Token Usage",
+              "url": "https://github.com/yoheinakajima/babyagi/discussions",
+              "date": "2024-08-20",
+              "value": "Can generate many tasks leading to unpredictable API costs"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-11-09",
+          "notes": "Task generation can spiral, accumulating costs"
+        },
+        "monitoring_capabilities": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging Features",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Basic console output, no production monitoring tools"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 50,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Project Purpose",
+              "url": "https://github.com/yoheinakajima/babyagi",
+              "date": "2024-09-01",
+              "value": "Designed as concept demonstration, not production system"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Extremely simple and elegant demonstration of AGI concepts",
+    "Under 200 lines of code, easy to understand and modify",
+    "Pioneered task-driven autonomous agent approach",
+    "Great educational tool for learning agent concepts",
+    "Open source with complete transparency",
+    "Low barrier to entry for experimentation"
+  ],
+  "limitations": [
+    "Not production-ready, designed as concept demonstration",
+    "Minimal error handling and recovery capabilities",
+    "Can generate excessive tasks leading to high costs",
+    "No built-in security or sandboxing features",
+    "Limited tool integration in classic version",
+    "Unpredictable behavior and task completion quality"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI GPT-4",
+      "GPT-3.5",
+      "GPT-3"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted (local script)",
+    "tool_support": [
+      "Limited, primarily LLM-based task execution"
+    ],
+    "github_stars": "20737+",
+    "first_release": "2023",
+    "code_lines": "~140 (classic version)",
+    "status": "Archived as of September 2024"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 45,
+      "notes": "Too unpredictable and experimental for customer support"
+    },
+    "code-generation": {
+      "overall": 55,
+      "notes": "Limited code generation capabilities, lacks necessary tools"
+    },
+    "research-assistant": {
+      "overall": 68,
+      "notes": "Can break down research tasks but execution quality varies"
+    },
+    "data-analysis": {
+      "overall": 50,
+      "notes": "Minimal data analysis capabilities in classic version"
+    },
+    "content-creation": {
+      "overall": 60,
+      "notes": "Can generate content tasks but quality control challenging"
+    },
+    "education": {
+      "overall": 52,
+      "notes": "Too experimental for educational applications"
+    },
+    "healthcare": {
+      "overall": 25,
+      "notes": "Completely unsuitable for healthcare due to reliability concerns"
+    },
+    "financial-analysis": {
+      "overall": 30,
+      "notes": "Lacks security, compliance, and reliability for financial use"
+    },
+    "legal-compliance": {
+      "overall": 35,
+      "notes": "Too unreliable for legal work requiring accuracy"
+    },
+    "creative-writing": {
+      "overall": 78,
+      "notes": "Best suited for creative exploration and concept generation"
+    }
+  },
+  "best_for": [
+    "AI researchers exploring task-driven autonomous agents",
+    "Developers learning about AGI concepts and implementation",
+    "Experimenters wanting minimalist agent frameworks"
+  ],
+  "tags": [
+    "autonomous",
+    "experimental",
+    "open-source"
+  ]
+}

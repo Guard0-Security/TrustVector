@@ -1,0 +1,509 @@
+{
+  "id": "adala",
+  "type": "agent",
+  "name": "Adala",
+  "provider": "HumanSignal",
+  "version": "0.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Autonomous data labeling agent framework for creating self-improving AI systems. Combines LLMs with ground truth learning to automate and improve data annotation tasks, enabling continuous learning loops.",
+  "website": "https://github.com/HumanSignal/Adala",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 77,
+      "criteria": {
+        "data_labeling_accuracy": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Adala Documentation",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-15",
+              "value": "Autonomous agents learn from ground truth to improve labeling"
+            }
+          ],
+          "methodology": "Labeling accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "self_improvement": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Learning Loop",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Agents improve through feedback and learning cycles"
+            }
+          ],
+          "methodology": "Learning capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "skill_acquisition": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Skills System",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Modular skills for classification, NER, summarization"
+            }
+          ],
+          "methodology": "Skill capability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "batch_processing": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-09-20",
+              "value": "Designed for batch data processing workflows"
+            }
+          ],
+          "methodology": "Batch processing testing",
+          "last_verified": "2025-11-09"
+        },
+        "ground_truth_learning": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Learning Mechanism",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Uses ground truth data to refine agent performance"
+            }
+          ],
+          "methodology": "Learning effectiveness testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Variable (batch processing)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Optimized for batch workflows, not real-time"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 73,
+      "criteria": {
+        "data_handling": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Pipeline",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Handles sensitive labeling data, requires secure setup"
+            }
+          ],
+          "methodology": "Data security review",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Python framework, full self-hosting control"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-20",
+              "value": "Apache 2.0 license, 1k+ stars, transparent code"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_security": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Security depends on configured LLM provider"
+            }
+          ],
+          "methodology": "LLM security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Framework Design",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-09-15",
+              "value": "Basic framework, access control user-implemented"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 76,
+      "criteria": {
+        "data_privacy": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Processing",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Labeling data processed locally or sent to LLM provider"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with proper configuration"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Installation",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Python package, full local deployment supported"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "training_data_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Learning System",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Ground truth data used for training, privacy considerations"
+            }
+          ],
+          "methodology": "Training data privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Labeling data sent to configured LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 79,
+      "criteria": {
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-15",
+              "value": "Good README and examples, documentation growing"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "learning_transparency": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Learning Metrics",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Agent learning progress trackable through metrics"
+            }
+          ],
+          "methodology": "Transparency assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-20",
+              "value": "Apache 2.0, developed by HumanSignal (Label Studio team)"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "skill_visibility": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Skills Framework",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Skill definitions and improvements visible"
+            }
+          ],
+          "methodology": "Explainability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://github.com/HumanSignal/Adala/discussions",
+              "date": "2024-10-10",
+              "value": "Growing community, backed by Label Studio team"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 75,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Python Package",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Simple pip install, Python API"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "label_studio_integration": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Label Studio",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Native integration with Label Studio for labeling workflows"
+            }
+          ],
+          "methodology": "Integration assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Batch processing design, scalability requires infrastructure"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Free Apache 2.0, costs only for LLM API usage"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Metrics",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Learning metrics available, limited production monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Maturity",
+              "url": "https://github.com/HumanSignal/Adala",
+              "date": "2024-10-01",
+              "value": "Active development, production use requires careful setup"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 76,
+      "notes": "Good for training support classification agents"
+    },
+    "code-generation": {
+      "overall": 68,
+      "notes": "Limited applicability to code generation"
+    },
+    "research-assistant": {
+      "overall": 80,
+      "notes": "Good for learning to summarize research documents"
+    },
+    "data-analysis": {
+      "overall": 88,
+      "notes": "Excellent for autonomous data labeling and classification"
+    },
+    "content-creation": {
+      "overall": 74,
+      "notes": "Can train content classification agents"
+    },
+    "education": {
+      "overall": 78,
+      "notes": "Can build self-improving educational content classifiers"
+    },
+    "healthcare": {
+      "overall": 83,
+      "notes": "Good for medical text classification and NER tasks"
+    },
+    "financial-analysis": {
+      "overall": 81,
+      "notes": "Useful for document classification in compliance workflows"
+    },
+    "legal-compliance": {
+      "overall": 85,
+      "notes": "Excellent for legal document classification and entity extraction"
+    },
+    "creative-writing": {
+      "overall": 65,
+      "notes": "Limited applicability to creative tasks"
+    }
+  },
+  "best_for": [
+    "Data scientists building self-improving labeling systems",
+    "ML teams needing autonomous data annotation workflows",
+    "Organizations with large-scale data labeling requirements",
+    "Teams using Label Studio for annotation projects"
+  ],
+  "strengths": [
+    "Specialized for autonomous data labeling with self-improvement",
+    "Ground truth learning enables continuous agent refinement",
+    "Open source (Apache 2.0) from trusted HumanSignal team",
+    "Native integration with Label Studio annotation platform",
+    "Modular skills system for classification, NER, summarization",
+    "Designed specifically for data annotation workflows"
+  ],
+  "limitations": [
+    "Narrow focus on data labeling, not general-purpose agents",
+    "Requires ground truth data for effective learning",
+    "Smaller community and ecosystem than general frameworks",
+    "Limited production features and documentation",
+    "Best suited for batch processing, not real-time inference",
+    "Requires expertise in data labeling workflows"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_models": [
+      "OpenAI",
+      "Anthropic",
+      "Custom LLMs"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted Python library",
+    "tool_support": [
+      "Classification",
+      "NER",
+      "Summarization",
+      "Custom skills"
+    ],
+    "pricing_model": "Free open source",
+    "github_stars": "1289+",
+    "first_release": "2024",
+    "parent_project": "HumanSignal (Label Studio)",
+    "use_case_focus": "Autonomous data labeling and annotation",
+    "pricing": "Free (Apache-2.0 license)",
+    "updated": "November 6, 2025"
+  },
+  "tags": [
+    "data-labeling",
+    "open-source"
+  ]
+}

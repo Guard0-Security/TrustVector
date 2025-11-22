@@ -1,0 +1,474 @@
+{
+  "id": "mcp-server-elasticsearch",
+  "type": "mcp",
+  "name": "MCP Elasticsearch Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Elasticsearch search and analytics operations. Enables AI models to perform full-text search, aggregations, indexing, and data analytics on large-scale datasets. Essential for AI-powered search optimization, log analysis, and business intelligence workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "search_accuracy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch Search",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html",
+              "date": "2025-11-16",
+              "value": "Highly accurate full-text search with relevance scoring"
+            }
+          ],
+          "methodology": "Search relevance testing",
+          "last_verified": "2025-11-09"
+        },
+        "aggregation_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch Aggregations",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html",
+              "date": "2025-11-16",
+              "value": "Powerful aggregation framework with accurate analytics"
+            }
+          ],
+          "methodology": "Aggregation accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "large_index_performance": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Elasticsearch Performance",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-search-speed.html",
+              "date": "2025-11-16",
+              "value": "Performance degrades with very large indices; requires optimization"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cluster_stability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Elasticsearch Cluster Health",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html",
+              "date": "2025-11-16",
+              "value": "Stable cluster operations with automatic shard management"
+            }
+          ],
+          "methodology": "Cluster stability testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles Elasticsearch errors with retry and timeout management"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 69,
+      "criteria": {
+        "authentication_security": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch Security",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-settings.html",
+              "date": "2025-11-16",
+              "value": "Supports API keys, basic auth, and security features (X-Pack)"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "credential_exposure_risk": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Elasticsearch credentials stored locally; accessible to AI"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "query_injection_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can construct arbitrary queries and scripts"
+            }
+          ],
+          "methodology": "Injection vulnerability testing",
+          "last_verified": "2025-11-09"
+        },
+        "index_modification_risk": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch API",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/docs.html",
+              "date": "2025-11-16",
+              "value": "AI can index, update, and delete documents within permissions"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "index_deletion_risk": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Can delete indices if permissions allow"
+            }
+          ],
+          "methodology": "Destructive operation testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch Audit Logging",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/enable-audit-logging.html",
+              "date": "2025-11-16",
+              "value": "Comprehensive audit logging available in X-Pack Security"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 67,
+      "criteria": {
+        "document_data_exposure": {
+          "score": 63,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Search results and indexed documents sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pii_in_logs": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Log data and application logs may contain PII"
+            }
+          ],
+          "methodology": "PII exposure assessment",
+          "last_verified": "2025-11-09"
+        },
+        "field_level_security": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Elasticsearch Field-Level Security",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/field-level-security.html",
+              "date": "2025-11-16",
+              "value": "Field-level security available in X-Pack but requires configuration"
+            }
+          ],
+          "methodology": "Field security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Search results shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "index_pattern_exposure": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Index names and mappings may reveal data structure"
+            }
+          ],
+          "methodology": "Index privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 79,
+      "criteria": {
+        "documentation_quality": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Elasticsearch MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained with evolving coverage"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "query_visibility": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All queries logged in MCP transaction logs"
+            }
+          ],
+          "methodology": "Query logging assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Clear but incomplete documentation of supported Elasticsearch APIs"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 81,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires Elasticsearch connection URL and credentials"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "search_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Elasticsearch Performance",
+              "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/tune-for-search-speed.html",
+              "date": "2025-11-16",
+              "value": "Performance varies with index size and query complexity (typically 50-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch Stability",
+              "url": "https://www.elastic.co/",
+              "date": "2025-11-16",
+              "value": "Built on mature Elasticsearch client libraries"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Elasticsearch MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers search, aggregations, indexing, and index management"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 80,
+      "notes": "Good for generating search queries and analytics dashboards"
+    },
+    "customer-support": {
+      "overall": 88,
+      "notes": "Excellent for searching support tickets and knowledge bases"
+    },
+    "content-creation": {
+      "overall": 75,
+      "notes": "Useful for content search and recommendation systems"
+    },
+    "data-analysis": {
+      "overall": 95,
+      "notes": "Excellent for log analysis, business intelligence, and data exploration"
+    },
+    "research-assistant": {
+      "overall": 92,
+      "notes": "Ideal for full-text research across large document collections"
+    },
+    "legal-compliance": {
+      "overall": 58,
+      "notes": "Risk of exposing legal documents; requires field-level security"
+    },
+    "healthcare": {
+      "overall": 52,
+      "notes": "High risk of exposing patient data in logs and indices"
+    },
+    "financial-analysis": {
+      "overall": 62,
+      "notes": "Moderate risk; financial transaction data exposure concerns"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for teaching search technologies and data analytics"
+    },
+    "creative-writing": {
+      "overall": 72,
+      "notes": "Useful for searching writing archives and research materials"
+    }
+  },
+  "best_for": [
+    "Data analysts performing log analysis and business intelligence",
+    "Researchers conducting full-text search across large document collections",
+    "Support engineers searching knowledge bases and troubleshooting tickets",
+    "Educators teaching search technology and data analytics"
+  ],
+  "strengths": [
+    "Highly accurate full-text search with relevance scoring",
+    "Powerful aggregation framework for analytics and insights",
+    "Built on mature Elasticsearch client libraries",
+    "Excellent for log analysis and business intelligence",
+    "Open source community implementation",
+    "Comprehensive audit logging in X-Pack Security"
+  ],
+  "limitations": [
+    "Search results and indexed documents exposed to LLM provider",
+    "Log data may contain PII and sensitive information",
+    "AI can modify and delete indices within permission scope",
+    "Elasticsearch credentials accessible to AI",
+    "Performance issues with very large indices without optimization",
+    "Field-level security requires X-Pack and careful configuration"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Elasticsearch client libraries",
+    "authentication": "API keys, Basic auth, X-Pack Security",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "tags": [
+    "search",
+    "analytics",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "id": "swarm",
+  "type": "agent",
+  "name": "OpenAI Swarm",
+  "provider": "OpenAI",
+  "version": "Experimental (Deprecated)",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Experimental educational framework from OpenAI for building multi-agent systems with lightweight orchestration. Demonstrates ergonomic patterns for agent coordination and handoffs using simple Python primitives.",
+  "website": "https://github.com/openai/swarm",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 73,
+      "criteria": {
+        "agent_orchestration": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Swarm Documentation",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-20",
+              "value": "Lightweight multi-agent orchestration patterns"
+            }
+          ],
+          "methodology": "Orchestration testing",
+          "last_verified": "2025-11-09"
+        },
+        "agent_handoffs": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Handoff Pattern",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-15",
+              "value": "Ergonomic agent-to-agent handoff mechanisms"
+            }
+          ],
+          "methodology": "Handoff testing",
+          "last_verified": "2025-11-09"
+        },
+        "simplicity": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Design Philosophy",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Minimalist design with simple Python primitives"
+            }
+          ],
+          "methodology": "Code complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "context_management": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Context Variables",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Basic context management for agent coordination"
+            }
+          ],
+          "methodology": "Context handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "experimental_status": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "README Warning",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Explicitly marked as experimental, not for production"
+            }
+          ],
+          "methodology": "Status assessment",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Variable (OpenAI API dependent)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Performance depends on OpenAI API and agent complexity"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 70,
+      "criteria": {
+        "minimal_dependencies": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Dependencies",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Minimal dependencies reduce attack surface"
+            }
+          ],
+          "methodology": "Dependency analysis",
+          "last_verified": "2025-11-09"
+        },
+        "openai_trust": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Repository",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-20",
+              "value": "Official OpenAI project with trusted maintainers"
+            }
+          ],
+          "methodology": "Source trust assessment",
+          "last_verified": "2025-11-09"
+        },
+        "experimental_risks": {
+          "score": 55,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Experimental Status",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Experimental status means security not production-hardened"
+            }
+          ],
+          "methodology": "Security maturity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-20",
+              "value": "MIT license, 13k+ stars, transparent code"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_security": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Integration",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Security depends on OpenAI API key handling"
+            }
+          ],
+          "methodology": "API security review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 75,
+      "criteria": {
+        "local_execution": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Framework Architecture",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Python library runs locally, orchestration in your environment"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "openai_data_sharing": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI API",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "All agent interactions sent to OpenAI API"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "no_telemetry": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Code Review",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "No telemetry in framework code"
+            }
+          ],
+          "methodology": "Telemetry assessment",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_considerations": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2024-10-01",
+              "value": "Privacy depends on OpenAI's data policies"
+            }
+          ],
+          "methodology": "Compliance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_control": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Framework Design",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Limited data control, OpenAI API required"
+            }
+          ],
+          "methodology": "Data control assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "README and Examples",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-20",
+              "value": "Good README with examples, limited detailed docs"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "code_clarity": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Source Code",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Clean, readable code demonstrating patterns"
+            }
+          ],
+          "methodology": "Code quality assessment",
+          "last_verified": "2025-11-09"
+        },
+        "openai_backing": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Official OpenAI",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-20",
+              "value": "Official OpenAI project, trusted source"
+            }
+          ],
+          "methodology": "Source trust assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-20",
+              "value": "MIT license, 13k+ stars, open development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "educational_purpose": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Purpose Statement",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Explicitly designed for educational and experimental use"
+            }
+          ],
+          "methodology": "Purpose assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 68,
+      "criteria": {
+        "ease_of_use": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Simplicity",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Very simple API, easy to understand patterns"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 45,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "README Warning",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Explicitly not recommended for production use"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Design",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Designed for experimentation, not large-scale deployment"
+            }
+          ],
+          "methodology": "Scalability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Free MIT library, costs only for OpenAI API usage"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 58,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Features",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Minimal monitoring, experimental framework"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "learning_value": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Educational Design",
+              "url": "https://github.com/openai/swarm",
+              "date": "2024-10-01",
+              "value": "Excellent for learning multi-agent patterns"
+            }
+          ],
+          "methodology": "Educational value assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Official OpenAI educational framework for multi-agent patterns",
+    "Extremely simple and ergonomic API design",
+    "Clean code that demonstrates best practices",
+    "MIT licensed with minimal dependencies",
+    "Excellent for learning agent orchestration concepts",
+    "13k+ GitHub stars showing community interest"
+  ],
+  "limitations": [
+    "Explicitly experimental, not for production use",
+    "OpenAI API only, no support for other LLM providers",
+    "Limited features compared to production frameworks",
+    "No built-in monitoring, error handling, or scaling features",
+    "Minimal documentation beyond examples",
+    "Not actively maintained for production use cases"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI GPT-4",
+      "GPT-3.5"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted Python library",
+    "tool_support": [
+      "Function calling",
+      "Agent handoffs"
+    ],
+    "pricing_model": "Free open source (OpenAI API costs apply)",
+    "github_stars": "13000+",
+    "first_release": "2024",
+    "status": "Experimental / Educational - Replaced by OpenAI Agents SDK",
+    "deprecation_notice": "OpenAI recommends migrating to the Agents SDK for production use. Swarm was experimental only and is not officially supported.",
+    "github_repo": "https://github.com/openai/swarm",
+    "successor": "OpenAI Agents SDK (production-ready evolution of Swarm)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 70,
+      "notes": "Good for prototyping agent handoff patterns"
+    },
+    "code-generation": {
+      "overall": 68,
+      "notes": "Can demonstrate multi-agent code workflows"
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Good for experimenting with research agent patterns"
+    },
+    "data-analysis": {
+      "overall": 71,
+      "notes": "Can prototype multi-agent data workflows"
+    },
+    "content-creation": {
+      "overall": 74,
+      "notes": "Good for prototyping content agent collaboration"
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Excellent for learning about multi-agent systems"
+    },
+    "healthcare": {
+      "overall": 50,
+      "notes": "Experimental status not suitable for healthcare"
+    },
+    "financial-analysis": {
+      "overall": 48,
+      "notes": "Not suitable for production financial systems"
+    },
+    "legal-compliance": {
+      "overall": 65,
+      "notes": "Can prototype multi-agent legal workflows"
+    },
+    "creative-writing": {
+      "overall": 76,
+      "notes": "Good for experimenting with creative agent collaboration"
+    }
+  },
+  "best_for": [
+    "Developers exploring lightweight multi-agent coordination",
+    "Teams learning agent handoff patterns and routines",
+    "Researchers experimenting with ergonomic agent orchestration"
+  ],
+  "tags": [
+    "openai",
+    "assistants",
+    "experimental",
+    "open-source"
+  ]
+}

@@ -1,0 +1,510 @@
+{
+  "id": "e2b-agents",
+  "type": "agent",
+  "name": "E2B Agents",
+  "provider": "E2B",
+  "version": "Cloud SDK",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Secure cloud runtime for AI agents with code interpreter capabilities. Provides sandboxed environments for executing agent-generated code safely, with support for multiple programming languages and pre-built integrations.",
+  "website": "https://e2b.dev/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 81,
+      "criteria": {
+        "code_execution": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "E2B Documentation",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-20",
+              "value": "Fast, reliable code execution in sandboxed environments"
+            }
+          ],
+          "methodology": "Code execution testing",
+          "last_verified": "2025-11-09"
+        },
+        "sandbox_isolation": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sandbox Security",
+              "url": "https://e2b.dev/docs/sandbox",
+              "date": "2024-10-15",
+              "value": "Secure isolated environments for each agent execution"
+            }
+          ],
+          "methodology": "Isolation testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_language_support": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Language Support",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Supports Python, JavaScript, and custom environments"
+            }
+          ],
+          "methodology": "Language capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "startup_latency": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-09-20",
+              "value": "Cold start can take 1-3s, warm sandboxes are faster"
+            }
+          ],
+          "methodology": "Latency testing",
+          "last_verified": "2025-11-09"
+        },
+        "file_system_support": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Filesystem",
+              "url": "https://e2b.dev/docs/sandbox/filesystem",
+              "date": "2024-10-01",
+              "value": "Full filesystem access within sandbox"
+            }
+          ],
+          "methodology": "File operations testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "50-500ms (warm), 1-3s (cold start)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Performance Metrics",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Fast execution with optimized infrastructure"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 89,
+      "criteria": {
+        "sandbox_security": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Model",
+              "url": "https://e2b.dev/docs/sandbox/security",
+              "date": "2024-10-01",
+              "value": "Firecracker microVMs for strong isolation"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "network_isolation": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Network Controls",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Configurable network access and restrictions"
+            }
+          ],
+          "methodology": "Network security testing",
+          "last_verified": "2025-11-09"
+        },
+        "code_sandboxing": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sandboxing",
+              "url": "https://e2b.dev/docs/sandbox",
+              "date": "2024-10-01",
+              "value": "Industry-leading code execution sandboxing"
+            }
+          ],
+          "methodology": "Sandbox security testing",
+          "last_verified": "2025-11-09"
+        },
+        "api_authentication": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "API Security",
+              "url": "https://e2b.dev/docs/api",
+              "date": "2024-09-15",
+              "value": "API key authentication with team management"
+            }
+          ],
+          "methodology": "Authentication testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_encryption": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Encryption",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "TLS encryption for API and sandbox communication"
+            }
+          ],
+          "methodology": "Encryption assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 80,
+      "criteria": {
+        "data_retention": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Policy",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Sandboxes are ephemeral, data cleared after session"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Compliance",
+              "url": "https://e2b.dev/",
+              "date": "2024-10-01",
+              "value": "GDPR considerations for cloud-hosted sandboxes"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "ephemeral_environments": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sandbox Lifecycle",
+              "url": "https://e2b.dev/docs/sandbox",
+              "date": "2024-10-01",
+              "value": "Sandboxes automatically destroyed after use"
+            }
+          ],
+          "methodology": "Data lifecycle assessment",
+          "last_verified": "2025-11-09"
+        },
+        "code_privacy": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Code executed in cloud, not stored long-term"
+            }
+          ],
+          "methodology": "Code privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-09-20",
+              "value": "Basic execution logs available"
+            }
+          ],
+          "methodology": "Logging assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "E2B Docs",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-20",
+              "value": "Excellent documentation with examples and guides"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "sdk_support": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SDKs",
+              "url": "https://e2b.dev/docs/sdk",
+              "date": "2024-10-01",
+              "value": "Python and JavaScript SDKs with TypeScript support"
+            }
+          ],
+          "methodology": "SDK assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_sdk": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/e2b-dev",
+              "date": "2024-10-15",
+              "value": "Open source SDKs and examples"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "execution_visibility": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Logging",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Sandbox execution logs and output capture"
+            }
+          ],
+          "methodology": "Traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_examples": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Examples",
+              "url": "https://github.com/e2b-dev/e2b",
+              "date": "2024-10-01",
+              "value": "Growing collection of agent examples and templates"
+            }
+          ],
+          "methodology": "Community resources assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 82,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SDK Integration",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Simple SDK integration with major agent frameworks"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Infrastructure",
+              "url": "https://e2b.dev/",
+              "date": "2024-10-01",
+              "value": "Cloud infrastructure scales automatically"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://e2b.dev/pricing",
+              "date": "2024-10-01",
+              "value": "Usage-based pricing, free tier available"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring",
+              "url": "https://e2b.dev/docs",
+              "date": "2024-10-01",
+              "value": "Dashboard for usage monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "framework_integrations": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Integrations",
+              "url": "https://e2b.dev/docs/integrations",
+              "date": "2024-10-01",
+              "value": "Pre-built integrations with LangChain, AutoGPT, AgentGPT"
+            }
+          ],
+          "methodology": "Integration ecosystem assessment",
+          "last_verified": "2025-11-09"
+        },
+        "uptime": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Reliability",
+              "url": "https://e2b.dev/",
+              "date": "2024-10-01",
+              "value": "Cloud infrastructure with good uptime"
+            }
+          ],
+          "methodology": "Uptime monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Industry-leading code execution sandboxing with Firecracker microVMs",
+    "Fast execution with warm sandbox pooling (50-500ms)",
+    "Pre-built integrations with major agent frameworks",
+    "Excellent documentation and SDK support (Python, JavaScript)",
+    "Ephemeral environments for strong privacy and security",
+    "Multi-language support (Python, JavaScript, custom)"
+  ],
+  "limitations": [
+    "Cloud-only, no self-hosting option currently",
+    "Usage-based pricing can be unpredictable for high-volume use",
+    "Cold start latency (1-3s) can impact performance",
+    "Limited to code execution use cases",
+    "Newer service with less production track record",
+    "Network restrictions may limit some agent capabilities"
+  ],
+  "metadata": {
+    "license": "Proprietary (SDKs are Apache 2.0)",
+    "supported_models": [
+      "Works with any LLM via agent frameworks"
+    ],
+    "programming_languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Custom environments"
+    ],
+    "deployment_type": "Managed cloud service",
+    "tool_support": [
+      "Agent framework integrations",
+      "Custom code execution"
+    ],
+    "pricing_model": "Free tier + usage-based pricing",
+    "sandbox_technology": "Firecracker microVMs",
+    "supported_frameworks": [
+      "LangChain",
+      "AutoGPT",
+      "AgentGPT",
+      "Custom"
+    ],
+    "github_org": "https://github.com/e2b-dev",
+    "pricing": "Free tier available, Paid plans from $150/month + usage"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 74,
+      "notes": "Good for support agents that need code execution"
+    },
+    "code-generation": {
+      "overall": 94,
+      "notes": "Excellent for safe code execution and testing"
+    },
+    "research-assistant": {
+      "overall": 79,
+      "notes": "Good for data analysis and research automation"
+    },
+    "data-analysis": {
+      "overall": 90,
+      "notes": "Excellent for data science agents with code execution"
+    },
+    "content-creation": {
+      "overall": 72,
+      "notes": "Can support code-based content generation"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for coding education and tutoring agents"
+    },
+    "healthcare": {
+      "overall": 76,
+      "notes": "Can support clinical data analysis with proper setup"
+    },
+    "financial-analysis": {
+      "overall": 78,
+      "notes": "Sandboxing useful for financial modeling agents"
+    },
+    "legal-compliance": {
+      "overall": 75,
+      "notes": "Can support document processing with code"
+    },
+    "creative-writing": {
+      "overall": 70,
+      "notes": "Limited for creative tasks without code needs"
+    }
+  },
+  "best_for": [
+    "Developers building agents that need code execution environments",
+    "Teams requiring secure sandboxed environments for AI agents",
+    "Organizations needing cloud-based code execution infrastructure"
+  ],
+  "tags": [
+    "sandbox",
+    "code-execution"
+  ]
+}

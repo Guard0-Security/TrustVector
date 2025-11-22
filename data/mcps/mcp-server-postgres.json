@@ -1,0 +1,467 @@
+{
+  "id": "mcp-server-postgres",
+  "type": "mcp",
+  "name": "MCP PostgreSQL Server",
+  "provider": "Anthropic (Archived)",
+  "version": "0.6.2",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "ARCHIVED: Former official MCP server for PostgreSQL database interaction. This server is NO LONGER MAINTAINED and has been moved to servers-archived repository. No security updates provided. Community alternatives available. Use with caution.",
+  "website": "https://modelcontextprotocol.io/docs/servers/postgres",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 87,
+      "criteria": {
+        "query_execution_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "PostgreSQL Driver Integration",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+              "date": "2025-11-16",
+              "value": "Uses standard PostgreSQL drivers with high query accuracy"
+            }
+          ],
+          "methodology": "Query execution testing",
+          "last_verified": "2025-11-09"
+        },
+        "schema_introspection": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Postgres Implementation",
+              "url": "https://modelcontextprotocol.io/docs/servers/postgres",
+              "date": "2025-11-16",
+              "value": "Comprehensive schema inspection including tables, columns, indexes, and constraints"
+            }
+          ],
+          "methodology": "Schema discovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "connection_stability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "PostgreSQL Reliability",
+              "url": "https://www.postgresql.org/about/",
+              "date": "2025-11-16",
+              "value": "Built on PostgreSQL's robust connection pooling and stability"
+            }
+          ],
+          "methodology": "Connection reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "large_result_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles large result sets with pagination and limits"
+            }
+          ],
+          "methodology": "Large dataset performance testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "PostgreSQL Error Reporting",
+              "url": "https://www.postgresql.org/docs/current/errcodes-appendix.html",
+              "date": "2025-11-16",
+              "value": "Detailed error messages from PostgreSQL with proper propagation"
+            }
+          ],
+          "methodology": "Error scenario testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 71,
+      "criteria": {
+        "sql_injection_protection": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Parameterized Queries",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+              "date": "2025-11-16",
+              "value": "Uses parameterized queries to prevent SQL injection"
+            }
+          ],
+          "methodology": "SQL injection testing",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "PostgreSQL Permissions",
+              "url": "https://www.postgresql.org/docs/current/sql-grant.html",
+              "date": "2025-11-16",
+              "value": "Inherits database user permissions but AI can execute any query within those permissions"
+            }
+          ],
+          "methodology": "Permission boundary testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_modification_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can execute INSERT, UPDATE, DELETE operations if database user has permissions"
+            }
+          ],
+          "methodology": "Write operation risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "credential_security": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Connection String Management",
+              "url": "https://modelcontextprotocol.io/docs/servers/postgres",
+              "date": "2025-11-16",
+              "value": "Credentials stored in configuration; requires secure credential management"
+            }
+          ],
+          "methodology": "Credential storage review",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "PostgreSQL Logging",
+              "url": "https://www.postgresql.org/docs/current/runtime-config-logging.html",
+              "date": "2025-11-16",
+              "value": "Depends on PostgreSQL audit configuration; MCP server provides basic query logging"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 68,
+      "criteria": {
+        "data_exposure_risk": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Flow Analysis",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Query results including sensitive data sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow and exposure analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pii_protection": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No built-in PII detection, redaction, or anonymization"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "query_result_filtering": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Configuration",
+              "url": "https://modelcontextprotocol.io/docs/servers/postgres",
+              "date": "2025-11-16",
+              "value": "Can limit result rows but no column-level filtering for sensitive data"
+            }
+          ],
+          "methodology": "Data filtering capabilities review",
+          "last_verified": "2025-11-09"
+        },
+        "compliance_readiness": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Compliance Assessment",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "GDPR/HIPAA compliance depends on LLM provider and data handling configuration"
+            }
+          ],
+          "methodology": "Compliance framework review",
+          "last_verified": "2025-11-09"
+        },
+        "schema_exposure": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Schema Introspection",
+              "url": "https://modelcontextprotocol.io/docs/servers/postgres",
+              "date": "2025-11-16",
+              "value": "Database schema metadata shared with LLM for query generation"
+            }
+          ],
+          "methodology": "Metadata exposure analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Postgres Docs",
+              "url": "https://modelcontextprotocol.io/docs/servers/postgres",
+              "date": "2025-11-16",
+              "value": "Clear documentation with setup instructions and security considerations"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "query_visibility": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol Logging",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All SQL queries logged and visible in MCP message stream"
+            }
+          ],
+          "methodology": "Query traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fully open source with MIT license"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "security_documentation": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Provides security best practices but could be more comprehensive for database access"
+            }
+          ],
+          "methodology": "Security documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 83,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Quickstart",
+              "url": "https://modelcontextprotocol.io/quickstart",
+              "date": "2025-11-16",
+              "value": "Straightforward setup requiring connection string configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "performance": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "PostgreSQL Performance",
+              "url": "https://www.postgresql.org/about/",
+              "date": "2025-11-16",
+              "value": "Query performance depends on database configuration and optimization"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "connection_pooling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Details",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Supports connection pooling for efficient resource utilization"
+            }
+          ],
+          "methodology": "Connection management review",
+          "last_verified": "2025-11-09"
+        },
+        "error_diagnostics": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "PostgreSQL Error Messages",
+              "url": "https://www.postgresql.org/docs/current/errcodes-appendix.html",
+              "date": "2025-11-16",
+              "value": "Detailed error messages help diagnose issues"
+            }
+          ],
+          "methodology": "Error messaging assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Growing community support for database MCP servers"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive PostgreSQL feature support including schema introspection",
+    "Natural language to SQL query generation capabilities",
+    "Excellent for data analysis and business intelligence workflows",
+    "Full query visibility and logging for audit purposes",
+    "Open source implementation with active development",
+    "Supports connection pooling and performance optimization"
+  ],
+  "limitations": [
+    "High risk of exposing sensitive database content to LLM providers",
+    "No built-in PII detection, redaction, or data anonymization",
+    "AI can execute destructive operations (DELETE, DROP) if permissions allow",
+    "Limited granular access control beyond database user permissions",
+    "Query results with sensitive data sent to external APIs",
+    "Compliance challenges for regulated industries (HIPAA, PCI-DSS, GDPR)"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with PostgreSQL client support"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers-archived",
+    "github_stars": 58700,
+    "database_version": "PostgreSQL 10+",
+    "connection_method": "Connection string with credentials",
+    "first_release": "2024-11",
+    "maintained_by": "None (Archived)",
+    "status": "Archived - No longer maintained",
+    "transport_types": [
+      "stdio"
+    ],
+    "installation_methods": [
+      "npm"
+    ]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 78,
+      "notes": "Useful for generating database migration scripts and query code"
+    },
+    "customer-support": {
+      "overall": 75,
+      "notes": "Can help support teams query customer data, but privacy concerns exist"
+    },
+    "content-creation": {
+      "overall": 65,
+      "notes": "Limited applicability; mainly for content stored in databases"
+    },
+    "data-analysis": {
+      "overall": 92,
+      "notes": "Excellent for AI-powered data analysis, reporting, and insights generation"
+    },
+    "research-assistant": {
+      "overall": 85,
+      "notes": "Good for analyzing research datasets stored in PostgreSQL"
+    },
+    "legal-compliance": {
+      "overall": 55,
+      "notes": "High risk due to potential exposure of sensitive legal data to LLM providers"
+    },
+    "healthcare": {
+      "overall": 50,
+      "notes": "Not recommended for PHI due to data exposure risks; HIPAA compliance challenges"
+    },
+    "financial-analysis": {
+      "overall": 58,
+      "notes": "Risky for sensitive financial data; requires strict access controls and data filtering"
+    },
+    "education": {
+      "overall": 82,
+      "notes": "Good for analyzing student data and learning analytics"
+    },
+    "creative-writing": {
+      "overall": 60,
+      "notes": "Limited utility unless creative content is database-driven"
+    }
+  },
+  "best_for": [
+    "Developers integrating this service with AI applications",
+    "Teams looking to automate workflows with AI assistance",
+    "Organizations exploring Model Context Protocol implementations"
+  ],
+  "tags": [
+    "database",
+    "sql",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

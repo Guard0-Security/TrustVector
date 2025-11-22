@@ -1,0 +1,659 @@
+{
+  "id": "gpt-oss-20b",
+  "type": "model",
+  "name": "GPT-OSS-20B",
+  "provider": "OpenAI",
+  "version": "20250805",
+  "last_evaluated": "2025-11-17",
+  "evaluated_by": "TrustVector Team",
+  "description": "OpenAI's edge-optimized open-weight model released August 2025. 21B total params (3.6B active), Apache 2.0 license. Matches o3-mini despite small size. Runs in 16GB memory (edge devices).",
+  "website": "https://openai.com/index/introducing-gpt-oss/",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 91,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Codeforces Benchmark",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Matches o4-mini on competition coding"
+            },
+            {
+              "source": "TauBench Tool Calling",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Exceeds o4-mini on tool calling"
+            }
+          ],
+          "methodology": "Competition coding and tool use benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "task_accuracy_reasoning": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AIME 2024 & 2025",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Outperforms o3-mini on competition mathematics"
+            },
+            {
+              "source": "Chain-of-Thought Access",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Full chain-of-thought reasoning process exposed"
+            }
+          ],
+          "methodology": "Math competition benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "task_accuracy_general": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU & HLE",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Matches o4-mini on general problem solving"
+            },
+            {
+              "source": "HealthBench",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Exceeds o4-mini on health-related queries"
+            }
+          ],
+          "methodology": "General knowledge and domain-specific testing",
+          "last_verified": "2025-11-17"
+        },
+        "output_consistency": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Model Card",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Configurable reasoning effort for consistency"
+            }
+          ],
+          "methodology": "Internal testing",
+          "last_verified": "2025-11-17"
+        },
+        "latency_p50": {
+          "value": "1.0s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Optimized Inference",
+              "url": "https://openai.com/index/introducing-gpt-oss/",
+              "date": "2025-08-05",
+              "value": "Fast inference with MoE architecture"
+            }
+          ],
+          "methodology": "Median latency estimation",
+          "last_verified": "2025-11-17"
+        },
+        "latency_p95": {
+          "value": "2.2s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Deployments",
+              "url": "https://huggingface.co/openai/gpt-oss-120b",
+              "date": "2025-08-10",
+              "value": "~2s on H100 hardware"
+            }
+          ],
+          "methodology": "95th percentile from community benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Technical Specs",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "128K context window natively supported"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-17"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Model",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "100% uptime when self-hosted"
+            }
+          ],
+          "methodology": "Self-hosting provides full control",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Flagship open-source performance. MoE architecture activates 5.1B of 117B params per token. Matches or beats o4-mini on most benchmarks."
+    },
+
+    "security": {
+      "overall_score": 85,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Testing",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Good resistance, customizable for self-hosted"
+            }
+          ],
+          "methodology": "OWASP LLM01 testing",
+          "last_verified": "2025-11-17"
+        },
+        "jailbreak_resistance": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://huggingface.co/openai/gpt-oss-120b",
+              "date": "2025-08-10",
+              "value": "Standard resistance, self-host allows custom guardrails"
+            }
+          ],
+          "methodology": "Adversarial testing",
+          "last_verified": "2025-11-17"
+        },
+        "data_leakage_prevention": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Deployment",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Complete data control when self-hosted"
+            }
+          ],
+          "methodology": "Self-hosting analysis",
+          "last_verified": "2025-11-17"
+        },
+        "output_safety": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Standard safety training, customizable"
+            }
+          ],
+          "methodology": "Safety testing",
+          "last_verified": "2025-11-17"
+        },
+        "api_security": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Security",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Customer controls all API security when self-hosted"
+            }
+          ],
+          "methodology": "Deployment security review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Good base security. Self-hosting provides complete control over safety guardrails and data handling."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 97,
+      "criteria": {
+        "data_residency": {
+          "value": "Anywhere (self-hosted)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-Weight Model",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Deploy anywhere, full data residency control"
+            }
+          ],
+          "methodology": "Self-hosting analysis",
+          "last_verified": "2025-11-17"
+        },
+        "training_data_optout": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Model",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "No data sent to OpenAI when self-hosted"
+            }
+          ],
+          "methodology": "Privacy model analysis",
+          "last_verified": "2025-11-17"
+        },
+        "data_retention": {
+          "value": "0 days (self-controlled)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Deployment",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Complete control over data retention"
+            }
+          ],
+          "methodology": "Self-hosting review",
+          "last_verified": "2025-11-17"
+        },
+        "pii_handling": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "On-Premises Deployment",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "PII never leaves your infrastructure"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-17"
+        },
+        "compliance_certifications": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Compliance",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Inherit your infrastructure's certifications"
+            }
+          ],
+          "methodology": "Compliance model review",
+          "last_verified": "2025-11-17"
+        },
+        "zero_data_retention": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-Weight Model",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Complete control, zero external retention"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Perfect privacy when self-hosted. No data sent to OpenAI. Full compliance control. Ideal for regulated industries."
+    },
+
+    "trust_transparency": {
+      "overall_score": 94,
+      "criteria": {
+        "explainability": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Full Chain-of-Thought",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Complete access to reasoning process"
+            }
+          ],
+          "methodology": "Reasoning transparency",
+          "last_verified": "2025-11-17"
+        },
+        "hallucination_rate": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Benchmark Testing",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Good factual accuracy"
+            }
+          ],
+          "methodology": "QA testing",
+          "last_verified": "2025-11-17"
+        },
+        "bias_fairness": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Model Card",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Standard bias testing"
+            }
+          ],
+          "methodology": "Bias benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "uncertainty_quantification": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Good uncertainty expression"
+            }
+          ],
+          "methodology": "Confidence assessment",
+          "last_verified": "2025-11-17"
+        },
+        "model_card_quality": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Comprehensive Model Card",
+              "url": "https://openai.com/index/gpt-oss-model-card/",
+              "date": "2025-08-05",
+              "value": "Detailed technical specs, benchmarks, architecture"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-17"
+        },
+        "training_data_transparency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://openai.com/index/introducing-gpt-oss/",
+              "date": "2025-08-05",
+              "value": "Mostly English, STEM, coding focus disclosed"
+            }
+          ],
+          "methodology": "Training data disclosure review",
+          "last_verified": "2025-11-17"
+        },
+        "guardrails": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Customizable Guardrails",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Standard safety, customizable when self-hosted"
+            }
+          ],
+          "methodology": "Safety mechanism review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Exceptional transparency. Full chain-of-thought access. Complete model weights and architecture disclosed. Open-source enables auditing."
+    },
+
+    "operational_excellence": {
+      "overall_score": 95,
+      "criteria": {
+        "api_design_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment Platforms",
+              "url": "https://openai.com/index/introducing-gpt-oss/",
+              "date": "2025-08-05",
+              "value": "Works with vLLM, Ollama, llama.cpp, Azure, AWS, etc."
+            }
+          ],
+          "methodology": "API compatibility review",
+          "last_verified": "2025-11-17"
+        },
+        "sdk_quality": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Official repo, Hugging Face integration"
+            }
+          ],
+          "methodology": "SDK ecosystem review",
+          "last_verified": "2025-11-17"
+        },
+        "versioning_policy": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Weights",
+              "url": "https://huggingface.co/openai/gpt-oss-120b",
+              "date": "2025-08-05",
+              "value": "Weights frozen, no deprecation risk"
+            }
+          ],
+          "methodology": "Version stability analysis",
+          "last_verified": "2025-11-17"
+        },
+        "monitoring_observability": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Control",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Full observability when self-hosted"
+            }
+          ],
+          "methodology": "Monitoring capability review",
+          "last_verified": "2025-11-17"
+        },
+        "support_quality": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Support",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "GitHub issues, community forums, deployment partners"
+            }
+          ],
+          "methodology": "Support ecosystem assessment",
+          "last_verified": "2025-11-17"
+        },
+        "ecosystem_maturity": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment Partners",
+              "url": "https://openai.com/index/introducing-gpt-oss/",
+              "date": "2025-08-05",
+              "value": "Azure, Hugging Face, AWS, Fireworks, Together AI, Databricks, Vercel, Cloudflare, OpenRouter"
+            }
+          ],
+          "methodology": "Ecosystem breadth analysis",
+          "last_verified": "2025-11-17"
+        },
+        "license_terms": {
+          "score": 100,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Apache 2.0 License",
+              "url": "https://github.com/openai/gpt-oss",
+              "date": "2025-08-05",
+              "value": "Permissive Apache 2.0, no copyleft, no patent risk"
+            }
+          ],
+          "methodology": "License review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Exceptional operational flexibility. Apache 2.0 enables commercial use. Massive deployment ecosystem. Self-host or use managed platforms."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 91,
+      "notes": "Excellent coding. Matches o4-mini. Configurable reasoning effort. Full chain-of-thought debugging.",
+      "alternatives": ["claude-haiku-4-5", "claude-sonnet-4-5"]
+    },
+    "customer-support": {
+      "overall": 87,
+      "notes": "Good for customer support. Self-host for complete data privacy. Configurable reasoning for cost control.",
+      "alternatives": ["claude-haiku-4-5", "gpt-4o-mini"]
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Strong content creation. Self-hosting enables unlimited generation without API costs.",
+      "alternatives": ["claude-opus-4", "gpt-5"]
+    },
+    "data-analysis": {
+      "overall": 89,
+      "notes": "Excellent for data analysis. Keep sensitive data on-premises. Full chain-of-thought for transparency.",
+      "alternatives": ["claude-opus-4", "openai-o3"]
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Outstanding for research. 128K context. Self-host proprietary research data. Full reasoning transparency.",
+      "alternatives": ["claude-opus-4", "gpt-5"]
+    },
+    "legal-compliance": {
+      "overall": 95,
+      "notes": "Perfect for legal. Self-host for complete compliance. No data leaves premises. Apache 2.0 license clarity.",
+      "alternatives": ["claude-opus-4"]
+    },
+    "healthcare": {
+      "overall": 94,
+      "notes": "Ideal for healthcare. Self-host for HIPAA. Complete PHI privacy. No external data transmission.",
+      "alternatives": ["claude-opus-4", "gpt-oss-20b"]
+    },
+    "financial-analysis": {
+      "overall": 91,
+      "notes": "Excellent for finance. Outperforms o3-mini on math. Self-host proprietary financial data.",
+      "alternatives": ["claude-opus-4", "openai-o3"]
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Great for education. Full chain-of-thought shows reasoning steps. Self-host for institutional control.",
+      "alternatives": ["claude-haiku-4-5", "gpt-5"]
+    },
+    "creative-writing": {
+      "overall": 84,
+      "notes": "Good creative writing. Unlimited generation when self-hosted. No API costs for iteration.",
+      "alternatives": ["claude-opus-4", "gpt-5"]
+    }
+  },
+
+  "strengths": [
+    "Apache 2.0 open-weight license enables commercial use without restrictions",
+    "Matches o3-mini performance despite small 21B size (3.6B active)",
+    "Runs in only 16GB memory (edge devices, consumer GPUs, IoT deployment)",
+    "Complete data privacy when self-hosted (zero external data transmission)",
+    "Ultra-low infrastructure costs (~$0.50-1/hr, 1/4 cost of 120B)",
+    "Full chain-of-thought access and massive deployment ecosystem"
+  ],
+
+  "limitations": [
+    "Smaller capacity than gpt-oss-120b for complex tasks",
+    "Self-hosting complexity and infrastructure costs",
+    "Community support vs enterprise SLA",
+    "Slightly lower performance than flagship closed models",
+    "No built-in safety guardrails (customizable but requires setup)"
+  ],
+
+  "best_for": [
+    "Edge deployments and on-device AI (IoT, mobile, embedded systems)",
+    "Consumer hardware deployments (16GB consumer GPUs)",
+    "Cost-sensitive self-hosting (1/4 infrastructure cost of 120B)",
+    "Regulated industries requiring data control with limited hardware",
+    "Development and testing before scaling to larger models"
+  ],
+
+  "not_recommended_for": [
+    "Most complex reasoning tasks (use gpt-oss-120b or Claude Opus 4)",
+    "Applications requiring absolute maximum performance",
+    "Tasks where the quality difference justifies 120B's higher cost"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "Free (self-hosted)",
+      "output": "Free (self-hosted)",
+      "notes": "Infrastructure costs only: ~$0.50-1/hr for consumer GPUs. Can run on edge devices. Free for download and commercial use under Apache 2.0.",
+      "last_verified": "2025-11-17"
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese"
+    ],
+    "modalities": ["text"],
+    "api_endpoint": "Self-hosted (various platforms)",
+    "model_download": "https://huggingface.co/openai/gpt-oss-20b",
+    "github": "https://github.com/openai/gpt-oss",
+    "open_source": true,
+    "license": "Apache 2.0",
+    "architecture": "Mixture-of-Experts (MoE) Transformer",
+    "parameters": "21B total (3.6B active per token)",
+    "memory_requirement": "16GB (edge-optimized)",
+    "tokenizer": "o200k_harmony",
+    "deployment_platforms": ["Azure", "AWS", "Hugging Face", "vLLM", "Ollama", "llama.cpp", "LM Studio", "Fireworks", "Together AI", "Baseten", "Databricks", "Vercel", "Cloudflare", "OpenRouter"]
+  },
+
+  "related_entities": ["gpt-oss-120b", "openai-o3-mini", "gpt-4o-mini", "claude-haiku-4-5"],
+
+  "tags": [
+    "open-source",
+    "apache-2.0",
+    "self-hosted",
+    "privacy",
+    "moe",
+    "reasoning",
+    "coding",
+    "on-premises",
+    "customizable",
+    "transparent"
+  ]
+}

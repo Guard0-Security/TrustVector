@@ -1,0 +1,504 @@
+{
+  "id": "salesforce-einstein-bots",
+  "type": "agent",
+  "name": "Salesforce Einstein Bots",
+  "provider": "Salesforce",
+  "version": "Einstein GPT",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Salesforce's AI-powered chatbot platform integrated deeply with the Salesforce ecosystem. Combines Einstein AI with CRM data for personalized customer interactions and seamless handoffs to human agents.",
+  "website": "https://www.salesforce.com/products/service-cloud/features/einstein-bots/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "intent_recognition": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Einstein Intent",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_intro.htm",
+              "date": "2024-10-15",
+              "value": "Einstein NLU for intent classification with CRM context"
+            }
+          ],
+          "methodology": "Intent accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "crm_integration": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Native Salesforce Integration",
+              "url": "https://www.salesforce.com/products/einstein/overview/",
+              "date": "2024-10-01",
+              "value": "Deep integration with Salesforce CRM, Service Cloud, Marketing Cloud"
+            }
+          ],
+          "methodology": "CRM integration assessment",
+          "last_verified": "2025-11-09"
+        },
+        "dialog_flow": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Bot Builder",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_create_bot.htm",
+              "date": "2024-10-01",
+              "value": "Visual dialog builder with branching logic and actions"
+            }
+          ],
+          "methodology": "Conversation design testing",
+          "last_verified": "2025-11-09"
+        },
+        "handoff_to_agent": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Agent Handoff",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_transfer_to_agent.htm",
+              "date": "2024-09-20",
+              "value": "Seamless handoff to Service Cloud agents with context"
+            }
+          ],
+          "methodology": "Handoff workflow testing",
+          "last_verified": "2025-11-09"
+        },
+        "personalization": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CRM Data Access",
+              "url": "https://www.salesforce.com/products/einstein/overview/",
+              "date": "2024-10-01",
+              "value": "Accesses customer data from Salesforce for personalized interactions"
+            }
+          ],
+          "methodology": "Personalization capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "400-900ms average",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance Metrics",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_intro.htm",
+              "date": "2024-10-01",
+              "value": "Response time depends on CRM queries and complexity"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 90,
+      "criteria": {
+        "data_encryption": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce Security",
+              "url": "https://www.salesforce.com/company/legal/trust-and-compliance-documentation/",
+              "date": "2024-10-01",
+              "value": "Platform encryption and TLS 1.2+ for all data"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce Profiles & Permissions",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.security_overview.htm",
+              "date": "2024-10-01",
+              "value": "Granular permission sets and profile-based access control"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_governance": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Shield Platform Encryption",
+              "url": "https://www.salesforce.com/products/platform/products/shield/",
+              "date": "2024-09-15",
+              "value": "Field-level encryption with Shield Platform Encryption"
+            }
+          ],
+          "methodology": "Data governance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_trail": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Event Monitoring",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.event_monitoring.htm",
+              "date": "2024-10-01",
+              "value": "Comprehensive event monitoring and audit logs"
+            }
+          ],
+          "methodology": "Audit capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "compliance": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce Compliance",
+              "url": "https://compliance.salesforce.com/en",
+              "date": "2024-10-01",
+              "value": "SOC 2, ISO 27001, HIPAA, PCI DSS, GDPR compliant"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 89,
+      "criteria": {
+        "data_retention": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Retention Policies",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_intro.htm",
+              "date": "2024-10-01",
+              "value": "Configurable retention aligned with Salesforce policies"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce GDPR",
+              "url": "https://www.salesforce.com/gdpr/overview/",
+              "date": "2024-09-01",
+              "value": "GDPR-compliant with data subject rights management"
+            }
+          ],
+          "methodology": "Compliance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "hipaa_compliance": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Health Cloud HIPAA",
+              "url": "https://www.salesforce.com/solutions/industries/healthcare/health-cloud/",
+              "date": "2024-10-01",
+              "value": "HIPAA-compliant when using Health Cloud edition"
+            }
+          ],
+          "methodology": "Healthcare compliance review",
+          "last_verified": "2025-11-09"
+        },
+        "pii_protection": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Masking",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.security_pe.htm",
+              "date": "2024-10-01",
+              "value": "Field-level encryption and data masking capabilities"
+            }
+          ],
+          "methodology": "PII protection testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_sovereignty": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Hyperforce",
+              "url": "https://www.salesforce.com/news/stories/what-is-salesforce-hyperforce/",
+              "date": "2024-10-01",
+              "value": "Hyperforce enables data residency in multiple regions"
+            }
+          ],
+          "methodology": "Data residency assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "documentation_quality": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce Help",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_intro.htm",
+              "date": "2024-10-15",
+              "value": "Comprehensive documentation and Trailhead learning paths"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "analytics": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Bot Analytics",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_analytics.htm",
+              "date": "2024-10-01",
+              "value": "Built-in analytics dashboards for bot performance"
+            }
+          ],
+          "methodology": "Analytics capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "testing_tools": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Bot Preview",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_preview.htm",
+              "date": "2024-09-20",
+              "value": "Preview and testing functionality in bot builder"
+            }
+          ],
+          "methodology": "Testing features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "explainability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Dialog Visibility",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_intro.htm",
+              "date": "2024-10-01",
+              "value": "Dialog flow visible but limited AI decision explainability"
+            }
+          ],
+          "methodology": "Explainability assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 88,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce Ecosystem",
+              "url": "https://www.salesforce.com/products/service-cloud/features/einstein-bots/",
+              "date": "2024-10-01",
+              "value": "Native Salesforce integration, seamless with existing setup"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Salesforce Platform",
+              "url": "https://www.salesforce.com/products/platform/overview/",
+              "date": "2024-10-01",
+              "value": "Enterprise-grade scalability on Salesforce platform"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://www.salesforce.com/products/service-cloud/pricing/",
+              "date": "2024-10-01",
+              "value": "Included with Service Cloud licenses, conversation-based pricing"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Service Cloud Monitoring",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.bots_service_analytics.htm",
+              "date": "2024-10-01",
+              "value": "Comprehensive monitoring via Service Cloud console"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "channel_support": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Messaging Channels",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.messaging_overview.htm",
+              "date": "2024-10-01",
+              "value": "SMS, WhatsApp, Facebook Messenger, Web Chat, Slack"
+            }
+          ],
+          "methodology": "Channel integration assessment",
+          "last_verified": "2025-11-09"
+        },
+        "workflow_automation": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Flow Integration",
+              "url": "https://help.salesforce.com/s/articleView?id=sf.flow.htm",
+              "date": "2024-10-01",
+              "value": "Integration with Salesforce Flow for automation"
+            }
+          ],
+          "methodology": "Automation capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Deep native integration with Salesforce CRM and ecosystem",
+    "Seamless agent handoff with Service Cloud for hybrid support",
+    "Access to complete customer data for personalized interactions",
+    "Strong enterprise security and compliance (HIPAA, SOC 2, GDPR)",
+    "Multi-channel support (SMS, WhatsApp, Facebook, Web, Slack)",
+    "Integration with Salesforce Flow and automation tools"
+  ],
+  "limitations": [
+    "Requires Salesforce licenses (Service Cloud), significant cost",
+    "Complete Salesforce platform lock-in and dependency",
+    "Limited capabilities outside of Salesforce ecosystem",
+    "Not suitable for organizations not using Salesforce CRM",
+    "Conversation design less sophisticated than specialized platforms",
+    "Einstein AI capabilities lag behind latest LLM-based systems"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_models": [
+      "Einstein Intent",
+      "Einstein NLU",
+      "Einstein GPT (GPT integration)"
+    ],
+    "programming_languages": [
+      "Apex",
+      "Salesforce Flow",
+      "REST API"
+    ],
+    "deployment_type": "Managed cloud service (Salesforce)",
+    "tool_support": [
+      "Salesforce Flow",
+      "Apex actions",
+      "API integrations"
+    ],
+    "pricing_model": "Included with Service Cloud, conversation-based add-on pricing",
+    "supported_channels": "Web, SMS, WhatsApp, Facebook Messenger, Slack, Apple Business Chat",
+    "enterprise_features": [
+      "Shield encryption",
+      "Event monitoring",
+      "Private Connect"
+    ],
+    "salesforce_clouds": [
+      "Service Cloud",
+      "Sales Cloud",
+      "Health Cloud",
+      "Financial Services Cloud"
+    ],
+    "min_license_tier": "Service Cloud",
+    "pricing": "Agentforce from $125/user/month (add-on) or $550/user/month (Edition 1). Flex Credits at $0.10+ per action. Requires Enterprise Edition or higher"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 96,
+      "notes": "Outstanding for Salesforce customers with CRM integration"
+    },
+    "code-generation": {
+      "overall": 58,
+      "notes": "Not designed for technical code tasks"
+    },
+    "research-assistant": {
+      "overall": 69,
+      "notes": "Limited research capabilities, CRM-focused"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Access to CRM analytics but not a primary use case"
+    },
+    "content-creation": {
+      "overall": 72,
+      "notes": "Einstein GPT adds generation capabilities but limited"
+    },
+    "education": {
+      "overall": 75,
+      "notes": "Possible with Education Cloud but not optimized"
+    },
+    "healthcare": {
+      "overall": 87,
+      "notes": "HIPAA-compliant with Health Cloud integration"
+    },
+    "financial-analysis": {
+      "overall": 90,
+      "notes": "Strong compliance with Financial Services Cloud"
+    },
+    "legal-compliance": {
+      "overall": 71,
+      "notes": "Basic capabilities, would need custom development"
+    },
+    "creative-writing": {
+      "overall": 64,
+      "notes": "Not designed for creative use cases"
+    }
+  },
+  "best_for": [
+    "Salesforce customers needing native CRM chatbots",
+    "Customer service teams wanting Salesforce integration",
+    "Enterprises requiring Einstein AI platform",
+    "Organizations with Salesforce Service Cloud"
+  ],
+  "tags": [
+    "salesforce",
+    "enterprise"
+  ]
+}

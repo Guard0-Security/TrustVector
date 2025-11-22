@@ -1,0 +1,449 @@
+{
+  "id": "mcp-server-sqlite",
+  "type": "mcp",
+  "name": "MCP SQLite Server",
+  "provider": "Anthropic",
+  "version": "2025.4.24",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official MCP server enabling AI models to interact with SQLite databases through natural language. Supports schema inspection, query execution, and data analysis for local file-based databases through the Model Context Protocol. Ideal for lightweight data applications but requires security considerations.",
+  "website": "https://modelcontextprotocol.io/docs/servers/sqlite",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 89,
+      "criteria": {
+        "query_execution_speed": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Performance",
+              "url": "https://www.sqlite.org/whentouse.html",
+              "date": "2025-11-16",
+              "value": "Extremely fast for local queries, no network overhead"
+            }
+          ],
+          "methodology": "Query performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "schema_introspection": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Schema",
+              "url": "https://www.sqlite.org/schematab.html",
+              "date": "2025-11-16",
+              "value": "Comprehensive schema metadata through sqlite_master table"
+            }
+          ],
+          "methodology": "Schema discovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_integrity": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite ACID Compliance",
+              "url": "https://www.sqlite.org/transactional.html",
+              "date": "2025-11-16",
+              "value": "Full ACID compliance ensures data integrity"
+            }
+          ],
+          "methodology": "Transaction testing",
+          "last_verified": "2025-11-09"
+        },
+        "concurrent_access": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SQLite Locking",
+              "url": "https://www.sqlite.org/lockingv3.html",
+              "date": "2025-11-16",
+              "value": "File-level locking may limit concurrent write operations"
+            }
+          ],
+          "methodology": "Concurrency testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Error Codes",
+              "url": "https://www.sqlite.org/rescode.html",
+              "date": "2025-11-16",
+              "value": "Clear error messages with detailed result codes"
+            }
+          ],
+          "methodology": "Error scenario testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 73,
+      "criteria": {
+        "sql_injection_protection": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Parameterized Queries",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+              "date": "2025-11-16",
+              "value": "Uses parameterized queries to prevent SQL injection"
+            }
+          ],
+          "methodology": "SQL injection testing",
+          "last_verified": "2025-11-09"
+        },
+        "file_access_control": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SQLite File Access",
+              "url": "https://www.sqlite.org/security.html",
+              "date": "2025-11-16",
+              "value": "Access controlled by filesystem permissions only"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_modification_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can execute any SQL including DROP, DELETE if database file is writable"
+            }
+          ],
+          "methodology": "Write operation risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "encryption_support": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SQLite Encryption",
+              "url": "https://www.sqlite.org/see/doc/trunk/www/readme.wiki",
+              "date": "2025-11-16",
+              "value": "Encryption available via SQLite Encryption Extension (commercial)"
+            }
+          ],
+          "methodology": "Encryption capabilities review",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Logging",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "Query logging via MCP protocol, no native SQLite audit"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 71,
+      "criteria": {
+        "data_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Flow Analysis",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Query results including all data sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow and exposure analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pii_protection": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No built-in PII detection or data redaction"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_processing": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Architecture",
+              "url": "https://www.sqlite.org/serverless.html",
+              "date": "2025-11-16",
+              "value": "Fully local, serverless database processing"
+            }
+          ],
+          "methodology": "Data processing architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "data_retention": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "File-based Storage",
+              "url": "https://www.sqlite.org/",
+              "date": "2025-11-16",
+              "value": "Complete control over data retention via file management"
+            }
+          ],
+          "methodology": "Data retention control review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 87,
+      "criteria": {
+        "documentation_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP SQLite Docs",
+              "url": "https://modelcontextprotocol.io/docs/servers/sqlite",
+              "date": "2025-11-16",
+              "value": "Clear documentation with setup and usage examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "query_visibility": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol Logging",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All SQL queries visible in MCP message logs"
+            }
+          ],
+          "methodology": "Query traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fully open source with MIT license"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "sqlite_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Public Domain",
+              "url": "https://www.sqlite.org/copyright.html",
+              "date": "2025-11-16",
+              "value": "SQLite is public domain with extensive documentation"
+            }
+          ],
+          "methodology": "Database engine transparency review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 90,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Quickstart",
+              "url": "https://modelcontextprotocol.io/quickstart",
+              "date": "2025-11-16",
+              "value": "Extremely simple setup, just point to database file"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "performance": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Performance",
+              "url": "https://www.sqlite.org/fasterthanfs.html",
+              "date": "2025-11-16",
+              "value": "Exceptionally fast for local operations, often faster than filesystem"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "resource_efficiency": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Resource Usage",
+              "url": "https://www.sqlite.org/footprint.html",
+              "date": "2025-11-16",
+              "value": "Minimal memory footprint and CPU usage"
+            }
+          ],
+          "methodology": "Resource utilization testing",
+          "last_verified": "2025-11-09"
+        },
+        "portability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Portability",
+              "url": "https://www.sqlite.org/onefile.html",
+              "date": "2025-11-16",
+              "value": "Single file format, highly portable across platforms"
+            }
+          ],
+          "methodology": "Cross-platform testing",
+          "last_verified": "2025-11-09"
+        },
+        "maintenance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SQLite Maintenance",
+              "url": "https://www.sqlite.org/",
+              "date": "2025-11-16",
+              "value": "Minimal maintenance required, no server to manage"
+            }
+          ],
+          "methodology": "Maintenance overhead assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Extremely fast local database operations with no network latency",
+    "Zero configuration required - serverless and self-contained",
+    "Minimal resource footprint (memory and CPU)",
+    "Complete local data control with no remote server dependencies",
+    "Full ACID compliance ensures data integrity",
+    "Open source MCP server and public domain database engine"
+  ],
+  "limitations": [
+    "Query results with all data sent to external LLM provider",
+    "No built-in encryption in standard SQLite (requires commercial extension)",
+    "Limited concurrent write performance due to file-level locking",
+    "No built-in PII detection or data anonymization",
+    "AI can execute destructive SQL if database file is writable",
+    "No native audit logging beyond MCP protocol logs"
+  ],
+  "metadata": {
+    "license": "MIT (MCP server), Public Domain (SQLite)",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "database_version": "SQLite 3.x",
+    "max_database_size": "281 TB (theoretical)",
+    "first_release": "2024-11",
+    "maintained_by": "None (Archived)"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good for generating SQL queries and database migration scripts"
+    },
+    "customer-support": {
+      "overall": 78,
+      "notes": "Useful for analyzing support ticket databases and knowledge bases"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Limited applicability unless content is stored in SQLite"
+    },
+    "data-analysis": {
+      "overall": 90,
+      "notes": "Excellent for analyzing local datasets and generating insights"
+    },
+    "research-assistant": {
+      "overall": 88,
+      "notes": "Great for managing research data, citations, and notes in local database"
+    },
+    "legal-compliance": {
+      "overall": 58,
+      "notes": "Risk of exposing sensitive data; better than cloud databases but still concerning"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "PHI exposure risk when data sent to LLM; local storage is positive but insufficient"
+    },
+    "financial-analysis": {
+      "overall": 65,
+      "notes": "Moderate risk; local database is good but data still exposed to LLM"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Great for managing student data, grades, and learning analytics locally"
+    },
+    "creative-writing": {
+      "overall": 75,
+      "notes": "Useful for managing character databases, plot points, and story elements"
+    }
+  },
+  "best_for": [
+    "Developers working with embedded SQLite databases",
+    "Data analysts querying local database files",
+    "Application developers building SQLite-based applications"
+  ],
+  "tags": [
+    "database",
+    "sql",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

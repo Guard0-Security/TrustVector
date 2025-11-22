@@ -1,0 +1,504 @@
+{
+  "id": "amazon-lex",
+  "type": "agent",
+  "name": "Amazon Lex",
+  "provider": "Amazon Web Services",
+  "version": "V2",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "AWS managed conversational AI service for building chatbots and voice assistants with automatic speech recognition (ASR) and natural language understanding (NLU). Integrates natively with AWS services and enterprise systems.",
+  "website": "https://aws.amazon.com/lex/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 88,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Lex Documentation",
+              "url": "https://docs.aws.amazon.com/lex/",
+              "date": "2024-10-01",
+              "value": "Advanced NLU powered by same technology as Amazon Alexa"
+            }
+          ],
+          "methodology": "Based on enterprise deployment metrics",
+          "last_verified": "2025-11-09"
+        },
+        "intent_recognition": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Lex NLU",
+              "url": "https://aws.amazon.com/lex/features/",
+              "date": "2024-09-15",
+              "value": "State-of-the-art intent recognition with context management"
+            }
+          ],
+          "methodology": "Intent classification testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_language_support": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Language Support",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/how-languages.html",
+              "date": "2024-10-01",
+              "value": "Supports 15+ languages including English, Spanish, French, German, Japanese"
+            }
+          ],
+          "methodology": "Multi-language testing",
+          "last_verified": "2025-11-09"
+        },
+        "voice_recognition": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Amazon Transcribe Integration",
+              "url": "https://aws.amazon.com/lex/features/",
+              "date": "2024-09-01",
+              "value": "Built-in ASR using Amazon Transcribe technology"
+            }
+          ],
+          "methodology": "Voice accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "context_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Lex Session Management",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html",
+              "date": "2024-10-01",
+              "value": "Session attributes and context carryover between intents"
+            }
+          ],
+          "methodology": "Conversation state testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "200-500ms average",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Performance Metrics",
+              "url": "https://aws.amazon.com/lex/sla/",
+              "date": "2024-10-01",
+              "value": "Low-latency responses with 99.9% uptime SLA"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 92,
+      "criteria": {
+        "data_encryption": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Security",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/security.html",
+              "date": "2024-10-01",
+              "value": "Encryption at rest and in transit with AWS KMS"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS IAM Integration",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/security-iam.html",
+              "date": "2024-10-01",
+              "value": "Fine-grained IAM policies and resource-based permissions"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "vpc_isolation": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "VPC Integration",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/vpc.html",
+              "date": "2024-09-15",
+              "value": "VPC endpoint support for private network access"
+            }
+          ],
+          "methodology": "Network isolation testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS CloudTrail",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/monitoring-aws-lex-cloudtrail.html",
+              "date": "2024-10-01",
+              "value": "Comprehensive audit logs via CloudTrail and CloudWatch"
+            }
+          ],
+          "methodology": "Audit capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "compliance_certifications": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Compliance",
+              "url": "https://aws.amazon.com/compliance/services-in-scope/",
+              "date": "2024-10-01",
+              "value": "SOC 2, ISO 27001, HIPAA eligible, PCI DSS compliant"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 91,
+      "criteria": {
+        "data_retention": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Data Retention",
+              "url": "https://aws.amazon.com/lex/faqs/",
+              "date": "2024-10-01",
+              "value": "Configurable retention policies, conversation logs optional"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS GDPR",
+              "url": "https://aws.amazon.com/compliance/gdpr-center/",
+              "date": "2024-09-01",
+              "value": "GDPR compliant with DPA and data processing addendum"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        },
+        "hipaa_compliance": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS HIPAA",
+              "url": "https://aws.amazon.com/compliance/hipaa-compliance/",
+              "date": "2024-10-01",
+              "value": "HIPAA eligible service with BAA available"
+            }
+          ],
+          "methodology": "Healthcare compliance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "pii_handling": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "PII Redaction",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/pii-redaction.html",
+              "date": "2024-09-15",
+              "value": "Built-in PII detection and redaction capabilities"
+            }
+          ],
+          "methodology": "PII protection testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_residency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Regions",
+              "url": "https://aws.amazon.com/about-aws/global-infrastructure/",
+              "date": "2024-10-01",
+              "value": "Data stays in selected AWS region, 30+ regions available"
+            }
+          ],
+          "methodology": "Data residency assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 86,
+      "criteria": {
+        "documentation_quality": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/lex/",
+              "date": "2024-10-01",
+              "value": "Comprehensive documentation with tutorials and best practices"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "conversation_analytics": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Lex Analytics",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/analytics.html",
+              "date": "2024-10-01",
+              "value": "Built-in analytics for intent detection, utterances, and sessions"
+            }
+          ],
+          "methodology": "Analytics capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "testing_tools": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Lex Console Testing",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/test-bot.html",
+              "date": "2024-09-15",
+              "value": "Built-in testing console and conversation flow testing"
+            }
+          ],
+          "methodology": "Testing features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "version_control": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Bot Versioning",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/versioning-aliases.html",
+              "date": "2024-10-01",
+              "value": "Bot versioning and alias management for deployment"
+            }
+          ],
+          "methodology": "Version management assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 90,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SDKs",
+              "url": "https://aws.amazon.com/tools/",
+              "date": "2024-10-01",
+              "value": "SDKs for all major languages, native AWS service integration"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Auto-scaling",
+              "url": "https://aws.amazon.com/lex/features/",
+              "date": "2024-10-01",
+              "value": "Fully managed auto-scaling, handles millions of requests"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Pricing",
+              "url": "https://aws.amazon.com/lex/pricing/",
+              "date": "2024-10-01",
+              "value": "Pay per request pricing, $0.00075 per text, $0.004 per voice"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring_capabilities": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CloudWatch Integration",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/monitoring-aws-lex-cloudwatch.html",
+              "date": "2024-10-01",
+              "value": "Comprehensive CloudWatch metrics and alarms"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "channel_integrations": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Channel Integrations",
+              "url": "https://docs.aws.amazon.com/lex/latest/dg/deploying-bots.html",
+              "date": "2024-10-01",
+              "value": "Native integrations: Facebook, Slack, Twilio, Amazon Connect"
+            }
+          ],
+          "methodology": "Integration options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "sla_guarantee": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SLA",
+              "url": "https://aws.amazon.com/lex/sla/",
+              "date": "2024-10-01",
+              "value": "99.9% uptime SLA with service credits"
+            }
+          ],
+          "methodology": "SLA review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Fully managed AWS service with enterprise-grade scalability and reliability",
+    "Built-in voice recognition (ASR) and natural language understanding (NLU)",
+    "Strong security and compliance (HIPAA, GDPR, SOC 2, ISO 27001)",
+    "Native integration with AWS ecosystem (Lambda, Connect, CloudWatch)",
+    "99.9% uptime SLA with comprehensive monitoring and analytics",
+    "Multi-channel support (voice, text, web, mobile, contact center)"
+  ],
+  "limitations": [
+    "Limited to conversational AI use cases, not a general-purpose agent framework",
+    "Can be expensive at scale compared to open-source alternatives",
+    "AWS vendor lock-in with proprietary service dependencies",
+    "Learning curve for bot design and intent modeling",
+    "Limited advanced AI capabilities compared to LLM-based agents",
+    "Customization requires significant AWS service knowledge"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_models": [
+      "Amazon Lex NLU Engine",
+      "Amazon Transcribe (ASR)",
+      "Amazon Polly (TTS)"
+    ],
+    "programming_languages": [
+      "Python",
+      "Java",
+      "Node.js",
+      "C#",
+      ".NET",
+      "Ruby",
+      "Go",
+      "PHP"
+    ],
+    "deployment_type": "Managed cloud service (AWS)",
+    "tool_support": [
+      "AWS Lambda functions",
+      "Amazon Connect",
+      "Amazon Kendra"
+    ],
+    "pricing_model": "Pay-per-request ($0.00075/text, $0.004/voice)",
+    "supported_languages": "15+ including EN, ES, FR, DE, IT, JA",
+    "max_session_timeout": "24 hours",
+    "enterprise_features": [
+      "VPC endpoints",
+      "KMS encryption",
+      "CloudTrail logging"
+    ],
+    "pricing": "Pay-per-request: Free tier (first year: 10k text + 5k speech/month), then $0.00075-0.004 per request. $200 free tier credits for 6 months (starting July 2025)",
+    "version": "V2",
+    "deprecation": "V1 discontinued September 15, 2025"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 95,
+      "notes": "Excellent for customer service chatbots with voice and text support"
+    },
+    "code-generation": {
+      "overall": 62,
+      "notes": "Not designed for code generation, limited technical capabilities"
+    },
+    "research-assistant": {
+      "overall": 68,
+      "notes": "Basic conversational capabilities, not optimized for research tasks"
+    },
+    "data-analysis": {
+      "overall": 70,
+      "notes": "Can integrate with analytics services but limited native capabilities"
+    },
+    "content-creation": {
+      "overall": 65,
+      "notes": "Focused on conversations, not content generation"
+    },
+    "education": {
+      "overall": 82,
+      "notes": "Good for educational chatbots and interactive learning"
+    },
+    "healthcare": {
+      "overall": 85,
+      "notes": "HIPAA eligible, suitable for patient engagement and scheduling"
+    },
+    "financial-analysis": {
+      "overall": 88,
+      "notes": "Strong compliance certifications, good for banking chatbots"
+    },
+    "legal-compliance": {
+      "overall": 72,
+      "notes": "Basic NLU capabilities, limited for complex legal analysis"
+    },
+    "creative-writing": {
+      "overall": 60,
+      "notes": "Not designed for creative applications"
+    }
+  },
+  "best_for": [
+    "Enterprises building voice-enabled chatbots and IVR systems",
+    "AWS customers needing managed conversational AI",
+    "Contact centers requiring multi-language voice support",
+    "Teams wanting tight AWS service integration"
+  ],
+  "tags": [
+    "aws"
+  ]
+}

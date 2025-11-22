@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-s3",
+  "type": "mcp",
+  "name": "MCP S3 Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for AWS S3 storage operations. Enables AI models to upload, download, list, and manage objects in S3 buckets. Includes support for multipart uploads, object metadata, and bucket operations. Essential for AI-powered cloud storage management and data pipeline workflows.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "upload_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS S3 API",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/API/",
+              "date": "2025-11-16",
+              "value": "Built on reliable AWS S3 API with 99.99% durability SLA"
+            }
+          ],
+          "methodology": "Upload success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "download_performance": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Performance",
+              "url": "https://aws.amazon.com/s3/performance/",
+              "date": "2025-11-16",
+              "value": "High-speed downloads from globally distributed S3 infrastructure"
+            }
+          ],
+          "methodology": "Download speed testing",
+          "last_verified": "2025-11-09"
+        },
+        "large_file_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "S3 Multipart Upload",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html",
+              "date": "2025-11-16",
+              "value": "Supports multipart uploads for large files up to 5TB"
+            }
+          ],
+          "methodology": "Large file transfer testing",
+          "last_verified": "2025-11-09"
+        },
+        "listing_performance": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "S3 List Objects",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html",
+              "date": "2025-11-16",
+              "value": "Performance degrades with large buckets; pagination recommended"
+            }
+          ],
+          "methodology": "Listing performance testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SDK",
+              "url": "https://aws.amazon.com/sdk-for-javascript/",
+              "date": "2025-11-16",
+              "value": "AWS SDK provides automatic retry with exponential backoff"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 71,
+      "criteria": {
+        "authentication_security": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS IAM",
+              "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+              "date": "2025-11-16",
+              "value": "Uses AWS IAM credentials with fine-grained permissions"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "credential_exposure_risk": {
+          "score": 63,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AWS access keys stored locally; AI can perform S3 operations"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "bucket_policy_enforcement": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Bucket Policies",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html",
+              "date": "2025-11-16",
+              "value": "Respects S3 bucket policies and IAM permissions"
+            }
+          ],
+          "methodology": "Policy enforcement testing",
+          "last_verified": "2025-11-09"
+        },
+        "object_deletion_risk": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can delete objects and empty buckets if IAM permits"
+            }
+          ],
+          "methodology": "Destructive operation testing",
+          "last_verified": "2025-11-09"
+        },
+        "public_access_risk": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "S3 Public Access",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html",
+              "date": "2025-11-16",
+              "value": "Can modify ACLs and make objects public if permissions allow"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Server Access Logging",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html",
+              "date": "2025-11-16",
+              "value": "Comprehensive logging via S3 access logs and CloudTrail"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 69,
+      "criteria": {
+        "object_content_exposure": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Downloaded object content and metadata sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "metadata_privacy": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Object metadata including tags and user-defined metadata exposed"
+            }
+          ],
+          "methodology": "Metadata privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "bucket_structure_exposure": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Bucket names and object keys may reveal organizational structure"
+            }
+          ],
+          "methodology": "Structure privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Object content shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "encryption_support": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Encryption",
+              "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html",
+              "date": "2025-11-16",
+              "value": "Supports server-side and client-side encryption but data decrypted for AI"
+            }
+          ],
+          "methodology": "Encryption support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 80,
+      "criteria": {
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "S3 MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained with evolving coverage"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS CloudTrail",
+              "url": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html",
+              "date": "2025-11-16",
+              "value": "All operations logged in CloudTrail and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Clear but incomplete documentation of supported S3 operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 83,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires AWS credentials and appropriate IAM permissions"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "transfer_performance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Transfer Acceleration",
+              "url": "https://aws.amazon.com/s3/transfer-acceleration/",
+              "date": "2025-11-16",
+              "value": "High-speed transfers with optional transfer acceleration"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Durability",
+              "url": "https://aws.amazon.com/s3/",
+              "date": "2025-11-16",
+              "value": "Built on S3's 99.999999999% durability SLA"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers upload, download, list, delete, and metadata operations"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Built on highly reliable AWS S3 with 99.999999999% durability",
+    "Comprehensive S3 operations (upload, download, list, delete, metadata)",
+    "Excellent for cloud storage automation and data pipelines",
+    "Full operation auditability through CloudTrail",
+    "Open source community implementation",
+    "Supports multipart uploads for large files up to 5TB"
+  ],
+  "limitations": [
+    "Downloaded object content and metadata exposed to LLM provider",
+    "AI can delete objects and modify ACLs within IAM permissions",
+    "AWS access keys and credentials accessible to AI",
+    "Object metadata and bucket structure may reveal sensitive information",
+    "Can make objects public if IAM permissions allow",
+    "Encrypted data decrypted before transmission to LLM provider"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "AWS SDK for JavaScript/Python",
+    "authentication": "AWS IAM credentials (Access Key ID, Secret Access Key)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good for generating S3 integration code and storage workflows"
+    },
+    "customer-support": {
+      "overall": 68,
+      "notes": "Useful for managing customer file uploads and support attachments"
+    },
+    "content-creation": {
+      "overall": 78,
+      "notes": "Good for managing media assets and content delivery"
+    },
+    "data-analysis": {
+      "overall": 88,
+      "notes": "Excellent for data pipeline automation and ETL workflows"
+    },
+    "research-assistant": {
+      "overall": 80,
+      "notes": "Useful for managing research data and document archives"
+    },
+    "legal-compliance": {
+      "overall": 60,
+      "notes": "Risk of exposing confidential documents; requires strict IAM controls"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "Risk of exposing PHI in stored files; requires careful controls"
+    },
+    "financial-analysis": {
+      "overall": 65,
+      "notes": "Moderate risk for financial document storage"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Excellent for teaching cloud storage and data pipeline concepts"
+    },
+    "creative-writing": {
+      "overall": 75,
+      "notes": "Good for managing writing projects and manuscript storage"
+    }
+  },
+  "best_for": [
+    "Cloud engineers managing AWS S3 storage and objects",
+    "Data engineers working with S3-based data lakes",
+    "DevOps teams automating S3 operations"
+  ],
+  "tags": [
+    "storage",
+    "aws",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

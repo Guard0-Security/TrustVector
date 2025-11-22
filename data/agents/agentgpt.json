@@ -1,0 +1,505 @@
+{
+  "id": "agentgpt",
+  "type": "agent",
+  "name": "AgentGPT",
+  "provider": "Reworkd",
+  "version": "Platform",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Browser-based autonomous AI agent platform for deploying and managing GPT-powered agents. Enables users to create goal-oriented autonomous agents that break down objectives and execute tasks without continuous human intervention.",
+  "website": "https://agentgpt.reworkd.ai/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 74,
+      "criteria": {
+        "autonomous_goal_execution": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AgentGPT Platform",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-15",
+              "value": "Goal-oriented autonomous execution with task decomposition"
+            }
+          ],
+          "methodology": "Autonomous task testing",
+          "last_verified": "2025-11-09"
+        },
+        "task_planning": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Behavior",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-01",
+              "value": "Multi-step planning and task breakdown capabilities"
+            }
+          ],
+          "methodology": "Planning capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "browser_execution": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Web Platform",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Runs entirely in browser with no installation required"
+            }
+          ],
+          "methodology": "Browser capability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "iteration_limits": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Platform Limits",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-09-20",
+              "value": "Free tier has iteration limits, can loop inefficiently"
+            }
+          ],
+          "methodology": "Execution limits testing",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 71,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "User Reports",
+              "url": "https://github.com/reworkd/AgentGPT/issues",
+              "date": "2024-10-01",
+              "value": "Agent reliability can vary, sometimes gets stuck in loops"
+            }
+          ],
+          "methodology": "Reliability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "3-20s per iteration",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Depends on LLM API response time and iteration count"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 68,
+      "criteria": {
+        "api_key_handling": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Configuration",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Users provide their own OpenAI API keys"
+            }
+          ],
+          "methodology": "API key security review",
+          "last_verified": "2025-11-09"
+        },
+        "data_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-01",
+              "value": "Browser-based execution, data sent to OpenAI API"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "browser_security": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Web Platform",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-09-15",
+              "value": "Standard browser security, HTTPS encryption"
+            }
+          ],
+          "methodology": "Browser security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-20",
+              "value": "GPL-3.0 license, 31k+ stars, source available"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "action_sandboxing": {
+          "score": 55,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Actions",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-01",
+              "value": "Limited action sandboxing, primarily text-based"
+            }
+          ],
+          "methodology": "Sandboxing assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 71,
+      "criteria": {
+        "data_retention": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Platform Storage",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Agent sessions stored temporarily, limited persistence"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Integration",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-01",
+              "value": "All data sent to OpenAI API with user's key"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosting",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-01",
+              "value": "Can self-host with Docker for more control"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Compliance",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Limited compliance features in hosted version"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "session_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sessions",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Browser-based sessions, limited server-side storage"
+            }
+          ],
+          "methodology": "Session privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 79,
+      "criteria": {
+        "documentation_quality": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-15",
+              "value": "Basic documentation, community-driven guides"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "web_interface": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "UI",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Clean, intuitive web interface"
+            }
+          ],
+          "methodology": "UI/UX assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-20",
+              "value": "GPL-3.0, 31k+ stars, active development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "execution_visibility": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Agent Output",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Real-time agent thinking and execution displayed"
+            }
+          ],
+          "methodology": "Traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://github.com/reworkd/AgentGPT/discussions",
+              "date": "2024-10-15",
+              "value": "Active GitHub community and Discord"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 70,
+      "criteria": {
+        "ease_of_use": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "User Experience",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Very easy to use, just enter goal and API key"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Platform Limits",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Limited scalability, designed for individual use"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Free platform, costs are OpenAI API usage (unpredictable)"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring Features",
+              "url": "https://agentgpt.reworkd.ai/",
+              "date": "2024-10-01",
+              "value": "Basic execution visibility, no detailed monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Platform Maturity",
+              "url": "https://github.com/reworkd/AgentGPT",
+              "date": "2024-10-01",
+              "value": "Experimental platform, not designed for production use"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Reliability",
+              "url": "https://github.com/reworkd/AgentGPT/issues",
+              "date": "2024-10-01",
+              "value": "Can be unreliable, agents sometimes fail to complete goals"
+            }
+          ],
+          "methodology": "Reliability testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 65,
+      "notes": "Experimental, not suitable for production support"
+    },
+    "code-generation": {
+      "overall": 70,
+      "notes": "Can attempt code tasks but limited tool access"
+    },
+    "research-assistant": {
+      "overall": 75,
+      "notes": "Good for autonomous research exploration and summarization"
+    },
+    "data-analysis": {
+      "overall": 68,
+      "notes": "Limited data analysis capabilities"
+    },
+    "content-creation": {
+      "overall": 73,
+      "notes": "Can generate content autonomously but quality varies"
+    },
+    "education": {
+      "overall": 72,
+      "notes": "Experimental, better for learning about AI agents"
+    },
+    "healthcare": {
+      "overall": 45,
+      "notes": "Not suitable for healthcare applications"
+    },
+    "financial-analysis": {
+      "overall": 50,
+      "notes": "Not suitable for financial services"
+    },
+    "legal-compliance": {
+      "overall": 62,
+      "notes": "Limited capabilities for legal work"
+    },
+    "creative-writing": {
+      "overall": 78,
+      "notes": "Good for creative exploration and idea generation"
+    }
+  },
+  "best_for": [
+    "AI enthusiasts exploring autonomous agent concepts",
+    "Students learning about goal-oriented AI systems",
+    "Researchers experimenting with autonomous task completion"
+  ],
+  "strengths": [
+    "Extremely easy to use - just enter a goal in the browser",
+    "No installation required, runs entirely in web browser",
+    "Open source (GPL-3.0) with 31k+ GitHub stars",
+    "Great for learning about autonomous AI agents",
+    "Self-hosting option available for more control",
+    "Visualizes agent thinking process in real-time"
+  ],
+  "limitations": [
+    "Experimental platform, not production-ready",
+    "Agents can get stuck in loops or fail to complete goals",
+    "Limited tool access and action capabilities",
+    "Can be expensive with unpredictable OpenAI API costs",
+    "No enterprise features (auth, monitoring, management)",
+    "Reliability and success rate varies significantly"
+  ],
+  "metadata": {
+    "license": "GPL-3.0",
+    "supported_models": [
+      "OpenAI GPT-4",
+      "GPT-3.5"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Next.js"
+    ],
+    "deployment_type": "Hosted web app or self-hosted",
+    "tool_support": [
+      "Limited web browsing",
+      "Text generation"
+    ],
+    "pricing_model": "Free platform (user pays for OpenAI API)",
+    "github_stars": "35000+",
+    "first_release": "2023",
+    "platform_type": "Browser-based autonomous agent",
+    "use_case_focus": "Experimental autonomous task completion",
+    "company_pivot": "Reworkd pivoted to multimodal LLM agents for web data extraction"
+  },
+  "tags": [
+    "autonomous",
+    "web-based"
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "id": "haystack",
+  "type": "agent",
+  "name": "Haystack",
+  "provider": "deepset",
+  "version": "2.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Open-source NLP framework for building production-ready LLM applications, RAG pipelines, and semantic search systems. Modular architecture with pre-built components for document processing, retrieval, and generation.",
+  "website": "https://haystack.deepset.ai/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "rag_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Haystack RAG",
+              "url": "https://haystack.deepset.ai/tutorials",
+              "date": "2024-10-20",
+              "value": "Optimized for retrieval-augmented generation workflows"
+            }
+          ],
+          "methodology": "RAG pipeline benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "document_retrieval": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Retriever Components",
+              "url": "https://docs.haystack.deepset.ai/docs/retrievers",
+              "date": "2024-10-15",
+              "value": "Multiple retriever types: BM25, embedding-based, hybrid"
+            }
+          ],
+          "methodology": "Retrieval accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "pipeline_flexibility": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pipeline Architecture",
+              "url": "https://docs.haystack.deepset.ai/docs/pipelines",
+              "date": "2024-10-01",
+              "value": "Composable pipelines with custom components"
+            }
+          ],
+          "methodology": "Architecture assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_integration": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Generator Components",
+              "url": "https://docs.haystack.deepset.ai/docs/generators",
+              "date": "2024-10-01",
+              "value": "Supports OpenAI, Anthropic, Cohere, HuggingFace models"
+            }
+          ],
+          "methodology": "LLM integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "document_processing": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Preprocessors",
+              "url": "https://docs.haystack.deepset.ai/docs/preprocessor",
+              "date": "2024-09-20",
+              "value": "Supports PDF, DOCX, HTML, TXT with text chunking"
+            }
+          ],
+          "methodology": "Document processing testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Varies by pipeline (500ms-5s)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://haystack.deepset.ai/",
+              "date": "2024-10-01",
+              "value": "Latency depends on retrieval, LLM calls, and document count"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 76,
+      "criteria": {
+        "self_hosted": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment Options",
+              "url": "https://docs.haystack.deepset.ai/docs/deployment",
+              "date": "2024-10-01",
+              "value": "Full self-hosting with Docker, Kubernetes support"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_security": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "REST API",
+              "url": "https://docs.haystack.deepset.ai/docs/rest_api",
+              "date": "2024-10-01",
+              "value": "Basic auth available, additional security user-implemented"
+            }
+          ],
+          "methodology": "API security review",
+          "last_verified": "2025-11-09"
+        },
+        "data_privacy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/deepset-ai/haystack",
+              "date": "2024-10-20",
+              "value": "Data stays local when self-hosted, no telemetry"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/deepset-ai/haystack",
+              "date": "2024-10-20",
+              "value": "Apache 2.0 license, 17k+ stars, active development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "document_storage_security": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Document Stores",
+              "url": "https://docs.haystack.deepset.ai/docs/document_store",
+              "date": "2024-10-01",
+              "value": "Security depends on chosen document store (Elasticsearch, etc.)"
+            }
+          ],
+          "methodology": "Storage security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 83,
+      "criteria": {
+        "data_retention": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Document Store Control",
+              "url": "https://docs.haystack.deepset.ai/docs/document_store",
+              "date": "2024-10-01",
+              "value": "Full control over document storage and retention policies"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted Option",
+              "url": "https://haystack.deepset.ai/",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://docs.haystack.deepset.ai/docs/deployment",
+              "date": "2024-10-01",
+              "value": "Complete local deployment with local LLMs possible"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://docs.haystack.deepset.ai/docs/generators",
+              "date": "2024-10-01",
+              "value": "Data sent to LLM provider unless using local models"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "no_telemetry": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/deepset-ai/haystack",
+              "date": "2024-10-01",
+              "value": "No telemetry in open-source version"
+            }
+          ],
+          "methodology": "Telemetry assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Haystack Docs",
+              "url": "https://docs.haystack.deepset.ai/",
+              "date": "2024-10-20",
+              "value": "Excellent documentation with tutorials and examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/deepset-ai/haystack",
+              "date": "2024-10-20",
+              "value": "Apache 2.0, 17k+ stars, transparent development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "pipeline_traceability": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pipeline Debugging",
+              "url": "https://docs.haystack.deepset.ai/docs/debugging",
+              "date": "2024-10-01",
+              "value": "Debug mode with step-by-step pipeline execution tracking"
+            }
+          ],
+          "methodology": "Traceability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://haystack.deepset.ai/community",
+              "date": "2024-10-20",
+              "value": "Active Discord, GitHub discussions, and forum"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 80,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Integrations",
+              "url": "https://haystack.deepset.ai/integrations",
+              "date": "2024-10-01",
+              "value": "100+ integrations with document stores, LLMs, embedders"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Scaling Guide",
+              "url": "https://docs.haystack.deepset.ai/docs/deployment",
+              "date": "2024-10-01",
+              "value": "Horizontal scaling with Kubernetes and load balancing"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/deepset-ai/haystack",
+              "date": "2024-10-01",
+              "value": "Free framework, costs for infrastructure and LLM APIs"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring",
+              "url": "https://docs.haystack.deepset.ai/docs/monitoring",
+              "date": "2024-10-01",
+              "value": "Basic logging, requires external monitoring tools"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Production Deployment",
+              "url": "https://docs.haystack.deepset.ai/docs/deployment",
+              "date": "2024-10-01",
+              "value": "Production-ready with REST API and Docker support"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "modular_architecture": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Components",
+              "url": "https://docs.haystack.deepset.ai/docs/components",
+              "date": "2024-10-01",
+              "value": "Highly modular with composable components"
+            }
+          ],
+          "methodology": "Architecture assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Open-source (Apache 2.0) specialized for RAG and semantic search",
+    "Modular architecture with 100+ pre-built integrations",
+    "Excellent documentation and active community (17k+ stars)",
+    "Supports multiple LLM providers and local models",
+    "Production-ready with REST API and container deployment",
+    "Strong document retrieval and processing capabilities"
+  ],
+  "limitations": [
+    "Requires ML/NLP expertise for optimal pipeline configuration",
+    "Limited built-in monitoring and observability features",
+    "Setup complexity higher than managed services",
+    "Performance tuning requires deep understanding",
+    "Limited agent-like autonomous behavior capabilities",
+    "Document store choice affects performance and cost significantly"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_models": [
+      "OpenAI",
+      "Anthropic",
+      "Cohere",
+      "HuggingFace",
+      "Local LLMs"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted (Docker, Kubernetes) or deepset Cloud",
+    "tool_support": [
+      "Document stores",
+      "Vector DBs",
+      "Embedding models",
+      "LLMs"
+    ],
+    "pricing_model": "Free open source (deepset Cloud managed service available)",
+    "github_stars": "21400+",
+    "first_release": "2019",
+    "supported_document_stores": "Elasticsearch, OpenSearch, Weaviate, Pinecone, Qdrant, Milvus",
+    "use_case_focus": "RAG, semantic search, question answering",
+    "version": "2.x",
+    "eol_notice": "Haystack 1.x reached end-of-life March 11, 2025"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good for knowledge base-powered support with RAG"
+    },
+    "code-generation": {
+      "overall": 74,
+      "notes": "Can integrate code-focused LLMs but not specialized"
+    },
+    "research-assistant": {
+      "overall": 92,
+      "notes": "Excellent for document analysis and research synthesis"
+    },
+    "data-analysis": {
+      "overall": 79,
+      "notes": "Good for text analytics, limited for numerical data"
+    },
+    "content-creation": {
+      "overall": 76,
+      "notes": "Can support with RAG-based content generation"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Excellent for building educational Q&A systems"
+    },
+    "healthcare": {
+      "overall": 84,
+      "notes": "Good for medical literature search and synthesis"
+    },
+    "financial-analysis": {
+      "overall": 81,
+      "notes": "Self-hosted option suitable for compliance"
+    },
+    "legal-compliance": {
+      "overall": 88,
+      "notes": "Excellent for legal document search and analysis"
+    },
+    "creative-writing": {
+      "overall": 71,
+      "notes": "Limited creative capabilities, better for research"
+    }
+  },
+  "best_for": [
+    "Teams building production-ready NLP and RAG applications",
+    "Organizations needing customizable search and QA systems",
+    "Developers requiring framework-agnostic AI pipelines",
+    "Enterprises wanting self-hosted document intelligence"
+  ],
+  "tags": [
+    "rag",
+    "search",
+    "open-source"
+  ]
+}

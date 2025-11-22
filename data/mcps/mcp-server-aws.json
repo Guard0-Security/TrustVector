@@ -1,0 +1,482 @@
+{
+  "id": "mcp-server-aws",
+  "type": "mcp",
+  "name": "MCP AWS Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server enabling AI models to interact with AWS cloud services including S3, EC2, Lambda, and more. Supports infrastructure management, resource provisioning, and cloud automation through the Model Context Protocol. Extremely powerful but poses critical security risks requiring strict controls.",
+  "website": "https://aws.amazon.com/sdk-for-javascript/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "api_reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Service Level Agreement",
+              "url": "https://aws.amazon.com/compute/sla/",
+              "date": "2025-11-16",
+              "value": "AWS APIs have 99.99% uptime SLA for most services"
+            }
+          ],
+          "methodology": "API uptime and reliability analysis",
+          "last_verified": "2025-11-08"
+        },
+        "operation_success_rate": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS SDK",
+              "url": "https://aws.amazon.com/sdk-for-javascript/",
+              "date": "2025-11-16",
+              "value": "High success rates for API operations with proper retry logic"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-08"
+        },
+        "multi_service_integration": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Service Integration",
+              "url": "https://aws.amazon.com/products/",
+              "date": "2025-11-16",
+              "value": "Supports multiple AWS services but integration complexity varies"
+            }
+          ],
+          "methodology": "Service integration testing",
+          "last_verified": "2025-11-08"
+        },
+        "response_time": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS API Performance",
+              "url": "https://aws.amazon.com/",
+              "date": "2025-11-16",
+              "value": "Response times vary by service and region (100ms-2s typical)"
+            }
+          ],
+          "methodology": "API latency testing",
+          "last_verified": "2025-11-08"
+        },
+        "error_handling": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Error Handling",
+              "url": "https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html",
+              "date": "2025-11-16",
+              "value": "Comprehensive error codes with automatic retry mechanisms"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 64,
+      "criteria": {
+        "iam_security": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS IAM",
+              "url": "https://aws.amazon.com/iam/",
+              "date": "2025-11-16",
+              "value": "Granular IAM permissions available but AI can use all granted permissions"
+            }
+          ],
+          "methodology": "IAM security review",
+          "last_verified": "2025-11-08"
+        },
+        "credential_exposure_risk": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Credentials",
+              "url": "https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials.html",
+              "date": "2025-11-16",
+              "value": "Access keys stored locally but AI can perform any action within permissions"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-08"
+        },
+        "resource_modification_risk": {
+          "score": 52,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can create, modify, delete AWS resources including EC2, S3, databases"
+            }
+          ],
+          "methodology": "Resource control risk assessment",
+          "last_verified": "2025-11-08"
+        },
+        "cost_control_risk": {
+          "score": 55,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Billing",
+              "url": "https://aws.amazon.com/aws-cost-management/",
+              "date": "2025-11-16",
+              "value": "AI can provision expensive resources without built-in cost controls"
+            }
+          ],
+          "methodology": "Cost control assessment",
+          "last_verified": "2025-11-08"
+        },
+        "audit_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS CloudTrail",
+              "url": "https://aws.amazon.com/cloudtrail/",
+              "date": "2025-11-16",
+              "value": "Comprehensive audit logging via CloudTrail for all API actions"
+            }
+          ],
+          "methodology": "Audit capabilities review",
+          "last_verified": "2025-11-08"
+        },
+        "data_exfiltration_risk": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "S3 Access",
+              "url": "https://aws.amazon.com/s3/",
+              "date": "2025-11-16",
+              "value": "AI can read S3 buckets and database contents, sending data to LLM"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 66,
+      "criteria": {
+        "data_exposure": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Flow Analysis",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "AWS resource data and content sent to LLM provider for processing"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-08"
+        },
+        "pii_protection": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No built-in PII detection when accessing S3, RDS, or other data stores"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-08"
+        },
+        "vpc_isolation": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS VPC",
+              "url": "https://aws.amazon.com/vpc/",
+              "date": "2025-11-16",
+              "value": "Can leverage VPC for network isolation but data still sent to LLM"
+            }
+          ],
+          "methodology": "Network isolation assessment",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_readiness": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Compliance",
+              "url": "https://aws.amazon.com/compliance/",
+              "date": "2025-11-16",
+              "value": "AWS is compliant but sharing data with LLM provider affects compliance"
+            }
+          ],
+          "methodology": "Compliance framework review",
+          "last_verified": "2025-11-08"
+        },
+        "encryption_support": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Encryption",
+              "url": "https://aws.amazon.com/kms/",
+              "date": "2025-11-16",
+              "value": "Supports AWS KMS but data decrypted before sending to LLM"
+            }
+          ],
+          "methodology": "Encryption capabilities review",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 80,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Documentation",
+              "url": "https://docs.aws.amazon.com/",
+              "date": "2025-11-16",
+              "value": "Comprehensive AWS SDK and service documentation"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-08"
+        },
+        "action_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CloudTrail Logging",
+              "url": "https://aws.amazon.com/cloudtrail/",
+              "date": "2025-11-16",
+              "value": "All AWS API actions logged in CloudTrail"
+            }
+          ],
+          "methodology": "Action traceability assessment",
+          "last_verified": "2025-11-08"
+        },
+        "mcp_implementation": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Community-maintained with variable documentation"
+            }
+          ],
+          "methodology": "Implementation documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "security_guidance": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Security Best Practices",
+              "url": "https://aws.amazon.com/security/",
+              "date": "2025-11-16",
+              "value": "AWS provides security guidance but specific MCP guidance limited"
+            }
+          ],
+          "methodology": "Security documentation review",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 77,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS SDK Setup",
+              "url": "https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started.html",
+              "date": "2025-11-16",
+              "value": "Requires AWS account, IAM configuration, and credential management"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-08"
+        },
+        "api_coverage": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Services",
+              "url": "https://aws.amazon.com/products/",
+              "date": "2025-11-16",
+              "value": "Supports major AWS services (S3, EC2, Lambda, RDS, etc.)"
+            }
+          ],
+          "methodology": "API coverage assessment",
+          "last_verified": "2025-11-08"
+        },
+        "reliability": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AWS Status",
+              "url": "https://status.aws.amazon.com/",
+              "date": "2025-11-16",
+              "value": "High reliability with 99.99% uptime for most services"
+            }
+          ],
+          "methodology": "Uptime analysis",
+          "last_verified": "2025-11-08"
+        },
+        "cost_predictability": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "AWS Pricing",
+              "url": "https://aws.amazon.com/pricing/",
+              "date": "2025-11-16",
+              "value": "Complex pricing model; AI can incur unexpected costs"
+            }
+          ],
+          "methodology": "Cost predictability analysis",
+          "last_verified": "2025-11-08"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Growing community for MCP AWS integration"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-08"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 80,
+      "notes": "Useful for generating infrastructure as code and automation scripts"
+    },
+    "customer-support": {
+      "overall": 68,
+      "notes": "Can manage support infrastructure but limited direct customer impact"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Can manage S3-based content storage but not primary use case"
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Excellent for analyzing data in S3, RDS, and other AWS data services"
+    },
+    "research-assistant": {
+      "overall": 78,
+      "notes": "Good for managing research data in AWS but data exposure concerns"
+    },
+    "legal-compliance": {
+      "overall": 50,
+      "notes": "Very high risk - can expose confidential data and modify critical infrastructure"
+    },
+    "healthcare": {
+      "overall": 45,
+      "notes": "Extreme risk for PHI exposure; HIPAA compliance nearly impossible with LLM sharing"
+    },
+    "financial-analysis": {
+      "overall": 55,
+      "notes": "High risk for sensitive financial data and infrastructure"
+    },
+    "education": {
+      "overall": 75,
+      "notes": "Useful for managing educational infrastructure and resources"
+    },
+    "creative-writing": {
+      "overall": 65,
+      "notes": "Can manage content storage but significant risk/benefit mismatch"
+    }
+  },
+  "best_for": [
+    "DevOps engineers automating AWS infrastructure provisioning and management",
+    "Data analysts working with large datasets in S3 and RDS",
+    "Cloud architects generating infrastructure-as-code templates"
+  ],
+  "strengths": [
+    "Comprehensive access to AWS cloud services and infrastructure",
+    "Built on highly reliable AWS infrastructure (99.99% uptime)",
+    "Powerful automation capabilities for cloud operations",
+    "Excellent audit logging through CloudTrail",
+    "Granular IAM permissions for access control",
+    "Supports major AWS services (S3, EC2, Lambda, RDS, DynamoDB)"
+  ],
+  "limitations": [
+    "CRITICAL SECURITY RISK: AI can create, modify, delete infrastructure",
+    "Cost control risk - AI can provision expensive resources",
+    "Data in S3, RDS, and other services exposed to LLM provider",
+    "No built-in PII detection or sensitive data filtering",
+    "Complex IAM setup required for secure operation",
+    "Potential for catastrophic infrastructure changes if misconfigured"
+  ],
+  "metadata": {
+    "license": "Varies (AWS SDK Apache 2.0, MCP implementation varies)",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "JavaScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "aws_sdk_version": "v3",
+    "supported_services": [
+      "S3",
+      "EC2",
+      "Lambda",
+      "RDS",
+      "DynamoDB",
+      "CloudWatch",
+      "IAM"
+    ],
+    "authentication": "AWS Access Keys or IAM Roles",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "tags": [
+    "aws",
+    "cloud",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

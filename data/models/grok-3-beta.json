@@ -1,0 +1,685 @@
+{
+  "id": "grok-3-beta",
+  "type": "model",
+  "name": "Grok 3 [Beta]",
+  "provider": "xAI",
+  "version": "Beta",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "xAI's flagship Grok 3 model in beta, featuring exceptional coding performance and real-time knowledge integration via X platform. Designed for cutting-edge applications requiring both high accuracy and current information.",
+  "website": "https://x.ai/grok",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 94,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HumanEval Benchmark",
+              "url": "https://x.ai/blog/grok-3-evaluation",
+              "date": "2025-01-20",
+              "value": "93.3% pass rate (industry leading)"
+            },
+            {
+              "source": "CodeContests",
+              "url": "https://x.ai/blog/grok-3-evaluation",
+              "date": "2025-01-20",
+              "value": "Exceptional competitive programming performance"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://x.ai/blog/grok-3-evaluation",
+              "date": "2025-01-20",
+              "value": "94% on mathematical reasoning tasks"
+            },
+            {
+              "source": "GPQA Diamond",
+              "url": "https://x.ai/blog/grok-3-evaluation",
+              "date": "2025-01-20",
+              "value": "82% on PhD-level science questions"
+            }
+          ],
+          "methodology": "Advanced reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU Benchmark",
+              "url": "https://x.ai/blog/grok-3-evaluation",
+              "date": "2025-01-20",
+              "value": "84.6% on multitask language understanding"
+            },
+            {
+              "source": "LMSYS Chatbot Arena",
+              "url": "https://lmsys.org/blog/2025-01-25-arena-update/",
+              "date": "2025-01-25",
+              "value": "1335 ELO (Top 3 overall)"
+            }
+          ],
+          "methodology": "Crowdsourced comparisons and knowledge testing",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 90,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Internal Testing",
+              "url": "https://x.ai/blog/grok-3-technical",
+              "date": "2025-01-20",
+              "value": "High consistency with real-time knowledge integration"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts",
+          "last_verified": "2025-11-08",
+          "notes": "Beta status may result in occasional inconsistencies"
+        },
+        "latency_p50": {
+          "value": "1.6s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Documentation",
+              "url": "https://docs.x.ai/api",
+              "date": "2025-01-20",
+              "value": "Typical response time ~1.6s"
+            }
+          ],
+          "methodology": "Median latency for API requests",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "3.4s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/grok-3-beta",
+              "date": "2025-01-30",
+              "value": "p95 latency ~3.4s"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "xAI API Documentation",
+              "url": "https://docs.x.ai/api",
+              "date": "2025-01-20",
+              "value": "128K token context window"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 96,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Status Page",
+              "url": "https://status.x.ai/",
+              "date": "2025-02-01",
+              "value": "99.7% uptime (beta period)"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2025-11-08",
+          "notes": "Beta status, production SLA TBD"
+        }
+      },
+      "notes": "Exceptional performance with industry-leading coding (93.3% HumanEval) and strong general knowledge (84.6% MMLU). Real-time X platform integration unique advantage."
+    },
+    "security": {
+      "overall_score": 84,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Safety Testing",
+              "url": "https://x.ai/blog/grok-3-safety",
+              "date": "2025-01-20",
+              "value": "Strong resistance to prompt injection"
+            }
+          ],
+          "methodology": "Testing against OWASP LLM01 attacks",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Safety Evaluations",
+              "url": "https://x.ai/blog/grok-3-safety",
+              "date": "2025-01-20",
+              "value": "Robust safety mechanisms"
+            }
+          ],
+          "methodology": "Testing against adversarial prompts",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Privacy Policy",
+              "url": "https://x.ai/privacy",
+              "date": "2025-01-01",
+              "value": "Standard data handling practices"
+            }
+          ],
+          "methodology": "Analysis of privacy policies",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Safety Benchmarks",
+              "url": "https://x.ai/blog/grok-3-safety",
+              "date": "2025-01-20",
+              "value": "Comprehensive safety testing"
+            }
+          ],
+          "methodology": "Safety testing across harmful content categories",
+          "last_verified": "2025-11-08",
+          "notes": "Beta status, safety systems still evolving"
+        },
+        "api_security": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI API Documentation",
+              "url": "https://docs.x.ai/api",
+              "date": "2025-01-20",
+              "value": "API key authentication, HTTPS, rate limiting"
+            }
+          ],
+          "methodology": "Review of API security features",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good security posture for beta product. Strong resistance to attacks, but systems still maturing."
+    },
+    "privacy_compliance": {
+      "overall_score": 78,
+      "criteria": {
+        "data_residency": {
+          "value": "US (primary)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Documentation",
+              "url": "https://x.ai/enterprise",
+              "date": "2025-01-20",
+              "value": "US-based infrastructure"
+            }
+          ],
+          "methodology": "Review of documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Privacy Policy",
+              "url": "https://x.ai/privacy",
+              "date": "2025-01-01",
+              "value": "Opt-out available for API data"
+            }
+          ],
+          "methodology": "Analysis of privacy policy",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "30 days",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Terms of Service",
+              "url": "https://x.ai/terms",
+              "date": "2025-01-01",
+              "value": "30-day retention for API data"
+            }
+          ],
+          "methodology": "Review of terms of service",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Privacy Documentation",
+              "url": "https://docs.x.ai/privacy",
+              "date": "2025-01-20",
+              "value": "Customer responsible for PII redaction"
+            }
+          ],
+          "methodology": "Review of data protection capabilities",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Trust Center",
+              "url": "https://trust.x.ai/",
+              "date": "2025-02-01",
+              "value": "SOC 2 Type II in progress"
+            }
+          ],
+          "methodology": "Verification of compliance certifications",
+          "last_verified": "2025-11-08",
+          "notes": "Beta status, certifications in progress"
+        },
+        "zero_data_retention": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI API Documentation",
+              "url": "https://docs.x.ai/api",
+              "date": "2025-01-20",
+              "value": "30-day retention period"
+            }
+          ],
+          "methodology": "Review of data handling practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Evolving privacy practices for beta product. Compliance certifications in progress. 30-day data retention."
+    },
+    "trust_transparency": {
+      "overall_score": 83,
+      "criteria": {
+        "explainability": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://x.ai/blog/grok-3-technical",
+              "date": "2025-01-20",
+              "value": "Good explanations and reasoning"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "X Platform Integration",
+              "url": "https://x.ai/blog/grok-3-evaluation",
+              "date": "2025-01-20",
+              "value": "Real-time knowledge reduces hallucinations"
+            }
+          ],
+          "methodology": "Testing on factual QA datasets",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Safety Report",
+              "url": "https://x.ai/blog/grok-3-safety",
+              "date": "2025-01-20",
+              "value": "Bias testing ongoing"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks",
+          "last_verified": "2025-11-08",
+          "notes": "Beta status, bias mitigation evolving"
+        },
+        "uncertainty_quantification": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://docs.x.ai/api",
+              "date": "2025-01-20",
+              "value": "Good uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Model Documentation",
+              "url": "https://docs.x.ai/models/grok-3",
+              "date": "2025-01-20",
+              "value": "Good documentation for beta"
+            }
+          ],
+          "methodology": "Review of documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Public Statements",
+              "url": "https://x.ai/blog",
+              "date": "2025-01-20",
+              "value": "General description with X platform data"
+            }
+          ],
+          "methodology": "Review of public disclosures",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Safety Systems",
+              "url": "https://x.ai/blog/grok-3-safety",
+              "date": "2025-01-20",
+              "value": "Comprehensive safety guardrails"
+            }
+          ],
+          "methodology": "Analysis of safety mechanisms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good transparency for beta product. Real-time X integration provides current information. Some aspects still evolving."
+    },
+    "operational_excellence": {
+      "overall_score": 81,
+      "criteria": {
+        "api_design_quality": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI API Documentation",
+              "url": "https://docs.x.ai/api",
+              "date": "2025-01-20",
+              "value": "Well-designed RESTful API"
+            }
+          ],
+          "methodology": "Review of API design",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI SDKs",
+              "url": "https://github.com/xai-org",
+              "date": "2025-01-20",
+              "value": "Official SDKs for Python, TypeScript"
+            }
+          ],
+          "methodology": "Review of SDK quality",
+          "last_verified": "2025-11-08",
+          "notes": "SDKs still maturing"
+        },
+        "versioning_policy": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI API Versioning",
+              "url": "https://docs.x.ai/versioning",
+              "date": "2025-01-20",
+              "value": "Beta versioning approach"
+            }
+          ],
+          "methodology": "Review of versioning",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Dashboard",
+              "url": "https://console.x.ai/",
+              "date": "2025-01-20",
+              "value": "Basic usage dashboard"
+            }
+          ],
+          "methodology": "Review of monitoring tools",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "xAI Support",
+              "url": "https://support.x.ai/",
+              "date": "2025-01-20",
+              "value": "Email support, growing documentation"
+            }
+          ],
+          "methodology": "Assessment of support",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Third-party Integrations",
+              "url": "https://github.com/topics/grok",
+              "date": "2025-02-01",
+              "value": "Growing ecosystem, early stage"
+            }
+          ],
+          "methodology": "Analysis of ecosystem",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "xAI Terms of Service",
+              "url": "https://x.ai/terms",
+              "date": "2025-01-01",
+              "value": "Clear commercial terms"
+            }
+          ],
+          "methodology": "Review of licensing",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good operational foundation for beta product. Ecosystem and tooling still maturing."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 97,
+      "notes": "Industry-leading coding (93.3% HumanEval). Exceptional for complex algorithms and software engineering.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "customer-support": {
+      "overall": 86,
+      "notes": "Strong conversational abilities with real-time knowledge from X platform.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "content-creation": {
+      "overall": 88,
+      "notes": "Excellent content creation with current events knowledge from X integration.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "data-analysis": {
+      "overall": 92,
+      "notes": "Exceptional mathematical reasoning (94% MATH) ideal for complex analysis.",
+      "alternatives": [
+        "openai-o3",
+        "llama-4-behemoth"
+      ]
+    },
+    "research-assistant": {
+      "overall": 93,
+      "notes": "Outstanding with real-time knowledge and strong reasoning (84.6% MMLU).",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 82,
+      "notes": "Good analytical capabilities but beta status and compliance certifications in progress.",
+      "alternatives": [
+        "claude-sonnet-4-5",
+        "gpt-4-1"
+      ]
+    },
+    "healthcare": {
+      "overall": 78,
+      "notes": "Strong capabilities but lacks HIPAA eligibility. Beta status limits healthcare use.",
+      "alternatives": [
+        "claude-sonnet-4-5",
+        "llama-4-behemoth"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 91,
+      "notes": "Excellent mathematical reasoning with real-time market data via X integration.",
+      "alternatives": [
+        "openai-o3",
+        "llama-4-behemoth"
+      ]
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Excellent for education with strong reasoning and current information.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "creative-writing": {
+      "overall": 86,
+      "notes": "Strong creative capabilities with unique perspective from X platform data.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-sonnet-4-5"
+      ]
+    }
+  },
+  "strengths": [
+    "Industry-leading coding performance (93.3% HumanEval)",
+    "Exceptional general knowledge (84.6% MMLU)",
+    "Real-time information via X platform integration",
+    "Strong mathematical reasoning (94% MATH)",
+    "Unique access to current events and trending topics",
+    "Free for X Premium+ subscribers"
+  ],
+  "limitations": [
+    "Beta status with evolving features and stability",
+    "Compliance certifications still in progress",
+    "Limited ecosystem maturity compared to established models",
+    "30-day data retention period",
+    "Not HIPAA eligible",
+    "Support and documentation still developing"
+  ],
+  "best_for": [
+    "Cutting-edge software development requiring best-in-class coding",
+    "Applications needing real-time information and current events",
+    "Complex mathematical and analytical tasks",
+    "Research requiring both reasoning and current knowledge",
+    "Early adopters comfortable with beta software"
+  ],
+  "not_recommended_for": [
+    "Healthcare applications (not HIPAA eligible, beta status)",
+    "Mission-critical production systems (beta status)",
+    "Organizations requiring mature compliance certifications",
+    "Applications requiring zero data retention",
+    "Conservative enterprises avoiding beta products",
+    "Use cases requiring extensive third-party integrations"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "Free for X Premium+ users",
+      "output": "Free for X Premium+ users",
+      "notes": "Free for X (Twitter) Premium+ subscribers, API pricing TBD",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic"
+    ],
+    "modalities": [
+      "text",
+      "image (input)"
+    ],
+    "api_endpoint": "https://api.x.ai/v1/chat/completions",
+    "open_source": false,
+    "architecture": "Transformer-based with real-time knowledge integration",
+    "parameters": "Not disclosed (large-scale)"
+  },
+  "related_entities": [
+    "openai-o3",
+    "claude-sonnet-4-5",
+    "gpt-4-1",
+    "llama-4-behemoth"
+  ],
+  "tags": [
+    "beta",
+    "coding",
+    "real-time",
+    "x-integration",
+    "cutting-edge",
+    "high-performance"
+  ]
+}

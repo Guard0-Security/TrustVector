@@ -1,0 +1,453 @@
+{
+  "id": "mcp-server-everything",
+  "type": "mcp",
+  "name": "MCP Everything Server",
+  "provider": "Anthropic",
+  "version": "2025.9.25",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Anthropic reference MCP server demonstrating all protocol features including tools, resources, prompts, and sampling. Designed for testing, development, and as a comprehensive example implementation. Not intended for production use but essential for MCP protocol understanding and testing.",
+  "website": "https://modelcontextprotocol.io/docs/servers/everything",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 80,
+      "criteria": {
+        "feature_completeness": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Everything Server",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+              "date": "2025-11-16",
+              "value": "Implements all MCP protocol features for comprehensive testing"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "protocol_compliance": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol Specification",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "Full compliance with MCP protocol specification"
+            }
+          ],
+          "methodology": "Protocol compliance testing",
+          "last_verified": "2025-11-09"
+        },
+        "test_reliability": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Reliable for testing and development purposes"
+            }
+          ],
+          "methodology": "Testing reliability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "example_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Code Examples",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Accurate examples demonstrating best practices"
+            }
+          ],
+          "methodology": "Example validation",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 50,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://modelcontextprotocol.io/docs/servers/everything",
+              "date": "2025-11-16",
+              "value": "Explicitly not designed for production use; reference implementation only"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 65,
+      "criteria": {
+        "test_data_security": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Uses mock data for testing; minimal real data exposure"
+            }
+          ],
+          "methodology": "Data security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "capability_exposure": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Exposes all protocol capabilities for testing; not security-hardened"
+            }
+          ],
+          "methodology": "Capability exposure testing",
+          "last_verified": "2025-11-09"
+        },
+        "production_deployment_risk": {
+          "score": 55,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "High risk if deployed in production; not security-hardened"
+            }
+          ],
+          "methodology": "Deployment risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "input_validation": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Basic input validation for testing purposes"
+            }
+          ],
+          "methodology": "Input validation testing",
+          "last_verified": "2025-11-09"
+        },
+        "resource_limits": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Limited resource protection; designed for controlled testing"
+            }
+          ],
+          "methodology": "Resource limit testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 75,
+      "criteria": {
+        "mock_data_usage": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Uses synthetic test data; minimal real data processing"
+            }
+          ],
+          "methodology": "Data usage analysis",
+          "last_verified": "2025-11-09"
+        },
+        "test_data_exposure": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Test data transmitted to LLM provider during testing"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-09"
+        },
+        "development_privacy": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Appropriate for development environments with test data"
+            }
+          ],
+          "methodology": "Development privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Test data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 94,
+      "criteria": {
+        "documentation_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Everything Docs",
+              "url": "https://modelcontextprotocol.io/docs/servers/everything",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation as reference implementation"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "code_example_quality": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Source Code",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Exemplary code quality demonstrating best practices"
+            }
+          ],
+          "methodology": "Code quality assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fully open source implementation with MIT license"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "protocol_feature_documentation": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol Docs",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "Clear documentation of all protocol features with examples"
+            }
+          ],
+          "methodology": "Feature documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 82,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Setup Guide",
+              "url": "https://modelcontextprotocol.io/quickstart",
+              "date": "2025-11-16",
+              "value": "Simple setup for testing and development"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "testing_utility": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Excellent for protocol testing and validation"
+            }
+          ],
+          "methodology": "Testing utility assessment",
+          "last_verified": "2025-11-09"
+        },
+        "development_value": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Developer Feedback",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Highly valuable for MCP server development and learning"
+            }
+          ],
+          "methodology": "Developer value assessment",
+          "last_verified": "2025-11-09"
+        },
+        "protocol_education": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Educational Value",
+              "url": "https://modelcontextprotocol.io/docs/servers/everything",
+              "date": "2025-11-16",
+              "value": "Ideal for learning MCP protocol concepts and patterns"
+            }
+          ],
+          "methodology": "Educational value assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_adoption": {
+          "score": 55,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Used for development/testing; not for production deployments"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 90,
+      "notes": "Excellent for learning MCP protocol and developing custom servers"
+    },
+    "customer-support": {
+      "overall": 40,
+      "notes": "Not suitable for production customer support; testing only"
+    },
+    "content-creation": {
+      "overall": 45,
+      "notes": "Limited production applicability; useful for testing content workflows"
+    },
+    "data-analysis": {
+      "overall": 50,
+      "notes": "Useful for testing data analysis patterns but not for production"
+    },
+    "research-assistant": {
+      "overall": 55,
+      "notes": "Good for researching MCP protocol capabilities and patterns"
+    },
+    "legal-compliance": {
+      "overall": 30,
+      "notes": "Not suitable for compliance workloads; testing reference only"
+    },
+    "healthcare": {
+      "overall": 25,
+      "notes": "Not suitable for healthcare applications; development only"
+    },
+    "financial-analysis": {
+      "overall": 35,
+      "notes": "Not suitable for financial systems; testing purposes only"
+    },
+    "education": {
+      "overall": 95,
+      "notes": "Excellent for teaching MCP protocol and AI integration patterns"
+    },
+    "creative-writing": {
+      "overall": 40,
+      "notes": "Limited production use; helpful for testing creative workflows"
+    }
+  },
+  "best_for": [
+    "Developers learning the Model Context Protocol specification",
+    "Engineers building custom MCP servers and testing implementations",
+    "Educators teaching AI integration and protocol development"
+  ],
+  "strengths": [
+    "Comprehensive reference implementation of all MCP protocol features",
+    "Exemplary code quality demonstrating best practices",
+    "Excellent educational resource for MCP protocol learning",
+    "Complete documentation with detailed examples",
+    "Open source with active Anthropic maintenance",
+    "Ideal for protocol testing and validation"
+  ],
+  "limitations": [
+    "Explicitly not designed for production deployment",
+    "Limited security hardening for testing purposes",
+    "Uses mock data; not suitable for real-world applications",
+    "May expose all protocol capabilities without restrictions",
+    "Not optimized for performance or scale",
+    "Requires careful consideration before any production use"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "github_stars": 58700,
+    "api_dependency": "None (MCP protocol only)",
+    "authentication": "None required",
+    "first_release": "2024-11",
+    "maintained_by": "Anthropic",
+    "status": "Official - Reference/Testing",
+    "transport_types": [
+      "stdio"
+    ],
+    "installation_methods": [
+      "npm"
+    ]
+  },
+  "tags": [
+    "meta",
+    "all-in-one",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

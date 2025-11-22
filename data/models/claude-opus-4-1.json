@@ -1,0 +1,640 @@
+{
+  "id": "claude-opus-4-1",
+  "type": "model",
+  "name": "Claude Opus 4.1",
+  "provider": "Anthropic",
+  "version": "20250530",
+  "last_evaluated": "2025-11-07",
+  "evaluated_by": "TrustVector Team",
+  "description": "Anthropic's most powerful model with state-of-the-art reasoning, ASL-3 safety level, and exceptional performance on complex tasks. Flagship model for mission-critical applications.",
+  "website": "https://www.anthropic.com/claude",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 96,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Benchmarks",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "State-of-the-art on complex coding tasks"
+            }
+          ],
+          "methodology": "Coding benchmarks and real-world engineering tasks",
+          "last_verified": "2025-11-07"
+        },
+        "task_accuracy_reasoning": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GPQA Diamond",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "73.4% on PhD-level questions (highest)"
+            },
+            {
+              "source": "MATH-500",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "96.1% on advanced mathematics"
+            }
+          ],
+          "methodology": "PhD-level reasoning and mathematics benchmarks",
+          "last_verified": "2025-11-07"
+        },
+        "task_accuracy_general": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU-Pro",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "82.1% on graduate-level knowledge"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing",
+          "last_verified": "2025-11-07"
+        },
+        "output_consistency": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-06-01",
+              "value": "Highly consistent outputs with advanced reasoning"
+            }
+          ],
+          "methodology": "Internal consistency testing",
+          "last_verified": "2025-11-07"
+        },
+        "latency_p50": {
+          "value": "2.1s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/",
+              "date": "2025-10-15",
+              "value": "Median latency ~2.1s"
+            }
+          ],
+          "methodology": "Real-world API latency measurements",
+          "last_verified": "2025-11-07"
+        },
+        "latency_p95": {
+          "value": "4.2s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/",
+              "date": "2025-10-15",
+              "value": "p95 latency ~4.2s"
+            }
+          ],
+          "methodology": "95th percentile measurements",
+          "last_verified": "2025-11-07"
+        },
+        "context_window": {
+          "value": "200,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-06-01",
+              "value": "200K token context window"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-07"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Status",
+              "url": "https://status.anthropic.com/",
+              "date": "2025-11-01",
+              "value": "99.95% uptime (last 90 days)"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Highest reasoning capability among all models. Best for extremely complex, mission-critical tasks requiring maximum intelligence."
+    },
+
+    "security": {
+      "overall_score": 92,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic ASL-3 Safety",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "date": "2025-05-30",
+              "value": "ASL-3 level security with enhanced defenses"
+            }
+          ],
+          "methodology": "OWASP LLM security testing",
+          "last_verified": "2025-11-07"
+        },
+        "jailbreak_resistance": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Safety Evals",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "Industry-leading jailbreak resistance"
+            }
+          ],
+          "methodology": "Adversarial prompt testing",
+          "last_verified": "2025-11-07"
+        },
+        "data_leakage_prevention": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy",
+              "url": "https://www.anthropic.com/legal/privacy",
+              "date": "2025-01-15",
+              "value": "No training on user data"
+            }
+          ],
+          "methodology": "Privacy policy and data handling review",
+          "last_verified": "2025-11-07"
+        },
+        "output_safety": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "ASL-3 Classification",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "date": "2025-05-30",
+              "value": "Highest safety tier (ASL-3) with comprehensive guardrails"
+            }
+          ],
+          "methodology": "Safety testing across harmful content",
+          "last_verified": "2025-11-07"
+        },
+        "api_security": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Docs",
+              "url": "https://docs.anthropic.com/en/api",
+              "date": "2025-06-01",
+              "value": "Enterprise-grade API security"
+            }
+          ],
+          "methodology": "API security feature review",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Industry-leading security with ASL-3 safety classification. Best-in-class for high-risk applications."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 93,
+      "criteria": {
+        "data_residency": {
+          "value": "US, EU (customer choice)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Enterprise",
+              "url": "https://www.anthropic.com/claude/enterprise",
+              "date": "2025-01-15",
+              "value": "Full data residency controls"
+            }
+          ],
+          "methodology": "Enterprise documentation review",
+          "last_verified": "2025-11-07"
+        },
+        "training_data_optout": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy Policy",
+              "url": "https://www.anthropic.com/legal/privacy",
+              "date": "2025-01-15",
+              "value": "No training on API data by default"
+            }
+          ],
+          "methodology": "Privacy policy analysis",
+          "last_verified": "2025-11-07"
+        },
+        "data_retention": {
+          "value": "0 days (ephemeral)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Terms",
+              "url": "https://www.anthropic.com/legal/terms",
+              "date": "2025-01-15",
+              "value": "Zero retention of prompts/outputs"
+            }
+          ],
+          "methodology": "Terms of service review",
+          "last_verified": "2025-11-07"
+        },
+        "pii_handling": {
+          "score": 90,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Data Protection",
+              "url": "https://docs.anthropic.com/en/docs/resources/data-protection",
+              "date": "2025-01-15",
+              "value": "Customer responsible for PII, strong privacy controls"
+            }
+          ],
+          "methodology": "Data protection capabilities review",
+          "last_verified": "2025-11-07"
+        },
+        "compliance_certifications": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Trust Center",
+              "url": "https://trust.anthropic.com/",
+              "date": "2025-02-01",
+              "value": "SOC 2 Type II, GDPR, HIPAA eligible, ISO 27001"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2025-11-07"
+        },
+        "zero_data_retention": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Docs",
+              "url": "https://docs.anthropic.com/en/docs/resources/data-protection",
+              "date": "2025-01-15",
+              "value": "Ephemeral processing, no storage"
+            }
+          ],
+          "methodology": "Data handling practices review",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Exceptional privacy with zero retention and HIPAA eligibility. Best for highly regulated industries."
+    },
+
+    "trust_transparency": {
+      "overall_score": 90,
+      "criteria": {
+        "explainability": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Claude Opus Capabilities",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "Superior reasoning transparency and explanation"
+            }
+          ],
+          "methodology": "Reasoning transparency evaluation",
+          "last_verified": "2025-11-07"
+        },
+        "hallucination_rate": {
+          "score": 89,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Internal testing",
+              "url": "https://www.anthropic.com/news/claude-opus-4",
+              "date": "2025-05-30",
+              "value": "Lower hallucination rate than predecessors"
+            }
+          ],
+          "methodology": "Factual accuracy testing",
+          "last_verified": "2025-11-07"
+        },
+        "bias_fairness": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic RSP",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "date": "2024-09-16",
+              "value": "Regular bias testing and mitigation"
+            }
+          ],
+          "methodology": "Bias benchmarks and testing",
+          "last_verified": "2025-11-07"
+        },
+        "uncertainty_quantification": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model behavior",
+              "url": "https://docs.anthropic.com/",
+              "date": "2025-06-01",
+              "value": "Well-calibrated confidence expression"
+            }
+          ],
+          "methodology": "Qualitative confidence assessment",
+          "last_verified": "2025-11-07"
+        },
+        "model_card_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-06-01",
+              "value": "Comprehensive model documentation"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-07"
+        },
+        "training_data_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Public Info",
+              "url": "https://www.anthropic.com/",
+              "date": "2025-05-30",
+              "value": "General description, specific sources not disclosed"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2025-11-07"
+        },
+        "guardrails": {
+          "score": 97,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "ASL-3 Safety",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "date": "2025-05-30",
+              "value": "Most comprehensive safety guardrails (ASL-3)"
+            }
+          ],
+          "methodology": "Safety mechanism analysis",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Excellent transparency with superior explainability. ASL-3 classification demonstrates commitment to safety and transparency."
+    },
+
+    "operational_excellence": {
+      "overall_score": 91,
+      "criteria": {
+        "api_design_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API",
+              "url": "https://docs.anthropic.com/en/api",
+              "date": "2025-06-01",
+              "value": "RESTful API with comprehensive features"
+            }
+          ],
+          "methodology": "API design review",
+          "last_verified": "2025-11-07"
+        },
+        "sdk_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic SDKs",
+              "url": "https://github.com/anthropics",
+              "date": "2025-06-01",
+              "value": "High-quality Python and TypeScript SDKs"
+            }
+          ],
+          "methodology": "SDK quality assessment",
+          "last_verified": "2025-11-07"
+        },
+        "versioning_policy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Versioning",
+              "url": "https://docs.anthropic.com/en/api/versioning",
+              "date": "2025-06-01",
+              "value": "Clear versioning with deprecation notices"
+            }
+          ],
+          "methodology": "Versioning policy review",
+          "last_verified": "2025-11-07"
+        },
+        "monitoring_observability": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Console",
+              "url": "https://console.anthropic.com/",
+              "date": "2025-06-01",
+              "value": "Usage dashboard with basic metrics"
+            }
+          ],
+          "methodology": "Observability tools review",
+          "last_verified": "2025-11-07"
+        },
+        "support_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Support",
+              "url": "https://support.anthropic.com/",
+              "date": "2025-06-01",
+              "value": "Premium support with SLAs for enterprise"
+            }
+          ],
+          "methodology": "Support quality assessment",
+          "last_verified": "2025-11-07"
+        },
+        "ecosystem_maturity": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Claude Ecosystem",
+              "url": "https://github.com/topics/claude",
+              "date": "2025-11-01",
+              "value": "Growing ecosystem with major framework support"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2025-11-07"
+        },
+        "license_terms": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Terms",
+              "url": "https://www.anthropic.com/legal/commercial-terms",
+              "date": "2025-01-15",
+              "value": "Flexible commercial terms"
+            }
+          ],
+          "methodology": "License terms review",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Strong operational maturity with enterprise-grade support and documentation. Well-suited for mission-critical applications."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 95,
+      "notes": "Exceptional for complex software architecture and system design. Best for mission-critical code requiring maximum reliability.",
+      "alternatives": ["claude-sonnet-4-5", "gpt-5"]
+    },
+    "customer-support": {
+      "overall": 90,
+      "notes": "Excellent quality but higher latency and cost than alternatives. Best for premium support requiring maximum empathy.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "content-creation": {
+      "overall": 96,
+      "notes": "Outstanding for long-form, complex content requiring deep thinking. Natural, engaging writing.",
+      "alternatives": ["gpt-5"]
+    },
+    "data-analysis": {
+      "overall": 97,
+      "notes": "Best-in-class for complex analytical tasks. Exceptional at multi-step reasoning and insight generation.",
+      "alternatives": ["claude-sonnet-4-5"]
+    },
+    "research-assistant": {
+      "overall": 97,
+      "notes": "Superior for academic and professional research. Exceptional synthesis and critical analysis.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "legal-compliance": {
+      "overall": 95,
+      "notes": "Best for legal work requiring maximum accuracy and privacy. HIPAA eligible with zero retention.",
+      "alternatives": ["claude-sonnet-4-5"]
+    },
+    "healthcare": {
+      "overall": 94,
+      "notes": "Top choice for healthcare with HIPAA eligibility and ASL-3 safety. Maximum privacy and accuracy.",
+      "alternatives": ["claude-sonnet-4-5"]
+    },
+    "financial-analysis": {
+      "overall": 96,
+      "notes": "Exceptional for complex financial modeling and risk analysis. Superior quantitative reasoning.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "education": {
+      "overall": 95,
+      "notes": "Outstanding for advanced education with detailed explanations and Socratic teaching.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "creative-writing": {
+      "overall": 94,
+      "notes": "Excellent for sophisticated creative projects. Strong narrative structure and character depth.",
+      "alternatives": ["gpt-5"]
+    }
+  },
+
+  "strengths": [
+    "Highest reasoning capability (GPQA Diamond 73.4%)",
+    "ASL-3 safety classification - industry-leading security",
+    "Zero data retention with HIPAA eligibility",
+    "Best for mission-critical, complex tasks requiring maximum intelligence",
+    "200K context window for large-scale analysis",
+    "Superior explainability and reasoning transparency"
+  ],
+
+  "limitations": [
+    "Highest latency (~2.1s p50) and cost among evaluated models",
+    "Premium pricing ($15/$75 per 1M tokens)",
+    "Overkill for simple tasks - use Sonnet for better value",
+    "Limited vision capabilities",
+    "Longer response times may not suit real-time applications"
+  ],
+
+  "best_for": [
+    "Mission-critical applications requiring maximum reliability",
+    "HIPAA-compliant healthcare and highly regulated industries",
+    "Complex research, analysis, and strategic decision-making",
+    "Legal and compliance work requiring perfect accuracy",
+    "Organizations prioritizing safety and privacy above all"
+  ],
+
+  "not_recommended_for": [
+    "Simple tasks where Sonnet provides better value",
+    "Real-time applications requiring sub-second latency",
+    "High-volume, cost-sensitive workloads",
+    "Applications where GPT-5 ecosystem features are critical"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "$15.00 per 1M tokens",
+      "output": "$75.00 per 1M tokens",
+      "notes": "Premium tier - 5x cost of Sonnet, use only when necessary",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 200000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic",
+      "Hindi"
+    ],
+    "modalities": ["text", "image (input)", "document"],
+    "api_endpoint": "https://api.anthropic.com/v1/messages",
+    "open_source": false,
+    "architecture": "Advanced transformer with ASL-3 safety alignment",
+    "parameters": "Not disclosed"
+  },
+
+  "related_entities": ["claude-sonnet-4-5", "gpt-5", "gemini-2-5-pro"],
+
+  "tags": [
+    "flagship",
+    "highest-reasoning",
+    "asl-3-safety",
+    "hipaa-eligible",
+    "mission-critical",
+    "premium"
+  ]
+}

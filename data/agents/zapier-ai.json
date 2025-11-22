@@ -1,0 +1,512 @@
+{
+  "id": "zapier-ai",
+  "type": "agent",
+  "name": "Zapier AI Actions",
+  "provider": "Zapier",
+  "version": "Current",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "No-code automation platform with AI actions for connecting AI models to 6000+ apps. Enables building intelligent automations and AI-powered workflows without coding through visual interface and natural language.",
+  "website": "https://zapier.com/ai",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "zap_execution": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Zapier Reliability",
+              "url": "https://zapier.com/help/",
+              "date": "2024-10-20",
+              "value": "Reliable zap execution with automatic retries"
+            }
+          ],
+          "methodology": "Workflow reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "ai_action_performance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "AI Actions",
+              "url": "https://actions.zapier.com/",
+              "date": "2024-10-15",
+              "value": "AI actions integrate with GPT and other LLMs"
+            }
+          ],
+          "methodology": "AI integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "integration_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "App Integrations",
+              "url": "https://zapier.com/apps",
+              "date": "2024-10-01",
+              "value": "6000+ app integrations with high uptime"
+            }
+          ],
+          "methodology": "Integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "chatbots": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Zapier Chatbots",
+              "url": "https://zapier.com/chatbots",
+              "date": "2024-10-01",
+              "value": "Build AI chatbots connected to your apps"
+            }
+          ],
+          "methodology": "Chatbot capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Error Management",
+              "url": "https://zapier.com/help/troubleshoot",
+              "date": "2024-09-20",
+              "value": "Automatic error handling and retry logic"
+            }
+          ],
+          "methodology": "Error recovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "1-30s average",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://zapier.com/help/",
+              "date": "2024-10-01",
+              "value": "Zaps typically execute within seconds, polling can add delay"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 87,
+      "criteria": {
+        "data_encryption": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security",
+              "url": "https://zapier.com/security",
+              "date": "2024-10-01",
+              "value": "TLS 1.2+ encryption and AES-256 data encryption"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "authentication": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Access Control",
+              "url": "https://zapier.com/help/account",
+              "date": "2024-10-01",
+              "value": "SSO, 2FA, and team permissions"
+            }
+          ],
+          "methodology": "Authentication testing",
+          "last_verified": "2025-11-09"
+        },
+        "credential_storage": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Connections",
+              "url": "https://zapier.com/help/create/basics/connect-accounts",
+              "date": "2024-10-01",
+              "value": "Encrypted credential storage with OAuth support"
+            }
+          ],
+          "methodology": "Credential security review",
+          "last_verified": "2025-11-09"
+        },
+        "compliance": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Compliance",
+              "url": "https://zapier.com/security",
+              "date": "2024-10-01",
+              "value": "SOC 2 Type II, ISO 27001, GDPR, HIPAA (BAA available)"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        },
+        "app_permissions": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Permissions",
+              "url": "https://zapier.com/help/",
+              "date": "2024-09-15",
+              "value": "Granular app permissions and scopes"
+            }
+          ],
+          "methodology": "Permission model assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 86,
+      "criteria": {
+        "data_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Policy",
+              "url": "https://zapier.com/privacy",
+              "date": "2024-10-01",
+              "value": "Configurable data retention, limited storage time"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GDPR",
+              "url": "https://zapier.com/privacy",
+              "date": "2024-09-01",
+              "value": "Full GDPR compliance with DPA available"
+            }
+          ],
+          "methodology": "Compliance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "hipaa_compliance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HIPAA",
+              "url": "https://zapier.com/security",
+              "date": "2024-10-01",
+              "value": "HIPAA compliant with BAA for healthcare customers"
+            }
+          ],
+          "methodology": "Healthcare compliance review",
+          "last_verified": "2025-11-09"
+        },
+        "data_processing": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Flow",
+              "url": "https://zapier.com/help/",
+              "date": "2024-10-01",
+              "value": "Data flows through Zapier infrastructure to connected apps"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "data_deletion": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Rights",
+              "url": "https://zapier.com/privacy",
+              "date": "2024-10-01",
+              "value": "User data deletion and export capabilities"
+            }
+          ],
+          "methodology": "Data rights assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 86,
+      "criteria": {
+        "documentation_quality": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Zapier Help",
+              "url": "https://zapier.com/help/",
+              "date": "2024-10-20",
+              "value": "Extensive documentation with tutorials and guides"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "visual_editor": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Zap Editor",
+              "url": "https://zapier.com/",
+              "date": "2024-10-01",
+              "value": "Intuitive no-code visual editor"
+            }
+          ],
+          "methodology": "UI/UX assessment",
+          "last_verified": "2025-11-09"
+        },
+        "task_history": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Zap History",
+              "url": "https://zapier.com/help/troubleshoot",
+              "date": "2024-10-01",
+              "value": "Detailed task history with data inspection"
+            }
+          ],
+          "methodology": "Traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "template_library": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Templates",
+              "url": "https://zapier.com/apps",
+              "date": "2024-10-01",
+              "value": "Massive template library for common workflows"
+            }
+          ],
+          "methodology": "Template availability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "support_quality": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Support",
+              "url": "https://zapier.com/help/",
+              "date": "2024-10-01",
+              "value": "Email support, live chat for higher tiers"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 87,
+      "criteria": {
+        "ease_of_use": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "User Experience",
+              "url": "https://zapier.com/",
+              "date": "2024-10-01",
+              "value": "Industry-leading no-code ease of use"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Enterprise",
+              "url": "https://zapier.com/pricing",
+              "date": "2024-10-01",
+              "value": "Enterprise plans with unlimited zaps and tasks"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://zapier.com/pricing",
+              "date": "2024-10-01",
+              "value": "Task-based pricing, free tier + paid from $19.99/month"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Monitoring",
+              "url": "https://zapier.com/help/",
+              "date": "2024-10-01",
+              "value": "Built-in monitoring and error notifications"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "integration_ecosystem": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Apps",
+              "url": "https://zapier.com/apps",
+              "date": "2024-10-01",
+              "value": "6000+ app integrations, industry leader"
+            }
+          ],
+          "methodology": "Integration ecosystem assessment",
+          "last_verified": "2025-11-09"
+        },
+        "uptime": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Reliability",
+              "url": "https://zapier.com/",
+              "date": "2024-10-01",
+              "value": "High uptime with redundant infrastructure"
+            }
+          ],
+          "methodology": "Uptime monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Industry-leading 6000+ app integrations, largest ecosystem",
+    "Exceptional no-code ease of use for non-technical users",
+    "Strong enterprise security and compliance (SOC 2, ISO 27001, HIPAA)",
+    "Reliable infrastructure with high uptime and automatic retries",
+    "AI Actions for integrating GPTs and chatbots with apps",
+    "Extensive template library and documentation"
+  ],
+  "limitations": [
+    "Proprietary cloud-only, no self-hosting option",
+    "Can become expensive at scale with task-based pricing",
+    "AI capabilities less advanced than specialized agent frameworks",
+    "Limited customization compared to code-based solutions",
+    "Vendor lock-in with proprietary platform",
+    "Polling-based triggers can introduce latency"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_models": [
+      "OpenAI GPT",
+      "Anthropic Claude",
+      "AI Actions API"
+    ],
+    "programming_languages": [
+      "No-code (visual)",
+      "Code steps (JavaScript, Python)"
+    ],
+    "deployment_type": "Managed cloud service",
+    "tool_support": [
+      "6000+ app integrations",
+      "Webhooks",
+      "API requests"
+    ],
+    "pricing_model": "Free tier + paid plans ($19.99-$69+/month)",
+    "tasks_included": "100 to unlimited per month",
+    "founded": "2011",
+    "users": "6+ million",
+    "ai_features": [
+      "AI Actions",
+      "Chatbots",
+      "ChatGPT plugin"
+    ],
+    "pricing": "Free: 400 activities/month; Pro: $33.33/month for 1,500 activities; Chatbots from $20/month; Platform from $19.99/month"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 90,
+      "notes": "Excellent for automating support across 6000+ tools"
+    },
+    "code-generation": {
+      "overall": 70,
+      "notes": "Can integrate AI for code but not specialized"
+    },
+    "research-assistant": {
+      "overall": 82,
+      "notes": "Good for automated research aggregation workflows"
+    },
+    "data-analysis": {
+      "overall": 86,
+      "notes": "Strong for data integration and automated insights"
+    },
+    "content-creation": {
+      "overall": 87,
+      "notes": "Excellent for AI-powered content workflows"
+    },
+    "education": {
+      "overall": 77,
+      "notes": "Suitable for educational automation"
+    },
+    "healthcare": {
+      "overall": 81,
+      "notes": "HIPAA compliant for healthcare workflows"
+    },
+    "financial-analysis": {
+      "overall": 83,
+      "notes": "Strong compliance for financial automation"
+    },
+    "legal-compliance": {
+      "overall": 80,
+      "notes": "Good for document workflow automation"
+    },
+    "creative-writing": {
+      "overall": 79,
+      "notes": "Suitable for creative AI workflows"
+    }
+  },
+  "best_for": [
+    "Business users automating workflows with AI actions",
+    "Teams needing no-code AI integration with 6000+ apps",
+    "Organizations wanting quick AI-powered automation",
+    "Non-technical users adding AI to existing Zapier workflows"
+  ],
+  "tags": [
+    "automation",
+    "workflow"
+  ]
+}

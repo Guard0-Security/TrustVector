@@ -1,0 +1,475 @@
+{
+  "id": "mcp-server-docker",
+  "type": "mcp",
+  "name": "MCP Docker Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Docker container management. Enables AI models to interact with Docker Engine for container lifecycle management, image operations, volume management, and network configuration. Essential for AI-powered containerized application deployment and DevOps automation.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "docker_api_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker Engine API",
+              "url": "https://docs.docker.com/engine/api/",
+              "date": "2025-11-16",
+              "value": "Built on stable Docker Engine API with mature implementation"
+            }
+          ],
+          "methodology": "API stability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "container_operation_success": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "High success rate for container and image operations"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-09"
+        },
+        "resource_monitoring_accuracy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker Stats API",
+              "url": "https://docs.docker.com/engine/api/",
+              "date": "2025-11-16",
+              "value": "Accurate real-time container resource metrics"
+            }
+          ],
+          "methodology": "Monitoring accuracy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "image_pull_reliability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Docker Hub",
+              "url": "https://hub.docker.com/",
+              "date": "2025-11-16",
+              "value": "Depends on registry availability and network conditions"
+            }
+          ],
+          "methodology": "Image operation testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles Docker errors with graceful fallback and retry"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 65,
+      "criteria": {
+        "docker_socket_access": {
+          "score": 55,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker Security",
+              "url": "https://docs.docker.com/engine/security/",
+              "date": "2025-11-16",
+              "value": "Requires Docker socket access, equivalent to root privileges"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "container_escape_risk": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can create privileged containers with host access"
+            }
+          ],
+          "methodology": "Privilege escalation testing",
+          "last_verified": "2025-11-09"
+        },
+        "image_security_scanning": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "No built-in image vulnerability scanning before deployment"
+            }
+          ],
+          "methodology": "Security scanning assessment",
+          "last_verified": "2025-11-09"
+        },
+        "network_isolation_control": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Docker Networking",
+              "url": "https://docs.docker.com/network/",
+              "date": "2025-11-16",
+              "value": "Can create and modify Docker networks, affecting isolation"
+            }
+          ],
+          "methodology": "Network security testing",
+          "last_verified": "2025-11-09"
+        },
+        "secret_exposure_risk": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Can access container environment variables and Docker secrets"
+            }
+          ],
+          "methodology": "Secrets management assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Docker Events",
+              "url": "https://docs.docker.com/engine/reference/commandline/events/",
+              "date": "2025-11-16",
+              "value": "Docker events provide audit trail but not comprehensive"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 68,
+      "criteria": {
+        "container_data_exposure": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Container configurations, logs, and environment variables sent to LLM"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "log_privacy": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Container logs may contain sensitive application data"
+            }
+          ],
+          "methodology": "Log privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "environment_variable_protection": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Environment variables including secrets accessible to AI"
+            }
+          ],
+          "methodology": "Environment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Container data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "volume_data_access": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Docker Volumes",
+              "url": "https://docs.docker.com/storage/volumes/",
+              "date": "2025-11-16",
+              "value": "Can inspect volume mounts and potentially access data paths"
+            }
+          ],
+          "methodology": "Storage privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 80,
+      "criteria": {
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Docker MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained with varying detail"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker Events",
+              "url": "https://docs.docker.com/engine/reference/commandline/events/",
+              "date": "2025-11-16",
+              "value": "Operations logged in Docker events and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "security_warning_disclosure": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Some security warnings but could be more prominent"
+            }
+          ],
+          "methodology": "Security disclosure review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 82,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring Docker installation and socket access"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "operation_performance": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Docker Performance",
+              "url": "https://docs.docker.com/",
+              "date": "2025-11-16",
+              "value": "Fast local operations; performance depends on host resources"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker Engine Stability",
+              "url": "https://docs.docker.com/",
+              "date": "2025-11-16",
+              "value": "Built on mature Docker Engine with high stability"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "feature_coverage": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Docker MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers containers, images, volumes, networks, and basic orchestration"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 92,
+      "notes": "Excellent for containerized application development and deployment automation"
+    },
+    "customer-support": {
+      "overall": 75,
+      "notes": "Useful for troubleshooting containerized applications"
+    },
+    "content-creation": {
+      "overall": 55,
+      "notes": "Limited applicability; mainly for infrastructure documentation"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Good for analyzing container metrics and resource utilization"
+    },
+    "research-assistant": {
+      "overall": 70,
+      "notes": "Useful for researching containerization patterns and Docker configurations"
+    },
+    "legal-compliance": {
+      "overall": 58,
+      "notes": "High security risk; requires very careful access controls"
+    },
+    "healthcare": {
+      "overall": 52,
+      "notes": "High risk due to privileged access; not recommended without strong controls"
+    },
+    "financial-analysis": {
+      "overall": 60,
+      "notes": "Moderate risk for financial infrastructure management"
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Excellent for teaching containerization, DevOps, and cloud-native concepts"
+    },
+    "creative-writing": {
+      "overall": 45,
+      "notes": "Low relevance to creative writing workflows"
+    }
+  },
+  "best_for": [
+    "DevOps engineers automating container deployment and orchestration",
+    "Software developers building and testing containerized applications",
+    "Educators teaching Docker and cloud-native development"
+  ],
+  "strengths": [
+    "Comprehensive Docker container lifecycle management",
+    "Built on stable and mature Docker Engine API",
+    "Excellent for DevOps automation and CI/CD workflows",
+    "Fast local operations with minimal latency",
+    "Open source community implementation",
+    "Covers containers, images, volumes, and networks"
+  ],
+  "limitations": [
+    "Requires Docker socket access equivalent to root privileges",
+    "AI can create privileged containers with host system access",
+    "Container logs and environment variables exposed to LLM provider",
+    "No built-in image vulnerability scanning",
+    "Can access and expose Docker secrets and sensitive configurations",
+    "Community-maintained with variable support quality"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "Linux",
+      "macOS",
+      "Windows (with Docker Desktop)"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Docker Engine API",
+    "authentication": "Docker socket access",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "tags": [
+    "containers",
+    "devops",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

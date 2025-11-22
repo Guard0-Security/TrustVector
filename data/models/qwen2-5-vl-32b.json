@@ -1,0 +1,661 @@
+{
+  "id": "qwen2-5-vl-32b",
+  "type": "model",
+  "name": "Qwen2.5-VL-32B",
+  "provider": "Alibaba",
+  "version": "20251020",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Advanced multimodal vision-language model from Alibaba achieving 42.9% on SWE-bench. Specialized for vision tasks with strong image understanding and competitive pricing.",
+  "website": "https://qwenlm.github.io/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+              "date": "2025-10-20",
+              "value": "42.9% resolution rate"
+            },
+            {
+              "source": "HumanEval",
+              "url": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+              "date": "2025-10-20",
+              "value": "75.3% accuracy"
+            }
+          ],
+          "methodology": "Standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+              "date": "2025-10-20",
+              "value": "71.8% on mathematical reasoning"
+            }
+          ],
+          "methodology": "Reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU",
+              "url": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+              "date": "2025-10-20",
+              "value": "68.5% on knowledge"
+            }
+          ],
+          "methodology": "Knowledge testing",
+          "last_verified": "2025-11-08"
+        },
+        "vision_accuracy": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Visual Benchmarks",
+              "url": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+              "date": "2025-10-20",
+              "value": "Strong performance on vision tasks"
+            }
+          ],
+          "methodology": "Vision-specific benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Documentation",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Good consistency"
+            }
+          ],
+          "methodology": "Internal testing",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "1.6s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Performance",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "~1.6s response time"
+            }
+          ],
+          "methodology": "Median latency",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "32,768 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Qwen Documentation",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "32K tokens"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 96,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud Status",
+              "url": "https://status.alibabacloud.com/",
+              "date": "2025-11-01",
+              "value": "97.5% uptime"
+            }
+          ],
+          "methodology": "Historical data",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong vision capabilities with good coding performance. 32B parameter size provides good balance."
+    },
+    "security": {
+      "overall_score": 80,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Safety",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Standard resistance"
+            }
+          ],
+          "methodology": "OWASP testing",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Safety",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Basic guardrails"
+            }
+          ],
+          "methodology": "Adversarial testing",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Privacy",
+              "url": "https://www.alibabacloud.com/help/doc-detail/42425.htm",
+              "date": "2025-10-01",
+              "value": "Standard practices"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Safety",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Basic safety filtering"
+            }
+          ],
+          "methodology": "Safety testing",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 81,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud Security",
+              "url": "https://www.alibabacloud.com/product/security",
+              "date": "2025-10-01",
+              "value": "Standard API security"
+            }
+          ],
+          "methodology": "Security review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Adequate security with standard guardrails."
+    },
+    "privacy_compliance": {
+      "overall_score": 79,
+      "criteria": {
+        "data_residency": {
+          "value": "China, Singapore, Malaysia",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud",
+              "url": "https://www.alibabacloud.com/help/doc-detail/40654.htm",
+              "date": "2025-10-01",
+              "value": "Asian data centers"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Privacy",
+              "url": "https://www.alibabacloud.com/help/doc-detail/42425.htm",
+              "date": "2025-10-01",
+              "value": "Opt-out available"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "90 days",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Terms",
+              "url": "https://www.alibabacloud.com/help/doc-detail/42416.htm",
+              "date": "2025-10-01",
+              "value": "90-day default"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Documentation",
+              "url": "https://www.alibabacloud.com/",
+              "date": "2025-10-01",
+              "value": "Customer responsible"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Compliance",
+              "url": "https://www.alibabacloud.com/trust-center",
+              "date": "2025-10-01",
+              "value": "ISO 27001, limited Western certs"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud",
+              "url": "https://www.alibabacloud.com/",
+              "date": "2025-10-01",
+              "value": "No zero retention"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Limited privacy for Western markets. Asian data residency."
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "explainability": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Features",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Basic explanation"
+            }
+          ],
+          "methodology": "Feature evaluation",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://github.com/QwenLM/Qwen2.5-VL",
+              "date": "2025-10-20",
+              "value": "Moderate rate"
+            }
+          ],
+          "methodology": "QA testing",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Research",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Basic mitigation"
+            }
+          ],
+          "methodology": "Bias testing",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Basic expression"
+            }
+          ],
+          "methodology": "Confidence assessment",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Qwen Documentation",
+              "url": "https://github.com/QwenLM/Qwen2.5-VL",
+              "date": "2025-10-20",
+              "value": "Good technical docs"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Research",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Limited disclosure"
+            }
+          ],
+          "methodology": "Disclosure review",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Safety",
+              "url": "https://qwenlm.github.io/",
+              "date": "2025-10-20",
+              "value": "Standard guardrails"
+            }
+          ],
+          "methodology": "Safety analysis",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Moderate transparency with standard safety features."
+    },
+    "operational_excellence": {
+      "overall_score": 83,
+      "criteria": {
+        "api_design_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud API",
+              "url": "https://www.alibabacloud.com/help/en/dashscope/",
+              "date": "2025-10-20",
+              "value": "Standard API design"
+            }
+          ],
+          "methodology": "API review",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Qwen SDKs",
+              "url": "https://github.com/QwenLM/",
+              "date": "2025-10-20",
+              "value": "Python SDK available"
+            }
+          ],
+          "methodology": "SDK review",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud",
+              "url": "https://www.alibabacloud.com/",
+              "date": "2025-10-20",
+              "value": "Basic versioning"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Cloud Console",
+              "url": "https://www.alibabacloud.com/",
+              "date": "2025-10-20",
+              "value": "Basic monitoring"
+            }
+          ],
+          "methodology": "Tool review",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Alibaba Support",
+              "url": "https://www.alibabacloud.com/support",
+              "date": "2025-10-20",
+              "value": "Standard support"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Qwen Community",
+              "url": "https://github.com/QwenLM/",
+              "date": "2025-10-20",
+              "value": "Growing ecosystem"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Qwen License",
+              "url": "https://github.com/QwenLM/Qwen2.5-VL",
+              "date": "2025-10-20",
+              "value": "Apache 2.0 license"
+            }
+          ],
+          "methodology": "License review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good operational quality with open-source license."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 86,
+      "notes": "Good coding with vision support. Useful for UI/UX code generation from images.",
+      "alternatives": [
+        "claude-4-sonnet",
+        "openai-o4-mini"
+      ]
+    },
+    "customer-support": {
+      "overall": 88,
+      "notes": "Strong for visual customer support. Can analyze product images and screenshots.",
+      "alternatives": [
+        "gemini-2-0-flash"
+      ]
+    },
+    "content-creation": {
+      "overall": 84,
+      "notes": "Good for content with visual elements. Can describe and analyze images.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    },
+    "data-analysis": {
+      "overall": 90,
+      "notes": "Excellent for visual data analysis. Can analyze charts, graphs, and diagrams.",
+      "alternatives": [
+        "gemini-2-0-flash"
+      ]
+    },
+    "research-assistant": {
+      "overall": 87,
+      "notes": "Strong for research with visual materials. Can analyze papers with diagrams.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 75,
+      "notes": "Limited compliance for Western markets. Data residency concerns.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "healthcare": {
+      "overall": 82,
+      "notes": "Good for medical image analysis but limited Western compliance.",
+      "alternatives": [
+        "claude-4-opus",
+        "gemini-2-0-flash"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 83,
+      "notes": "Good for analyzing financial charts and visual reports.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "education": {
+      "overall": 91,
+      "notes": "Excellent for education with visual learning materials. Can explain diagrams.",
+      "alternatives": [
+        "gemini-2-0-flash"
+      ]
+    },
+    "creative-writing": {
+      "overall": 82,
+      "notes": "Good for visual storytelling and image-based creative content.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    }
+  },
+  "strengths": [
+    "Strong vision capabilities for image understanding",
+    "Apache 2.0 open-source license",
+    "Competitive pricing for vision model",
+    "Good for visual data analysis and education",
+    "32B parameters provide good capability/efficiency balance",
+    "Strong for Asian languages and markets"
+  ],
+  "limitations": [
+    "Limited data residency for Western markets",
+    "90-day data retention (not ephemeral)",
+    "Fewer compliance certifications for Western markets",
+    "Smaller context window (32K tokens)",
+    "Lower coding benchmarks (42.9% SWE-bench)",
+    "Growing but less mature ecosystem"
+  ],
+  "best_for": [
+    "Visual AI applications requiring image understanding",
+    "Educational content with visual materials",
+    "Customer support with screenshot analysis",
+    "Visual data analysis and chart interpretation",
+    "Asian market applications"
+  ],
+  "not_recommended_for": [
+    "Healthcare or finance in Western markets",
+    "Applications requiring Western compliance",
+    "US/EU data residency requirements",
+    "Ephemeral data processing",
+    "Large context window needs (>32K)",
+    "Pure text-only applications"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$0.40 per 1M tokens",
+      "output": "$1.20 per 1M tokens",
+      "notes": "Highly competitive pricing for vision model"
+    },
+    "context_window": 32768,
+    "languages": [
+      "English",
+      "Chinese",
+      "Japanese",
+      "Korean",
+      "Vietnamese",
+      "Thai",
+      "Arabic",
+      "French",
+      "Spanish"
+    ],
+    "modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "api_endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+    "open_source": true,
+    "architecture": "32B vision-language model with Apache 2.0 license",
+    "parameters": "32 billion"
+  },
+  "related_entities": [
+    "gemini-2-0-flash",
+    "claude-sonnet-4-5",
+    "gpt-5"
+  ],
+  "tags": [
+    "vision",
+    "multimodal",
+    "open-source",
+    "cost-effective",
+    "visual-ai",
+    "chinese-provider",
+    "education",
+    "apache-2.0"
+  ]
+}

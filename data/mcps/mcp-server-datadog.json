@@ -1,0 +1,474 @@
+{
+  "id": "mcp-server-datadog",
+  "type": "mcp",
+  "name": "MCP Datadog Server",
+  "provider": "Datadog",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Datadog MCP server for observability and monitoring integration. Enables AI models to query metrics, logs, traces, dashboards, and alerts. Includes infrastructure monitoring, APM, and security monitoring. Essential for AI-powered observability, performance optimization, and incident management workflows.",
+  "website": "https://github.com/DataDog/datadog-mcp-server",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 88,
+      "criteria": {
+        "metrics_query_reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog API",
+              "url": "https://docs.datadoghq.com/api/latest/",
+              "date": "2025-11-16",
+              "value": "Highly reliable metrics and time-series queries"
+            }
+          ],
+          "methodology": "Query success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "log_search_accuracy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Log Management",
+              "url": "https://docs.datadoghq.com/logs/",
+              "date": "2025-11-16",
+              "value": "Powerful log search with indexing and analytics"
+            }
+          ],
+          "methodology": "Search accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "real_time_monitoring": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Monitors",
+              "url": "https://docs.datadoghq.com/monitors/",
+              "date": "2025-11-16",
+              "value": "Real-time alerting and monitoring with low latency"
+            }
+          ],
+          "methodology": "Real-time monitoring testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Datadog Rate Limits",
+              "url": "https://docs.datadoghq.com/api/latest/rate-limits/",
+              "date": "2025-11-16",
+              "value": "Subject to API rate limits with per-endpoint quotas"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Handles API errors with exponential backoff and retry"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 73,
+      "criteria": {
+        "authentication_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Authentication",
+              "url": "https://docs.datadoghq.com/account_management/api-app-keys/",
+              "date": "2025-11-16",
+              "value": "Uses API keys and application keys with scoped permissions"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "api_key_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Datadog API keys stored locally; AI can access monitoring data"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "infrastructure_visibility_risk": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "AI can access detailed infrastructure topology and configurations"
+            }
+          ],
+          "methodology": "Visibility risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "monitor_modification_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Datadog API",
+              "url": "https://docs.datadoghq.com/api/latest/monitors/",
+              "date": "2025-11-16",
+              "value": "Can create, modify, and mute monitors within permissions"
+            }
+          ],
+          "methodology": "Modification control testing",
+          "last_verified": "2025-11-09"
+        },
+        "organization_access_control": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog RBAC",
+              "url": "https://docs.datadoghq.com/account_management/rbac/",
+              "date": "2025-11-16",
+              "value": "Respects Datadog RBAC and team permissions"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Audit Trail",
+              "url": "https://docs.datadoghq.com/account_management/audit_trail/",
+              "date": "2025-11-16",
+              "value": "Comprehensive audit logging for all API operations"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 68,
+      "criteria": {
+        "metrics_data_exposure": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Metrics, logs, and trace data sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "log_data_privacy": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Application logs may contain PII, credentials, and sensitive data"
+            }
+          ],
+          "methodology": "Log privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "infrastructure_metadata_privacy": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Infrastructure topology and host information may be exposed"
+            }
+          ],
+          "methodology": "Infrastructure privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Monitoring data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "trace_data_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Datadog APM",
+              "url": "https://docs.datadoghq.com/tracing/",
+              "date": "2025-11-16",
+              "value": "Distributed traces may contain request parameters and user identifiers"
+            }
+          ],
+          "methodology": "Trace privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 86,
+      "criteria": {
+        "documentation_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog MCP Docs",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation from official Datadog team"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Audit Trail",
+              "url": "https://docs.datadoghq.com/account_management/audit_trail/",
+              "date": "2025-11-16",
+              "value": "All API operations logged in Datadog audit trail and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Open source implementation from Datadog"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Clear documentation of supported Datadog operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 87,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring Datadog API and application keys"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog API Performance",
+              "url": "https://docs.datadoghq.com/api/latest/",
+              "date": "2025-11-16",
+              "value": "Fast API responses with global infrastructure (typically 100-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Infrastructure",
+              "url": "https://www.datadoghq.com/",
+              "date": "2025-11-16",
+              "value": "Built on highly reliable Datadog infrastructure with 99.9%+ uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog MCP Server",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Covers metrics, logs, traces, dashboards, monitors, and infrastructure"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "official_support": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Datadog Team",
+              "url": "https://github.com/DataDog/datadog-mcp-server",
+              "date": "2025-11-16",
+              "value": "Officially maintained by Datadog with active support"
+            }
+          ],
+          "methodology": "Maintainer support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good for generating monitoring configurations and alert definitions"
+    },
+    "customer-support": {
+      "overall": 78,
+      "notes": "Useful for investigating customer-reported performance issues"
+    },
+    "content-creation": {
+      "overall": 50,
+      "notes": "Limited applicability for content workflows"
+    },
+    "data-analysis": {
+      "overall": 95,
+      "notes": "Excellent for infrastructure analytics, performance analysis, and trend detection"
+    },
+    "research-assistant": {
+      "overall": 75,
+      "notes": "Useful for researching system behavior and performance patterns"
+    },
+    "legal-compliance": {
+      "overall": 60,
+      "notes": "Risk of exposing infrastructure details and log data"
+    },
+    "healthcare": {
+      "overall": 55,
+      "notes": "Risk of exposing PHI in application logs and traces"
+    },
+    "financial-analysis": {
+      "overall": 65,
+      "notes": "Moderate risk for financial infrastructure monitoring"
+    },
+    "education": {
+      "overall": 85,
+      "notes": "Excellent for teaching observability and monitoring practices"
+    },
+    "creative-writing": {
+      "overall": 42,
+      "notes": "Low relevance to creative writing workflows"
+    }
+  },
+  "best_for": [
+    "Site reliability engineers analyzing infrastructure performance and incidents",
+    "DevOps teams implementing comprehensive observability solutions",
+    "Data analysts exploring metrics, logs, and traces for insights",
+    "Educators teaching modern observability and monitoring practices"
+  ],
+  "strengths": [
+    "Comprehensive observability platform (metrics, logs, traces, infrastructure)",
+    "Official Datadog implementation with active support",
+    "Highly reliable with 99.9%+ uptime on global infrastructure",
+    "Excellent for AI-powered performance optimization and incident management",
+    "Real-time alerting and monitoring with low latency",
+    "Comprehensive audit logging for all operations"
+  ],
+  "limitations": [
+    "Metrics, logs, and trace data exposed to LLM provider",
+    "Application logs may contain PII, credentials, and sensitive data",
+    "Infrastructure topology and host information may be revealed",
+    "Distributed traces may contain request parameters and user identifiers",
+    "Subject to Datadog API rate limits",
+    "Requires careful log scrubbing to avoid sensitive data exposure"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/DataDog/datadog-mcp-server",
+    "api_dependency": "Datadog REST API",
+    "authentication": "Datadog API Key and Application Key",
+    "first_release": "2024-11",
+    "maintained_by": "Datadog"
+  },
+  "tags": [
+    "monitoring",
+    "observability",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

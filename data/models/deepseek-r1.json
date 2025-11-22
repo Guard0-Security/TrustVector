@@ -1,0 +1,673 @@
+{
+  "id": "deepseek-r1",
+  "type": "model",
+  "name": "DeepSeek-R1",
+  "provider": "DeepSeek",
+  "version": "20251020",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Advanced reasoning AI model from DeepSeek achieving 53.6% on SWE-bench and 79.8% on HumanEval. Combines strong coding capabilities with efficient reasoning at competitive pricing.",
+  "website": "https://www.deepseek.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 91,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "53.6% resolution rate"
+            },
+            {
+              "source": "HumanEval",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "79.8% accuracy on code generation"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks measuring real-world software engineering tasks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "88.5% on mathematical reasoning"
+            },
+            {
+              "source": "GPQA",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "58.7% on graduate-level questions"
+            }
+          ],
+          "methodology": "Graduate-level reasoning benchmarks requiring multi-step problem solving",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "74.8% on comprehensive knowledge benchmark"
+            },
+            {
+              "source": "DeepSeek Benchmarks",
+              "url": "https://www.deepseek.com/research/deepseek-r1",
+              "date": "2025-10-20",
+              "value": "Strong general performance"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing across domains",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Documentation",
+              "url": "https://platform.deepseek.com/docs",
+              "date": "2025-10-20",
+              "value": "Good consistency with reasoning optimization"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts at various temperature settings",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "1.9s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Performance Metrics",
+              "url": "https://platform.deepseek.com/docs",
+              "date": "2025-10-20",
+              "value": "Typical response time ~1.9s"
+            }
+          ],
+          "methodology": "Median latency for API requests with standard prompt sizes",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "3.4s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/deepseek-r1",
+              "date": "2025-10-25",
+              "value": "p95 latency ~3.4s"
+            }
+          ],
+          "methodology": "95th percentile response time across diverse workloads",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "64,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek Documentation",
+              "url": "https://platform.deepseek.com/docs",
+              "date": "2025-10-20",
+              "value": "64K token context window"
+            }
+          ],
+          "methodology": "Official specification from provider",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 97,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Status",
+              "url": "https://status.deepseek.com/",
+              "date": "2025-11-01",
+              "value": "98.7% uptime (last 90 days)"
+            }
+          ],
+          "methodology": "Historical uptime data from official status page",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong performance with excellent coding capabilities and efficient reasoning. Competitive latency despite reasoning optimization."
+    },
+    "security": {
+      "overall_score": 83,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Safety Documentation",
+              "url": "https://platform.deepseek.com/docs/safety",
+              "date": "2025-10-20",
+              "value": "Good resistance to prompt injection"
+            }
+          ],
+          "methodology": "Testing against OWASP LLM01 prompt injection attacks",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Safety Research",
+              "url": "https://www.deepseek.com/research/safety",
+              "date": "2025-10-20",
+              "value": "Standard safety guardrails"
+            }
+          ],
+          "methodology": "Testing against adversarial prompt datasets",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Privacy Policy",
+              "url": "https://www.deepseek.com/privacy",
+              "date": "2025-10-01",
+              "value": "Standard data handling practices"
+            }
+          ],
+          "methodology": "Analysis of privacy policies and data handling practices",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Safety Evaluations",
+              "url": "https://platform.deepseek.com/docs/safety",
+              "date": "2025-10-20",
+              "value": "Comprehensive safety filtering"
+            }
+          ],
+          "methodology": "Comprehensive safety testing across harmful content categories",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek API Documentation",
+              "url": "https://platform.deepseek.com/docs/api",
+              "date": "2025-10-20",
+              "value": "API key authentication, HTTPS, rate limiting"
+            }
+          ],
+          "methodology": "Review of API security features and best practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good security posture with standard guardrails. Adequate protection for typical use cases."
+    },
+    "privacy_compliance": {
+      "overall_score": 82,
+      "criteria": {
+        "data_residency": {
+          "value": "China, Singapore (limited options)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Documentation",
+              "url": "https://platform.deepseek.com/docs",
+              "date": "2025-10-01",
+              "value": "Primary data centers in China and Singapore"
+            }
+          ],
+          "methodology": "Review of documentation and privacy policies",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek Privacy Policy",
+              "url": "https://www.deepseek.com/privacy",
+              "date": "2025-10-01",
+              "value": "No training on API data by default"
+            }
+          ],
+          "methodology": "Analysis of privacy policy and data usage terms",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "60 days (configurable)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Terms of Service",
+              "url": "https://www.deepseek.com/terms",
+              "date": "2025-10-01",
+              "value": "60-day default retention"
+            }
+          ],
+          "methodology": "Review of terms of service and data retention policies",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Privacy Documentation",
+              "url": "https://platform.deepseek.com/docs/privacy",
+              "date": "2025-10-01",
+              "value": "Customer responsible for PII handling"
+            }
+          ],
+          "methodology": "Review of data protection capabilities",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Compliance",
+              "url": "https://www.deepseek.com/compliance",
+              "date": "2025-10-01",
+              "value": "ISO 27001, limited Western certifications"
+            }
+          ],
+          "methodology": "Verification of compliance certifications",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Documentation",
+              "url": "https://platform.deepseek.com/docs",
+              "date": "2025-10-01",
+              "value": "No zero retention option"
+            }
+          ],
+          "methodology": "Review of data handling practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Moderate privacy posture. Data residency primarily in Asia. Limited compliance certifications for Western markets."
+    },
+    "trust_transparency": {
+      "overall_score": 81,
+      "criteria": {
+        "explainability": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Features",
+              "url": "https://www.deepseek.com/research/deepseek-r1",
+              "date": "2025-10-20",
+              "value": "Reasoning mode with explanation capabilities"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-25",
+              "value": "Moderate hallucination rate"
+            }
+          ],
+          "methodology": "Testing on factual QA datasets",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Research",
+              "url": "https://www.deepseek.com/research",
+              "date": "2025-10-20",
+              "value": "Basic bias mitigation"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 79,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://platform.deepseek.com/docs",
+              "date": "2025-10-20",
+              "value": "Basic uncertainty expression"
+            }
+          ],
+          "methodology": "Assessment of confidence expression",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek Documentation",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "Good technical documentation"
+            }
+          ],
+          "methodology": "Review of documentation completeness",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Research Papers",
+              "url": "https://www.deepseek.com/research",
+              "date": "2025-10-20",
+              "value": "Limited disclosure of training data"
+            }
+          ],
+          "methodology": "Review of public disclosures",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Safety Features",
+              "url": "https://platform.deepseek.com/docs/safety",
+              "date": "2025-10-20",
+              "value": "Standard safety guardrails"
+            }
+          ],
+          "methodology": "Analysis of built-in safety mechanisms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Moderate transparency with standard safety features. Limited disclosure compared to Western providers."
+    },
+    "operational_excellence": {
+      "overall_score": 86,
+      "criteria": {
+        "api_design_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek API Documentation",
+              "url": "https://platform.deepseek.com/docs/api",
+              "date": "2025-10-20",
+              "value": "Clean RESTful API design"
+            }
+          ],
+          "methodology": "Review of API design and consistency",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek SDKs",
+              "url": "https://github.com/deepseek-ai",
+              "date": "2025-10-20",
+              "value": "Python SDK available, actively maintained"
+            }
+          ],
+          "methodology": "Review of SDK quality and maintenance",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek API Documentation",
+              "url": "https://platform.deepseek.com/docs/api",
+              "date": "2025-10-20",
+              "value": "Basic versioning policy"
+            }
+          ],
+          "methodology": "Review of versioning practices",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Platform",
+              "url": "https://platform.deepseek.com/",
+              "date": "2025-10-20",
+              "value": "Basic usage dashboard"
+            }
+          ],
+          "methodology": "Review of monitoring tools",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "DeepSeek Support",
+              "url": "https://www.deepseek.com/support",
+              "date": "2025-10-20",
+              "value": "Community support and documentation"
+            }
+          ],
+          "methodology": "Assessment of support options",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/deepseek-ai",
+              "date": "2025-10-25",
+              "value": "Growing ecosystem, limited third-party integrations"
+            }
+          ],
+          "methodology": "Analysis of ecosystem maturity",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "DeepSeek License",
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "date": "2025-10-20",
+              "value": "Open license with commercial use allowed"
+            }
+          ],
+          "methodology": "Review of licensing terms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good operational quality with open licensing. Growing ecosystem with room for maturity."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 92,
+      "notes": "Excellent coding with 53.6% SWE-bench and 79.8% HumanEval. Strong value proposition with competitive pricing.",
+      "alternatives": [
+        "claude-4-sonnet",
+        "openai-o1"
+      ]
+    },
+    "customer-support": {
+      "overall": 81,
+      "notes": "Adequate for customer support but not specialized. Good latency helps.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    },
+    "content-creation": {
+      "overall": 83,
+      "notes": "Solid content generation capabilities at competitive pricing.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    },
+    "data-analysis": {
+      "overall": 89,
+      "notes": "Strong analytical capabilities with good reasoning. Excellent value for price.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "research-assistant": {
+      "overall": 87,
+      "notes": "Good research capabilities with reasoning optimization.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 78,
+      "notes": "Limited compliance certifications for Western markets. Data residency concerns.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "healthcare": {
+      "overall": 76,
+      "notes": "Not suitable for healthcare due to limited compliance certifications and data residency.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 86,
+      "notes": "Good analytical capabilities at competitive pricing.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Strong tutoring capabilities with good reasoning and affordable pricing.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "creative-writing": {
+      "overall": 82,
+      "notes": "Adequate creative capabilities at good value.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    }
+  },
+  "strengths": [
+    "Excellent coding performance (53.6% SWE-bench, 79.8% HumanEval)",
+    "Competitive pricing compared to Western alternatives",
+    "Good reasoning capabilities with efficient implementation",
+    "Open license allowing commercial use",
+    "Fast latency (1.9s p50) despite reasoning features",
+    "Strong mathematical capabilities"
+  ],
+  "limitations": [
+    "Limited data residency options (primarily Asia)",
+    "Fewer compliance certifications for Western markets",
+    "60-day data retention (not ephemeral)",
+    "Limited transparency on training data",
+    "Smaller context window (64K tokens)",
+    "Less mature ecosystem compared to Western providers"
+  ],
+  "best_for": [
+    "Cost-sensitive projects needing strong coding capabilities",
+    "Mathematical and analytical tasks on a budget",
+    "Educational applications in Asian markets",
+    "Organizations comfortable with Asian data residency",
+    "Developers seeking open-license alternatives"
+  ],
+  "not_recommended_for": [
+    "Healthcare or financial services in Western markets",
+    "Applications requiring HIPAA, FedRAMP, or strict Western compliance",
+    "Organizations requiring US/EU data residency",
+    "Use cases requiring ephemeral data processing",
+    "Large context window requirements (>64K tokens)",
+    "Highly regulated industries in Western markets"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$0.55 per 1M tokens",
+      "output": "$2.19 per 1M tokens",
+      "notes": "Highly competitive pricing, significantly lower than Western alternatives",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 64000,
+    "languages": [
+      "English",
+      "Chinese",
+      "Japanese",
+      "Korean",
+      "Spanish",
+      "French",
+      "German"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "api_endpoint": "https://api.deepseek.com/v1/chat/completions",
+    "open_source": true,
+    "architecture": "Transformer-based with efficient reasoning optimization",
+    "parameters": "Not disclosed"
+  },
+  "related_entities": [
+    "claude-sonnet-4-5",
+    "openai-o1",
+    "nemotron-ultra-253b"
+  ],
+  "tags": [
+    "coding",
+    "reasoning",
+    "open-source",
+    "cost-effective",
+    "mathematical",
+    "chinese-provider",
+    "value-pricing"
+  ]
+}

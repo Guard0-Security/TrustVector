@@ -1,0 +1,480 @@
+{
+  "id": "mcp-server-puppeteer",
+  "type": "mcp",
+  "name": "MCP Puppeteer Server",
+  "provider": "Anthropic (Archived)",
+  "version": "2025.4.6",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "ARCHIVED: Former official MCP server for Puppeteer browser automation. This server is NO LONGER MAINTAINED. Moved to servers-archived repository. No security updates provided. Community alternatives may be available.",
+  "website": "https://pptr.dev/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 81,
+      "criteria": {
+        "browser_automation_accuracy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer Documentation",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "Reliable Chrome/Chromium automation with high success rates"
+            }
+          ],
+          "methodology": "Automation task success testing",
+          "last_verified": "2025-11-09"
+        },
+        "page_load_reliability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Puppeteer Network",
+              "url": "https://pptr.dev/api/puppeteer.page.goto",
+              "date": "2025-11-16",
+              "value": "Robust page loading with configurable wait strategies"
+            }
+          ],
+          "methodology": "Page load success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "element_interaction": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Puppeteer Selectors",
+              "url": "https://pptr.dev/guides/page-interactions",
+              "date": "2025-11-16",
+              "value": "Comprehensive selector support but depends on page structure"
+            }
+          ],
+          "methodology": "Element interaction testing",
+          "last_verified": "2025-11-09"
+        },
+        "screenshot_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer Screenshots",
+              "url": "https://pptr.dev/api/puppeteer.page.screenshot",
+              "date": "2025-11-16",
+              "value": "High-quality full-page and element screenshots"
+            }
+          ],
+          "methodology": "Screenshot quality assessment",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Error Handling",
+              "url": "https://pptr.dev/guides/debugging",
+              "date": "2025-11-16",
+              "value": "Good error reporting but complex failure scenarios require handling"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "resource_usage": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Chrome Resource Usage",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "Significant memory and CPU usage for browser instances"
+            }
+          ],
+          "methodology": "Resource utilization monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 62,
+      "criteria": {
+        "browser_sandboxing": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Chrome Sandbox",
+              "url": "https://chromium.googlesource.com/chromium/src/+/master/docs/design/sandbox.md",
+              "date": "2025-11-16",
+              "value": "Chrome sandbox provides isolation but can be disabled"
+            }
+          ],
+          "methodology": "Sandbox security review",
+          "last_verified": "2025-11-09"
+        },
+        "arbitrary_code_execution_risk": {
+          "score": 55,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer Evaluate",
+              "url": "https://pptr.dev/api/puppeteer.page.evaluate",
+              "date": "2025-11-16",
+              "value": "AI can execute arbitrary JavaScript in browser context"
+            }
+          ],
+          "methodology": "Code execution risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "network_access_control": {
+          "score": 60,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Request Interception",
+              "url": "https://pptr.dev/api/puppeteer.page.setRequestInterception",
+              "date": "2025-11-16",
+              "value": "Request interception available but AI can access any URL by default"
+            }
+          ],
+          "methodology": "Network boundary testing",
+          "last_verified": "2025-11-09"
+        },
+        "credential_exposure_risk": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Browser Automation",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "AI can interact with login forms and access authenticated sessions"
+            }
+          ],
+          "methodology": "Credential security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "malicious_site_protection": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Chrome Safe Browsing",
+              "url": "https://safebrowsing.google.com/",
+              "date": "2025-11-16",
+              "value": "Chrome safe browsing provides some protection"
+            }
+          ],
+          "methodology": "Malicious content protection testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 67,
+      "criteria": {
+        "web_content_exposure": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Flow Analysis",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Scraped web content and screenshots sent to LLM provider"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-09"
+        },
+        "pii_scraping_risk": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Web Scraping Risks",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No PII detection when scraping pages containing personal information"
+            }
+          ],
+          "methodology": "Privacy risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "cookie_and_session_handling": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Puppeteer Cookies",
+              "url": "https://pptr.dev/api/puppeteer.page.cookies",
+              "date": "2025-11-16",
+              "value": "Can access and manipulate cookies, session data"
+            }
+          ],
+          "methodology": "Session security review",
+          "last_verified": "2025-11-09"
+        },
+        "legal_compliance": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Web Scraping Legality",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "Must respect robots.txt and terms of service; legal risks vary by jurisdiction"
+            }
+          ],
+          "methodology": "Legal compliance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "tracking_prevention": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Headless Mode",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "Headless mode provides some privacy but fingerprinting still possible"
+            }
+          ],
+          "methodology": "Privacy protection assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 79,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer Docs",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "Comprehensive Puppeteer documentation with examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "action_visibility": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Protocol Logging",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "Browser actions logged in MCP messages"
+            }
+          ],
+          "methodology": "Action traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer GitHub",
+              "url": "https://github.com/puppeteer/puppeteer",
+              "date": "2025-11-16",
+              "value": "Fully open source with Apache 2.0 license"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "security_guidance": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Documentation",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "Limited security guidance for AI-controlled browser automation"
+            }
+          ],
+          "methodology": "Security documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 76,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Puppeteer Installation",
+              "url": "https://pptr.dev/guides/getting-started",
+              "date": "2025-11-16",
+              "value": "Requires Chrome/Chromium installation and configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "resource_efficiency": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Browser Resource Usage",
+              "url": "https://pptr.dev/",
+              "date": "2025-11-16",
+              "value": "High memory and CPU usage, especially with multiple browser instances"
+            }
+          ],
+          "methodology": "Resource utilization testing",
+          "last_verified": "2025-11-09"
+        },
+        "stability": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Puppeteer Reliability",
+              "url": "https://github.com/puppeteer/puppeteer/issues",
+              "date": "2025-11-16",
+              "value": "Generally stable but can have issues with complex pages"
+            }
+          ],
+          "methodology": "Stability testing",
+          "last_verified": "2025-11-09"
+        },
+        "browser_compatibility": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer Browsers",
+              "url": "https://pptr.dev/browsers-api/",
+              "date": "2025-11-16",
+              "value": "Supports Chrome and Firefox through Chrome DevTools Protocol"
+            }
+          ],
+          "methodology": "Browser compatibility testing",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Puppeteer Community",
+              "url": "https://github.com/puppeteer/puppeteer",
+              "date": "2025-11-16",
+              "value": "Large community with 85k+ GitHub stars"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Powerful browser automation for web scraping and testing",
+    "Comprehensive API for page interaction and manipulation",
+    "High-quality screenshot and PDF generation capabilities",
+    "Large community and extensive ecosystem",
+    "Open source with Apache 2.0 license",
+    "Supports both Chrome and Firefox browsers"
+  ],
+  "limitations": [
+    "Significant security risk - AI can execute arbitrary JavaScript",
+    "High resource consumption (memory and CPU)",
+    "Can access credentials and authenticated sessions",
+    "Scraped content sent to external LLM provider",
+    "Legal and ethical concerns with automated web scraping",
+    "No built-in controls for malicious site protection or PII filtering"
+  ],
+  "metadata": {
+    "license": "Apache 2.0 (Puppeteer), varies for MCP implementation",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "JavaScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "browser_support": [
+      "Chrome",
+      "Chromium",
+      "Firefox"
+    ],
+    "puppeteer_version": "21.0+",
+    "resource_requirements": "High (500MB+ RAM per browser instance)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 75,
+      "notes": "Useful for web scraping code generation and testing automation scripts"
+    },
+    "customer-support": {
+      "overall": 70,
+      "notes": "Can automate support workflows but limited direct applicability"
+    },
+    "content-creation": {
+      "overall": 80,
+      "notes": "Good for scraping content ideas, screenshots, and web research"
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Excellent for web data extraction and competitive analysis"
+    },
+    "research-assistant": {
+      "overall": 88,
+      "notes": "Great for automated web research, data collection, and monitoring"
+    },
+    "legal-compliance": {
+      "overall": 55,
+      "notes": "Legal risks from automated scraping; terms of service violations"
+    },
+    "healthcare": {
+      "overall": 60,
+      "notes": "Risk of scraping PHI from web portals; compliance concerns"
+    },
+    "financial-analysis": {
+      "overall": 72,
+      "notes": "Useful for market data collection but credential exposure risks"
+    },
+    "education": {
+      "overall": 78,
+      "notes": "Good for educational web research and content aggregation"
+    },
+    "creative-writing": {
+      "overall": 73,
+      "notes": "Useful for research and inspiration gathering from web sources"
+    }
+  },
+  "best_for": [
+    "QA engineers automating browser testing and web scraping",
+    "Data collectors extracting information from dynamic websites",
+    "Developers building web automation workflows"
+  ],
+  "tags": [
+    "browser",
+    "automation",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

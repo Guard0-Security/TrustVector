@@ -1,0 +1,652 @@
+{
+  "id": "openai-o1-mini",
+  "type": "model",
+  "name": "OpenAI o1-mini",
+  "provider": "OpenAI",
+  "version": "2024-12",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "OpenAI's efficient reasoning model with chain-of-thought capabilities at lower cost. Balanced performance for reasoning tasks with faster response times than o3.",
+  "website": "https://openai.com/o1",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 82,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HumanEval Benchmark",
+              "url": "https://openai.com/research/o1-mini-evaluation",
+              "date": "2024-12-15",
+              "value": "63.6% pass rate"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 81,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://openai.com/research/o1-mini-evaluation",
+              "date": "2024-12-15",
+              "value": "78% on mathematical reasoning"
+            }
+          ],
+          "methodology": "Mathematical reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 81,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU Benchmark",
+              "url": "https://openai.com/research/o1-mini-evaluation",
+              "date": "2024-12-15",
+              "value": "60% on multitask language understanding"
+            }
+          ],
+          "methodology": "Knowledge testing benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Internal Testing",
+              "url": "https://platform.openai.com/docs/models/o1-mini",
+              "date": "2024-12-15",
+              "value": "Good consistency with reasoning traces"
+            }
+          ],
+          "methodology": "Internal testing",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "1.8s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/o1-mini",
+              "date": "2024-12-15",
+              "value": "~1.8s typical response"
+            }
+          ],
+          "methodology": "Median latency",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "3.6s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/o1-mini",
+              "date": "2025-01-10",
+              "value": "p95 ~3.6s"
+            }
+          ],
+          "methodology": "95th percentile",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/models/o1-mini",
+              "date": "2024-12-15",
+              "value": "128K tokens"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Status",
+              "url": "https://status.openai.com/",
+              "date": "2025-02-01",
+              "value": "99.9% uptime"
+            }
+          ],
+          "methodology": "Historical uptime",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good reasoning performance with faster inference than o3. Balanced for cost-sensitive reasoning tasks."
+    },
+    "security": {
+      "overall_score": 85,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Testing",
+              "url": "https://openai.com/research/o1-safety",
+              "date": "2024-12-15",
+              "value": "Strong resistance"
+            }
+          ],
+          "methodology": "OWASP LLM01 testing",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Evaluations",
+              "url": "https://openai.com/research/o1-safety",
+              "date": "2024-12-15",
+              "value": "Robust safety mechanisms"
+            }
+          ],
+          "methodology": "Adversarial testing",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2024-12-15",
+              "value": "API data not used for training"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Benchmarks",
+              "url": "https://openai.com/research/o1-safety",
+              "date": "2024-12-15",
+              "value": "Comprehensive safety testing"
+            }
+          ],
+          "methodology": "Safety benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API Documentation",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2024-12-15",
+              "value": "Standard API security"
+            }
+          ],
+          "methodology": "API review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong security with reasoning-enhanced safety."
+    },
+    "privacy_compliance": {
+      "overall_score": 84,
+      "criteria": {
+        "data_residency": {
+          "value": "US (primary)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://openai.com/enterprise",
+              "date": "2024-12-15",
+              "value": "US infrastructure"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2024-12-15",
+              "value": "API data opt-out by default"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "30 days",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2024-12-15",
+              "value": "30-day retention"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/guides/safety",
+              "date": "2024-12-15",
+              "value": "Customer responsible"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Trust Portal",
+              "url": "https://trust.openai.com/",
+              "date": "2025-01-01",
+              "value": "SOC 2 Type II, GDPR"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/o1-mini",
+              "date": "2024-12-15",
+              "value": "30-day retention"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Standard OpenAI privacy with 30-day retention."
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "explainability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Chain-of-Thought",
+              "url": "https://openai.com/research/o1-technical",
+              "date": "2024-12-15",
+              "value": "Exposed reasoning traces"
+            }
+          ],
+          "methodology": "Reasoning transparency evaluation",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SimpleQA",
+              "url": "https://openai.com/research/o1-evaluation",
+              "date": "2024-12-15",
+              "value": "Good factual accuracy"
+            }
+          ],
+          "methodology": "Factual QA testing",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety",
+              "url": "https://openai.com/research/o1-safety",
+              "date": "2024-12-15",
+              "value": "Bias testing applied"
+            }
+          ],
+          "methodology": "Bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://platform.openai.com/docs/models/o1-mini",
+              "date": "2024-12-15",
+              "value": "Good uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/o1-mini",
+              "date": "2024-12-15",
+              "value": "Comprehensive documentation"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Statements",
+              "url": "https://openai.com/research",
+              "date": "2024-12-15",
+              "value": "General description"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Safety Systems",
+              "url": "https://openai.com/research/o1-safety",
+              "date": "2024-12-15",
+              "value": "Comprehensive guardrails"
+            }
+          ],
+          "methodology": "Safety system analysis",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent explainability via chain-of-thought. Good transparency."
+    },
+    "operational_excellence": {
+      "overall_score": 88,
+      "criteria": {
+        "api_design_quality": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2024-12-15",
+              "value": "RESTful API"
+            }
+          ],
+          "methodology": "API review",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI SDKs",
+              "url": "https://github.com/openai",
+              "date": "2024-12-15",
+              "value": "High-quality SDKs"
+            }
+          ],
+          "methodology": "SDK review",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Versioning",
+              "url": "https://platform.openai.com/docs/versioning",
+              "date": "2024-12-15",
+              "value": "Clear versioning"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Dashboard",
+              "url": "https://platform.openai.com/dashboard",
+              "date": "2024-12-15",
+              "value": "Usage dashboard"
+            }
+          ],
+          "methodology": "Tool review",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Support",
+              "url": "https://help.openai.com/",
+              "date": "2024-12-15",
+              "value": "Email support"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Ecosystem",
+              "url": "https://github.com/topics/openai",
+              "date": "2025-01-01",
+              "value": "Mature ecosystem"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2024-12-15",
+              "value": "Clear terms"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent operational maturity with OpenAI ecosystem."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 84,
+      "notes": "Good coding (63.6% HumanEval) with reasoning transparency.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "customer-support": {
+      "overall": 80,
+      "notes": "Reasoning overhead may be unnecessary for basic support.",
+      "alternatives": [
+        "gpt-4-1",
+        "claude-3-5-haiku"
+      ]
+    },
+    "content-creation": {
+      "overall": 82,
+      "notes": "Good quality but reasoning overhead for simple content.",
+      "alternatives": [
+        "gpt-4-1"
+      ]
+    },
+    "data-analysis": {
+      "overall": 86,
+      "notes": "Strong analytical capabilities with reasoning traces.",
+      "alternatives": [
+        "openai-o3",
+        "llama-4-behemoth"
+      ]
+    },
+    "research-assistant": {
+      "overall": 87,
+      "notes": "Excellent with reasoning transparency and good knowledge.",
+      "alternatives": [
+        "openai-o3",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 82,
+      "notes": "Good reasoning but 30-day retention may limit use.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "healthcare": {
+      "overall": 79,
+      "notes": "Not HIPAA eligible.",
+      "alternatives": [
+        "claude-sonnet-4-5"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 85,
+      "notes": "Good for financial modeling with reasoning traces.",
+      "alternatives": [
+        "openai-o3"
+      ]
+    },
+    "education": {
+      "overall": 89,
+      "notes": "Excellent for STEM with step-by-step reasoning.",
+      "alternatives": [
+        "openai-o3"
+      ]
+    },
+    "creative-writing": {
+      "overall": 78,
+      "notes": "Reasoning overhead unnecessary for creative tasks.",
+      "alternatives": [
+        "gpt-4-1"
+      ]
+    }
+  },
+  "strengths": [
+    "Good coding performance (63.6% HumanEval)",
+    "Chain-of-thought reasoning provides transparency",
+    "Strong mathematical capabilities (78% MATH)",
+    "Faster than o3 with lower cost",
+    "Good balance of reasoning and speed",
+    "Mature OpenAI ecosystem"
+  ],
+  "limitations": [
+    "Higher latency than non-reasoning models (~1.8s p50)",
+    "30-day data retention",
+    "Not HIPAA eligible",
+    "Reasoning overhead unnecessary for simple tasks",
+    "Lower performance than o3 on complex tasks",
+    "Premium pricing for reasoning capabilities"
+  ],
+  "best_for": [
+    "Reasoning tasks requiring transparency",
+    "STEM education with step-by-step explanations",
+    "Data analysis and financial modeling",
+    "Research requiring detailed reasoning",
+    "Cost-sensitive reasoning applications"
+  ],
+  "not_recommended_for": [
+    "Real-time applications requiring <1s latency",
+    "Simple tasks where reasoning is unnecessary",
+    "Healthcare (not HIPAA eligible)",
+    "Applications requiring zero data retention",
+    "High-volume basic workloads",
+    "Creative writing (reasoning overhead)"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$3.00 per 1M tokens",
+      "output": "$12.00 per 1M tokens",
+      "notes": "Mid-tier reasoning model pricing (pricing varies by tier and usage)",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "api_endpoint": "https://api.openai.com/v1/chat/completions",
+    "open_source": false,
+    "architecture": "Transformer with chain-of-thought",
+    "parameters": "Not disclosed"
+  },
+  "related_entities": [
+    "openai-o3",
+    "gpt-4-1",
+    "claude-sonnet-4-5"
+  ],
+  "tags": [
+    "reasoning",
+    "chain-of-thought",
+    "coding",
+    "education",
+    "balanced",
+    "cost-effective"
+  ]
+}

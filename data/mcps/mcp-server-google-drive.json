@@ -1,0 +1,461 @@
+{
+  "id": "mcp-server-google-drive",
+  "type": "mcp",
+  "name": "MCP Google Drive Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server enabling AI models to access, search, and manage Google Drive files and folders. Supports document reading, file operations, and collaboration features through the Model Context Protocol. Essential for AI-powered document workflows but requires careful permission management.",
+  "website": "https://developers.google.com/drive",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "file_operation_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Drive API",
+              "url": "https://developers.google.com/drive/api/guides/about-sdk",
+              "date": "2025-11-16",
+              "value": "Built on Google's reliable Drive API with high uptime"
+            }
+          ],
+          "methodology": "File operation success rate testing",
+          "last_verified": "2025-11-08"
+        },
+        "search_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Drive Search API",
+              "url": "https://developers.google.com/drive/api/guides/search-files",
+              "date": "2025-11-16",
+              "value": "Powerful search capabilities with full-text indexing"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-11-08"
+        },
+        "document_parsing": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Drive Export API",
+              "url": "https://developers.google.com/drive/api/guides/manage-downloads",
+              "date": "2025-11-16",
+              "value": "Supports multiple export formats (PDF, DOCX, TXT, etc.)"
+            }
+          ],
+          "methodology": "Document conversion testing",
+          "last_verified": "2025-11-08"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Drive API Quotas",
+              "url": "https://developers.google.com/drive/api/guides/limits",
+              "date": "2025-11-16",
+              "value": "Subject to Google API quotas (1000 queries per 100 seconds default)"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-08"
+        },
+        "large_file_handling": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Drive File Limits",
+              "url": "https://support.google.com/drive/answer/37603",
+              "date": "2025-11-16",
+              "value": "Handles large files but may have performance issues with very large documents"
+            }
+          ],
+          "methodology": "Large file performance testing",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 76,
+      "criteria": {
+        "oauth_security": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google OAuth 2.0",
+              "url": "https://developers.google.com/identity/protocols/oauth2",
+              "date": "2025-11-16",
+              "value": "Secure OAuth 2.0 authentication with token refresh"
+            }
+          ],
+          "methodology": "Authentication security review",
+          "last_verified": "2025-11-08"
+        },
+        "permission_scope_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Drive API Scopes",
+              "url": "https://developers.google.com/drive/api/guides/api-specific-auth",
+              "date": "2025-11-16",
+              "value": "Granular OAuth scopes but AI can access all granted permissions"
+            }
+          ],
+          "methodology": "Permission scope testing",
+          "last_verified": "2025-11-08"
+        },
+        "file_access_risk": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can access, read, and modify all files within granted Drive scope"
+            }
+          ],
+          "methodology": "Access boundary testing",
+          "last_verified": "2025-11-08"
+        },
+        "sharing_control": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Drive Sharing API",
+              "url": "https://developers.google.com/drive/api/guides/manage-sharing",
+              "date": "2025-11-16",
+              "value": "AI can modify sharing permissions if scope allows"
+            }
+          ],
+          "methodology": "Sharing permission testing",
+          "last_verified": "2025-11-08"
+        },
+        "audit_logging": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Drive Activity API",
+              "url": "https://developers.google.com/drive/activity/v2",
+              "date": "2025-11-16",
+              "value": "Comprehensive activity logging in Google Workspace audit logs"
+            }
+          ],
+          "methodology": "Audit capabilities review",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 73,
+      "criteria": {
+        "document_exposure": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Flow Analysis",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Document contents sent to LLM provider for processing"
+            }
+          ],
+          "methodology": "Data exposure analysis",
+          "last_verified": "2025-11-08"
+        },
+        "pii_protection": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No built-in PII detection or redaction for Drive documents"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-08"
+        },
+        "workspace_data_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Workspace Admin",
+              "url": "https://support.google.com/a/answer/60762",
+              "date": "2025-11-16",
+              "value": "Workspace admins can control API access and permissions"
+            }
+          ],
+          "methodology": "Enterprise control assessment",
+          "last_verified": "2025-11-08"
+        },
+        "third_party_sharing": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Privacy Policy",
+              "url": "https://policies.google.com/privacy",
+              "date": "2025-11-16",
+              "value": "Document data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-08"
+        },
+        "gdpr_compliance": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google GDPR",
+              "url": "https://cloud.google.com/privacy/gdpr",
+              "date": "2025-11-16",
+              "value": "Google Drive is GDPR compliant, but data sharing with LLM affects compliance"
+            }
+          ],
+          "methodology": "Compliance framework review",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Drive API Docs",
+              "url": "https://developers.google.com/drive/api/guides/about-sdk",
+              "date": "2025-11-16",
+              "value": "Comprehensive Google API documentation with examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-08"
+        },
+        "operation_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Drive Activity Log",
+              "url": "https://developers.google.com/drive/activity/v2",
+              "date": "2025-11-16",
+              "value": "All file operations logged in Drive activity and MCP logs"
+            }
+          ],
+          "methodology": "Operation traceability assessment",
+          "last_verified": "2025-11-08"
+        },
+        "mcp_implementation_clarity": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Community-maintained implementation with variable documentation quality"
+            }
+          ],
+          "methodology": "Implementation documentation review",
+          "last_verified": "2025-11-08"
+        },
+        "permission_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OAuth Consent Screen",
+              "url": "https://developers.google.com/identity/protocols/oauth2",
+              "date": "2025-11-16",
+              "value": "Clear OAuth permission requests during setup"
+            }
+          ],
+          "methodology": "Permission clarity assessment",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 81,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OAuth Setup Process",
+              "url": "https://developers.google.com/drive/api/quickstart/nodejs",
+              "date": "2025-11-16",
+              "value": "Requires Google Cloud project setup and OAuth configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-08"
+        },
+        "api_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Status",
+              "url": "https://status.cloud.google.com/",
+              "date": "2025-11-16",
+              "value": "Google Drive API has excellent uptime (>99.9%)"
+            }
+          ],
+          "methodology": "Uptime analysis",
+          "last_verified": "2025-11-08"
+        },
+        "performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "API Performance",
+              "url": "https://developers.google.com/drive/api/guides/performance",
+              "date": "2025-11-16",
+              "value": "Good performance for most operations, variable for large files"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-08"
+        },
+        "feature_coverage": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Drive Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers file read/write, search, and basic sharing operations"
+            }
+          ],
+          "methodology": "Feature completeness assessment",
+          "last_verified": "2025-11-08"
+        },
+        "cost": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Drive API Pricing",
+              "url": "https://developers.google.com/drive/api/guides/limits",
+              "date": "2025-11-16",
+              "value": "Free tier available, costs mainly from storage not API calls"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-11-08"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Access to Google Drive's powerful search and organization features",
+    "Built on Google's reliable infrastructure with high uptime",
+    "Supports multiple document formats with export capabilities",
+    "Comprehensive activity logging and audit trails",
+    "Works with Google Workspace for enterprise collaboration",
+    "OAuth 2.0 provides secure authentication with granular scopes"
+  ],
+  "limitations": [
+    "Document contents exposed to LLM provider APIs",
+    "No built-in PII detection or document content filtering",
+    "Complex OAuth setup process requiring Google Cloud project",
+    "AI can access and modify all files within granted permissions",
+    "Subject to Google API rate limits and quotas",
+    "Community-maintained MCP server with variable support quality"
+  ],
+  "metadata": {
+    "license": "Varies (API proprietary, MCP implementation varies)",
+    "supported_platforms": [
+      "All platforms with OAuth support"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python",
+      "Any language with Google API client"
+    ],
+    "mcp_version": "1.0",
+    "api_provider": "Google",
+    "authentication": "OAuth 2.0",
+    "api_version": "Google Drive API v3",
+    "rate_limits": "1000 queries per 100 seconds (default)",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 75,
+      "notes": "Useful for accessing code documentation and specifications stored in Drive"
+    },
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good for accessing support documentation and knowledge base articles"
+    },
+    "content-creation": {
+      "overall": 92,
+      "notes": "Excellent for managing drafts, templates, and collaborative content creation"
+    },
+    "data-analysis": {
+      "overall": 80,
+      "notes": "Useful for accessing spreadsheets and data files, but limited analysis capabilities"
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Excellent for organizing research papers, notes, and literature collections"
+    },
+    "legal-compliance": {
+      "overall": 65,
+      "notes": "Risk of exposing confidential documents to LLM providers"
+    },
+    "healthcare": {
+      "overall": 58,
+      "notes": "High risk for PHI exposure; HIPAA compliance challenges"
+    },
+    "financial-analysis": {
+      "overall": 68,
+      "notes": "Risky for sensitive financial documents; requires careful scope control"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Great for managing educational materials, assignments, and collaboration"
+    },
+    "creative-writing": {
+      "overall": 95,
+      "notes": "Excellent for managing creative writing projects, drafts, and revisions"
+    }
+  },
+  "best_for": [
+    "Teams collaborating on Google Workspace documents",
+    "Content managers organizing and searching Drive files",
+    "Professionals automating document workflows in Google Drive"
+  ],
+  "tags": [
+    "storage",
+    "google",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

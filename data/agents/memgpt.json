@@ -1,0 +1,510 @@
+{
+  "id": "memgpt",
+  "type": "agent",
+  "name": "MemGPT",
+  "provider": "Research",
+  "version": "0.x",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Memory-enhanced LLM agent system enabling long-term context and conversation memory. Implements virtual context management inspired by operating systems to overcome LLM context window limitations for stateful agents.",
+  "website": "https://memgpt.ai/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 79,
+      "criteria": {
+        "memory_management": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MemGPT Documentation",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-20",
+              "value": "Hierarchical memory system with virtual context management"
+            }
+          ],
+          "methodology": "Memory system testing",
+          "last_verified": "2025-11-09"
+        },
+        "long_context_handling": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Research Paper",
+              "url": "https://arxiv.org/abs/2310.08560",
+              "date": "2023-10-13",
+              "value": "Enables unlimited context through memory pagination"
+            }
+          ],
+          "methodology": "Long context testing",
+          "last_verified": "2025-11-09"
+        },
+        "conversation_continuity": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Memory Features",
+              "url": "https://memgpt.readme.io/docs/memory",
+              "date": "2024-10-15",
+              "value": "Maintains conversation state across long interactions"
+            }
+          ],
+          "methodology": "Continuity testing",
+          "last_verified": "2025-11-09"
+        },
+        "llm_integration": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Model Support",
+              "url": "https://memgpt.readme.io/docs/models",
+              "date": "2024-10-01",
+              "value": "Supports OpenAI, Anthropic, local models via backends"
+            }
+          ],
+          "methodology": "LLM integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "self_editing_memory": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Editing",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Agent can edit its own memory structures"
+            }
+          ],
+          "methodology": "Self-editing capability testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "1-5s (memory overhead)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://memgpt.ai/",
+              "date": "2024-10-01",
+              "value": "Memory management adds overhead to LLM calls"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 75,
+      "criteria": {
+        "memory_isolation": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Per-agent memory isolation in storage backend"
+            }
+          ],
+          "methodology": "Isolation testing",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://memgpt.readme.io/docs/installation",
+              "date": "2024-10-01",
+              "value": "Full self-hosting with pip install or Docker"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_persistence": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Storage",
+              "url": "https://memgpt.readme.io/docs/storage",
+              "date": "2024-10-01",
+              "value": "Configurable storage backends (PostgreSQL, SQLite)"
+            }
+          ],
+          "methodology": "Data security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/cpacker/MemGPT",
+              "date": "2024-10-20",
+              "value": "Apache 2.0 license, 12k+ stars, research-backed"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "memory_security": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Features",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Memory security requires careful configuration"
+            }
+          ],
+          "methodology": "Memory security assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 78,
+      "criteria": {
+        "memory_privacy": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Storage",
+              "url": "https://memgpt.readme.io/docs/storage",
+              "date": "2024-10-01",
+              "value": "Memory stored in configured database backend"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 77,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://memgpt.ai/",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Installation",
+              "url": "https://memgpt.readme.io/docs/installation",
+              "date": "2024-10-01",
+              "value": "Complete local deployment with local LLMs supported"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://memgpt.readme.io/docs/models",
+              "date": "2024-10-01",
+              "value": "Memory context sent to configured LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "memory_deletion": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Management",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Memory can be deleted, archival system available"
+            }
+          ],
+          "methodology": "Data deletion assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-20",
+              "value": "Good documentation with research paper backing"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "research_backed": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Research Paper",
+              "url": "https://arxiv.org/abs/2310.08560",
+              "date": "2023-10-13",
+              "value": "Published research paper explaining memory system"
+            }
+          ],
+          "methodology": "Research foundation assessment",
+          "last_verified": "2025-11-09"
+        },
+        "memory_visibility": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Inspection",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Agent memory can be inspected and debugged"
+            }
+          ],
+          "methodology": "Transparency assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/cpacker/MemGPT",
+              "date": "2024-10-20",
+              "value": "Apache 2.0, 12k+ stars, active community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://discord.gg/memgpt",
+              "date": "2024-10-15",
+              "value": "Active Discord community and GitHub discussions"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 76,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Python Package",
+              "url": "https://memgpt.readme.io/docs/installation",
+              "date": "2024-10-01",
+              "value": "Pip install with CLI and Python API"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 74,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Architecture",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Scalability depends on database backend and infrastructure"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://github.com/cpacker/MemGPT",
+              "date": "2024-10-01",
+              "value": "Free Apache 2.0, costs for LLM API and storage"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring Features",
+              "url": "https://memgpt.readme.io/",
+              "date": "2024-10-01",
+              "value": "Basic logging, requires external monitoring tools"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Maturity",
+              "url": "https://github.com/cpacker/MemGPT",
+              "date": "2024-10-01",
+              "value": "Active development, production use requires careful setup"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "cli_interface": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "CLI",
+              "url": "https://memgpt.readme.io/docs/cli",
+              "date": "2024-10-01",
+              "value": "Feature-rich CLI for agent management"
+            }
+          ],
+          "methodology": "CLI capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Breakthrough memory system enabling unlimited conversation context",
+    "Research-backed approach (published paper) with novel virtual context",
+    "Open source (Apache 2.0) with active community (12k+ stars)",
+    "Self-hosting option for complete memory control",
+    "Supports multiple LLM providers and local models",
+    "Enables truly stateful, personalized agent interactions"
+  ],
+  "limitations": [
+    "Memory management adds latency overhead to interactions",
+    "Requires database backend setup for persistence",
+    "Complexity in managing and debugging agent memory",
+    "Active development, some features still experimental",
+    "Limited production tooling and monitoring features",
+    "Memory pagination can introduce unpredictability"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_models": [
+      "OpenAI",
+      "Anthropic",
+      "Azure OpenAI",
+      "Local LLMs via Ollama"
+    ],
+    "programming_languages": [
+      "Python"
+    ],
+    "deployment_type": "Self-hosted (pip, Docker) or MemGPT Cloud",
+    "tool_support": [
+      "Memory management",
+      "Tool use",
+      "Custom functions"
+    ],
+    "pricing_model": "Free open source (MemGPT Cloud available)",
+    "github_stars": "12000+",
+    "first_release": "2023",
+    "research_paper": "https://arxiv.org/abs/2310.08560",
+    "storage_backends": "PostgreSQL, SQLite, Chroma",
+    "rebranding": "Now called Letta (formerly MemGPT)",
+    "pricing": "Free (open source)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 88,
+      "notes": "Excellent for long-term customer relationships with memory"
+    },
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good for maintaining context across coding sessions"
+    },
+    "research-assistant": {
+      "overall": 90,
+      "notes": "Excellent for long-form research with extensive context"
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Good for maintaining analysis context over time"
+    },
+    "content-creation": {
+      "overall": 84,
+      "notes": "Good for maintaining style and context in long projects"
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for personalized tutoring with student history"
+    },
+    "healthcare": {
+      "overall": 86,
+      "notes": "Good for maintaining patient context and history"
+    },
+    "financial-analysis": {
+      "overall": 80,
+      "notes": "Useful for maintaining client context and history"
+    },
+    "legal-compliance": {
+      "overall": 87,
+      "notes": "Excellent for maintaining context across long documents"
+    },
+    "creative-writing": {
+      "overall": 85,
+      "notes": "Good for maintaining creative context across sessions"
+    }
+  },
+  "best_for": [
+    "Researchers exploring advanced agent memory systems",
+    "Developers needing unlimited conversation context",
+    "Teams building long-running autonomous agents",
+    "Organizations requiring sophisticated memory management"
+  ],
+  "tags": [
+    "memory",
+    "long-context",
+    "open-source"
+  ]
+}

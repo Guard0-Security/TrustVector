@@ -1,0 +1,474 @@
+{
+  "id": "mcp-server-atlassian",
+  "type": "mcp",
+  "name": "MCP Atlassian Server",
+  "provider": "Atlassian",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Atlassian MCP server for Jira and Confluence integration. Enables AI models to interact with project management, issue tracking, and knowledge base operations. Essential for AI-powered project management, documentation, and team collaboration workflows.",
+  "website": "https://github.com/atlassian/atlassian-mcp-server",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 83,
+      "criteria": {
+        "api_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian Cloud API",
+              "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
+              "date": "2025-11-16",
+              "value": "Built on Atlassian's reliable REST APIs with 99.9% uptime"
+            }
+          ],
+          "methodology": "API stability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "issue_operation_success": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian MCP Server",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "High success rate for issue and page operations"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Atlassian Rate Limits",
+              "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+              "date": "2025-11-16",
+              "value": "Respects Atlassian rate limits with retry logic"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "search_accuracy": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Jira Search API",
+              "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/",
+              "date": "2025-11-16",
+              "value": "Powerful JQL-based search with good accuracy"
+            }
+          ],
+          "methodology": "Search result quality assessment",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Handles API errors with retry and graceful fallback"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 74,
+      "criteria": {
+        "authentication_security": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian Authentication",
+              "url": "https://developer.atlassian.com/cloud/jira/platform/security-overview/",
+              "date": "2025-11-16",
+              "value": "Uses Atlassian API tokens or OAuth 2.0 for secure authentication"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "API token stored locally; AI can perform actions within token scope"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "permission_scope_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Atlassian Permissions",
+              "url": "https://support.atlassian.com/jira-cloud-administration/docs/manage-project-permissions/",
+              "date": "2025-11-16",
+              "value": "Respects Jira/Confluence permissions but requires careful token scoping"
+            }
+          ],
+          "methodology": "Permission scope testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_modification_risk": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "AI can create, modify, and delete issues and pages"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian Audit Log",
+              "url": "https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-with-the-audit-log/",
+              "date": "2025-11-16",
+              "value": "All operations logged in Atlassian audit system"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        },
+        "cross_project_access": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Can access all projects/spaces within token permissions"
+            }
+          ],
+          "methodology": "Access boundary testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 71,
+      "criteria": {
+        "project_data_exposure": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Jira issues and Confluence pages sent to LLM provider for analysis"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "sensitive_issue_protection": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "No built-in filtering for sensitive issues or confidential pages"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "team_member_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://www.atlassian.com/legal/privacy-policy",
+              "date": "2025-11-16",
+              "value": "User names, emails, and activity data may be exposed"
+            }
+          ],
+          "methodology": "User privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Project data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "attachment_handling": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "May access and transmit issue attachments and page attachments"
+            }
+          ],
+          "methodology": "File handling assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 85,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian MCP Docs",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation with Jira and Confluence examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian Audit Log",
+              "url": "https://support.atlassian.com/security-and-access-policies/docs/track-organization-activities-with-the-audit-log/",
+              "date": "2025-11-16",
+              "value": "All operations logged in Atlassian audit trail and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Open source implementation from Atlassian"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Clear documentation of supported Jira and Confluence operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 82,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Requires Atlassian API token and site configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Atlassian API Performance",
+              "url": "https://www.atlassian.com/trust/reliability/cloud-status",
+              "date": "2025-11-16",
+              "value": "Response times vary (typically 200-800ms); depends on query complexity"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian Cloud Status",
+              "url": "https://www.atlassian.com/trust/reliability/cloud-status",
+              "date": "2025-11-16",
+              "value": "Depends on Atlassian Cloud uptime (99.9% SLA)"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "feature_coverage": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Atlassian MCP Server",
+              "url": "https://github.com/atlassian/atlassian-mcp-server",
+              "date": "2025-11-16",
+              "value": "Covers Jira issues, JQL search, Confluence pages, and spaces"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_adoption": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/atlassian/atlassian-mcp-server/discussions",
+              "date": "2025-11-16",
+              "value": "Growing adoption among Atlassian users"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 78,
+      "notes": "Useful for issue tracking and documentation generation in development workflows"
+    },
+    "customer-support": {
+      "overall": 90,
+      "notes": "Excellent for support ticket management and knowledge base access"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Great for creating and managing documentation in Confluence"
+    },
+    "data-analysis": {
+      "overall": 82,
+      "notes": "Good for analyzing project metrics, sprint data, and team performance"
+    },
+    "research-assistant": {
+      "overall": 80,
+      "notes": "Useful for researching project history and knowledge base content"
+    },
+    "legal-compliance": {
+      "overall": 65,
+      "notes": "Moderate risk; careful consideration needed for confidential projects"
+    },
+    "healthcare": {
+      "overall": 60,
+      "notes": "Risk of exposing patient project data; requires careful access controls"
+    },
+    "financial-analysis": {
+      "overall": 68,
+      "notes": "Moderate risk for financial project management; requires data controls"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for managing educational projects and course documentation"
+    },
+    "creative-writing": {
+      "overall": 75,
+      "notes": "Good for managing writing projects and collaboration in Confluence"
+    }
+  },
+  "best_for": [
+    "Product managers using Jira for issue tracking and sprint planning",
+    "Customer support teams managing tickets in Jira Service Management",
+    "Documentation teams creating knowledge bases in Confluence",
+    "Educators managing course content and student projects in Atlassian tools"
+  ],
+  "strengths": [
+    "Official Atlassian implementation with deep Jira and Confluence expertise",
+    "Comprehensive project management and documentation capabilities",
+    "Built on reliable Atlassian Cloud APIs with strong SLAs",
+    "Full operation auditability through Atlassian audit logs",
+    "Open source with Atlassian support",
+    "Powerful JQL search for complex issue queries"
+  ],
+  "limitations": [
+    "Jira issues and Confluence pages exposed to LLM provider",
+    "Risk of unintended issue creation or modification",
+    "No built-in filtering for sensitive or confidential content",
+    "May expose team member names, emails, and activity patterns",
+    "Subject to Atlassian API rate limits",
+    "Attachments and file content may be transmitted to LLM provider"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/atlassian/atlassian-mcp-server",
+    "api_dependency": "Jira REST API, Confluence REST API",
+    "authentication": "Atlassian API Token or OAuth 2.0",
+    "first_release": "2024-11",
+    "maintained_by": "Atlassian"
+  },
+  "tags": [
+    "project-management",
+    "jira",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

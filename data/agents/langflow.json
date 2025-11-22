@@ -1,0 +1,498 @@
+{
+  "id": "langflow",
+  "type": "agent",
+  "name": "Langflow",
+  "provider": "Logspace",
+  "version": "1.5.1+",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Visual, drag-and-drop interface for building LangChain-based AI applications and agents. Low-code platform that makes it easy to prototype and deploy LLM workflows, RAG systems, and conversational agents.",
+  "website": "https://www.langflow.org/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 79,
+      "criteria": {
+        "visual_workflow_execution": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Langflow UI",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-20",
+              "value": "Drag-and-drop interface for building LangChain flows"
+            }
+          ],
+          "methodology": "Workflow execution testing",
+          "last_verified": "2025-11-09"
+        },
+        "langchain_compatibility": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangChain Integration",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-15",
+              "value": "Built on LangChain with access to all components"
+            }
+          ],
+          "methodology": "Compatibility testing",
+          "last_verified": "2025-11-09"
+        },
+        "rapid_prototyping": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Low-Code Development",
+              "url": "https://docs.langflow.org/getting-started",
+              "date": "2024-10-01",
+              "value": "Fast prototyping with pre-built templates and components"
+            }
+          ],
+          "methodology": "Development speed assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_support": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Model Support",
+              "url": "https://docs.langflow.org/components/models",
+              "date": "2024-10-01",
+              "value": "Supports OpenAI, Anthropic, Google, local models via LangChain"
+            }
+          ],
+          "methodology": "LLM integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_handling": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Flow Execution",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-09-20",
+              "value": "Basic error handling, visual debugging available"
+            }
+          ],
+          "methodology": "Error recovery testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Varies by flow (1-10s)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Performance",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-01",
+              "value": "Performance depends on LangChain components and LLM calls"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 71,
+      "criteria": {
+        "api_key_management": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Credentials",
+              "url": "https://docs.langflow.org/configuration",
+              "date": "2024-10-01",
+              "value": "Environment variable-based credential management"
+            }
+          ],
+          "methodology": "Security configuration review",
+          "last_verified": "2025-11-09"
+        },
+        "self_hosting": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://docs.langflow.org/deployment",
+              "date": "2024-10-01",
+              "value": "Self-hosting with Docker and cloud deployment options"
+            }
+          ],
+          "methodology": "Deployment security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_privacy": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted Option",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-01",
+              "value": "Data privacy depends on deployment and LLM choices"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-20",
+              "value": "MIT license, 30k+ stars, open source community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "authentication": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Features",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-01",
+              "value": "Basic auth available, enterprise features in DataStax version"
+            }
+          ],
+          "methodology": "Authentication assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 77,
+      "criteria": {
+        "data_retention": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Data Storage",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-01",
+              "value": "Flow definitions and logs stored in configured database"
+            }
+          ],
+          "methodology": "Privacy architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-Hosted",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-01",
+              "value": "GDPR compliance possible with self-hosted deployment"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment Options",
+              "url": "https://docs.langflow.org/deployment/local",
+              "date": "2024-10-01",
+              "value": "Full local deployment with pip or Docker"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        },
+        "llm_data_sharing": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Integration",
+              "url": "https://docs.langflow.org/components/models",
+              "date": "2024-10-01",
+              "value": "Data sent to LLM providers unless using local models"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "flow_export": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Export Features",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-01",
+              "value": "Export flows as JSON for version control and migration"
+            }
+          ],
+          "methodology": "Data portability assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 85,
+      "criteria": {
+        "documentation_quality": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Langflow Docs",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-20",
+              "value": "Good documentation with tutorials and component guides"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "visual_debugging": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "UI Features",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-01",
+              "value": "Visual flow debugging with step-by-step execution"
+            }
+          ],
+          "methodology": "Debugging tools assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-20",
+              "value": "MIT license, 30k+ stars, very active community"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 83,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community",
+              "url": "https://github.com/logspace-ai/langflow/discussions",
+              "date": "2024-10-20",
+              "value": "Active Discord and GitHub discussions"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 78,
+      "criteria": {
+        "ease_of_use": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "UI/UX",
+              "url": "https://www.langflow.org/",
+              "date": "2024-10-01",
+              "value": "Intuitive drag-and-drop interface for non-developers"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Deployment",
+              "url": "https://docs.langflow.org/deployment",
+              "date": "2024-10-01",
+              "value": "Can scale with containerization, limited production features"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source",
+              "url": "https://github.com/logspace-ai/langflow",
+              "date": "2024-10-01",
+              "value": "Free MIT license, costs only for infrastructure and LLMs"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Monitoring Features",
+              "url": "https://docs.langflow.org/",
+              "date": "2024-10-01",
+              "value": "Basic logging, limited production monitoring"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "production_readiness": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Deployment Guide",
+              "url": "https://docs.langflow.org/deployment",
+              "date": "2024-10-01",
+              "value": "Designed for prototyping, production use requires hardening"
+            }
+          ],
+          "methodology": "Production readiness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "template_library": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Templates",
+              "url": "https://docs.langflow.org/examples",
+              "date": "2024-10-01",
+              "value": "Pre-built templates for common use cases"
+            }
+          ],
+          "methodology": "Template availability assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Intuitive visual drag-and-drop interface for LLM workflows",
+    "Open source (MIT) with very active community (30k+ stars)",
+    "Built on LangChain ecosystem with access to all components",
+    "Excellent for rapid prototyping and experimentation",
+    "Low-code approach makes AI accessible to non-developers",
+    "Free to use with flexible deployment options"
+  ],
+  "limitations": [
+    "Limited production-grade features (auth, monitoring, scaling)",
+    "Performance overhead from visual abstraction layer",
+    "Primarily designed for prototyping, not enterprise deployment",
+    "Security features less mature than enterprise platforms",
+    "Limited control compared to code-based implementations",
+    "Debugging complex flows can be challenging despite visual interface"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Cohere",
+      "HuggingFace",
+      "Local LLMs"
+    ],
+    "programming_languages": [
+      "Python",
+      "TypeScript (UI)"
+    ],
+    "deployment_type": "Self-hosted (pip, Docker) or cloud",
+    "tool_support": [
+      "LangChain tools",
+      "Custom Python components"
+    ],
+    "pricing_model": "Free open source (DataStax offers managed enterprise version)",
+    "github_stars": "130000+",
+    "first_release": "2023",
+    "ui_framework": "React-based visual interface",
+    "langchain_version": "Compatible with LangChain ecosystem",
+    "version": "1.5.1+",
+    "pricing": "Free (open source), Cloud from $0/hour (usage-based)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 80,
+      "notes": "Good for prototyping support bots with visual design"
+    },
+    "code-generation": {
+      "overall": 72,
+      "notes": "Can build code agents but limited specialized features"
+    },
+    "research-assistant": {
+      "overall": 82,
+      "notes": "Good for RAG-based research workflows with visual design"
+    },
+    "data-analysis": {
+      "overall": 75,
+      "notes": "Can integrate analysis tools via LangChain components"
+    },
+    "content-creation": {
+      "overall": 78,
+      "notes": "Suitable for building content generation workflows"
+    },
+    "education": {
+      "overall": 83,
+      "notes": "Easy for educators to build tutoring systems visually"
+    },
+    "healthcare": {
+      "overall": 74,
+      "notes": "Prototyping viable, production needs security hardening"
+    },
+    "financial-analysis": {
+      "overall": 71,
+      "notes": "Self-hosted option possible but limited enterprise features"
+    },
+    "legal-compliance": {
+      "overall": 79,
+      "notes": "Good for building document analysis workflows"
+    },
+    "creative-writing": {
+      "overall": 76,
+      "notes": "Suitable for creative workflow prototyping"
+    }
+  },
+  "best_for": [
+    "Data scientists prototyping LangChain applications visually",
+    "Teams wanting drag-and-drop LLM workflow design",
+    "Developers building RAG systems without extensive coding",
+    "Organizations needing collaborative AI workflow development"
+  ],
+  "tags": [
+    "visual",
+    "low-code",
+    "open-source"
+  ]
+}

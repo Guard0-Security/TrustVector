@@ -1,0 +1,454 @@
+{
+  "id": "mcp-server-github",
+  "type": "mcp",
+  "name": "MCP GitHub Server",
+  "provider": "GitHub (formerly Anthropic)",
+  "version": "2025.4.6",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server providing AI models with comprehensive GitHub integration capabilities. Enables repository management, issue tracking, pull request operations, and code search. NOTE: The original Anthropic version has been deprecated. Development moved to GitHub's official server at github.com/github/github-mcp-server.",
+  "website": "https://modelcontextprotocol.io/docs/servers/github",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "api_reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub API Documentation",
+              "url": "https://docs.github.com/en/rest",
+              "date": "2025-11-16",
+              "value": "Built on GitHub's reliable REST API with 99.9% uptime SLA"
+            }
+          ],
+          "methodology": "API stability and uptime analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_success_rate": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP GitHub Server",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+              "date": "2025-11-16",
+              "value": "High success rate for repo operations, issues, and PR management"
+            }
+          ],
+          "methodology": "Operation success testing",
+          "last_verified": "2025-11-09"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Rate Limits",
+              "url": "https://docs.github.com/en/rest/rate-limit",
+              "date": "2025-11-16",
+              "value": "Respects GitHub rate limits (5000/hour authenticated, 60/hour unauthenticated)"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-09"
+        },
+        "search_accuracy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Search API",
+              "url": "https://docs.github.com/en/rest/search",
+              "date": "2025-11-16",
+              "value": "Powerful code and repository search capabilities"
+            }
+          ],
+          "methodology": "Search result quality assessment",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles API errors gracefully with retry logic"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 78,
+      "criteria": {
+        "authentication_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Personal Access Tokens",
+              "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens",
+              "date": "2025-11-16",
+              "value": "Uses GitHub PAT or OAuth for secure authentication"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Token stored locally but AI can perform any action within token scope"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "scope_limitation": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Token Scopes",
+              "url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps",
+              "date": "2025-11-16",
+              "value": "Supports granular permission scopes, but requires careful configuration"
+            }
+          ],
+          "methodology": "Permission scope testing",
+          "last_verified": "2025-11-09"
+        },
+        "action_auditability": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Audit Log",
+              "url": "https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization",
+              "date": "2025-11-16",
+              "value": "All actions logged in GitHub's audit system"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        },
+        "unauthorized_action_risk": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can create PRs, issues, and modify repos within token permissions"
+            }
+          ],
+          "methodology": "Authorization boundary testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 74,
+      "criteria": {
+        "code_exposure": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Repository code and metadata sent to LLM provider for analysis"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "sensitive_data_protection": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Security Guidelines",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "No built-in secret detection; risk of exposing API keys or credentials in code"
+            }
+          ],
+          "methodology": "Privacy controls assessment",
+          "last_verified": "2025-11-09"
+        },
+        "organization_data_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Permissions",
+              "url": "https://docs.github.com/en/organizations",
+              "date": "2025-11-16",
+              "value": "Access controlled by GitHub org permissions and token scopes"
+            }
+          ],
+          "methodology": "Access control review",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 75,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Repository data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 87,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP GitHub Docs",
+              "url": "https://modelcontextprotocol.io/docs/servers/github",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation with setup guides and API reference"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Protocol",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "All GitHub operations visible in MCP logs and GitHub audit trail"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fully open source implementation with MIT license"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://modelcontextprotocol.io/docs/servers/github",
+              "date": "2025-11-16",
+              "value": "Clear documentation of supported GitHub API operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 85,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Setup Guide",
+              "url": "https://modelcontextprotocol.io/quickstart",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring only GitHub PAT configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub API Performance",
+              "url": "https://www.githubstatus.com/",
+              "date": "2025-11-16",
+              "value": "Response times vary based on GitHub API load (typically 200-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Status",
+              "url": "https://www.githubstatus.com/",
+              "date": "2025-11-16",
+              "value": "Depends on GitHub API uptime (historically >99.9%)"
+            }
+          ],
+          "methodology": "Uptime analysis",
+          "last_verified": "2025-11-09"
+        },
+        "feature_coverage": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP GitHub Server",
+              "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+              "date": "2025-11-16",
+              "value": "Covers repos, issues, PRs, search, and file operations"
+            }
+          ],
+          "methodology": "Feature completeness assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_adoption": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Growing adoption as MCP protocol gains traction (launched late 2024)"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive GitHub API coverage (repos, issues, PRs, search)",
+    "Built on reliable GitHub infrastructure with high uptime",
+    "Excellent for development workflows and code collaboration",
+    "Full operation auditability through GitHub's audit logs",
+    "Open source implementation with active Anthropic support",
+    "Supports granular permission scopes via GitHub tokens"
+  ],
+  "limitations": [
+    "Repository code and metadata exposed to LLM provider APIs",
+    "Risk of unintended repository modifications or PR creation",
+    "No built-in secret detection or sensitive data filtering",
+    "Subject to GitHub API rate limits (5000 requests/hour)",
+    "Token scope misconfiguration can grant excessive permissions",
+    "Potential for accidental data leakage from private repositories"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/github/github-mcp-server",
+    "github_stars": 58700,
+    "deprecated_repo": "https://github.com/modelcontextprotocol/servers-archived",
+    "api_dependency": "GitHub REST API v3",
+    "authentication": "GitHub Personal Access Token or OAuth",
+    "first_release": "2024-11",
+    "maintained_by": "GitHub",
+    "status": "Migrated - Now maintained by GitHub",
+    "transport_types": [
+      "stdio"
+    ],
+    "installation_methods": [
+      "npm"
+    ]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 95,
+      "notes": "Excellent for AI-assisted development, PR creation, and code review workflows"
+    },
+    "customer-support": {
+      "overall": 72,
+      "notes": "Useful for creating support issues and tracking feature requests"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Good for managing documentation and content in GitHub repos"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Useful for analyzing repository metrics, commit history, and issue data"
+    },
+    "research-assistant": {
+      "overall": 85,
+      "notes": "Excellent for researching codebases, finding examples, and tracking issues"
+    },
+    "legal-compliance": {
+      "overall": 65,
+      "notes": "Limited applicability; potential risk of exposing private repositories"
+    },
+    "healthcare": {
+      "overall": 60,
+      "notes": "Low suitability due to risk of exposing sensitive code to LLM providers"
+    },
+    "financial-analysis": {
+      "overall": 68,
+      "notes": "Moderate risk; requires careful repository access controls"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Great for teaching programming, managing assignments, and code review"
+    },
+    "creative-writing": {
+      "overall": 75,
+      "notes": "Useful for managing writing projects in GitHub, but not the primary use case"
+    }
+  },
+  "best_for": [
+    "Developers integrating this service with AI applications",
+    "Teams looking to automate workflows with AI assistance",
+    "Organizations exploring Model Context Protocol implementations"
+  ],
+  "tags": [
+    "git",
+    "version-control",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

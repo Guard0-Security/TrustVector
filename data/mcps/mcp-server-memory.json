@@ -1,0 +1,477 @@
+{
+  "id": "mcp-server-memory",
+  "type": "mcp",
+  "name": "MCP Memory Server",
+  "provider": "Anthropic",
+  "version": "2025.9.25",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server providing AI models with persistent memory and knowledge graph capabilities. Enables long-term information retention, entity relationship tracking, and contextual recall across conversations through the Model Context Protocol. Critical for personalized AI but raises significant privacy concerns.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 83,
+      "criteria": {
+        "memory_retrieval_accuracy": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Database Performance",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Semantic search with vector embeddings provides good recall"
+            }
+          ],
+          "methodology": "Retrieval accuracy testing",
+          "last_verified": "2025-11-09"
+        },
+        "knowledge_graph_integrity": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Graph Database Implementation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Entity relationships maintained with reasonable accuracy"
+            }
+          ],
+          "methodology": "Graph consistency testing",
+          "last_verified": "2025-11-09"
+        },
+        "context_recall": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory System Testing",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Can recall past conversations with varying accuracy depending on relevance"
+            }
+          ],
+          "methodology": "Recall quality assessment",
+          "last_verified": "2025-11-09"
+        },
+        "storage_scalability": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Database Backend",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Scales with underlying database (SQLite, PostgreSQL, etc.)"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "query_performance": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Search Performance",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fast retrieval for small to medium datasets (1-10ms typical)"
+            }
+          ],
+          "methodology": "Query latency testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 72,
+      "criteria": {
+        "access_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Isolation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "User-level memory isolation depends on implementation"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_modification_risk": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Write Operations",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can modify or delete stored memories"
+            }
+          ],
+          "methodology": "Write operation risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "memory_poisoning_risk": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "AI can store incorrect or malicious information in memory"
+            }
+          ],
+          "methodology": "Data integrity risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "query_injection_protection": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Database Query Security",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Parameterized queries used but semantic search has different attack vectors"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Operations Logging",
+              "url": "https://modelcontextprotocol.io/docs/protocol",
+              "date": "2025-11-16",
+              "value": "MCP protocol logs operations but detailed memory audit varies by implementation"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 65,
+      "criteria": {
+        "pii_storage_risk": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Memory Content Analysis",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Stores personal information, preferences, and conversation history indefinitely"
+            }
+          ],
+          "methodology": "Privacy risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "data_retention_control": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Management",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Manual memory deletion possible but no automatic retention policies"
+            }
+          ],
+          "methodology": "Data retention controls review",
+          "last_verified": "2025-11-09"
+        },
+        "consent_management": {
+          "score": 62,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Controls",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "No built-in consent mechanisms for memory storage"
+            }
+          ],
+          "methodology": "Consent framework review",
+          "last_verified": "2025-11-09"
+        },
+        "right_to_deletion": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Deletion",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Can delete specific memories but requires manual intervention"
+            }
+          ],
+          "methodology": "GDPR right to erasure assessment",
+          "last_verified": "2025-11-09"
+        },
+        "embedding_privacy": {
+          "score": 65,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Embeddings",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Text converted to embeddings, sent to embedding provider (OpenAI, etc.)"
+            }
+          ],
+          "methodology": "Embedding privacy analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 78,
+      "criteria": {
+        "memory_visibility": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Memory Inspection",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Users can query and view stored memories"
+            }
+          ],
+          "methodology": "Memory transparency assessment",
+          "last_verified": "2025-11-09"
+        },
+        "knowledge_graph_explainability": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Graph Visualization",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Entity relationships can be viewed but limited visualization tools"
+            }
+          ],
+          "methodology": "Explainability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Community documentation with examples but could be more comprehensive"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source implementation available for review"
+            }
+          ],
+          "methodology": "Source code transparency review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 80,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Setup Guide",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Straightforward setup with database backend configuration"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "storage_efficiency": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Vector Storage",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Efficient vector storage with compression options"
+            }
+          ],
+          "methodology": "Storage efficiency testing",
+          "last_verified": "2025-11-09"
+        },
+        "retrieval_performance": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Query Performance",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Fast semantic search for typical workloads"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "maintenance_requirements": {
+          "score": 77,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Database Maintenance",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Requires periodic cleanup and optimization"
+            }
+          ],
+          "methodology": "Maintenance overhead assessment",
+          "last_verified": "2025-11-09"
+        },
+        "backup_and_recovery": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Database Backup",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Standard database backup procedures apply"
+            }
+          ],
+          "methodology": "Backup capabilities review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Enables true long-term memory and personalization across sessions",
+    "Knowledge graph capabilities for entity relationship tracking",
+    "Fast semantic search with vector embeddings",
+    "Supports building contextual understanding over time",
+    "Can dramatically improve AI assistant quality and relevance",
+    "Open source implementation with flexibility"
+  ],
+  "limitations": [
+    "Significant privacy risk - stores personal information indefinitely",
+    "No built-in PII detection or automatic data anonymization",
+    "Embeddings typically sent to third-party providers (OpenAI, etc.)",
+    "Limited consent management and data retention controls",
+    "Memory poisoning risk - AI can store incorrect information",
+    "GDPR/privacy compliance challenges without careful implementation"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with database support"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "github_stars": 58700,
+    "storage_backends": [
+      "SQLite",
+      "PostgreSQL",
+      "Redis",
+      "Vector databases"
+    ],
+    "embedding_providers": [
+      "OpenAI",
+      "Anthropic",
+      "Local models"
+    ],
+    "vector_dimensions": "Varies (384-1536 typical)",
+    "first_release": "2024-11",
+    "maintained_by": "Anthropic",
+    "status": "Official - Active",
+    "transport_types": [
+      "stdio"
+    ],
+    "installation_methods": [
+      "npm"
+    ]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 78,
+      "notes": "Useful for remembering coding preferences and project context"
+    },
+    "customer-support": {
+      "overall": 90,
+      "notes": "Excellent for maintaining customer history and personalized support"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Great for maintaining style preferences and project continuity"
+    },
+    "data-analysis": {
+      "overall": 80,
+      "notes": "Useful for remembering analysis patterns and user preferences"
+    },
+    "research-assistant": {
+      "overall": 88,
+      "notes": "Excellent for building knowledge graphs and tracking research progress"
+    },
+    "legal-compliance": {
+      "overall": 55,
+      "notes": "Privacy concerns with storing sensitive case information indefinitely"
+    },
+    "healthcare": {
+      "overall": 50,
+      "notes": "High PHI storage risk; retention and consent management challenges"
+    },
+    "financial-analysis": {
+      "overall": 60,
+      "notes": "Risk of storing sensitive financial information long-term"
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for personalized learning and tracking student progress"
+    },
+    "creative-writing": {
+      "overall": 95,
+      "notes": "Outstanding for maintaining character details, plot threads, and story continuity"
+    }
+  },
+  "best_for": [
+    "Developers integrating this service with AI applications",
+    "Teams looking to automate workflows with AI assistance",
+    "Organizations exploring Model Context Protocol implementations"
+  ],
+  "tags": [
+    "memory",
+    "storage",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

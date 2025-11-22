@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-sentry",
+  "type": "mcp",
+  "name": "MCP Sentry Server",
+  "provider": "Sentry",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Official Sentry MCP server for error tracking and monitoring integration. Enables AI models to query errors, analyze stack traces, manage issues, track releases, and access performance data. Essential for AI-powered debugging, incident response, and application monitoring workflows.",
+  "website": "https://github.com/getsentry/sentry-mcp-server",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 87,
+      "criteria": {
+        "error_query_reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry API",
+              "url": "https://docs.sentry.io/api/",
+              "date": "2025-11-16",
+              "value": "Highly reliable error and issue querying"
+            }
+          ],
+          "methodology": "Query success rate testing",
+          "last_verified": "2025-11-08"
+        },
+        "stack_trace_parsing_accuracy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Stack Traces",
+              "url": "https://docs.sentry.io/platforms/",
+              "date": "2025-11-16",
+              "value": "Accurate stack trace parsing and symbolication"
+            }
+          ],
+          "methodology": "Parsing accuracy testing",
+          "last_verified": "2025-11-08"
+        },
+        "real_time_monitoring": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Webhooks",
+              "url": "https://docs.sentry.io/product/integrations/integration-platform/webhooks/",
+              "date": "2025-11-16",
+              "value": "Real-time error notifications via webhooks"
+            }
+          ],
+          "methodology": "Real-time monitoring testing",
+          "last_verified": "2025-11-08"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sentry API Rate Limits",
+              "url": "https://docs.sentry.io/api/ratelimits/",
+              "date": "2025-11-16",
+              "value": "Subject to API rate limits with retry-after headers"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-11-08"
+        },
+        "error_recovery": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Handles API errors with retry logic"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 72,
+      "criteria": {
+        "authentication_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Authentication",
+              "url": "https://docs.sentry.io/api/auth/",
+              "date": "2025-11-16",
+              "value": "Uses auth tokens or integration tokens with scoped permissions"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-08"
+        },
+        "token_exposure_risk": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "Sentry auth token stored locally; AI can access error data"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-08"
+        },
+        "source_code_exposure_risk": {
+          "score": 60,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Stack traces may contain source code snippets and file paths"
+            }
+          ],
+          "methodology": "Code exposure assessment",
+          "last_verified": "2025-11-08"
+        },
+        "issue_modification_control": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sentry API",
+              "url": "https://docs.sentry.io/api/events/",
+              "date": "2025-11-16",
+              "value": "Can update issue status and assign issues within permissions"
+            }
+          ],
+          "methodology": "Modification control testing",
+          "last_verified": "2025-11-08"
+        },
+        "organization_access_control": {
+          "score": 78,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Permissions",
+              "url": "https://docs.sentry.io/product/accounts/membership/",
+              "date": "2025-11-16",
+              "value": "Respects Sentry organization and project permissions"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-08"
+        },
+        "audit_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Audit Log",
+              "url": "https://docs.sentry.io/product/accounts/audit-log/",
+              "date": "2025-11-16",
+              "value": "Comprehensive audit logging for all operations"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 66,
+      "criteria": {
+        "error_data_exposure": {
+          "score": 62,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Error messages, stack traces, and context data sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-08"
+        },
+        "user_data_in_errors": {
+          "score": 58,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Error context may include user IDs, emails, and session data"
+            }
+          ],
+          "methodology": "PII exposure assessment",
+          "last_verified": "2025-11-08"
+        },
+        "source_code_privacy": {
+          "score": 65,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Stack Traces",
+              "url": "https://docs.sentry.io/platforms/",
+              "date": "2025-11-16",
+              "value": "Stack traces contain file paths and code snippets"
+            }
+          ],
+          "methodology": "Code privacy assessment",
+          "last_verified": "2025-11-08"
+        },
+        "third_party_data_sharing": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Error and monitoring data shared with LLM provider"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-08"
+        },
+        "breadcrumb_data_privacy": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sentry Breadcrumbs",
+              "url": "https://docs.sentry.io/platforms/javascript/enriching-events/breadcrumbs/",
+              "date": "2025-11-16",
+              "value": "Breadcrumbs may contain sensitive user actions and data"
+            }
+          ],
+          "methodology": "Breadcrumb privacy assessment",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry MCP Docs",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Comprehensive documentation from official Sentry team"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-08"
+        },
+        "operation_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Audit Log",
+              "url": "https://docs.sentry.io/product/accounts/audit-log/",
+              "date": "2025-11-16",
+              "value": "All API operations logged in Sentry audit log and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-08"
+        },
+        "open_source_transparency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Open source implementation from Sentry"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-08"
+        },
+        "api_coverage_clarity": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Clear documentation of supported Sentry operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-08"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 85,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring Sentry auth token"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-08"
+        },
+        "api_performance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry API Performance",
+              "url": "https://docs.sentry.io/api/",
+              "date": "2025-11-16",
+              "value": "Fast API responses (typically 100-500ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-08"
+        },
+        "reliability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Infrastructure",
+              "url": "https://sentry.io/",
+              "date": "2025-11-16",
+              "value": "Built on highly reliable Sentry infrastructure with 99.9%+ uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-08"
+        },
+        "operation_coverage": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry MCP Server",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Covers errors, issues, releases, performance, and projects"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-08"
+        },
+        "official_support": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sentry Team",
+              "url": "https://github.com/getsentry/sentry-mcp-server",
+              "date": "2025-11-16",
+              "value": "Officially maintained by Sentry with active support"
+            }
+          ],
+          "methodology": "Maintainer support assessment",
+          "last_verified": "2025-11-08"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive error tracking and monitoring capabilities",
+    "Official Sentry implementation with active support",
+    "Accurate stack trace parsing and symbolication",
+    "Real-time error notifications via webhooks",
+    "Excellent for AI-powered debugging and incident response",
+    "Comprehensive audit logging for all operations"
+  ],
+  "limitations": [
+    "Error messages and stack traces exposed to LLM provider",
+    "Error context may include user IDs, emails, and session data",
+    "Stack traces contain source code snippets and file paths",
+    "Breadcrumbs may contain sensitive user actions",
+    "Subject to Sentry API rate limits",
+    "Requires careful data scrubbing configuration to avoid PII exposure"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/getsentry/sentry-mcp-server",
+    "api_dependency": "Sentry REST API",
+    "authentication": "Sentry Auth Token or Integration Token",
+    "first_release": "2024-11",
+    "maintained_by": "Sentry"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 85,
+      "notes": "Excellent for AI-assisted debugging and error resolution"
+    },
+    "customer-support": {
+      "overall": 80,
+      "notes": "Good for analyzing customer-reported errors and incidents"
+    },
+    "content-creation": {
+      "overall": 55,
+      "notes": "Limited applicability for content workflows"
+    },
+    "data-analysis": {
+      "overall": 92,
+      "notes": "Excellent for error analytics, trend analysis, and performance monitoring"
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Useful for researching error patterns and debugging strategies"
+    },
+    "legal-compliance": {
+      "overall": 58,
+      "notes": "Risk of exposing application internals and user data in errors"
+    },
+    "healthcare": {
+      "overall": 52,
+      "notes": "High risk of exposing PHI in error context and logs"
+    },
+    "financial-analysis": {
+      "overall": 60,
+      "notes": "Moderate risk of financial data in error messages"
+    },
+    "education": {
+      "overall": 82,
+      "notes": "Good for teaching debugging and error handling"
+    },
+    "creative-writing": {
+      "overall": 45,
+      "notes": "Low relevance to creative writing workflows"
+    }
+  },
+  "best_for": [
+    "Developers monitoring application errors and performance",
+    "DevOps teams managing error tracking and alerts",
+    "Site reliability engineers investigating incidents"
+  ],
+  "tags": [
+    "error-tracking",
+    "monitoring",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

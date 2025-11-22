@@ -1,0 +1,658 @@
+{
+  "id": "gemma-3-27b",
+  "type": "model",
+  "name": "Gemma 3 27B",
+  "provider": "Google",
+  "version": "2025-01",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Google's open-source Gemma 3 model with 27 billion parameters. Designed for developers seeking Google's research quality with open-source flexibility and commercial-friendly licensing.",
+  "website": "https://ai.google.dev/gemma",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 70,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "HumanEval Benchmark",
+              "url": "https://ai.google.dev/gemma/docs/model_card_3",
+              "date": "2025-01-10",
+              "value": "38% pass rate (estimated)"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 69,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://ai.google.dev/gemma/docs/model_card_3",
+              "date": "2025-01-10",
+              "value": "45% on mathematical reasoning tasks"
+            }
+          ],
+          "methodology": "Mathematical reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU Benchmark",
+              "url": "https://ai.google.dev/gemma/docs/model_card_3",
+              "date": "2025-01-10",
+              "value": "42.4% on multitask language understanding"
+            }
+          ],
+          "methodology": "Knowledge testing benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 71,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Internal Testing",
+              "url": "https://ai.google.dev/gemma/docs/",
+              "date": "2025-01-10",
+              "value": "Reasonable consistency for typical tasks"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "1.0s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/gemma-3-27b",
+              "date": "2025-01-20",
+              "value": "~1.0s on standard hardware"
+            }
+          ],
+          "methodology": "Median latency on recommended hardware",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "2.0s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/gemma-3-27b",
+              "date": "2025-01-20",
+              "value": "p95 latency ~2.0s"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "8,192 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Documentation",
+              "url": "https://ai.google.dev/gemma/docs/model_card_3",
+              "date": "2025-01-10",
+              "value": "8K token context window"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 95,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Self-hosted model",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Uptime depends on hosting infrastructure"
+            }
+          ],
+          "methodology": "User-controlled deployment",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Moderate performance suitable for basic tasks. Limited by smaller context window (8K tokens). Open-source flexibility."
+    },
+    "security": {
+      "overall_score": 78,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Safety Testing",
+              "url": "https://ai.google.dev/gemma/docs/responsible_ai",
+              "date": "2025-01-10",
+              "value": "Baseline resistance, additional safeguards recommended"
+            }
+          ],
+          "methodology": "Testing against prompt injection attacks",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 77,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Safety Evaluations",
+              "url": "https://ai.google.dev/gemma/docs/responsible_ai",
+              "date": "2025-01-10",
+              "value": "Built-in safety mechanisms"
+            }
+          ],
+          "methodology": "Testing against adversarial prompts",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Full control over data"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Safety Benchmarks",
+              "url": "https://ai.google.dev/gemma/docs/responsible_ai",
+              "date": "2025-01-10",
+              "value": "Safety training applied"
+            }
+          ],
+          "methodology": "Safety testing",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Deployment documentation",
+              "url": "https://ai.google.dev/gemma/docs/",
+              "date": "2025-01-10",
+              "value": "Security depends on deployment"
+            }
+          ],
+          "methodology": "Review of deployment practices",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Basic security with self-hosted deployment control. Additional safety layers recommended for production."
+    },
+    "privacy_compliance": {
+      "overall_score": 94,
+      "criteria": {
+        "data_residency": {
+          "value": "User-controlled",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-source model",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Full control over data location"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted model",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "No data sent to Google"
+            }
+          ],
+          "methodology": "Analysis of data flow",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "User-controlled",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Full control over retention"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Full PII control"
+            }
+          ],
+          "methodology": "Review of deployment architecture",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted model",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Compliance through deployment"
+            }
+          ],
+          "methodology": "Review of deployment options",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-hosted deployment",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Complete control"
+            }
+          ],
+          "methodology": "Analysis of deployment model",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent privacy with self-hosted deployment. Full control over all data aspects."
+    },
+    "trust_transparency": {
+      "overall_score": 85,
+      "criteria": {
+        "explainability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://ai.google.dev/gemma/docs/",
+              "date": "2025-01-10",
+              "value": "Reasonable explanations for typical tasks"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://huggingface.co/google/gemma-3-27b",
+              "date": "2025-01-15",
+              "value": "Moderate hallucination rate"
+            }
+          ],
+          "methodology": "Community evaluation",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Responsible AI",
+              "url": "https://ai.google.dev/gemma/docs/responsible_ai",
+              "date": "2025-01-10",
+              "value": "Bias testing applied"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://ai.google.dev/gemma/docs/",
+              "date": "2025-01-10",
+              "value": "Reasonable uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Model Card",
+              "url": "https://ai.google.dev/gemma/docs/model_card_3",
+              "date": "2025-01-10",
+              "value": "Comprehensive model card"
+            }
+          ],
+          "methodology": "Review of documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Technical Report",
+              "url": "https://ai.google.dev/gemma/docs/tech_report",
+              "date": "2025-01-10",
+              "value": "Good transparency on training"
+            }
+          ],
+          "methodology": "Review of technical documentation",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-source implementation",
+              "url": "https://github.com/google/gemma",
+              "date": "2025-01-10",
+              "value": "Transparent safety mechanisms"
+            }
+          ],
+          "methodology": "Review of safety systems",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good transparency as open-source model from Google. Comprehensive documentation."
+    },
+    "operational_excellence": {
+      "overall_score": 83,
+      "criteria": {
+        "api_design_quality": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Documentation",
+              "url": "https://ai.google.dev/gemma/docs/",
+              "date": "2025-01-10",
+              "value": "Standard inference API"
+            }
+          ],
+          "methodology": "Review of API design",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google GitHub",
+              "url": "https://github.com/google/gemma",
+              "date": "2025-01-10",
+              "value": "Official libraries"
+            }
+          ],
+          "methodology": "Review of SDKs",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Release Policy",
+              "url": "https://ai.google.dev/gemma",
+              "date": "2025-01-10",
+              "value": "Clear versioning"
+            }
+          ],
+          "methodology": "Review of versioning",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 76,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community tools",
+              "url": "https://github.com/google/gemma",
+              "date": "2025-01-10",
+              "value": "Depends on deployment"
+            }
+          ],
+          "methodology": "Review of monitoring tools",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Support",
+              "url": "https://github.com/google/gemma/discussions",
+              "date": "2025-01-10",
+              "value": "Active community"
+            }
+          ],
+          "methodology": "Assessment of support",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open-source ecosystem",
+              "url": "https://huggingface.co/google",
+              "date": "2025-01-10",
+              "value": "Growing ecosystem"
+            }
+          ],
+          "methodology": "Analysis of ecosystem",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gemma Terms",
+              "url": "https://ai.google.dev/gemma/terms",
+              "date": "2025-01-10",
+              "value": "Commercial-friendly license"
+            }
+          ],
+          "methodology": "Review of license",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good operational maturity with Google's backing. Easier deployment than larger models."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 68,
+      "notes": "Basic coding capabilities. Limited context window (8K) restricts complex projects.",
+      "alternatives": [
+        "llama-4-scout",
+        "gpt-4-1-mini"
+      ]
+    },
+    "customer-support": {
+      "overall": 76,
+      "notes": "Adequate for basic customer support with privacy benefits.",
+      "alternatives": [
+        "gpt-4-1-mini",
+        "claude-3-5-haiku"
+      ]
+    },
+    "content-creation": {
+      "overall": 74,
+      "notes": "Good for short-form content. Limited by 8K context window.",
+      "alternatives": [
+        "gpt-4-1",
+        "llama-4-scout"
+      ]
+    },
+    "data-analysis": {
+      "overall": 71,
+      "notes": "Basic data analysis only. Not suitable for complex tasks.",
+      "alternatives": [
+        "llama-4-behemoth",
+        "gpt-4-1"
+      ]
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Basic research tasks. 42.4% MMLU shows limited knowledge depth.",
+      "alternatives": [
+        "llama-4-behemoth",
+        "gpt-4-1"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 74,
+      "notes": "Basic legal tasks with data sovereignty. Limited accuracy for complex work.",
+      "alternatives": [
+        "llama-4-behemoth",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "healthcare": {
+      "overall": 76,
+      "notes": "Basic healthcare tasks with self-hosted HIPAA compliance.",
+      "alternatives": [
+        "llama-4-behemoth",
+        "claude-sonnet-4-5"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 70,
+      "notes": "Basic financial tasks only. Not suitable for complex modeling.",
+      "alternatives": [
+        "llama-4-behemoth",
+        "openai-o3"
+      ]
+    },
+    "education": {
+      "overall": 75,
+      "notes": "Good for basic educational content and tutoring.",
+      "alternatives": [
+        "llama-4-behemoth",
+        "gpt-4-1"
+      ]
+    },
+    "creative-writing": {
+      "overall": 73,
+      "notes": "Adequate for short creative writing. Context limit restricts long-form content.",
+      "alternatives": [
+        "gpt-4-1",
+        "llama-4-behemoth"
+      ]
+    }
+  },
+  "strengths": [
+    "Open-source with commercial-friendly Google license",
+    "Complete data sovereignty with self-hosted deployment",
+    "Lower resource requirements than larger models",
+    "No data sharing with Google",
+    "Google's research quality in open-source package",
+    "Cost-effective for basic tasks"
+  ],
+  "limitations": [
+    "Limited accuracy (42.4% MMLU) compared to larger models",
+    "Small context window (8K tokens)",
+    "Moderate coding capabilities",
+    "Requires infrastructure for deployment",
+    "Not suitable for complex or specialized tasks",
+    "Limited ecosystem compared to Llama"
+  ],
+  "best_for": [
+    "Developers prioritizing Google's open-source models",
+    "Basic applications requiring data sovereignty",
+    "Teams exploring open-source alternatives",
+    "Short-form content generation",
+    "Development and experimentation"
+  ],
+  "not_recommended_for": [
+    "Complex coding or software engineering",
+    "Long document processing (limited context)",
+    "Advanced reasoning or mathematical tasks",
+    "Production applications requiring highest accuracy",
+    "Large-scale enterprise deployments",
+    "Applications requiring extensive context"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "Self-hosted (infrastructure costs)",
+      "output": "Self-hosted (infrastructure costs)",
+      "notes": "Open-source model. Typically $0.20-0.60 per 1M tokens with optimized deployment."
+    },
+    "context_window": 8192,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese"
+    ],
+    "modalities": [
+      "text"
+    ],
+    "api_endpoint": "Self-hosted",
+    "open_source": true,
+    "architecture": "Transformer-based",
+    "parameters": "27B"
+  },
+  "related_entities": [
+    "llama-4-scout",
+    "llama-3-3-70b",
+    "gpt-4-1-mini",
+    "claude-haiku-4-5"
+  ],
+  "tags": [
+    "open-source",
+    "google",
+    "privacy",
+    "basic",
+    "commercial-friendly",
+    "lightweight"
+  ]
+}

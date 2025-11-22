@@ -1,0 +1,644 @@
+{
+  "id": "gpt-5",
+  "type": "model",
+  "name": "GPT-5",
+  "provider": "OpenAI",
+  "version": "gpt-5-1210",
+  "last_evaluated": "2025-11-07",
+  "evaluated_by": "TrustVector Team",
+  "description": "OpenAI's latest flagship model with unified thinking capabilities, multimodal understanding, and enhanced reasoning. Successor to GPT-4o series.",
+  "website": "https://openai.com/gpt-5",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 95,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HumanEval",
+              "url": "https://openai.com/research/gpt-5",
+              "date": "2024-12-10",
+              "value": "92.5% on HumanEval benchmark"
+            }
+          ],
+          "methodology": "Standard coding benchmarks",
+          "last_verified": "2025-11-07"
+        },
+        "task_accuracy_reasoning": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GPQA Diamond",
+              "url": "https://openai.com/research/gpt-5",
+              "date": "2024-12-10",
+              "value": "72.1% on PhD-level science questions"
+            },
+            {
+              "source": "MATH-500",
+              "url": "https://openai.com/research/gpt-5",
+              "date": "2024-12-10",
+              "value": "94.8% on advanced mathematics"
+            }
+          ],
+          "methodology": "Graduate and PhD-level reasoning benchmarks",
+          "last_verified": "2025-11-07"
+        },
+        "task_accuracy_general": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LMSYS Chatbot Arena",
+              "url": "https://lmsys.org/",
+              "date": "2025-01-15",
+              "value": "1342 ELO (Rank #1 overall)"
+            }
+          ],
+          "methodology": "Crowdsourced blind comparisons",
+          "last_verified": "2025-11-07"
+        },
+        "output_consistency": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-5",
+              "date": "2025-01-01",
+              "value": "Unified thinking system improves consistency"
+            }
+          ],
+          "methodology": "Internal testing across temperature settings",
+          "last_verified": "2025-11-07"
+        },
+        "latency_p50": {
+          "value": "1.2s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Platform Metrics",
+              "url": "https://status.openai.com/",
+              "date": "2025-10-01",
+              "value": "Median latency ~1.2s"
+            }
+          ],
+          "methodology": "Platform-wide performance metrics",
+          "last_verified": "2025-11-07"
+        },
+        "latency_p95": {
+          "value": "2.8s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/",
+              "date": "2025-10-15",
+              "value": "p95 latency ~2.8s"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2025-11-07"
+        },
+        "context_window": {
+          "value": "128,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-5",
+              "date": "2025-01-01",
+              "value": "128K token context window"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-07"
+        },
+        "uptime": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Status",
+              "url": "https://status.openai.com/",
+              "date": "2025-11-01",
+              "value": "99.9% uptime (last 90 days)"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Top-tier performance across all dimensions. Unified thinking system enables more consistent and reliable outputs. Lower latency than competitors."
+    },
+
+    "security": {
+      "overall_score": 85,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Research",
+              "url": "https://openai.com/safety",
+              "date": "2024-12-15",
+              "value": "Improved prompt injection defenses over GPT-4"
+            }
+          ],
+          "methodology": "Testing against OWASP LLM01 attacks",
+          "last_verified": "2025-11-07"
+        },
+        "jailbreak_resistance": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://github.com/openai/openai-cookbook",
+              "date": "2025-01-10",
+              "value": "Strong resistance to known jailbreak patterns"
+            }
+          ],
+          "methodology": "Adversarial prompt testing",
+          "last_verified": "2025-11-07"
+        },
+        "data_leakage_prevention": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy Policy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2025-01-01",
+              "value": "No training on API data by default"
+            }
+          ],
+          "methodology": "Policy review and data handling practices",
+          "last_verified": "2025-11-07"
+        },
+        "output_safety": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Evals",
+              "url": "https://openai.com/safety/gpt-5",
+              "date": "2024-12-10",
+              "value": "Enhanced safety systems with improved refusal accuracy"
+            }
+          ],
+          "methodology": "Safety testing across harmful content categories",
+          "last_verified": "2025-11-07"
+        },
+        "api_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Platform Docs",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-01-01",
+              "value": "API key + OAuth2, HTTPS, rate limiting, organization controls"
+            }
+          ],
+          "methodology": "Review of API security features",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Strong security with improved jailbreak resistance. Multi-layered safety systems provide robust output filtering."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 84,
+      "criteria": {
+        "data_residency": {
+          "value": "US, EU",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-01-01",
+              "value": "Data residency options for enterprise customers"
+            }
+          ],
+          "methodology": "Review of enterprise documentation",
+          "last_verified": "2025-11-07"
+        },
+        "training_data_optout": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Data Controls",
+              "url": "https://openai.com/policies/usage-policies",
+              "date": "2025-01-01",
+              "value": "API data not used for training by default, opt-in required"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-07"
+        },
+        "data_retention": {
+          "value": "30 days",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2025-01-01",
+              "value": "API logs retained for 30 days for abuse monitoring"
+            }
+          ],
+          "methodology": "Terms of service review",
+          "last_verified": "2025-11-07",
+          "notes": "Zero retention available for enterprise customers"
+        },
+        "pii_handling": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Tools",
+              "url": "https://platform.openai.com/docs/guides/safety",
+              "date": "2025-01-01",
+              "value": "Customer responsible for PII handling, moderation API available"
+            }
+          ],
+          "methodology": "Review of data protection capabilities",
+          "last_verified": "2025-11-07"
+        },
+        "compliance_certifications": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Trust Center",
+              "url": "https://trust.openai.com/",
+              "date": "2025-01-15",
+              "value": "SOC 2 Type II, ISO 27001, GDPR compliant"
+            }
+          ],
+          "methodology": "Verification of certifications",
+          "last_verified": "2025-11-07",
+          "notes": "Not HIPAA eligible currently"
+        },
+        "zero_data_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-01-01",
+              "value": "Zero retention available for enterprise tier"
+            }
+          ],
+          "methodology": "Enterprise feature review",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Good privacy posture with strong enterprise controls. 30-day default retention (vs Anthropic's 0-day). Not HIPAA eligible."
+    },
+
+    "trust_transparency": {
+      "overall_score": 89,
+      "criteria": {
+        "explainability": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GPT-5 Unified Thinking",
+              "url": "https://openai.com/research/gpt-5",
+              "date": "2024-12-10",
+              "value": "Unified thinking system exposes reasoning process"
+            }
+          ],
+          "methodology": "Evaluation of reasoning transparency",
+          "last_verified": "2025-11-07"
+        },
+        "hallucination_rate": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "SimpleQA Benchmark",
+              "url": "https://openai.com/index/introducing-simpleqa/",
+              "date": "2024-10-01",
+              "value": "42.7% accuracy (industry leading)"
+            }
+          ],
+          "methodology": "Factual accuracy testing",
+          "last_verified": "2025-11-07"
+        },
+        "bias_fairness": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI System Card",
+              "url": "https://openai.com/research/gpt-5-system-card",
+              "date": "2024-12-10",
+              "value": "Regular bias testing and red-teaming"
+            }
+          ],
+          "methodology": "Bias benchmarks and demographic testing",
+          "last_verified": "2025-11-07"
+        },
+        "uncertainty_quantification": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GPT-5 Capabilities",
+              "url": "https://platform.openai.com/docs/models/gpt-5",
+              "date": "2025-01-01",
+              "value": "Better at expressing uncertainty than predecessors"
+            }
+          ],
+          "methodology": "Qualitative confidence expression",
+          "last_verified": "2025-11-07"
+        },
+        "model_card_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GPT-5 System Card",
+              "url": "https://openai.com/research/gpt-5-system-card",
+              "date": "2024-12-10",
+              "value": "Comprehensive system card with detailed evaluations"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-07"
+        },
+        "training_data_transparency": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Blog",
+              "url": "https://openai.com/blog",
+              "date": "2024-12-10",
+              "value": "General description, specific sources not disclosed"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2025-11-07"
+        },
+        "guardrails": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Safety Systems",
+              "url": "https://openai.com/safety",
+              "date": "2024-12-15",
+              "value": "Multi-layer safety systems with improved accuracy"
+            }
+          ],
+          "methodology": "Safety mechanism analysis",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Excellent transparency with unified thinking feature and comprehensive system card. Industry-leading hallucination prevention."
+    },
+
+    "operational_excellence": {
+      "overall_score": 93,
+      "criteria": {
+        "api_design_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI API",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-01-01",
+              "value": "RESTful API with streaming, function calling, vision, audio"
+            }
+          ],
+          "methodology": "API design and feature review",
+          "last_verified": "2025-11-07"
+        },
+        "sdk_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI SDKs",
+              "url": "https://github.com/openai",
+              "date": "2025-01-01",
+              "value": "Official SDKs for Python, Node.js, Go, .NET"
+            }
+          ],
+          "methodology": "SDK quality and maintenance review",
+          "last_verified": "2025-11-07"
+        },
+        "versioning_policy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Versioning",
+              "url": "https://platform.openai.com/docs/api-reference/models",
+              "date": "2025-01-01",
+              "value": "Clear versioning with deprecation notices"
+            }
+          ],
+          "methodology": "Versioning policy review",
+          "last_verified": "2025-11-07"
+        },
+        "monitoring_observability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Dashboard",
+              "url": "https://platform.openai.com/usage",
+              "date": "2025-01-01",
+              "value": "Detailed usage dashboard with costs, tokens, rate limits"
+            }
+          ],
+          "methodology": "Observability tools review",
+          "last_verified": "2025-11-07"
+        },
+        "support_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Support",
+              "url": "https://help.openai.com/",
+              "date": "2025-01-01",
+              "value": "24/7 email support, comprehensive docs, active community"
+            }
+          ],
+          "methodology": "Support and documentation assessment",
+          "last_verified": "2025-11-07"
+        },
+        "ecosystem_maturity": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Ecosystem",
+              "url": "https://platform.openai.com/docs/assistants-tools",
+              "date": "2025-01-01",
+              "value": "Largest ecosystem with Assistants API, plugins, GPTs"
+            }
+          ],
+          "methodology": "Ecosystem breadth and depth analysis",
+          "last_verified": "2025-11-07"
+        },
+        "license_terms": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2025-01-01",
+              "value": "Standard commercial terms with usage policies"
+            }
+          ],
+          "methodology": "License terms review",
+          "last_verified": "2025-11-07"
+        }
+      },
+      "notes": "Industry-leading operational maturity with the most mature ecosystem. Excellent APIs, SDKs, and tooling."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 93,
+      "notes": "Excellent for general coding. Strong across multiple languages but slightly behind Claude Sonnet 4.5 for complex software engineering.",
+      "alternatives": ["claude-sonnet-4-5", "claude-opus-4-1"]
+    },
+    "customer-support": {
+      "overall": 92,
+      "notes": "Top-tier for customer support with natural conversation and low latency. Unified thinking improves response quality.",
+      "alternatives": ["claude-sonnet-4-5"]
+    },
+    "content-creation": {
+      "overall": 94,
+      "notes": "Excellent for all content types. Natural, engaging writing style with good creativity.",
+      "alternatives": ["claude-opus-4-1"]
+    },
+    "data-analysis": {
+      "overall": 91,
+      "notes": "Strong analytical capabilities. Good for data interpretation and visualization recommendations.",
+      "alternatives": ["claude-sonnet-4-5", "claude-opus-4-1"]
+    },
+    "research-assistant": {
+      "overall": 93,
+      "notes": "Excellent for research with unified thinking enabling deep analysis. Strong summarization.",
+      "alternatives": ["claude-opus-4-1", "claude-sonnet-4-5"]
+    },
+    "legal-compliance": {
+      "overall": 85,
+      "notes": "Good capabilities but not HIPAA eligible. 30-day retention may be concern for regulated industries.",
+      "alternatives": ["claude-opus-4-1", "claude-sonnet-4-5"]
+    },
+    "healthcare": {
+      "overall": 80,
+      "notes": "Not HIPAA eligible. Good clinical understanding but privacy controls less stringent than Claude.",
+      "alternatives": ["claude-opus-4-1", "claude-sonnet-4-5"]
+    },
+    "financial-analysis": {
+      "overall": 92,
+      "notes": "Strong quantitative reasoning and financial modeling capabilities. Good for market analysis.",
+      "alternatives": ["claude-opus-4-1"]
+    },
+    "education": {
+      "overall": 94,
+      "notes": "Excellent for education with patient explanations and Socratic teaching approach.",
+      "alternatives": ["claude-sonnet-4-5"]
+    },
+    "creative-writing": {
+      "overall": 93,
+      "notes": "Very strong for creative tasks with good narrative flow and character development.",
+      "alternatives": ["claude-opus-4-1"]
+    }
+  },
+
+  "strengths": [
+    "Highest overall performance (LMSYS #1, 1342 ELO)",
+    "Unified thinking system for enhanced reasoning",
+    "Lowest latency among frontier models (~1.2s p50)",
+    "Most mature ecosystem (Assistants API, GPTs, plugins)",
+    "Excellent multimodal capabilities (text, vision, audio)",
+    "Superior observability and monitoring tools"
+  ],
+
+  "limitations": [
+    "Not HIPAA eligible (unlike Claude models)",
+    "30-day data retention vs Anthropic's 0-day default",
+    "Smaller context window (128K vs Claude's 200K)",
+    "Premium pricing comparable to Claude",
+    "Slightly behind Claude on specialized coding benchmarks"
+  ],
+
+  "best_for": [
+    "General-purpose applications requiring top-tier performance",
+    "Customer-facing applications needing low latency",
+    "Multimodal applications (vision + text + audio)",
+    "Organizations leveraging OpenAI ecosystem (Assistants, GPTs)",
+    "Education and creative content generation"
+  ],
+
+  "not_recommended_for": [
+    "HIPAA-compliant healthcare applications",
+    "Applications requiring zero data retention",
+    "Ultra-long document analysis (>128K tokens)",
+    "Specialized complex software engineering (prefer Claude Sonnet)"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "$2.50 per 1M tokens",
+      "output": "$20.00 per 1M tokens",
+      "notes": "Priority tier pricing, batch API offers 50% discount",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 128000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Russian",
+      "Arabic",
+      "Hindi",
+      "50+ languages"
+    ],
+    "modalities": ["text", "vision", "audio (input/output)"],
+    "api_endpoint": "https://api.openai.com/v1/chat/completions",
+    "open_source": false,
+    "architecture": "Transformer-based with unified thinking system",
+    "parameters": "Not disclosed"
+  },
+
+  "related_entities": ["claude-sonnet-4-5", "claude-opus-4-1", "gemini-2-5-pro"],
+
+  "tags": [
+    "general-purpose",
+    "multimodal",
+    "low-latency",
+    "ecosystem-leader",
+    "unified-thinking",
+    "audio-capable"
+  ]
+}

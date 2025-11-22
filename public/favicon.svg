@@ -1,0 +1,54 @@
+<svg width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer shield shape -->
+  <path
+    d="M50 5 L85 20 L85 45 Q85 75 50 95 Q15 75 15 45 L15 20 Z"
+    fill="url(#primary-gradient)"
+    stroke="url(#accent-gradient)"
+    stroke-width="3"
+  />
+
+  <!-- Inner vector network -->
+  <!-- Center node -->
+  <circle cx="50" cy="50" r="6" fill="#0891b2" />
+
+  <!-- Top node -->
+  <circle cx="50" cy="25" r="4" fill="#fb923c" />
+  <line x1="50" y1="29" x2="50" y2="44" stroke="#0891b2" stroke-width="2.5" />
+
+  <!-- Bottom-left node -->
+  <circle cx="35" cy="65" r="4" fill="#fb923c" />
+  <line x1="38" y1="62" x2="46" y2="53" stroke="#0891b2" stroke-width="2.5" />
+
+  <!-- Bottom-right node -->
+  <circle cx="65" cy="65" r="4" fill="#fb923c" />
+  <line x1="62" y1="62" x2="54" y2="53" stroke="#0891b2" stroke-width="2.5" />
+
+  <!-- Left node -->
+  <circle cx="30" cy="45" r="3" fill="#0891b2" opacity="0.7" />
+  <line x1="33" y1="46" x2="44" y2="49" stroke="#0891b2" stroke-width="2" opacity="0.7" />
+
+  <!-- Right node -->
+  <circle cx="70" cy="45" r="3" fill="#0891b2" opacity="0.7" />
+  <line x1="67" y1="46" x2="56" y2="49" stroke="#0891b2" stroke-width="2" opacity="0.7" />
+
+  <!-- Directional arrow overlay -->
+  <path
+    d="M50 30 L50 55 M50 30 L45 35 M50 30 L55 35"
+    stroke="#fb923c"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.8"
+  />
+
+  <defs>
+    <linearGradient id="primary-gradient" x1="15" y1="5" x2="85" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="15" y1="5" x2="85" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+  </defs>
+</svg>

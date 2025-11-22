@@ -1,0 +1,502 @@
+{
+  "id": "google-dialogflow",
+  "type": "agent",
+  "name": "Google Dialogflow CX",
+  "provider": "Google Cloud",
+  "version": "CX",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Google's advanced conversational AI platform for building sophisticated virtual agents with visual flow design, state management, and enterprise features. Successor to Dialogflow ES with enhanced capabilities for complex conversations.",
+  "website": "https://cloud.google.com/dialogflow/cx/docs",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 89,
+      "criteria": {
+        "intent_recognition": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Dialogflow CX NLU",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/intent",
+              "date": "2024-10-20",
+              "value": "Advanced NLU powered by Google's language models"
+            }
+          ],
+          "methodology": "Intent classification benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "conversation_flow": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Flow Management",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/flow",
+              "date": "2024-10-15",
+              "value": "Advanced flow and page-based conversation design"
+            }
+          ],
+          "methodology": "Complex conversation testing",
+          "last_verified": "2025-11-09"
+        },
+        "entity_extraction": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Entity Types",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/entity",
+              "date": "2024-10-01",
+              "value": "System and custom entities with fuzzy matching"
+            }
+          ],
+          "methodology": "Entity extraction testing",
+          "last_verified": "2025-11-09"
+        },
+        "state_management": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Session Parameters",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/parameter",
+              "date": "2024-10-01",
+              "value": "Session and page parameters for state tracking"
+            }
+          ],
+          "methodology": "State persistence testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_language": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Language Support",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/reference/language",
+              "date": "2024-10-01",
+              "value": "50+ languages with automatic translation"
+            }
+          ],
+          "methodology": "Multi-language testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "200-400ms average",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GCP Performance",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/performance",
+              "date": "2024-10-01",
+              "value": "Low latency with global infrastructure"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 90,
+      "criteria": {
+        "data_encryption": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GCP Security",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/data-security",
+              "date": "2024-10-01",
+              "value": "Encryption at rest and in transit by default"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "IAM Integration",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/access-control",
+              "date": "2024-10-01",
+              "value": "Fine-grained IAM roles and permissions"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "vpc_integration": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "VPC Service Controls",
+              "url": "https://cloud.google.com/vpc-service-controls/docs",
+              "date": "2024-09-15",
+              "value": "VPC Service Controls for data perimeter"
+            }
+          ],
+          "methodology": "Network security assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloud Audit Logs",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/audit-logging",
+              "date": "2024-10-01",
+              "value": "Comprehensive audit logs for all API calls"
+            }
+          ],
+          "methodology": "Audit capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "compliance": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GCP Compliance",
+              "url": "https://cloud.google.com/security/compliance",
+              "date": "2024-10-01",
+              "value": "SOC 2, ISO 27001, HIPAA, PCI DSS compliant"
+            }
+          ],
+          "methodology": "Compliance documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 88,
+      "criteria": {
+        "data_retention": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Data Retention",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/data-retention",
+              "date": "2024-10-01",
+              "value": "Configurable retention policies, 30-day default"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google GDPR",
+              "url": "https://cloud.google.com/privacy/gdpr",
+              "date": "2024-09-01",
+              "value": "GDPR compliant with data processing terms"
+            }
+          ],
+          "methodology": "Compliance assessment",
+          "last_verified": "2025-11-09"
+        },
+        "hipaa_compliance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "HIPAA Compliance",
+              "url": "https://cloud.google.com/security/compliance/hipaa",
+              "date": "2024-10-01",
+              "value": "HIPAA compliant with BAA available"
+            }
+          ],
+          "methodology": "Healthcare compliance review",
+          "last_verified": "2025-11-09"
+        },
+        "pii_redaction": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Redaction Features",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/data-redaction",
+              "date": "2024-10-01",
+              "value": "Automatic PII redaction for sensitive data"
+            }
+          ],
+          "methodology": "PII protection testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_residency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Regional Endpoints",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/how/region",
+              "date": "2024-10-01",
+              "value": "Regional deployments for data residency compliance"
+            }
+          ],
+          "methodology": "Data residency assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 87,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Docs",
+              "url": "https://cloud.google.com/dialogflow/cx/docs",
+              "date": "2024-10-20",
+              "value": "Comprehensive documentation with best practices"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "visual_design_tools": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Flow Builder",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/flow",
+              "date": "2024-10-01",
+              "value": "Visual flow builder with graph-based design"
+            }
+          ],
+          "methodology": "Design tools assessment",
+          "last_verified": "2025-11-09"
+        },
+        "analytics": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Analytics Dashboard",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/analytics",
+              "date": "2024-10-01",
+              "value": "Built-in analytics for conversations and intents"
+            }
+          ],
+          "methodology": "Analytics capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "testing_simulator": {
+          "score": 84,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Test Cases",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/test-case",
+              "date": "2024-10-01",
+              "value": "Built-in simulator and test case management"
+            }
+          ],
+          "methodology": "Testing features assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 88,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Client Libraries",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/reference/libraries",
+              "date": "2024-10-01",
+              "value": "Client libraries for multiple languages, REST/gRPC APIs"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GCP Infrastructure",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/quotas",
+              "date": "2024-10-01",
+              "value": "Auto-scaling on Google's global infrastructure"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Pricing",
+              "url": "https://cloud.google.com/dialogflow/cx/pricing",
+              "date": "2024-10-01",
+              "value": "Session-based pricing, $0.007 per session (first 1000 free)"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Cloud Monitoring",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/monitoring",
+              "date": "2024-10-01",
+              "value": "Integration with Cloud Monitoring and Logging"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "versioning": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Version Control",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/version",
+              "date": "2024-10-01",
+              "value": "Built-in versioning and environment management"
+            }
+          ],
+          "methodology": "Version control assessment",
+          "last_verified": "2025-11-09"
+        },
+        "integrations": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Integrations",
+              "url": "https://cloud.google.com/dialogflow/cx/docs/concept/integration",
+              "date": "2024-10-01",
+              "value": "Pre-built integrations for Telephony, CCAI, Contact Center"
+            }
+          ],
+          "methodology": "Integration options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Visual flow builder for designing complex conversation paths",
+    "Advanced state management with pages and flows architecture",
+    "Excellent scalability on Google Cloud Platform infrastructure",
+    "Comprehensive analytics and testing tools built-in",
+    "50+ language support with automatic translation",
+    "Strong enterprise features (HIPAA, telephony, contact center integration)"
+  ],
+  "limitations": [
+    "Steep learning curve for complex flow design",
+    "Higher cost compared to Dialogflow ES or open-source alternatives",
+    "Google Cloud Platform lock-in and dependencies",
+    "Limited to conversational AI, not a general agent framework",
+    "Session-based pricing can be unpredictable for high-volume use",
+    "Requires GCP knowledge for optimal configuration and deployment"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_models": [
+      "Dialogflow CX NLU",
+      "Google Cloud Speech-to-Text",
+      "Text-to-Speech"
+    ],
+    "programming_languages": [
+      "Python",
+      "Node.js",
+      "Java",
+      "C#",
+      "Go",
+      "Ruby",
+      "PHP"
+    ],
+    "deployment_type": "Managed cloud service (GCP)",
+    "tool_support": [
+      "Webhooks",
+      "Cloud Functions",
+      "Vertex AI integration"
+    ],
+    "pricing_model": "$0.007 per session (first 1000 free monthly)",
+    "supported_languages": "50+ languages",
+    "max_agents": "Unlimited",
+    "enterprise_features": [
+      "VPC Service Controls",
+      "CMEK encryption",
+      "Audit logging"
+    ],
+    "telephony_support": true,
+    "pricing": "Dialogflow ES: $0.0025/text request (7.5M messages/month free); Dialogflow CX: $0.0050-0.0065/query or $20 per 100 sessions. Enterprise support from $10k/month. New customers get $600 credit (12 months)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 96,
+      "notes": "Exceptional for complex customer service with advanced flow control"
+    },
+    "code-generation": {
+      "overall": 65,
+      "notes": "Not designed for code generation tasks"
+    },
+    "research-assistant": {
+      "overall": 71,
+      "notes": "Conversational focus, limited research capabilities"
+    },
+    "data-analysis": {
+      "overall": 73,
+      "notes": "Can integrate with BigQuery but limited native analytics"
+    },
+    "content-creation": {
+      "overall": 68,
+      "notes": "Primarily for conversations, not content generation"
+    },
+    "education": {
+      "overall": 84,
+      "notes": "Good for educational chatbots with complex conversation flows"
+    },
+    "healthcare": {
+      "overall": 89,
+      "notes": "HIPAA compliant, excellent for patient triage and engagement"
+    },
+    "financial-analysis": {
+      "overall": 91,
+      "notes": "Strong compliance and security for financial institutions"
+    },
+    "legal-compliance": {
+      "overall": 75,
+      "notes": "Basic NLU, would need additional AI services"
+    },
+    "creative-writing": {
+      "overall": 63,
+      "notes": "Not optimized for creative tasks"
+    }
+  },
+  "best_for": [
+    "Enterprises building sophisticated chatbots and voice assistants",
+    "Google Cloud customers needing conversational AI",
+    "Teams requiring multi-language conversational interfaces",
+    "Contact centers implementing intelligent virtual agents"
+  ],
+  "tags": [
+    "google"
+  ]
+}

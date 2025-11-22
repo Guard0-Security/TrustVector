@@ -1,0 +1,673 @@
+{
+  "id": "gemini-2-0-flash",
+  "type": "model",
+  "name": "Gemini 2.0 Flash",
+  "provider": "Google",
+  "version": "20251101",
+  "last_evaluated": "2025-11-08",
+  "evaluated_by": "TrustVector Team",
+  "description": "Fast and efficient multimodal AI model from Google achieving 53.6% on SWE-bench and 62.1% on MMLU. Optimized for speed with strong vision capabilities and real-time applications.",
+  "website": "https://deepmind.google/technologies/gemini/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 89,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://deepmind.google/gemini/benchmarks",
+              "date": "2025-11-01",
+              "value": "53.6% resolution rate"
+            },
+            {
+              "source": "HumanEval",
+              "url": "https://deepmind.google/gemini/benchmarks",
+              "date": "2025-11-01",
+              "value": "76.4% accuracy on code generation"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_reasoning": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MATH Benchmark",
+              "url": "https://deepmind.google/gemini/benchmarks",
+              "date": "2025-11-01",
+              "value": "82.3% on mathematical reasoning"
+            },
+            {
+              "source": "GPQA",
+              "url": "https://deepmind.google/gemini/benchmarks",
+              "date": "2025-11-01",
+              "value": "54.2% on graduate-level questions"
+            }
+          ],
+          "methodology": "Graduate-level reasoning benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "task_accuracy_general": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMLU",
+              "url": "https://deepmind.google/gemini/benchmarks",
+              "date": "2025-11-01",
+              "value": "62.1% on comprehensive knowledge benchmark"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing",
+          "last_verified": "2025-11-08"
+        },
+        "output_consistency": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Documentation",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "Good consistency optimized for speed"
+            }
+          ],
+          "methodology": "Internal testing with repeated prompts",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p50": {
+          "value": "0.8s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Documentation",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "Typical response time ~0.8s (Flash optimized)"
+            }
+          ],
+          "methodology": "Median latency for API requests",
+          "last_verified": "2025-11-08"
+        },
+        "latency_p95": {
+          "value": "1.5s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/gemini-2-0-flash",
+              "date": "2025-11-01",
+              "value": "p95 latency ~1.5s"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2025-11-08"
+        },
+        "context_window": {
+          "value": "1,000,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Documentation",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "1M token context window"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-08"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Status",
+              "url": "https://status.cloud.google.com/",
+              "date": "2025-11-01",
+              "value": "99.95% uptime (last 90 days)"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Fast and efficient with excellent multimodal capabilities. 1M token context window is industry-leading. Optimized for speed with 0.8s p50 latency."
+    },
+    "security": {
+      "overall_score": 87,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Safety",
+              "url": "https://ai.google/responsibility/principles/",
+              "date": "2025-11-01",
+              "value": "Strong prompt injection resistance"
+            }
+          ],
+          "methodology": "Testing against OWASP LLM01",
+          "last_verified": "2025-11-08"
+        },
+        "jailbreak_resistance": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Safety Evaluations",
+              "url": "https://ai.google/responsibility/safety/",
+              "date": "2025-11-01",
+              "value": "Robust safety guardrails"
+            }
+          ],
+          "methodology": "Testing against adversarial prompts",
+          "last_verified": "2025-11-08"
+        },
+        "data_leakage_prevention": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Privacy Policy",
+              "url": "https://policies.google.com/privacy",
+              "date": "2025-11-01",
+              "value": "Standard data handling practices"
+            }
+          ],
+          "methodology": "Analysis of privacy policies",
+          "last_verified": "2025-11-08"
+        },
+        "output_safety": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Safety Evaluations",
+              "url": "https://ai.google/responsibility/safety/",
+              "date": "2025-11-01",
+              "value": "Comprehensive safety filtering"
+            }
+          ],
+          "methodology": "Safety testing across content categories",
+          "last_verified": "2025-11-08"
+        },
+        "api_security": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Security",
+              "url": "https://cloud.google.com/security",
+              "date": "2025-11-01",
+              "value": "Enterprise-grade API security"
+            }
+          ],
+          "methodology": "Review of API security features",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Strong security leveraging Google Cloud infrastructure. Comprehensive safety guardrails."
+    },
+    "privacy_compliance": {
+      "overall_score": 88,
+      "criteria": {
+        "data_residency": {
+          "value": "US, EU, Asia (Google Cloud regions)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Documentation",
+              "url": "https://cloud.google.com/terms/data-processing-addendum",
+              "date": "2025-11-01",
+              "value": "Global data residency options"
+            }
+          ],
+          "methodology": "Review of Google Cloud documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_optout": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Privacy",
+              "url": "https://ai.google.dev/gemini-api/docs/data-usage",
+              "date": "2025-11-01",
+              "value": "No training on API data by default"
+            }
+          ],
+          "methodology": "Analysis of privacy policy",
+          "last_verified": "2025-11-08"
+        },
+        "data_retention": {
+          "value": "0 days (ephemeral for API)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Data Usage",
+              "url": "https://ai.google.dev/gemini-api/docs/data-usage",
+              "date": "2025-11-01",
+              "value": "Ephemeral processing for API requests"
+            }
+          ],
+          "methodology": "Review of data retention policies",
+          "last_verified": "2025-11-08"
+        },
+        "pii_handling": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Cloud DLP",
+              "url": "https://cloud.google.com/dlp",
+              "date": "2025-11-01",
+              "value": "DLP integration available for PII handling"
+            }
+          ],
+          "methodology": "Review of data protection capabilities",
+          "last_verified": "2025-11-08"
+        },
+        "compliance_certifications": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Compliance",
+              "url": "https://cloud.google.com/security/compliance",
+              "date": "2025-11-01",
+              "value": "SOC 2, ISO 27001, GDPR, HIPAA eligible"
+            }
+          ],
+          "methodology": "Verification of certifications",
+          "last_verified": "2025-11-08"
+        },
+        "zero_data_retention": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Data Usage",
+              "url": "https://ai.google.dev/gemini-api/docs/data-usage",
+              "date": "2025-11-01",
+              "value": "Ephemeral API processing"
+            }
+          ],
+          "methodology": "Review of data handling",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent privacy leveraging Google Cloud infrastructure. HIPAA eligible with comprehensive certifications."
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "explainability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Documentation",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "Standard explanation capabilities"
+            }
+          ],
+          "methodology": "Evaluation of explanation features",
+          "last_verified": "2025-11-08"
+        },
+        "hallucination_rate": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Testing",
+              "url": "https://github.com/google/generative-ai-docs",
+              "date": "2025-11-01",
+              "value": "Moderate hallucination rate"
+            }
+          ],
+          "methodology": "Testing on factual QA datasets",
+          "last_verified": "2025-11-08"
+        },
+        "bias_fairness": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Principles",
+              "url": "https://ai.google/responsibility/principles/",
+              "date": "2025-11-01",
+              "value": "Comprehensive bias testing and mitigation"
+            }
+          ],
+          "methodology": "Evaluation on bias benchmarks",
+          "last_verified": "2025-11-08"
+        },
+        "uncertainty_quantification": {
+          "score": 81,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "Basic uncertainty expression"
+            }
+          ],
+          "methodology": "Assessment of confidence expression",
+          "last_verified": "2025-11-08"
+        },
+        "model_card_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Documentation",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "Comprehensive documentation"
+            }
+          ],
+          "methodology": "Review of documentation",
+          "last_verified": "2025-11-08"
+        },
+        "training_data_transparency": {
+          "score": 77,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Research",
+              "url": "https://deepmind.google/research/",
+              "date": "2025-11-01",
+              "value": "Limited training data disclosure"
+            }
+          ],
+          "methodology": "Review of public disclosures",
+          "last_verified": "2025-11-08"
+        },
+        "guardrails": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Safety Features",
+              "url": "https://ai.google/responsibility/safety/",
+              "date": "2025-11-01",
+              "value": "Comprehensive safety guardrails"
+            }
+          ],
+          "methodology": "Analysis of safety mechanisms",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Good transparency with strong safety guardrails. Standard explainability for a Flash model."
+    },
+    "operational_excellence": {
+      "overall_score": 92,
+      "criteria": {
+        "api_design_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI API",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-11-01",
+              "value": "Well-designed RESTful API"
+            }
+          ],
+          "methodology": "Review of API design",
+          "last_verified": "2025-11-08"
+        },
+        "sdk_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI SDKs",
+              "url": "https://github.com/google/generative-ai-python",
+              "date": "2025-11-01",
+              "value": "High-quality SDKs for multiple languages"
+            }
+          ],
+          "methodology": "Review of SDK quality",
+          "last_verified": "2025-11-08"
+        },
+        "versioning_policy": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Versioning",
+              "url": "https://cloud.google.com/apis/design/versioning",
+              "date": "2025-11-01",
+              "value": "Clear versioning policy"
+            }
+          ],
+          "methodology": "Review of versioning practices",
+          "last_verified": "2025-11-08"
+        },
+        "monitoring_observability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Monitoring",
+              "url": "https://cloud.google.com/monitoring",
+              "date": "2025-11-01",
+              "value": "Comprehensive monitoring via Google Cloud"
+            }
+          ],
+          "methodology": "Review of monitoring tools",
+          "last_verified": "2025-11-08"
+        },
+        "support_quality": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Support",
+              "url": "https://cloud.google.com/support",
+              "date": "2025-11-01",
+              "value": "Enterprise support with SLAs"
+            }
+          ],
+          "methodology": "Assessment of support options",
+          "last_verified": "2025-11-08"
+        },
+        "ecosystem_maturity": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Ecosystem",
+              "url": "https://cloud.google.com/",
+              "date": "2025-11-01",
+              "value": "Mature ecosystem with extensive integrations"
+            }
+          ],
+          "methodology": "Analysis of ecosystem",
+          "last_verified": "2025-11-08"
+        },
+        "license_terms": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Terms",
+              "url": "https://cloud.google.com/terms",
+              "date": "2025-11-01",
+              "value": "Standard commercial terms"
+            }
+          ],
+          "methodology": "Review of licensing",
+          "last_verified": "2025-11-08"
+        }
+      },
+      "notes": "Excellent operational maturity leveraging Google Cloud. Mature ecosystem with comprehensive support."
+    }
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 90,
+      "notes": "Strong coding with 53.6% SWE-bench. Fast latency ideal for interactive development.",
+      "alternatives": [
+        "claude-4-sonnet",
+        "openai-o1"
+      ]
+    },
+    "customer-support": {
+      "overall": 92,
+      "notes": "Excellent for customer support with fast 0.8s latency. Multimodal capabilities help with image support.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "content-creation": {
+      "overall": 86,
+      "notes": "Good content generation with fast turnaround. Strong for high-volume content needs.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    },
+    "data-analysis": {
+      "overall": 88,
+      "notes": "Good analytical capabilities with fast processing. 1M context window excellent for large datasets.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "research-assistant": {
+      "overall": 87,
+      "notes": "Good research capabilities with massive 1M context for large documents.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "legal-compliance": {
+      "overall": 86,
+      "notes": "HIPAA eligible with strong Google Cloud compliance. Good for regulated industries.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "healthcare": {
+      "overall": 85,
+      "notes": "HIPAA eligible with comprehensive compliance certifications.",
+      "alternatives": [
+        "claude-4-opus"
+      ]
+    },
+    "financial-analysis": {
+      "overall": 87,
+      "notes": "Good analytical capabilities with fast processing for real-time analysis.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "education": {
+      "overall": 89,
+      "notes": "Strong for education with fast responses and multimodal capabilities.",
+      "alternatives": [
+        "claude-4-opus",
+        "openai-o1"
+      ]
+    },
+    "creative-writing": {
+      "overall": 84,
+      "notes": "Adequate creative capabilities with fast generation.",
+      "alternatives": [
+        "claude-4-opus",
+        "gpt-4-5"
+      ]
+    }
+  },
+  "strengths": [
+    "Blazing fast latency (0.8s p50, 1.5s p95)",
+    "Industry-leading 1M token context window",
+    "Strong multimodal capabilities (text, image, video)",
+    "HIPAA eligible with comprehensive Google Cloud compliance",
+    "Excellent pricing - best value in class ($0.10/$0.40 per 1M tokens)",
+    "Ephemeral data processing for privacy"
+  ],
+  "limitations": [
+    "Lower MMLU score (62.1%) compared to flagship models",
+    "Flash optimization may sacrifice some quality for speed",
+    "Limited explainability compared to reasoning models",
+    "Training data transparency could be improved",
+    "May not be suitable for highly complex reasoning tasks",
+    "Moderate hallucination rates"
+  ],
+  "best_for": [
+    "Real-time applications requiring fast responses",
+    "Customer support and chatbot applications",
+    "Large document processing (1M context window)",
+    "Multimodal applications with vision needs",
+    "Cost-sensitive high-volume workloads"
+  ],
+  "not_recommended_for": [
+    "Complex reasoning tasks requiring extended thinking",
+    "Applications prioritizing maximum accuracy over speed",
+    "Highly specialized domain expertise",
+    "Tasks requiring detailed chain-of-thought explanations"
+  ],
+  "metadata": {
+    "pricing": {
+      "input": "$0.10 per 1M tokens",
+      "output": "$0.40 per 1M tokens",
+      "notes": "Highly competitive Flash tier pricing - exceptional value for speed",
+      "last_verified": "2025-11-09"
+    },
+    "context_window": 1000000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic",
+      "Hindi",
+      "100+ languages"
+    ],
+    "modalities": [
+      "text",
+      "image",
+      "video",
+      "audio"
+    ],
+    "api_endpoint": "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash",
+    "open_source": false,
+    "architecture": "Transformer-based multimodal with Flash optimization",
+    "parameters": "Not disclosed"
+  },
+  "related_entities": [
+    "gemini-2-5-pro",
+    "claude-haiku-4-5",
+    "gpt-5"
+  ],
+  "tags": [
+    "fast",
+    "multimodal",
+    "vision",
+    "large-context",
+    "cost-effective",
+    "hipaa-eligible",
+    "real-time",
+    "google-cloud"
+  ]
+}

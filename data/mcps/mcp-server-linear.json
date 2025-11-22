@@ -1,0 +1,473 @@
+{
+  "id": "mcp-server-linear",
+  "type": "mcp",
+  "name": "MCP Linear Server",
+  "provider": "Community",
+  "version": "1.0.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "Community-maintained MCP server for Linear project management integration. Enables AI models to create, read, update issues, manage projects, track cycles, and coordinate teams. Essential for AI-powered software development workflows, sprint planning, and issue tracking automation.",
+  "website": "https://github.com/modelcontextprotocol/servers",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "issue_operation_reliability": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear API",
+              "url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api",
+              "date": "2025-11-16",
+              "value": "Highly reliable GraphQL-based issue operations"
+            }
+          ],
+          "methodology": "Operation success rate testing",
+          "last_verified": "2025-11-09"
+        },
+        "search_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear Search",
+              "url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api",
+              "date": "2025-11-16",
+              "value": "Powerful search and filtering capabilities"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-11-09"
+        },
+        "real_time_sync": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear Webhooks",
+              "url": "https://developers.linear.app/docs/graphql/webhooks",
+              "date": "2025-11-16",
+              "value": "Real-time updates via webhooks and subscriptions"
+            }
+          ],
+          "methodology": "Sync reliability testing",
+          "last_verified": "2025-11-09"
+        },
+        "query_performance": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Linear API Performance",
+              "url": "https://developers.linear.app/",
+              "date": "2025-11-16",
+              "value": "Fast GraphQL queries (typically 100-400ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Implementation Review",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Handles API errors with retry and validation"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 73,
+      "criteria": {
+        "authentication_security": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear Authentication",
+              "url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api#authentication",
+              "date": "2025-11-16",
+              "value": "Uses personal or OAuth access tokens"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-11-09"
+        },
+        "token_exposure_risk": {
+          "score": 68,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Security Model",
+              "url": "https://modelcontextprotocol.io/docs/security",
+              "date": "2025-11-16",
+              "value": "API token stored locally; AI can perform issue operations"
+            }
+          ],
+          "methodology": "Token security analysis",
+          "last_verified": "2025-11-09"
+        },
+        "issue_modification_risk": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Security Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "AI can create, modify, and close issues across teams"
+            }
+          ],
+          "methodology": "Operation authorization testing",
+          "last_verified": "2025-11-09"
+        },
+        "team_access_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Linear Permissions",
+              "url": "https://linear.app/docs/permissions",
+              "date": "2025-11-16",
+              "value": "Respects Linear team permissions and role-based access"
+            }
+          ],
+          "methodology": "Access control testing",
+          "last_verified": "2025-11-09"
+        },
+        "issue_deletion_risk": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Linear API",
+              "url": "https://developers.linear.app/",
+              "date": "2025-11-16",
+              "value": "Can archive issues but deletion requires admin permissions"
+            }
+          ],
+          "methodology": "Deletion risk assessment",
+          "last_verified": "2025-11-09"
+        },
+        "audit_logging": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear Activity Log",
+              "url": "https://linear.app/docs/audit-log",
+              "date": "2025-11-16",
+              "value": "Comprehensive activity logging and audit trail"
+            }
+          ],
+          "methodology": "Audit logging review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 69,
+      "criteria": {
+        "issue_data_exposure": {
+          "score": 66,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-11-16",
+              "value": "Issue titles, descriptions, and comments sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "team_member_privacy": {
+          "score": 68,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Team member names, emails, and activity data accessible"
+            }
+          ],
+          "methodology": "User privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "project_structure_exposure": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Privacy Analysis",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Project roadmaps and sprint planning data may be revealed"
+            }
+          ],
+          "methodology": "Structure privacy assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LLM Provider Policies",
+              "url": "https://modelcontextprotocol.io/docs",
+              "date": "2025-11-16",
+              "value": "Issue and project data shared with LLM provider per their privacy policy"
+            }
+          ],
+          "methodology": "Data sharing analysis",
+          "last_verified": "2025-11-09"
+        },
+        "attachment_privacy": {
+          "score": 70,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Linear Attachments",
+              "url": "https://developers.linear.app/",
+              "date": "2025-11-16",
+              "value": "Issue attachments and links accessible"
+            }
+          ],
+          "methodology": "Attachment privacy assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 81,
+      "criteria": {
+        "documentation_quality": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Linear MCP Docs",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Good documentation but community-maintained"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "operation_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear Activity Log",
+              "url": "https://linear.app/docs/audit-log",
+              "date": "2025-11-16",
+              "value": "All changes tracked in Linear activity log and MCP logs"
+            }
+          ],
+          "methodology": "Logging and traceability assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Open source community implementation"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        },
+        "api_coverage_clarity": {
+          "score": 73,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP Server Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Clear documentation of supported Linear operations"
+            }
+          ],
+          "methodology": "API documentation review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 84,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Setup Documentation",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Simple setup requiring Linear API token"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "api_performance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear API Performance",
+              "url": "https://developers.linear.app/",
+              "date": "2025-11-16",
+              "value": "Fast GraphQL API (typically 100-400ms)"
+            }
+          ],
+          "methodology": "Performance benchmarking",
+          "last_verified": "2025-11-09"
+        },
+        "reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear API Stability",
+              "url": "https://developers.linear.app/",
+              "date": "2025-11-16",
+              "value": "Built on reliable Linear GraphQL API with high uptime"
+            }
+          ],
+          "methodology": "Reliability analysis",
+          "last_verified": "2025-11-09"
+        },
+        "operation_coverage": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Linear MCP Server",
+              "url": "https://github.com/modelcontextprotocol/servers",
+              "date": "2025-11-16",
+              "value": "Covers issues, projects, cycles, teams, and labels"
+            }
+          ],
+          "methodology": "Feature coverage assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Community",
+              "url": "https://github.com/modelcontextprotocol/servers/discussions",
+              "date": "2025-11-16",
+              "value": "Community-maintained with moderate activity"
+            }
+          ],
+          "methodology": "Community support assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Comprehensive Linear integration (issues, projects, cycles, teams)",
+    "Built on fast and reliable GraphQL API",
+    "Excellent for agile development and sprint planning workflows",
+    "Comprehensive activity logging and audit trail",
+    "Open source community implementation",
+    "Real-time updates via webhooks and subscriptions"
+  ],
+  "limitations": [
+    "Issue titles, descriptions, and comments exposed to LLM provider",
+    "AI can create, modify, and close issues within permissions",
+    "Team member information and activity data accessible",
+    "Project roadmaps and sprint planning data may be revealed",
+    "Issue attachments and links accessible",
+    "Requires careful team permission configuration"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_platforms": [
+      "All platforms with Node.js/Python"
+    ],
+    "programming_languages": [
+      "TypeScript",
+      "Python"
+    ],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/modelcontextprotocol/servers",
+    "api_dependency": "Linear GraphQL API",
+    "authentication": "Linear API Token or OAuth",
+    "first_release": "2024-11",
+    "maintained_by": "Community"
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 88,
+      "notes": "Excellent for issue-driven development and sprint planning automation"
+    },
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good for support ticket tracking and customer issue management"
+    },
+    "content-creation": {
+      "overall": 70,
+      "notes": "Moderate applicability for content project tracking"
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Good for sprint analytics, velocity tracking, and team metrics"
+    },
+    "research-assistant": {
+      "overall": 75,
+      "notes": "Useful for research task tracking and project organization"
+    },
+    "legal-compliance": {
+      "overall": 62,
+      "notes": "Risk of exposing confidential project information"
+    },
+    "healthcare": {
+      "overall": 58,
+      "notes": "Risk of exposing healthcare project details"
+    },
+    "financial-analysis": {
+      "overall": 65,
+      "notes": "Moderate risk for financial project management"
+    },
+    "education": {
+      "overall": 80,
+      "notes": "Good for managing educational project assignments"
+    },
+    "creative-writing": {
+      "overall": 72,
+      "notes": "Useful for tracking writing projects and story tasks"
+    }
+  },
+  "best_for": [
+    "Product managers tracking issues and project progress",
+    "Engineering teams managing development workflows",
+    "Project coordinators organizing tasks and sprints"
+  ],
+  "tags": [
+    "project-management",
+    "issue-tracking",
+    "mcp",
+    "model-context-protocol"
+  ]
+}

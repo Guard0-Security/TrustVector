@@ -1,0 +1,647 @@
+{
+  "id": "claude-haiku-4-5",
+  "type": "model",
+  "name": "Claude Haiku 4.5",
+  "provider": "Anthropic",
+  "version": "20251015",
+  "last_evaluated": "2025-11-17",
+  "evaluated_by": "TrustVector Team",
+  "description": "Anthropic's fastest model released October 2025. Best coding performance (73.3% SWE-bench) at 1/3 cost and 2x speed of Sonnet 4. First Haiku with extended thinking.",
+  "website": "https://www.anthropic.com/claude",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 93,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "73.3% (beats Sonnet 4's 72.7%)"
+            },
+            {
+              "source": "Terminal-Bench",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "41% (on par with Sonnet 4, GPT-5)"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "task_accuracy_reasoning": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Benchmarks",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "Strong reasoning with extended thinking"
+            }
+          ],
+          "methodology": "Reasoning benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "task_accuracy_general": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "General Benchmarks",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "Flagship-level performance at small model size"
+            }
+          ],
+          "methodology": "Comprehensive knowledge testing",
+          "last_verified": "2025-11-17"
+        },
+        "output_consistency": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-10-15",
+              "value": "Consistent with extended thinking"
+            }
+          ],
+          "methodology": "Internal testing",
+          "last_verified": "2025-11-17"
+        },
+        "latency_p50": {
+          "value": "0.4s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Performance Data",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "4-5x faster than Sonnet 4.5"
+            }
+          ],
+          "methodology": "Median latency",
+          "last_verified": "2025-11-17"
+        },
+        "latency_p95": {
+          "value": "0.9s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/models/claude-haiku-45",
+              "date": "2025-10-20",
+              "value": "Extremely fast p95"
+            }
+          ],
+          "methodology": "95th percentile",
+          "last_verified": "2025-11-17"
+        },
+        "context_window": {
+          "value": "200,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Docs",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-10-15",
+              "value": "200K context, 64K max output"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2025-11-17"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Status Page",
+              "url": "https://status.anthropic.com/",
+              "date": "2025-10-20",
+              "value": "99.95% uptime"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Best coding model for the price. 73.3% SWE-bench beats Sonnet 4. 4-5x faster than Sonnet 4.5. Flagship performance at budget pricing."
+    },
+
+    "security": {
+      "overall_score": 86,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Safety",
+              "url": "https://www.anthropic.com/news/evaluating-ai-systems",
+              "date": "2025-10-15",
+              "value": "Strong Constitutional AI resistance"
+            }
+          ],
+          "methodology": "OWASP LLM01 testing",
+          "last_verified": "2025-11-17"
+        },
+        "jailbreak_resistance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Constitutional AI",
+              "url": "https://www.anthropic.com/news/claudes-constitution",
+              "date": "2025-10-15",
+              "value": "Robust jailbreak resistance"
+            }
+          ],
+          "methodology": "Adversarial testing",
+          "last_verified": "2025-11-17"
+        },
+        "data_leakage_prevention": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy",
+              "url": "https://www.anthropic.com/legal/privacy",
+              "date": "2025-10-15",
+              "value": "No training on user data"
+            }
+          ],
+          "methodology": "Privacy policy analysis",
+          "last_verified": "2025-11-17"
+        },
+        "output_safety": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "ASL-2 Safety Standard",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "ASL-2 safety level"
+            }
+          ],
+          "methodology": "Safety testing",
+          "last_verified": "2025-11-17"
+        },
+        "api_security": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API",
+              "url": "https://docs.anthropic.com/en/api/getting-started",
+              "date": "2025-10-15",
+              "value": "Standard API security"
+            }
+          ],
+          "methodology": "Security review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Strong security with ASL-2 standard. Constitutional AI guardrails. Less restrictive than ASL-3 models."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 91,
+      "criteria": {
+        "data_residency": {
+          "value": "US, EU (customer choice)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Enterprise",
+              "url": "https://www.anthropic.com/claude/enterprise",
+              "date": "2025-10-15",
+              "value": "Data residency options"
+            }
+          ],
+          "methodology": "Enterprise docs review",
+          "last_verified": "2025-11-17"
+        },
+        "training_data_optout": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy Policy",
+              "url": "https://www.anthropic.com/legal/privacy",
+              "date": "2025-10-15",
+              "value": "No API data training"
+            }
+          ],
+          "methodology": "Policy analysis",
+          "last_verified": "2025-11-17"
+        },
+        "data_retention": {
+          "value": "0 days (ephemeral)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Terms",
+              "url": "https://www.anthropic.com/legal/terms",
+              "date": "2025-10-15",
+              "value": "Ephemeral processing"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2025-11-17"
+        },
+        "pii_handling": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Privacy Docs",
+              "url": "https://docs.anthropic.com/en/docs/resources/data-protection",
+              "date": "2025-10-15",
+              "value": "Customer PII responsibility"
+            }
+          ],
+          "methodology": "Data protection review",
+          "last_verified": "2025-11-17"
+        },
+        "compliance_certifications": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Trust Center",
+              "url": "https://trust.anthropic.com/",
+              "date": "2025-10-15",
+              "value": "SOC 2, GDPR, HIPAA eligible"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2025-11-17"
+        },
+        "zero_data_retention": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API Docs",
+              "url": "https://docs.anthropic.com/en/docs/resources/data-protection",
+              "date": "2025-10-15",
+              "value": "Ephemeral processing"
+            }
+          ],
+          "methodology": "Data handling review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Excellent privacy with ephemeral data. HIPAA eligible at budget pricing. Strong compliance."
+    },
+
+    "trust_transparency": {
+      "overall_score": 85,
+      "criteria": {
+        "explainability": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Extended Thinking Feature",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "First Haiku with extended thinking"
+            }
+          ],
+          "methodology": "Reasoning transparency evaluation",
+          "last_verified": "2025-11-17"
+        },
+        "hallucination_rate": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Factual Testing",
+              "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+              "date": "2025-10-15",
+              "value": "Good factual accuracy"
+            }
+          ],
+          "methodology": "QA testing",
+          "last_verified": "2025-11-17"
+        },
+        "bias_fairness": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Responsible Scaling",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "date": "2025-10-15",
+              "value": "Regular bias testing"
+            }
+          ],
+          "methodology": "Bias benchmarks",
+          "last_verified": "2025-11-17"
+        },
+        "uncertainty_quantification": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-10-15",
+              "value": "Good uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2025-11-17"
+        },
+        "model_card_quality": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Documentation",
+              "url": "https://docs.anthropic.com/en/docs/about-claude/models",
+              "date": "2025-10-15",
+              "value": "Comprehensive documentation"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-11-17"
+        },
+        "training_data_transparency": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Statements",
+              "url": "https://www.anthropic.com/news",
+              "date": "2025-10-15",
+              "value": "General description, cutoff February 2025"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2025-11-17"
+        },
+        "guardrails": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Constitutional AI",
+              "url": "https://www.anthropic.com/news/claudes-constitution",
+              "date": "2025-10-15",
+              "value": "Constitutional AI guardrails"
+            }
+          ],
+          "methodology": "Safety mechanism analysis",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Good transparency with extended thinking (first for Haiku). Strong guardrails. Latest training cutoff (Feb 2025)."
+    },
+
+    "operational_excellence": {
+      "overall_score": 93,
+      "criteria": {
+        "api_design_quality": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic API",
+              "url": "https://docs.anthropic.com/en/api",
+              "date": "2025-10-15",
+              "value": "RESTful API, claude-haiku-4-5 model ID"
+            }
+          ],
+          "methodology": "API design review",
+          "last_verified": "2025-11-17"
+        },
+        "sdk_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic SDKs",
+              "url": "https://github.com/anthropics",
+              "date": "2025-10-15",
+              "value": "Python, TypeScript SDKs"
+            }
+          ],
+          "methodology": "SDK review",
+          "last_verified": "2025-11-17"
+        },
+        "versioning_policy": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Versioning",
+              "url": "https://docs.anthropic.com/en/api/versioning",
+              "date": "2025-10-15",
+              "value": "6-month deprecation"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2025-11-17"
+        },
+        "monitoring_observability": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Anthropic Console",
+              "url": "https://console.anthropic.com/",
+              "date": "2025-10-15",
+              "value": "Usage dashboard"
+            }
+          ],
+          "methodology": "Monitoring tools review",
+          "last_verified": "2025-11-17"
+        },
+        "support_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Support",
+              "url": "https://support.anthropic.com/",
+              "date": "2025-10-15",
+              "value": "Email, Discord, docs"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2025-11-17"
+        },
+        "ecosystem_maturity": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Multi-Agent Opportunity",
+              "url": "https://caylent.com/blog/claude-haiku-4-5-deep-dive-cost-capabilities-and-the-multi-agent-opportunity",
+              "date": "2025-10-15",
+              "value": "Perfect for multi-agent systems"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2025-11-17"
+        },
+        "license_terms": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Anthropic Terms",
+              "url": "https://www.anthropic.com/legal/commercial-terms",
+              "date": "2025-10-15",
+              "value": "Clear commercial terms"
+            }
+          ],
+          "methodology": "License review",
+          "last_verified": "2025-11-17"
+        }
+      },
+      "notes": "Excellent for high-volume production. Budget pricing enables multi-agent architectures. Fast deployment."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 96,
+      "notes": "World's best coding model for the price. 73.3% SWE-bench beats even Sonnet 4. Perfect for high-volume coding.",
+      "alternatives": ["claude-sonnet-4-5", "claude-opus-4"]
+    },
+    "customer-support": {
+      "overall": 93,
+      "notes": "Exceptional for customer support. Flagship performance at $1/$5. 0.4s latency perfect for chat.",
+      "alternatives": ["claude-sonnet-4", "gpt-4o-mini"]
+    },
+    "content-creation": {
+      "overall": 87,
+      "notes": "Strong content creation at budget pricing. Fast generation (4-5x faster than Sonnet 4.5).",
+      "alternatives": ["claude-opus-4", "claude-sonnet-4-5"]
+    },
+    "data-analysis": {
+      "overall": 85,
+      "notes": "Good analytical capabilities with extended thinking. Great value for cost.",
+      "alternatives": ["claude-opus-4", "claude-sonnet-4"]
+    },
+    "research-assistant": {
+      "overall": 89,
+      "notes": "Excellent for research. 200K context, extended thinking, fast, budget pricing.",
+      "alternatives": ["claude-opus-4", "gpt-5"]
+    },
+    "legal-compliance": {
+      "overall": 88,
+      "notes": "HIPAA eligible with strong privacy at budget pricing. Good for legal document processing.",
+      "alternatives": ["claude-opus-4", "claude-sonnet-4"]
+    },
+    "healthcare": {
+      "overall": 87,
+      "notes": "HIPAA eligible. Budget pricing enables high-volume clinical documentation.",
+      "alternatives": ["claude-opus-4", "claude-opus-4-1"]
+    },
+    "financial-analysis": {
+      "overall": 84,
+      "notes": "Good for standard financial analysis. Extended thinking helps with modeling.",
+      "alternatives": ["claude-opus-4", "openai-o3"]
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Exceptional for education. Fast, affordable, strong explanations. Perfect for high-volume use.",
+      "alternatives": ["gpt-5", "claude-sonnet-4-5"]
+    },
+    "creative-writing": {
+      "overall": 86,
+      "notes": "Strong creative writing. Fast generation good for drafting. Budget pricing for iteration.",
+      "alternatives": ["claude-opus-4", "gpt-5"]
+    }
+  },
+
+  "strengths": [
+    "Best coding performance for price: 73.3% SWE-bench beats Sonnet 4",
+    "4-5x faster than Sonnet 4.5 (~0.4s p50 latency)",
+    "Budget pricing: $1/$5 per 1M tokens (1/3 cost of Sonnet 4)",
+    "First Haiku with extended thinking, computer use, context awareness",
+    "HIPAA eligible with ephemeral data handling",
+    "200K context, 64K output (more than Opus 4)",
+    "Latest training cutoff: February 2025"
+  ],
+
+  "limitations": [
+    "ASL-2 security (less restrictive than ASL-3 Opus/Sonnet models)",
+    "Slightly lower reasoning than Opus 4 for complex tasks",
+    "Training cutoff February 2025",
+    "New model with less battle-testing than predecessors"
+  ],
+
+  "best_for": [
+    "High-volume coding workloads requiring flagship performance at budget pricing",
+    "Latency-sensitive applications (customer support, chat, real-time coding assistance)",
+    "Multi-agent systems where cost and speed are critical",
+    "HIPAA-compliant healthcare applications at scale",
+    "Cost-sensitive enterprises requiring Claude quality"
+  ],
+
+  "not_recommended_for": [
+    "Mission-critical tasks requiring absolute maximum reasoning (use Opus 4)",
+    "Tasks requiring latest training data (post-February 2025)",
+    "Scenarios requiring ASL-3 security level"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "$1.00 per 1M tokens",
+      "output": "$5.00 per 1M tokens",
+      "notes": "Best value in flagship class. Batch API 50% discount ($1/$2.50). Prompt caching up to 90% savings.",
+      "last_verified": "2025-11-17"
+    },
+    "context_window": 200000,
+    "max_output_tokens": 64000,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Chinese",
+      "Arabic",
+      "Hindi"
+    ],
+    "modalities": ["text", "image (input)", "document"],
+    "capabilities": ["extended-thinking", "computer-use", "context-awareness"],
+    "api_endpoint": "https://api.anthropic.com/v1/messages",
+    "model_id": "claude-haiku-4-5",
+    "open_source": false,
+    "architecture": "Transformer-based with Constitutional AI and extended thinking",
+    "parameters": "Not disclosed",
+    "training_cutoff": "February 2025",
+    "safety_level": "ASL-2"
+  },
+
+  "related_entities": ["claude-sonnet-4-5", "claude-sonnet-4", "claude-opus-4", "gpt-4o-mini"],
+
+  "tags": [
+    "coding",
+    "fast",
+    "budget",
+    "hipaa-eligible",
+    "privacy",
+    "extended-thinking",
+    "computer-use",
+    "multi-agent",
+    "value"
+  ]
+}

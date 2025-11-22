@@ -1,0 +1,467 @@
+{
+  "id": "langgraph-agent",
+  "type": "agent",
+  "name": "LangGraph Agent",
+  "provider": "LangChain",
+  "version": "1.0",
+  "last_evaluated": "2025-11-09",
+  "evaluated_by": "TrustVector Team",
+  "description": "LangChain's graph-based agent framework for building stateful, multi-actor applications with cycles and controllable execution flow. Enables complex, cyclic agent workflows with human-in-the-loop capabilities.",
+  "website": "https://langchain-ai.github.io/langgraph/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 84,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Documentation",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-15",
+              "value": "Supports multiple LLM providers with consistent performance"
+            }
+          ],
+          "methodology": "Based on underlying model performance and framework overhead",
+          "last_verified": "2025-11-09"
+        },
+        "tool_use_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Tools",
+              "url": "https://langchain-ai.github.io/langgraph/how-tos/tool-calling/",
+              "date": "2024-10-01",
+              "value": "Native integration with LangChain tools ecosystem"
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-11-09"
+        },
+        "multi_step_planning": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Cycles",
+              "url": "https://langchain-ai.github.io/langgraph/concepts/low_level/",
+              "date": "2024-10-01",
+              "value": "Explicit graph structure enables sophisticated multi-step workflows with cycles"
+            }
+          ],
+          "methodology": "Complex task testing with graph execution",
+          "last_verified": "2025-11-09"
+        },
+        "memory_persistence": {
+          "score": 87,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Checkpointing",
+              "url": "https://langchain-ai.github.io/langgraph/how-tos/persistence/",
+              "date": "2024-10-01",
+              "value": "Built-in checkpointing with multiple backend support (SQLite, PostgreSQL, Redis)"
+            }
+          ],
+          "methodology": "Memory persistence testing",
+          "last_verified": "2025-11-09"
+        },
+        "error_recovery": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LangGraph Error Handling",
+              "url": "https://langchain-ai.github.io/langgraph/how-tos/error-handling/",
+              "date": "2024-09-20",
+              "value": "Supports custom error handling and retry logic in graph nodes"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-11-09"
+        },
+        "latency": {
+          "value": "Variable (2-8s typical)",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community Benchmarks",
+              "url": "https://github.com/langchain-ai/langgraph/discussions",
+              "date": "2024-09-15",
+              "value": "Latency depends on graph complexity and LLM provider"
+            }
+          ],
+          "methodology": "Performance monitoring",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 79,
+      "criteria": {
+        "tool_sandboxing": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LangGraph Documentation",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-01",
+              "value": "Tool sandboxing depends on implementation, not enforced by framework"
+            }
+          ],
+          "methodology": "Security architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "access_control": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LangGraph Self-Hosted",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-01",
+              "value": "Access control implementation is developer's responsibility"
+            }
+          ],
+          "methodology": "Access control capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "prompt_injection_defense": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LangChain Security",
+              "url": "https://python.langchain.com/docs/security",
+              "date": "2024-09-01",
+              "value": "Provides guidance but requires developer implementation"
+            }
+          ],
+          "methodology": "Injection attack testing",
+          "last_verified": "2025-11-09"
+        },
+        "data_isolation": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Persistence",
+              "url": "https://langchain-ai.github.io/langgraph/how-tos/persistence/",
+              "date": "2024-10-01",
+              "value": "Thread-based isolation when using proper checkpointing"
+            }
+          ],
+          "methodology": "Data architecture review",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph GitHub",
+              "url": "https://github.com/langchain-ai/langgraph",
+              "date": "2024-10-15",
+              "value": "Fully open source with MIT license, code auditable"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 82,
+      "criteria": {
+        "data_retention": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Self-Hosted Architecture",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-01",
+              "value": "Full control over data retention when self-hosted"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-11-09"
+        },
+        "gdpr_compliance": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Open Source Framework",
+              "url": "https://github.com/langchain-ai/langgraph",
+              "date": "2024-10-01",
+              "value": "GDPR compliance depends on deployment configuration"
+            }
+          ],
+          "methodology": "Compliance capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "third_party_data_sharing": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LLM Provider Integration",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-01",
+              "value": "Data shared with chosen LLM provider (OpenAI, Anthropic, etc.)"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-11-09"
+        },
+        "local_deployment_option": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Deployment",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-01",
+              "value": "Fully supports local deployment with local LLMs"
+            }
+          ],
+          "methodology": "Deployment options assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 86,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Docs",
+              "url": "https://langchain-ai.github.io/langgraph/",
+              "date": "2024-10-15",
+              "value": "Comprehensive documentation with tutorials and examples"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-11-09"
+        },
+        "execution_traceability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangSmith Integration",
+              "url": "https://docs.smith.langchain.com/",
+              "date": "2024-10-01",
+              "value": "Excellent tracing via LangSmith integration, shows full graph execution"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-11-09"
+        },
+        "decision_explainability": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Graph Visualization",
+              "url": "https://langchain-ai.github.io/langgraph/how-tos/visualization/",
+              "date": "2024-10-01",
+              "value": "Graph structure provides clear execution flow visualization"
+            }
+          ],
+          "methodology": "Explainability features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "open_source_code": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GitHub Repository",
+              "url": "https://github.com/langchain-ai/langgraph",
+              "date": "2024-10-15",
+              "value": "MIT licensed, 5k+ stars, active development"
+            }
+          ],
+          "methodology": "Open source assessment",
+          "last_verified": "2025-11-09"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 81,
+      "criteria": {
+        "ease_of_integration": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "LangGraph Quickstart",
+              "url": "https://langchain-ai.github.io/langgraph/tutorials/introduction/",
+              "date": "2024-10-01",
+              "value": "Requires understanding of graph concepts, steeper learning curve"
+            }
+          ],
+          "methodology": "Integration complexity assessment",
+          "last_verified": "2025-11-09"
+        },
+        "scalability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangGraph Cloud",
+              "url": "https://langchain-ai.github.io/langgraph/cloud/",
+              "date": "2024-10-01",
+              "value": "Supports horizontal scaling with proper infrastructure"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-11-09"
+        },
+        "cost_predictability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Open Source Pricing",
+              "url": "https://github.com/langchain-ai/langgraph",
+              "date": "2024-10-01",
+              "value": "Free framework, costs only from LLM API usage"
+            }
+          ],
+          "methodology": "Pricing model analysis",
+          "last_verified": "2025-11-09"
+        },
+        "monitoring_capabilities": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "LangSmith",
+              "url": "https://docs.smith.langchain.com/",
+              "date": "2024-10-01",
+              "value": "Excellent monitoring via LangSmith platform"
+            }
+          ],
+          "methodology": "Monitoring features assessment",
+          "last_verified": "2025-11-09"
+        },
+        "community_support": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "GitHub Discussions",
+              "url": "https://github.com/langchain-ai/langgraph/discussions",
+              "date": "2024-10-01",
+              "value": "Growing community but newer framework"
+            }
+          ],
+          "methodology": "Community activity analysis",
+          "last_verified": "2025-11-09"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Full control over agent execution flow with explicit graph structure",
+    "Excellent for complex, cyclic workflows with human-in-the-loop",
+    "Open source with MIT license, fully auditable code",
+    "Built-in checkpointing and state persistence",
+    "Strong integration with LangChain ecosystem and tools",
+    "Superior observability via LangSmith integration"
+  ],
+  "limitations": [
+    "Steeper learning curve compared to simpler agent frameworks",
+    "Requires more code for simple use cases",
+    "Security and sandboxing must be implemented by developer",
+    "Relatively newer framework with evolving APIs",
+    "Performance overhead from graph execution layer",
+    "Limited managed service options (LangGraph Cloud in beta)"
+  ],
+  "metadata": {
+    "license": "MIT",
+    "supported_models": [
+      "Any LangChain-compatible model",
+      "OpenAI",
+      "Anthropic",
+      "Local LLMs"
+    ],
+    "programming_languages": [
+      "Python",
+      "JavaScript/TypeScript"
+    ],
+    "deployment_type": "Self-hosted or LangGraph Cloud",
+    "tool_support": [
+      "LangChain tools",
+      "Custom tools",
+      "Function calling"
+    ],
+    "github_stars": "11700+",
+    "monthly_downloads": "7M+ on PyPI",
+    "first_release": "2024",
+    "pricing": "Free (MIT license) - Cloud deployment via LangSmith Plus/Enterprise plans",
+    "ga_version": "1.0 (October 2025)"
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 87,
+      "notes": "Excellent for complex support workflows with human-in-the-loop"
+    },
+    "code-generation": {
+      "overall": 84,
+      "notes": "Good for multi-step code generation with review cycles"
+    },
+    "research-assistant": {
+      "overall": 88,
+      "notes": "Graph structure ideal for complex research workflows"
+    },
+    "data-analysis": {
+      "overall": 82,
+      "notes": "Works well but requires custom tool integration"
+    },
+    "content-creation": {
+      "overall": 85,
+      "notes": "Good for iterative content workflows with review stages"
+    },
+    "education": {
+      "overall": 86,
+      "notes": "Graph-based curriculum paths work well for tutoring"
+    },
+    "healthcare": {
+      "overall": 78,
+      "notes": "Requires careful security implementation for healthcare data"
+    },
+    "financial-analysis": {
+      "overall": 80,
+      "notes": "Self-hosted option good for compliance, needs security hardening"
+    },
+    "legal-compliance": {
+      "overall": 83,
+      "notes": "Multi-stage review workflows map well to graph structure"
+    },
+    "creative-writing": {
+      "overall": 89,
+      "notes": "Cyclic graph structure excellent for iterative ideation"
+    }
+  },
+  "best_for": [
+    "Developers building stateful multi-agent systems",
+    "Teams needing complex agent workflow orchestration",
+    "Organizations requiring human-in-the-loop agent systems",
+    "Python developers wanting advanced LangChain capabilities"
+  ],
+  "tags": [
+    "workflow",
+    "langchain",
+    "open-source"
+  ]
+}
