@@ -112,7 +112,7 @@ export default function HomePage() {
                 Explore Evaluations
               </a>
               <a
-                href="https://github.com/JBAhire/trust-vector"
+                href="https://github.com/Guard0-Security/TrustVector"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold border-2 border-gray-600 text-gray-300 hover:border-[#00ff41] hover:text-[#00ff41] transition-colors duration-200"
@@ -262,7 +262,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://github.com/JBAhire/trust-vector"
+                href="https://github.com/Guard0-Security/TrustVector"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold bg-[#00ff41] text-black hover:bg-[#00dd35] transition-colors duration-200"
