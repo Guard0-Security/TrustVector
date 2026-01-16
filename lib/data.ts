@@ -6,17 +6,20 @@ import type { TrustVectorEntity } from '@/framework/schema/types';
 import { calculateOverallScore } from '@/framework/schema/types';
 
 // ========================================
-// MODELS (33 total)
+// MODELS (38 total)
 // ========================================
 
-// Anthropic Models (6)
+// Anthropic Models (7)
+import claudeOpus45 from '@/data/models/claude-opus-4-5.json';
 import claudeSonnet45 from '@/data/models/claude-sonnet-4-5.json';
 import claudeSonnet4 from '@/data/models/claude-sonnet-4.json';
 import claudeOpus41 from '@/data/models/claude-opus-4-1.json';
 import claudeOpus4 from '@/data/models/claude-opus-4.json';
 import claudeHaiku45 from '@/data/models/claude-haiku-4-5.json';
 
-// OpenAI Models (15)
+// OpenAI Models (17)
+import gpt52 from '@/data/models/gpt-5-2.json';
+import gpt52Codex from '@/data/models/gpt-5-2-codex.json';
 import gpt51 from '@/data/models/gpt-5-1.json';
 import gpt5 from '@/data/models/gpt-5.json';
 import gpt41 from '@/data/models/gpt-4-1.json';
@@ -32,7 +35,9 @@ import openaiO4Mini from '@/data/models/openai-o4-mini.json';
 import gptOss120b from '@/data/models/gpt-oss-120b.json';
 import gptOss20b from '@/data/models/gpt-oss-20b.json';
 
-// Google Models (3)
+// Google Models (5)
+import gemini3Pro from '@/data/models/gemini-3-pro.json';
+import gemini3Flash from '@/data/models/gemini-3-flash.json';
 import gemini25Pro from '@/data/models/gemini-2-5-pro.json';
 import gemini20Flash from '@/data/models/gemini-2-0-flash.json';
 import gemma327b from '@/data/models/gemma-3-27b.json';
@@ -149,20 +154,23 @@ import mcpFilesystem from '@/data/mcps/mcp-server-filesystem.json';
 import mcpMemory from '@/data/mcps/mcp-server-memory.json';
 
 /**
- * All entities in the system (93 total: 33 models + 30 agents + 30 MCPs)
+ * All entities in the system (98 total: 38 models + 30 agents + 30 MCPs)
  */
 const ALL_ENTITIES: TrustVectorEntity[] = [
   // ========================================
-  // MODELS (33)
+  // MODELS (38)
   // ========================================
-  // Anthropic (6)
+  // Anthropic (7)
+  claudeOpus45,
   claudeSonnet45,
   claudeSonnet4,
   claudeOpus41,
   claudeOpus4,
   claudeHaiku45,
 
-  // OpenAI (15)
+  // OpenAI (17)
+  gpt52,
+  gpt52Codex,
   gpt51,
   gpt5,
   gpt41,
@@ -178,7 +186,9 @@ const ALL_ENTITIES: TrustVectorEntity[] = [
   gptOss120b,
   gptOss20b,
 
-  // Google (3)
+  // Google (5)
+  gemini3Pro,
+  gemini3Flash,
   gemini25Pro,
   gemini20Flash,
   gemma327b,

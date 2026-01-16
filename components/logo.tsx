@@ -20,12 +20,15 @@ export function Logo({ className = '', size = 40, variant = 'full' }: LogoProps)
       <div
         className={`relative ${className}`}
         style={{ width: size, height: size }}
+        role="img"
+        aria-label="TrustVector logo"
       >
         {/* Terminal bracket icon with glowing effect */}
         <div className="font-mono font-bold flex items-center justify-center h-full relative group">
           <span
             className="neon-green text-2xl relative"
             style={{ fontSize: size * 0.7 }}
+            aria-hidden="true"
           >
             &gt;_
           </span>
@@ -43,8 +46,8 @@ export function Logo({ className = '', size = 40, variant = 'full' }: LogoProps)
 
   if (variant === 'wordmark') {
     return (
-      <div className={`flex items-center font-mono ${className}`}>
-        <span className="text-2xl font-bold tracking-tight uppercase">
+      <div className={`flex items-center font-mono ${className}`} role="img" aria-label="TrustVector">
+        <span className="text-2xl font-bold tracking-tight uppercase" aria-hidden="true">
           <span className="neon-green">[</span>
           <span className="text-primary">TRUST</span>
           <span className="neon-cyan">&gt;</span>
@@ -57,8 +60,8 @@ export function Logo({ className = '', size = 40, variant = 'full' }: LogoProps)
 
   // Full logo (clean version)
   return (
-    <div className={`flex items-center ${className}`}>
-      <span className="text-xl font-bold font-mono tracking-tight uppercase">
+    <div className={`flex items-center ${className}`} role="img" aria-label="TrustVector">
+      <span className="text-xl font-bold font-mono tracking-tight uppercase" aria-hidden="true">
         <span className="text-white">TRUST</span>
         <span className="text-primary">VECTOR</span>
       </span>
@@ -74,6 +77,8 @@ export function AnimatedLogo({ className = '', size = 120 }: { className?: strin
     <div
       className={`relative ${className}`}
       style={{ width: size * 2, height: size }}
+      role="img"
+      aria-label="TrustVector - AI Security Terminal - Online with 98 systems and 5 vectors"
     >
       {/* Background glow */}
       <div className="absolute inset-0 bg-primary/5 rounded-lg blur-xl" />
@@ -150,7 +155,7 @@ export function AnimatedLogo({ className = '', size = 120 }: { className?: strin
  */
 export function ASCIILogo({ className = '' }: { className?: string }) {
   return (
-    <pre className={`ascii-art ${className}`}>
+    <pre className={`ascii-art ${className}`} role="img" aria-label="TrustVector - AI Security Assurance Framework">
 {`╔════════════════════════════════════════╗
 ║  ▀█▀ █▀▀█ █  █ █▀▀█ ▀█▀   █   █ █▀▀  ║
 ║   █  █▄▄▀ █  █ ▀▀▀▄  █   ▀█▀  █ █▀▀  ║

@@ -38,12 +38,14 @@ export function ScoreBadge({ score, size = 'md', showLabel = false, className }:
         color: color,
         border: `1px solid ${color}40`,
       }}
+      role="status"
+      aria-label={`Score: ${score} out of 100, rated as ${labels[interpretation]}`}
     >
-      <span>{score}</span>
+      <span aria-hidden="true">{score}</span>
       {showLabel && (
         <>
-          <span className="mx-1">·</span>
-          <span>{labels[interpretation]}</span>
+          <span className="mx-1" aria-hidden="true">·</span>
+          <span aria-hidden="true">{labels[interpretation]}</span>
         </>
       )}
     </div>
@@ -60,27 +62,32 @@ interface ScoreBarProps {
 export function ScoreBar({ score, label, showValue = true, className }: ScoreBarProps) {
   const color = getScoreColor(score);
 
-  // Use more subtle styling for scores
-  const getBarColorClass = (score: number) => {
-    if (score >= 80) return 'bg-green-500';
-    if (score >= 60) return 'bg-blue-500';
-    if (score >= 40) return 'bg-yellow-500';
-    return 'bg-orange-500'; // Softer than red
-  };
-
   return (
-    <div className={cn('space-y-1', className)}>
+    <div
+      className={cn('space-y-1', className)}
+      role="meter"
+      aria-label={label ? `${label}: ${score} out of 100` : `Score: ${score} out of 100`}
+      aria-valuenow={score}
+      aria-valuemin={0}
+      aria-valuemax={100}
+    >
       {label && (
         <div className="flex items-center justify-between text-sm">
           <span className="text-muted-foreground">{label}</span>
-          {showValue && <span className="font-semibold text-muted-foreground">{score}</span>}
+          {showValue && (
+            <span className="font-semibold" style={{ color }}>
+              {score}
+            </span>
+          )}
         </div>
       )}
-      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+      <div className="h-2 bg-gray-800/50 rounded-full overflow-hidden" aria-hidden="true">
         <div
-          className={cn('h-full rounded-full transition-all duration-500', getBarColorClass(score))}
+          className="h-full rounded-full transition-all duration-500"
           style={{
             width: `${score}%`,
+            backgroundColor: color,
+            boxShadow: `0 0 8px ${color}60`,
           }}
         />
       </div>

@@ -5,7 +5,7 @@ import { Logo } from '@/components/logo';
 export const metadata: Metadata = {
   title: 'TrustVector - AI Assurance Framework',
   description:
-    'Open-source framework for evaluating 98 AI systems (models, MCPs, and agents) across 5 trust dimensions: security, privacy, performance, trust, and operational excellence.',
+    'Open-source framework for evaluating 106 AI systems (models, MCPs, and agents) across 5 trust dimensions: security, privacy, performance, trust, and operational excellence.',
   keywords: [
     'AI',
     'LLM',
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'TrustVector - AI Assurance Framework',
-    description: 'Evidence-based evaluations of 98 AI systems across 5 trust dimensions',
+    description: 'Evidence-based evaluations of 106 AI systems across 5 trust dimensions',
     type: 'website',
     siteName: 'TrustVector',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'TrustVector - AI Assurance Framework',
-    description: 'Evidence-based evaluations of 98 AI systems across 5 trust dimensions',
+    description: 'Evidence-based evaluations of 106 AI systems across 5 trust dimensions',
   },
 };
 
@@ -70,7 +70,7 @@ export default function RootLayout({
                       SYSTEM ACTIVE
                     </span>
                     <span className="hidden sm:inline">|</span>
-                    <span className="hidden sm:inline">98 AI ENTITIES MONITORED</span>
+                    <span className="hidden sm:inline">106 AI ENTITIES MONITORED</span>
                     <span className="hidden md:inline">|</span>
                     <span className="hidden md:inline">5 TRUST VECTORS</span>
                   </div>
@@ -121,6 +121,13 @@ export default function RootLayout({
                   >
                     <span className="text-primary text-xs">#</span>
                     <span className="hidden sm:inline uppercase tracking-wide">Methodology</span>
+                  </a>
+                  <a
+                    href="/contribute"
+                    className="group flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-accent transition-all hover:bg-accent/5 rounded border border-transparent hover:border-accent/30"
+                  >
+                    <span className="text-accent text-xs">+</span>
+                    <span className="hidden sm:inline uppercase tracking-wide">Contribute</span>
                   </a>
 
                   {/* GitHub button - command line style */}

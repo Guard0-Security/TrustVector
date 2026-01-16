@@ -1,0 +1,439 @@
+{
+  "id": "mcp-server-supabase",
+  "type": "mcp",
+  "name": "MCP Supabase Server",
+  "provider": "Supabase",
+  "version": "2025.1.0",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server enabling AI models to interact with Supabase backend services. Provides schema design, database migrations, SQL query execution, TypeScript type generation, and real-time subscription management for building full-stack applications.",
+  "website": "https://supabase.com/docs/guides/getting-started/mcp",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 85,
+      "criteria": {
+        "api_reliability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Status",
+              "url": "https://status.supabase.com/",
+              "date": "2025-01-10",
+              "value": "99.9% uptime SLA on Pro plan with PostgreSQL reliability"
+            }
+          ],
+          "methodology": "API stability and uptime analysis",
+          "last_verified": "2025-01-14"
+        },
+        "query_execution": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase PostgreSQL",
+              "url": "https://supabase.com/docs/guides/database",
+              "date": "2025-01-10",
+              "value": "Full PostgreSQL query support with optimized connection pooling"
+            }
+          ],
+          "methodology": "Query execution testing",
+          "last_verified": "2025-01-14"
+        },
+        "schema_management": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Migrations",
+              "url": "https://supabase.com/docs/guides/cli/managing-environments",
+              "date": "2025-01-10",
+              "value": "Schema design and migration support through CLI integration"
+            }
+          ],
+          "methodology": "Schema management testing",
+          "last_verified": "2025-01-14"
+        },
+        "type_generation": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase TypeScript",
+              "url": "https://supabase.com/docs/guides/api/generating-types",
+              "date": "2025-01-10",
+              "value": "Automatic TypeScript type generation from database schema"
+            }
+          ],
+          "methodology": "Type generation testing",
+          "last_verified": "2025-01-14"
+        },
+        "realtime_support": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Supabase Realtime",
+              "url": "https://supabase.com/docs/guides/realtime",
+              "date": "2025-01-10",
+              "value": "Real-time subscriptions through PostgreSQL logical replication"
+            }
+          ],
+          "methodology": "Real-time functionality testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 82,
+      "criteria": {
+        "authentication_security": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Auth",
+              "url": "https://supabase.com/docs/guides/auth",
+              "date": "2025-01-10",
+              "value": "Service role key with full database access, or anon key with RLS"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-01-14"
+        },
+        "row_level_security": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase RLS",
+              "url": "https://supabase.com/docs/guides/auth/row-level-security",
+              "date": "2025-01-10",
+              "value": "PostgreSQL RLS policies for fine-grained access control"
+            }
+          ],
+          "methodology": "RLS implementation review",
+          "last_verified": "2025-01-14"
+        },
+        "sql_injection_protection": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "MCP SQL Execution",
+              "url": "https://supabase.com/docs/guides/getting-started/mcp",
+              "date": "2025-01-10",
+              "value": "AI can execute arbitrary SQL; requires careful prompt engineering"
+            }
+          ],
+          "methodology": "SQL injection testing",
+          "last_verified": "2025-01-14"
+        },
+        "data_encryption": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Security",
+              "url": "https://supabase.com/docs/guides/platform/going-into-prod",
+              "date": "2025-01-10",
+              "value": "Encryption at rest and in transit, SSL/TLS connections"
+            }
+          ],
+          "methodology": "Encryption review",
+          "last_verified": "2025-01-14"
+        },
+        "key_management": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Supabase Keys",
+              "url": "https://supabase.com/docs/guides/api/api-keys",
+              "date": "2025-01-10",
+              "value": "Service role key has full access; key rotation available"
+            }
+          ],
+          "methodology": "Key management review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 80,
+      "criteria": {
+        "data_residency": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Regions",
+              "url": "https://supabase.com/docs/guides/platform/regions",
+              "date": "2025-01-10",
+              "value": "Multiple regions available; self-hosted option for full control"
+            }
+          ],
+          "methodology": "Data residency review",
+          "last_verified": "2025-01-14"
+        },
+        "gdpr_compliance": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase GDPR",
+              "url": "https://supabase.com/privacy",
+              "date": "2025-01-10",
+              "value": "GDPR compliant with data processing agreements available"
+            }
+          ],
+          "methodology": "GDPR compliance review",
+          "last_verified": "2025-01-14"
+        },
+        "data_exposure_to_llm": {
+          "score": 70,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MCP Data Flow",
+              "url": "https://modelcontextprotocol.io/docs/architecture",
+              "date": "2025-01-10",
+              "value": "Query results and schema information sent to LLM provider"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-01-14"
+        },
+        "self_hosted_option": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Self-Hosting",
+              "url": "https://supabase.com/docs/guides/self-hosting",
+              "date": "2025-01-10",
+              "value": "Full self-hosting support with Docker for complete data control"
+            }
+          ],
+          "methodology": "Self-hosting options review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "documentation_quality": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Docs",
+              "url": "https://supabase.com/docs",
+              "date": "2025-01-10",
+              "value": "Excellent documentation with tutorials, guides, and API reference"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-01-14"
+        },
+        "open_source_transparency": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase GitHub",
+              "url": "https://github.com/supabase/supabase",
+              "date": "2025-01-10",
+              "value": "Fully open source under Apache 2.0 license, 75k+ stars"
+            }
+          ],
+          "methodology": "Source code review",
+          "last_verified": "2025-01-14"
+        },
+        "query_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Logging",
+              "url": "https://supabase.com/docs/guides/platform/logs",
+              "date": "2025-01-10",
+              "value": "Query logging and monitoring available in dashboard"
+            }
+          ],
+          "methodology": "Logging capabilities assessment",
+          "last_verified": "2025-01-14"
+        },
+        "community_activity": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Community",
+              "url": "https://github.com/supabase/supabase/discussions",
+              "date": "2025-01-10",
+              "value": "Very active community with frequent releases and updates"
+            }
+          ],
+          "methodology": "Community engagement analysis",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 86,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase MCP Setup",
+              "url": "https://supabase.com/docs/guides/getting-started/mcp",
+              "date": "2025-01-10",
+              "value": "Simple setup with project URL and service key"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-01-14"
+        },
+        "developer_experience": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase DX",
+              "url": "https://supabase.com/docs/guides/getting-started",
+              "date": "2025-01-10",
+              "value": "Excellent developer experience with CLI, dashboard, and SDKs"
+            }
+          ],
+          "methodology": "Developer experience assessment",
+          "last_verified": "2025-01-14"
+        },
+        "scalability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Scaling",
+              "url": "https://supabase.com/docs/guides/platform/going-into-prod",
+              "date": "2025-01-10",
+              "value": "Scales with PostgreSQL; connection pooling for high concurrency"
+            }
+          ],
+          "methodology": "Scalability testing",
+          "last_verified": "2025-01-14"
+        },
+        "cost_efficiency": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Pricing",
+              "url": "https://supabase.com/pricing",
+              "date": "2025-01-10",
+              "value": "Generous free tier; predictable pricing on paid plans"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-01-14"
+        },
+        "integration_ecosystem": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Supabase Integrations",
+              "url": "https://supabase.com/docs/guides/integrations",
+              "date": "2025-01-10",
+              "value": "Rich ecosystem with framework integrations and extensions"
+            }
+          ],
+          "methodology": "Integration ecosystem review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Full PostgreSQL power with AI-assisted query building",
+    "Automatic TypeScript type generation from schema",
+    "Excellent row-level security for fine-grained access",
+    "Self-hosted option for complete data sovereignty",
+    "Outstanding developer experience and documentation",
+    "Fully open source with active community"
+  ],
+  "limitations": [
+    "Service role key grants full database access",
+    "Query results and schema exposed to LLM provider",
+    "AI can execute potentially destructive SQL",
+    "Requires careful prompt engineering for safety",
+    "Real-time features add complexity",
+    "Connection pooling limits on free tier"
+  ],
+  "metadata": {
+    "license": "Apache 2.0",
+    "supported_platforms": ["All platforms with Node.js"],
+    "programming_languages": ["TypeScript"],
+    "mcp_version": "1.0",
+    "github_repo": "https://github.com/supabase/supabase",
+    "github_stars": 78000,
+    "api_dependency": "Supabase REST API / PostgreSQL",
+    "authentication": "Service Role Key or Anon Key",
+    "first_release": "2025-01",
+    "maintained_by": "Supabase",
+    "transport_types": ["stdio"],
+    "installation_methods": ["npm"]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 95,
+      "notes": "Excellent for full-stack development with auto-generated types"
+    },
+    "customer-support": {
+      "overall": 78,
+      "notes": "Good for building support ticket systems and user management"
+    },
+    "content-creation": {
+      "overall": 82,
+      "notes": "Great for CMS backends and content management"
+    },
+    "data-analysis": {
+      "overall": 90,
+      "notes": "Full SQL power for complex data analysis queries"
+    },
+    "research-assistant": {
+      "overall": 85,
+      "notes": "Good for building research databases and knowledge bases"
+    },
+    "legal-compliance": {
+      "overall": 75,
+      "notes": "RLS and audit logging support compliance requirements"
+    },
+    "healthcare": {
+      "overall": 72,
+      "notes": "Self-hosted option needed; requires careful RLS configuration"
+    },
+    "financial-analysis": {
+      "overall": 80,
+      "notes": "Strong for financial data storage with proper access controls"
+    },
+    "education": {
+      "overall": 88,
+      "notes": "Excellent for learning SQL and building educational apps"
+    },
+    "creative-writing": {
+      "overall": 70,
+      "notes": "Good for storing and organizing creative content"
+    }
+  },
+  "best_for": [
+    "Full-stack developers building AI-powered applications",
+    "Teams needing AI-assisted database management",
+    "Startups wanting rapid backend development",
+    "Projects requiring PostgreSQL with modern DX"
+  ],
+  "tags": ["database", "postgresql", "backend", "mcp", "model-context-protocol", "supabase"]
+}

@@ -1,0 +1,653 @@
+{
+  "id": "gpt-5-2-codex",
+  "type": "model",
+  "name": "GPT-5.2 Codex",
+  "provider": "OpenAI",
+  "version": "gpt-5-2-codex-2025-12-11",
+  "last_evaluated": "2026-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "OpenAI's specialized coding model built on GPT-5.2 with 56.4% SWE-bench Pro (state-of-the-art), 64% Terminal-bench 2.0, native code compaction, and enhanced cybersecurity capabilities.",
+  "website": "https://openai.com/index/introducing-gpt-5-2-codex/",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 96,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Pro",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "56.4% (state-of-the-art on professional coding)"
+            },
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "82.1% (exceeds Claude Opus 4.5's 80.9%)"
+            },
+            {
+              "source": "Terminal-bench 2.0",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "64.0% (industry-leading command-line tasks)"
+            }
+          ],
+          "methodology": "Professional and enterprise coding benchmarks",
+          "last_verified": "2026-01-14"
+        },
+        "task_accuracy_reasoning": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Inherited from GPT-5.2",
+              "url": "https://openai.com/index/introducing-gpt-5-2/",
+              "date": "2025-12-11",
+              "value": "Strong reasoning inherited from GPT-5.2 base"
+            }
+          ],
+          "methodology": "Reasoning benchmarks optimized for code-related tasks",
+          "last_verified": "2026-01-14"
+        },
+        "task_accuracy_general": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Specialized for coding, general capabilities reduced"
+            }
+          ],
+          "methodology": "General knowledge testing",
+          "last_verified": "2026-01-14",
+          "notes": "Optimized for coding tasks; general performance slightly reduced"
+        },
+        "output_consistency": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Testing",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Native code compaction ensures consistent output format"
+            }
+          ],
+          "methodology": "Code consistency and format testing",
+          "last_verified": "2026-01-14"
+        },
+        "latency_p50": {
+          "value": "1.0s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/",
+              "date": "2025-12-15",
+              "value": "Optimized for coding tasks"
+            }
+          ],
+          "methodology": "Median latency for code generation",
+          "last_verified": "2026-01-14"
+        },
+        "latency_p95": {
+          "value": "3.0s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/",
+              "date": "2025-12-15",
+              "value": "p95 latency for complex code tasks"
+            }
+          ],
+          "methodology": "95th percentile response time",
+          "last_verified": "2026-01-14"
+        },
+        "context_window": {
+          "value": "400,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Documentation",
+              "url": "https://platform.openai.com/docs/models/gpt-5-2-codex",
+              "date": "2025-12-11",
+              "value": "400K context for full codebase analysis"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2026-01-14"
+        },
+        "uptime": {
+          "score": 99,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Status",
+              "url": "https://status.openai.com/",
+              "date": "2026-01-01",
+              "value": "99.9% uptime"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "State-of-the-art coding model: 56.4% SWE-bench Pro, 82.1% SWE-bench Verified, 64% Terminal-bench 2.0. Native code compaction for clean outputs."
+    },
+
+    "security": {
+      "overall_score": 89,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Codex Security",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Enhanced cybersecurity capabilities"
+            }
+          ],
+          "methodology": "Testing against code-focused injection attacks",
+          "last_verified": "2026-01-14"
+        },
+        "jailbreak_resistance": {
+          "score": 90,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety",
+              "url": "https://openai.com/safety",
+              "date": "2025-12-11",
+              "value": "Inherited GPT-5.2 safety features"
+            }
+          ],
+          "methodology": "Adversarial prompt testing",
+          "last_verified": "2026-01-14"
+        },
+        "data_leakage_prevention": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Privacy",
+              "url": "https://openai.com/policies/privacy-policy",
+              "date": "2025-12-11",
+              "value": "No training on API data by default"
+            }
+          ],
+          "methodology": "Code-specific data handling review",
+          "last_verified": "2026-01-14"
+        },
+        "output_safety": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Codex Security Features",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Enhanced for secure code generation"
+            }
+          ],
+          "methodology": "Security-focused code output testing",
+          "last_verified": "2026-01-14"
+        },
+        "api_security": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Platform",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-12-11",
+              "value": "Standard OpenAI API security"
+            }
+          ],
+          "methodology": "API security review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Enhanced cybersecurity capabilities for secure code generation. Specialized for identifying and avoiding code vulnerabilities."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 85,
+      "criteria": {
+        "data_residency": {
+          "value": "US, EU",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-12-11",
+              "value": "Enterprise data residency options"
+            }
+          ],
+          "methodology": "Enterprise documentation review",
+          "last_verified": "2026-01-14"
+        },
+        "training_data_optout": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Data Controls",
+              "url": "https://openai.com/policies/usage-policies",
+              "date": "2025-12-11",
+              "value": "API data not used for training"
+            }
+          ],
+          "methodology": "Policy review",
+          "last_verified": "2026-01-14"
+        },
+        "data_retention": {
+          "value": "30 days",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2025-12-11",
+              "value": "Standard 30-day retention, zero for enterprise"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2026-01-14"
+        },
+        "pii_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Safety",
+              "url": "https://platform.openai.com/docs/guides/safety",
+              "date": "2025-12-11",
+              "value": "Customer responsible for code PII"
+            }
+          ],
+          "methodology": "Data protection review",
+          "last_verified": "2026-01-14"
+        },
+        "compliance_certifications": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Trust Center",
+              "url": "https://trust.openai.com/",
+              "date": "2025-12-11",
+              "value": "SOC 2 Type II, ISO 27001, GDPR"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2026-01-14"
+        },
+        "zero_data_retention": {
+          "score": 86,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Enterprise",
+              "url": "https://openai.com/enterprise",
+              "date": "2025-12-11",
+              "value": "Zero retention for enterprise"
+            }
+          ],
+          "methodology": "Enterprise feature review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Standard OpenAI privacy. Important for code: ensure proprietary code handling policies are understood."
+    },
+
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "explainability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Codex Documentation",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Code explanations and comments generation"
+            }
+          ],
+          "methodology": "Code explainability assessment",
+          "last_verified": "2026-01-14"
+        },
+        "hallucination_rate": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Testing",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "High accuracy on real-world code tasks"
+            }
+          ],
+          "methodology": "Code accuracy and compilation testing",
+          "last_verified": "2026-01-14"
+        },
+        "bias_fairness": {
+          "score": 83,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Testing",
+              "url": "https://openai.com/safety",
+              "date": "2025-12-11",
+              "value": "Code-focused bias testing"
+            }
+          ],
+          "methodology": "Code generation bias assessment",
+          "last_verified": "2026-01-14"
+        },
+        "uncertainty_quantification": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://platform.openai.com/docs/models/gpt-5-2-codex",
+              "date": "2025-12-11",
+              "value": "Expresses uncertainty in code suggestions"
+            }
+          ],
+          "methodology": "Code confidence expression",
+          "last_verified": "2026-01-14"
+        },
+        "model_card_quality": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Codex Documentation",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Comprehensive coding benchmarks and capabilities"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2026-01-14"
+        },
+        "training_data_transparency": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "OpenAI Blog",
+              "url": "https://openai.com/blog",
+              "date": "2025-12-11",
+              "value": "General description of code training data"
+            }
+          ],
+          "methodology": "Training data disclosure review",
+          "last_verified": "2026-01-14"
+        },
+        "guardrails": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Codex Safety",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+              "date": "2025-12-11",
+              "value": "Enhanced guardrails for secure code generation"
+            }
+          ],
+          "methodology": "Code safety mechanism review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Strong code explainability with native documentation generation. Enhanced for secure code practices."
+    },
+
+    "operational_excellence": {
+      "overall_score": 94,
+      "criteria": {
+        "api_design_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Codex API",
+              "url": "https://platform.openai.com/docs/api-reference",
+              "date": "2025-12-11",
+              "value": "Code-optimized API with native compaction"
+            }
+          ],
+          "methodology": "API design review",
+          "last_verified": "2026-01-14"
+        },
+        "sdk_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI SDKs",
+              "url": "https://github.com/openai",
+              "date": "2025-12-11",
+              "value": "Full SDK support with code-specific features"
+            }
+          ],
+          "methodology": "SDK review",
+          "last_verified": "2026-01-14"
+        },
+        "versioning_policy": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Versioning",
+              "url": "https://platform.openai.com/docs/api-reference/models",
+              "date": "2025-12-11",
+              "value": "Clear versioning policy"
+            }
+          ],
+          "methodology": "Versioning review",
+          "last_verified": "2026-01-14"
+        },
+        "monitoring_observability": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Dashboard",
+              "url": "https://platform.openai.com/usage",
+              "date": "2025-12-11",
+              "value": "Detailed usage metrics for code tasks"
+            }
+          ],
+          "methodology": "Observability review",
+          "last_verified": "2026-01-14"
+        },
+        "support_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Support",
+              "url": "https://help.openai.com/",
+              "date": "2025-12-11",
+              "value": "Developer-focused support"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2026-01-14"
+        },
+        "ecosystem_maturity": {
+          "score": 96,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Developer Tools",
+              "url": "https://platform.openai.com/docs",
+              "date": "2025-12-11",
+              "value": "IDE integrations, GitHub Copilot compatibility"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2026-01-14"
+        },
+        "license_terms": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "OpenAI Terms",
+              "url": "https://openai.com/policies/terms-of-use",
+              "date": "2025-12-11",
+              "value": "Standard commercial terms"
+            }
+          ],
+          "methodology": "License review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Excellent developer experience with native code compaction and IDE integrations. Industry-leading code tooling."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 99,
+      "notes": "State-of-the-art: 56.4% SWE-bench Pro, 82.1% SWE-bench Verified. Native compaction for clean code.",
+      "alternatives": ["claude-opus-4-5", "gpt-5-2"]
+    },
+    "customer-support": {
+      "overall": 75,
+      "notes": "Specialized for coding, not optimized for general customer support.",
+      "alternatives": ["gpt-5-2", "claude-sonnet-4-5"]
+    },
+    "content-creation": {
+      "overall": 78,
+      "notes": "Good for technical documentation, not optimized for general content.",
+      "alternatives": ["gpt-5-2", "claude-opus-4-5"]
+    },
+    "data-analysis": {
+      "overall": 88,
+      "notes": "Strong for code-based data analysis and scripting.",
+      "alternatives": ["gpt-5-2", "gemini-3-pro"]
+    },
+    "research-assistant": {
+      "overall": 82,
+      "notes": "Excellent for code research, limited for general research.",
+      "alternatives": ["gpt-5-2", "claude-opus-4-5"]
+    },
+    "legal-compliance": {
+      "overall": 70,
+      "notes": "Not designed for legal work. Use general-purpose models.",
+      "alternatives": ["claude-opus-4-5"]
+    },
+    "healthcare": {
+      "overall": 65,
+      "notes": "Not suitable for healthcare applications.",
+      "alternatives": ["claude-opus-4-5"]
+    },
+    "financial-analysis": {
+      "overall": 80,
+      "notes": "Good for quantitative coding, limited for general finance.",
+      "alternatives": ["gpt-5-2", "claude-opus-4-5"]
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for teaching programming and code review.",
+      "alternatives": ["claude-opus-4-5", "gpt-5-2"]
+    },
+    "creative-writing": {
+      "overall": 70,
+      "notes": "Specialized for code, not creative writing.",
+      "alternatives": ["gpt-5-2", "claude-opus-4-5"]
+    }
+  },
+
+  "strengths": [
+    "State-of-the-art coding: 56.4% SWE-bench Pro (best available)",
+    "82.1% SWE-bench Verified (exceeds Claude Opus 4.5)",
+    "64% Terminal-bench 2.0 (industry-leading CLI)",
+    "Native code compaction for clean, formatted output",
+    "Enhanced cybersecurity for secure code generation",
+    "400K context for full codebase analysis",
+    "IDE integrations and developer tooling"
+  ],
+
+  "limitations": [
+    "Specialized for coding - reduced general capabilities",
+    "Not suitable for non-code tasks",
+    "Same pricing as GPT-5.2",
+    "Not HIPAA eligible",
+    "30-day data retention"
+  ],
+
+  "best_for": [
+    "Professional software development and refactoring",
+    "Security-focused code generation",
+    "Terminal and CLI automation",
+    "Teaching programming",
+    "Full codebase analysis and modification"
+  ],
+
+  "not_recommended_for": [
+    "General conversation and chat",
+    "Creative writing",
+    "Healthcare applications",
+    "Legal document analysis",
+    "Non-technical customer support"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "$1.75 per 1M tokens",
+      "output": "$14.00 per 1M tokens",
+      "notes": "Same as GPT-5.2. Optimized for coding efficiency.",
+      "last_verified": "2026-01-14"
+    },
+    "context_window": 400000,
+    "max_output": 128000,
+    "languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "C++",
+      "C#",
+      "Go",
+      "Rust",
+      "Ruby",
+      "PHP",
+      "Swift",
+      "Kotlin",
+      "100+ programming languages"
+    ],
+    "modalities": ["text", "code"],
+    "api_endpoint": "https://api.openai.com/v1/chat/completions",
+    "open_source": false,
+    "architecture": "GPT-5.2 based with code-specialized training",
+    "parameters": "Not disclosed"
+  },
+
+  "related_entities": ["gpt-5-2", "claude-opus-4-5", "claude-sonnet-4-5"],
+
+  "tags": [
+    "coding",
+    "specialized",
+    "swe-bench-leader",
+    "terminal",
+    "cybersecurity",
+    "code-compaction",
+    "developer-tools"
+  ]
+}

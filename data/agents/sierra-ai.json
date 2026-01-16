@@ -1,0 +1,394 @@
+{
+  "id": "sierra-ai",
+  "type": "agent",
+  "name": "Sierra",
+  "provider": "Sierra Technologies Inc.",
+  "version": "2025.1",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "Conversational AI platform specialized in autonomous customer experience agents. Founded by former Salesforce co-CEO Bret Taylor and ex-Google executive Clay Bavor, Sierra focuses on transactional CX workflows with agents that can take real actions on behalf of customers.",
+  "website": "https://sierra.ai/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "conversation_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Platform",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Natural, empathetic conversations with brand voice customization"
+            }
+          ],
+          "methodology": "Conversation quality testing",
+          "last_verified": "2025-01-14"
+        },
+        "action_execution": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Actions",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Agents can take real actions: process returns, update orders, etc."
+            }
+          ],
+          "methodology": "Action capability testing",
+          "last_verified": "2025-01-14"
+        },
+        "resolution_rate": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Customers",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "High resolution rates reported by enterprise customers"
+            }
+          ],
+          "methodology": "Resolution rate analysis",
+          "last_verified": "2025-01-14"
+        },
+        "brand_alignment": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Customization",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Deep brand voice and tone customization"
+            }
+          ],
+          "methodology": "Brand alignment testing",
+          "last_verified": "2025-01-14"
+        },
+        "escalation_handling": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Handoff",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Smart escalation to human agents when needed"
+            }
+          ],
+          "methodology": "Escalation flow testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 85,
+      "criteria": {
+        "enterprise_security": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Security",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Enterprise-grade security for Fortune 500 customers"
+            }
+          ],
+          "methodology": "Security assessment",
+          "last_verified": "2025-01-14"
+        },
+        "action_guardrails": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Platform",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Guardrails and policies to control agent actions"
+            }
+          ],
+          "methodology": "Guardrails review",
+          "last_verified": "2025-01-14"
+        },
+        "data_protection": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Privacy",
+              "url": "https://sierra.ai/privacy",
+              "date": "2025-01-10",
+              "value": "Data protection measures for customer information"
+            }
+          ],
+          "methodology": "Data protection review",
+          "last_verified": "2025-01-14"
+        },
+        "access_control": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Admin",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Role-based access control for administrators"
+            }
+          ],
+          "methodology": "Access control review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 82,
+      "criteria": {
+        "customer_data_handling": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Privacy",
+              "url": "https://sierra.ai/privacy",
+              "date": "2025-01-10",
+              "value": "Customer data handling policies for enterprise use"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-01-14"
+        },
+        "compliance_support": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Enterprise",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Supports enterprise compliance requirements"
+            }
+          ],
+          "methodology": "Compliance review",
+          "last_verified": "2025-01-14"
+        },
+        "data_minimization": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Data Practices",
+              "url": "https://sierra.ai/privacy",
+              "date": "2025-01-10",
+              "value": "Collects data necessary for service delivery"
+            }
+          ],
+          "methodology": "Data practices review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 80,
+      "criteria": {
+        "conversation_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Analytics",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Full conversation logs and analytics"
+            }
+          ],
+          "methodology": "Visibility assessment",
+          "last_verified": "2025-01-14"
+        },
+        "action_transparency": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Platform",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Actions taken by agents are logged and reviewable"
+            }
+          ],
+          "methodology": "Action logging review",
+          "last_verified": "2025-01-14"
+        },
+        "model_disclosure": {
+          "score": 72,
+          "confidence": "low",
+          "evidence": [
+            {
+              "source": "Sierra Technology",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Proprietary technology with limited disclosure"
+            }
+          ],
+          "methodology": "Technology transparency review",
+          "last_verified": "2025-01-14"
+        },
+        "company_transparency": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Leadership",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Well-known founders with public profiles"
+            }
+          ],
+          "methodology": "Company transparency review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 84,
+      "criteria": {
+        "implementation_support": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Onboarding",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "White-glove implementation for enterprise customers"
+            }
+          ],
+          "methodology": "Implementation review",
+          "last_verified": "2025-01-14"
+        },
+        "system_integration": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Integrations",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Integrates with CRM, order management, and support systems"
+            }
+          ],
+          "methodology": "Integration review",
+          "last_verified": "2025-01-14"
+        },
+        "analytics": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Sierra Analytics",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Rich analytics for conversation and business insights"
+            }
+          ],
+          "methodology": "Analytics capability review",
+          "last_verified": "2025-01-14"
+        },
+        "continuous_improvement": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Sierra Platform",
+              "url": "https://sierra.ai/",
+              "date": "2025-01-10",
+              "value": "Continuous learning and improvement capabilities"
+            }
+          ],
+          "methodology": "Improvement process review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 96,
+      "notes": "Purpose-built for autonomous customer service"
+    },
+    "code-generation": {
+      "overall": 40,
+      "notes": "Not designed for code generation"
+    },
+    "research-assistant": {
+      "overall": 55,
+      "notes": "Not designed for research tasks"
+    },
+    "data-analysis": {
+      "overall": 60,
+      "notes": "Limited to customer service analytics"
+    },
+    "content-creation": {
+      "overall": 50,
+      "notes": "Not designed for content creation"
+    },
+    "education": {
+      "overall": 65,
+      "notes": "Could support educational institution support"
+    },
+    "healthcare": {
+      "overall": 70,
+      "notes": "Could support patient service inquiries"
+    },
+    "financial-analysis": {
+      "overall": 55,
+      "notes": "Not designed for financial analysis"
+    },
+    "legal-compliance": {
+      "overall": 60,
+      "notes": "Limited compliance-specific features"
+    },
+    "creative-writing": {
+      "overall": 40,
+      "notes": "Not designed for creative applications"
+    }
+  },
+  "best_for": [
+    "E-commerce customer service automation",
+    "Retail brands needing 24/7 support",
+    "Companies wanting agents that take actions",
+    "Brands prioritizing authentic customer experience"
+  ],
+  "strengths": [
+    "Agents can take real transactional actions",
+    "Strong brand voice customization",
+    "Founded by proven tech leaders (Bret Taylor, Clay Bavor)",
+    "High-quality natural conversations",
+    "Enterprise-grade reliability",
+    "Smart escalation to human agents"
+  ],
+  "limitations": [
+    "Focused solely on customer service use cases",
+    "Enterprise pricing - not for small businesses",
+    "Newer company (founded 2023)",
+    "Limited public documentation",
+    "Proprietary technology with limited disclosure",
+    "Requires system integrations for full capability"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_platforms": ["Cloud"],
+    "deployment_type": "SaaS",
+    "pricing": "Enterprise pricing - contact sales",
+    "founded": "2023",
+    "founders": "Bret Taylor (ex-Salesforce co-CEO), Clay Bavor (ex-Google)",
+    "headquarters": "San Francisco, CA",
+    "funding": "$285M Series C at $4.5B valuation (Dec 2024)",
+    "customers": "WeightWatchers, SiriusXM, ADT, OluKai"
+  },
+  "tags": ["customer-support", "conversational-ai", "autonomous-agents", "e-commerce"]
+}

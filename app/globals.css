@@ -633,3 +633,97 @@
   pointer-events: none;
   opacity: 0.05;
 }
+
+/* PDF Export Mode - Applied when exporting */
+.pdf-export-mode,
+.pdf-export-mode body {
+  background: #0a0a0a !important;
+  background-image: none !important;
+}
+
+.pdf-export-mode body::before,
+.pdf-export-mode body::after {
+  display: none !important;
+}
+
+.pdf-export-mode .absolute.pointer-events-none {
+  display: none !important;
+}
+
+.pdf-export-mode .matrix-bg,
+.pdf-export-mode .cyber-grid,
+.pdf-export-mode #matrix-canvas {
+  display: none !important;
+}
+
+.pdf-export-mode header,
+.pdf-export-mode footer {
+  display: none !important;
+}
+
+.pdf-export-mode main {
+  background: #0a0a0a !important;
+}
+
+.pdf-export-mode * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Force single column layout in PDF export mode */
+.pdf-export-mode .grid.lg\:grid-cols-3 {
+  display: block !important;
+}
+
+.pdf-export-mode .lg\:col-span-2 {
+  width: 100% !important;
+  margin-bottom: 24px !important;
+}
+
+.pdf-export-mode .space-y-6 > * {
+  margin-bottom: 24px !important;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: #0a0a0a !important;
+    background-image: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  .absolute.pointer-events-none {
+    display: none !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Force single column layout */
+  .grid {
+    display: block !important;
+  }
+
+  .lg\:grid-cols-3,
+  .md\:grid-cols-2,
+  .md\:grid-cols-3 {
+    display: block !important;
+  }
+
+  .lg\:col-span-2 {
+    width: 100% !important;
+  }
+
+  /* Hide export button */
+  [data-export-button] {
+    display: none !important;
+  }
+}

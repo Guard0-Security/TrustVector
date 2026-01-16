@@ -87,7 +87,7 @@ export default function HomePage() {
 
             {/* Description - More Readable */}
             <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed text-center mb-12" style={{ lineHeight: '1.8' }}>
-              Comprehensive trust evaluations of <span className="text-[#00ff41] font-semibold">93 AI systems</span> across{' '}
+              Comprehensive trust evaluations of <span className="text-[#00ff41] font-semibold">{allEntities.length} AI systems</span> across{' '}
               <span className="text-cyan-400 font-semibold">5 security dimensions</span> — covering models, MCPs, and agents with evidence-backed analysis.
             </p>
 
@@ -112,7 +112,7 @@ export default function HomePage() {
                 Explore Evaluations
               </a>
               <a
-                href="https://github.com/Guard0-Security/TrustVector"
+                href="https://github.com/JBAhire/trust-vector"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold border-2 border-gray-600 text-gray-300 hover:border-[#00ff41] hover:text-[#00ff41] transition-colors duration-200"
@@ -248,36 +248,6 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* CTA Section */}
-        <div className="mt-24 max-w-4xl mx-auto">
-          <div className="bg-gray-950 border border-gray-800 p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Open Source & Community Driven
-            </h2>
-
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8" style={{ lineHeight: '1.7' }}>
-              TrustVector is an open-source framework for evidence-based AI security assessments.
-              Help us evaluate more systems and make AI transparency accessible to everyone.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://github.com/Guard0-Security/TrustVector"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold bg-[#00ff41] text-black hover:bg-[#00dd35] transition-colors duration-200"
-              >
-                Contribute on GitHub
-              </a>
-              <a
-                href="/methodology"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold border-2 border-gray-600 text-gray-300 hover:border-[#00ff41] hover:text-[#00ff41] transition-colors duration-200"
-              >
-                View Methodology
-              </a>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Custom Styles */}

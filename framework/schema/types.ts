@@ -214,18 +214,23 @@ export function interpretScore(score: number): ScoreInterpretation {
 }
 
 /**
+ * Score color palette - Terminal/Matrix themed
+ * Single source of truth for all score-based colors
+ */
+export const SCORE_COLORS = {
+  exceptional: '#00ff41', // Matrix green
+  strong: '#00d9ff',      // Electric cyan
+  adequate: '#ffdd00',    // Terminal yellow
+  concerning: '#ff6b35',  // Warning orange
+  poor: '#ff006e',        // Neon magenta
+} as const;
+
+/**
  * Get color for score
  */
 export function getScoreColor(score: number): string {
   const interpretation = interpretScore(score);
-  const colors = {
-    exceptional: '#10b981',
-    strong: '#3b82f6',
-    adequate: '#f59e0b',
-    concerning: '#f97316',
-    poor: '#ef4444',
-  };
-  return colors[interpretation];
+  return SCORE_COLORS[interpretation];
 }
 
 /**

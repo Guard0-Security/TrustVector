@@ -11,6 +11,15 @@ import {
 } from 'recharts';
 import type { TrustVectorEntity } from '@/framework/schema/types';
 
+// Terminal theme colors for chart
+const CHART_COLORS = {
+  grid: '#1a3a1a',         // Dark green grid
+  axis: '#00ff41',         // Matrix green for labels
+  axisSecondary: '#4a7c4a', // Muted green for radius
+  radar: '#00ff41',        // Matrix green for radar
+  radarFill: '#00ff41',    // Matrix green fill
+};
+
 interface TrustVectorChartProps {
   entity: TrustVectorEntity;
   height?: number;
@@ -47,21 +56,25 @@ export function TrustVectorChart({ entity, height = 400 }: TrustVectorChartProps
     },
   ];
 
+  // Generate accessible description for screen readers
+  const accessibleDescription = data.map(d => `${d.fullName}: ${d.score} out of 100`).join(', ');
+
   return (
+    <div role="img" aria-label={`Trust vector radar chart for ${entity.name}. ${accessibleDescription}`}>
     <ResponsiveContainer width="100%" height={height}>
       <RadarChart data={data}>
-        <PolarGrid stroke="#e5e7eb" />
+        <PolarGrid stroke={CHART_COLORS.grid} />
         <PolarAngleAxis
           dataKey="dimension"
-          tick={{ fill: '#6b7280', fontSize: 14 }}
+          tick={{ fill: CHART_COLORS.axis, fontSize: 14 }}
         />
-        <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: '#9ca3af', fontSize: 12 }} />
+        <PolarRadiusAxis angle={90} domain={[0, 100]} tick={{ fill: CHART_COLORS.axisSecondary, fontSize: 12 }} />
         <Radar
           name={entity.name}
           dataKey="score"
-          stroke="#3b82f6"
-          fill="#3b82f6"
-          fillOpacity={0.3}
+          stroke={CHART_COLORS.radar}
+          fill={CHART_COLORS.radarFill}
+          fillOpacity={0.2}
           strokeWidth={2}
         />
         <Tooltip
@@ -82,5 +95,6 @@ export function TrustVectorChart({ entity, height = 400 }: TrustVectorChartProps
         />
       </RadarChart>
     </ResponsiveContainer>
+    </div>
   );
 }

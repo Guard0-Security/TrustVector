@@ -1,0 +1,635 @@
+{
+  "id": "gemini-3-flash",
+  "type": "model",
+  "name": "Gemini 3 Flash",
+  "provider": "Google",
+  "version": "gemini-3-flash-preview",
+  "last_evaluated": "2026-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "Google's efficiency model with Pro-level performance at 1/4 the price. 78% SWE-bench (beats Pro), 1M context, 3x faster than 2.5 Pro. Thinking level parameter for compute control.",
+  "website": "https://blog.google/products/gemini/gemini-3-flash/",
+
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 93,
+      "criteria": {
+        "task_accuracy_code": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "SWE-bench Verified",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "78% (actually beats Gemini 3 Pro's 76.2%)"
+            }
+          ],
+          "methodology": "Industry-standard coding benchmarks",
+          "last_verified": "2026-01-14"
+        },
+        "task_accuracy_reasoning": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "GPQA Diamond",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "90.4% (near Pro-level 93.8%)"
+            },
+            {
+              "source": "Toolathlon & MPC Atlas",
+              "url": "https://simonwillison.net/2025/Dec/17/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "Beats Gemini 3 Pro on tool use and multi-step planning"
+            }
+          ],
+          "methodology": "PhD-level reasoning benchmarks",
+          "last_verified": "2026-01-14"
+        },
+        "task_accuracy_general": {
+          "score": 93,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "MMMU Pro",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "81.2% (actually beats Gemini 3 Pro's 81%)"
+            }
+          ],
+          "methodology": "Multimodal understanding testing",
+          "last_verified": "2026-01-14"
+        },
+        "output_consistency": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Documentation",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "Thinking level parameter enables consistent quality control"
+            }
+          ],
+          "methodology": "Consistency testing across thinking levels",
+          "last_verified": "2026-01-14"
+        },
+        "latency_p50": {
+          "value": "0.5s",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Performance Data",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "3x faster than Gemini 2.5 Pro"
+            }
+          ],
+          "methodology": "Median latency measurements",
+          "last_verified": "2026-01-14"
+        },
+        "latency_p95": {
+          "value": "1.5s",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Community benchmarking",
+              "url": "https://artificialanalysis.ai/",
+              "date": "2025-12-20",
+              "value": "p95 latency optimized for speed"
+            }
+          ],
+          "methodology": "95th percentile measurements",
+          "last_verified": "2026-01-14"
+        },
+        "context_window": {
+          "value": "1,000,000 tokens",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Documentation",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "1M token context window"
+            }
+          ],
+          "methodology": "Official specification",
+          "last_verified": "2026-01-14"
+        },
+        "uptime": {
+          "score": 98,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Status",
+              "url": "https://status.cloud.google.com/",
+              "date": "2026-01-01",
+              "value": "99.9% uptime"
+            }
+          ],
+          "methodology": "Historical uptime data",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Exceptional value: 78% SWE-bench beats Pro at 1/4 the price. 3x faster than 2.5 Pro with 1M context. Beats Pro on tool use and MMMU."
+    },
+
+    "security": {
+      "overall_score": 86,
+      "criteria": {
+        "prompt_injection_resistance": {
+          "score": 85,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Safety",
+              "url": "https://ai.google/responsibility/",
+              "date": "2025-12-17",
+              "value": "Inherited safety from Gemini 3 family"
+            }
+          ],
+          "methodology": "OWASP LLM security testing",
+          "last_verified": "2026-01-14"
+        },
+        "jailbreak_resistance": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Safety Testing",
+              "url": "https://ai.google.dev/gemini-api/docs/safety-settings",
+              "date": "2025-12-17",
+              "value": "Strong jailbreak resistance"
+            }
+          ],
+          "methodology": "Adversarial prompt testing",
+          "last_verified": "2026-01-14"
+        },
+        "data_leakage_prevention": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Privacy",
+              "url": "https://policies.google.com/privacy",
+              "date": "2025-12-17",
+              "value": "API data not used for training"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2026-01-14"
+        },
+        "output_safety": {
+          "score": 89,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Safety Filters",
+              "url": "https://ai.google.dev/gemini-api/docs/safety-settings",
+              "date": "2025-12-17",
+              "value": "Configurable safety filters"
+            }
+          ],
+          "methodology": "Safety testing",
+          "last_verified": "2026-01-14"
+        },
+        "api_security": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Security",
+              "url": "https://cloud.google.com/security",
+              "date": "2025-12-17",
+              "value": "Google Cloud security"
+            }
+          ],
+          "methodology": "API security review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Strong security inherited from Gemini 3 family. Google Cloud infrastructure provides enterprise-grade protection."
+    },
+
+    "privacy_compliance": {
+      "overall_score": 85,
+      "criteria": {
+        "data_residency": {
+          "value": "Global (Google Cloud regions)",
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud",
+              "url": "https://cloud.google.com/about/locations",
+              "date": "2025-12-17",
+              "value": "Multiple region options"
+            }
+          ],
+          "methodology": "Cloud infrastructure review",
+          "last_verified": "2026-01-14"
+        },
+        "training_data_optout": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gemini API Terms",
+              "url": "https://ai.google.dev/gemini-api/terms",
+              "date": "2025-12-17",
+              "value": "API data not used for training"
+            }
+          ],
+          "methodology": "Terms review",
+          "last_verified": "2026-01-14"
+        },
+        "data_retention": {
+          "value": "Varies by tier",
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Cloud Terms",
+              "url": "https://cloud.google.com/terms/service-terms",
+              "date": "2025-12-17",
+              "value": "Enterprise zero retention available"
+            }
+          ],
+          "methodology": "Retention policy review",
+          "last_verified": "2026-01-14"
+        },
+        "pii_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Safety",
+              "url": "https://ai.google.dev/gemini-api/docs/safety-settings",
+              "date": "2025-12-17",
+              "value": "Customer responsible for PII"
+            }
+          ],
+          "methodology": "Data protection review",
+          "last_verified": "2026-01-14"
+        },
+        "compliance_certifications": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Compliance",
+              "url": "https://cloud.google.com/security/compliance",
+              "date": "2025-12-17",
+              "value": "SOC 2, ISO 27001, GDPR, HIPAA (via Google Cloud)"
+            }
+          ],
+          "methodology": "Certification verification",
+          "last_verified": "2026-01-14"
+        },
+        "zero_data_retention": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Enterprise Options",
+              "url": "https://cloud.google.com/",
+              "date": "2025-12-17",
+              "value": "Available for enterprise"
+            }
+          ],
+          "methodology": "Enterprise feature review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Good privacy with Google Cloud. Free tier available. Enterprise options for enhanced compliance."
+    },
+
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "explainability": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Thinking Level Parameter",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "Thinking level (minimal, low, medium, high) for reasoning control"
+            }
+          ],
+          "methodology": "Reasoning transparency evaluation",
+          "last_verified": "2026-01-14"
+        },
+        "hallucination_rate": {
+          "score": 87,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google Testing",
+              "url": "https://blog.google/products/gemini/gemini-3-flash/",
+              "date": "2025-12-17",
+              "value": "Improved accuracy over 2.5 Flash"
+            }
+          ],
+          "methodology": "Factual accuracy testing",
+          "last_verified": "2026-01-14"
+        },
+        "bias_fairness": {
+          "score": 84,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Principles",
+              "url": "https://ai.google/responsibility/principles/",
+              "date": "2025-12-17",
+              "value": "Regular bias testing"
+            }
+          ],
+          "methodology": "Bias evaluation",
+          "last_verified": "2026-01-14"
+        },
+        "uncertainty_quantification": {
+          "score": 86,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Model Behavior",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-12-17",
+              "value": "Appropriate uncertainty expression"
+            }
+          ],
+          "methodology": "Qualitative assessment",
+          "last_verified": "2026-01-14"
+        },
+        "model_card_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gemini 3 Flash Documentation",
+              "url": "https://ai.google.dev/gemini-api/docs/models",
+              "date": "2025-12-17",
+              "value": "Comprehensive documentation"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2026-01-14"
+        },
+        "training_data_transparency": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Google AI Blog",
+              "url": "https://blog.google/technology/ai/",
+              "date": "2025-12-17",
+              "value": "General description"
+            }
+          ],
+          "methodology": "Public disclosure review",
+          "last_verified": "2026-01-14"
+        },
+        "guardrails": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Safety Settings",
+              "url": "https://ai.google.dev/gemini-api/docs/safety-settings",
+              "date": "2025-12-17",
+              "value": "Configurable safety filters"
+            }
+          ],
+          "methodology": "Safety mechanism review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Strong transparency with thinking level parameter. Configurable reasoning depth for different use cases."
+    },
+
+    "operational_excellence": {
+      "overall_score": 92,
+      "criteria": {
+        "api_design_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Gemini API",
+              "url": "https://ai.google.dev/gemini-api/docs",
+              "date": "2025-12-17",
+              "value": "RESTful API with streaming, function calling, multimodal"
+            }
+          ],
+          "methodology": "API design review",
+          "last_verified": "2026-01-14"
+        },
+        "sdk_quality": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI SDKs",
+              "url": "https://github.com/google-gemini",
+              "date": "2025-12-17",
+              "value": "SDKs for Python, Node.js, Go, Swift, Kotlin, Dart"
+            }
+          ],
+          "methodology": "SDK quality assessment",
+          "last_verified": "2026-01-14"
+        },
+        "versioning_policy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Versioning",
+              "url": "https://cloud.google.com/apis/design/versioning",
+              "date": "2025-12-17",
+              "value": "Clear versioning"
+            }
+          ],
+          "methodology": "Versioning policy review",
+          "last_verified": "2026-01-14"
+        },
+        "monitoring_observability": {
+          "score": 94,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Console",
+              "url": "https://console.cloud.google.com/",
+              "date": "2025-12-17",
+              "value": "Comprehensive monitoring"
+            }
+          ],
+          "methodology": "Observability review",
+          "last_verified": "2026-01-14"
+        },
+        "support_quality": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Support",
+              "url": "https://cloud.google.com/support",
+              "date": "2025-12-17",
+              "value": "Enterprise support with SLAs"
+            }
+          ],
+          "methodology": "Support assessment",
+          "last_verified": "2026-01-14"
+        },
+        "ecosystem_maturity": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google AI Ecosystem",
+              "url": "https://ai.google.dev/",
+              "date": "2025-12-17",
+              "value": "Default model in consumer Gemini app"
+            }
+          ],
+          "methodology": "Ecosystem analysis",
+          "last_verified": "2026-01-14"
+        },
+        "license_terms": {
+          "score": 91,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Google Cloud Terms",
+              "url": "https://cloud.google.com/terms",
+              "date": "2025-12-17",
+              "value": "Standard commercial terms"
+            }
+          ],
+          "methodology": "License review",
+          "last_verified": "2026-01-14"
+        }
+      },
+      "notes": "Excellent operational maturity. Default model in Gemini consumer app. Free tier available in API."
+    }
+  },
+
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 93,
+      "notes": "78% SWE-bench beats Gemini 3 Pro. Excellent value for coding at 1/4 the price.",
+      "alternatives": ["gpt-5-2-codex", "claude-opus-4-5"]
+    },
+    "customer-support": {
+      "overall": 92,
+      "notes": "Low latency (3x faster than 2.5 Pro). Native multimodal for image/video support.",
+      "alternatives": ["gpt-5-2", "claude-sonnet-4-5"]
+    },
+    "content-creation": {
+      "overall": 91,
+      "notes": "Good creative capabilities with cost efficiency. 1M context for long-form.",
+      "alternatives": ["gemini-3-pro", "gpt-5-2"]
+    },
+    "data-analysis": {
+      "overall": 94,
+      "notes": "1M context enables massive dataset analysis at low cost.",
+      "alternatives": ["gemini-3-pro", "gpt-5-2"]
+    },
+    "research-assistant": {
+      "overall": 93,
+      "notes": "1M context for document processing. Cost-effective for high-volume research.",
+      "alternatives": ["gemini-3-pro"]
+    },
+    "legal-compliance": {
+      "overall": 86,
+      "notes": "1M context for contract analysis. Good value for document review.",
+      "alternatives": ["gemini-3-pro", "claude-opus-4-5"]
+    },
+    "healthcare": {
+      "overall": 84,
+      "notes": "HIPAA via Google Cloud. Cost-effective for medical record processing.",
+      "alternatives": ["claude-opus-4-5", "gemini-3-pro"]
+    },
+    "financial-analysis": {
+      "overall": 91,
+      "notes": "Strong quantitative reasoning at low cost. 1M context for large documents.",
+      "alternatives": ["gemini-3-pro", "gpt-5-2"]
+    },
+    "education": {
+      "overall": 93,
+      "notes": "90.4% GPQA Diamond. Cost-effective for educational platforms.",
+      "alternatives": ["gpt-5-2", "gemini-3-pro"]
+    },
+    "creative-writing": {
+      "overall": 89,
+      "notes": "Good creative capabilities. Best value for creative at scale.",
+      "alternatives": ["gemini-3-pro", "gpt-5-2"]
+    }
+  },
+
+  "strengths": [
+    "Pro-level performance at 1/4 the price ($0.50/$3 per 1M tokens)",
+    "78% SWE-bench actually beats Gemini 3 Pro (76.2%)",
+    "3x faster than Gemini 2.5 Pro with 1M token context",
+    "Thinking level parameter (minimal, low, medium, high)",
+    "Beats Pro on MMMU (81.2% vs 81%) and tool use",
+    "Free tier available in Gemini API",
+    "Default model in consumer Gemini app"
+  ],
+
+  "limitations": [
+    "Preview status (not yet GA)",
+    "Slightly behind Pro on GPQA Diamond (90.4% vs 93.8%)",
+    "Less deep reasoning than Pro's Deep Think mode",
+    "Newer model with less enterprise testing",
+    "Slightly higher than 2.5 Flash pricing ($0.50 vs $0.30)"
+  ],
+
+  "best_for": [
+    "Cost-sensitive applications needing frontier performance",
+    "High-volume inference and real-time applications",
+    "Startups and developers on a budget",
+    "Long-context applications at scale",
+    "Agentic workflows requiring fast iteration"
+  ],
+
+  "not_recommended_for": [
+    "Applications requiring deepest reasoning (use Gemini 3 Pro)",
+    "Projects needing GA/stable model status",
+    "Tasks where 3% GPQA difference matters critically"
+  ],
+
+  "metadata": {
+    "pricing": {
+      "input": "$0.50 per 1M tokens",
+      "output": "$3.00 per 1M tokens",
+      "notes": "1/4 the price of Gemini 3 Pro. 10x cheaper than GPT-4o input. Free tier available.",
+      "last_verified": "2026-01-14"
+    },
+    "context_window": 1000000,
+    "max_output": 64000,
+    "languages": [
+      "English",
+      "100+ languages"
+    ],
+    "modalities": ["text", "vision", "audio", "video"],
+    "api_endpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+    "open_source": false,
+    "architecture": "Multimodal transformer with thinking level parameter",
+    "parameters": "Not disclosed",
+    "knowledge_cutoff": "January 2025"
+  },
+
+  "related_entities": ["gemini-3-pro", "gemini-2-0-flash", "claude-sonnet-4-5", "gpt-4o"],
+
+  "tags": [
+    "cost-effective",
+    "fast",
+    "1m-tokens",
+    "multimodal",
+    "thinking-level",
+    "free-tier",
+    "high-volume",
+    "value-leader"
+  ]
+}

@@ -52,12 +52,14 @@ const config: Config = {
           blue: 'hsl(var(--terminal-blue))',
         },
         // Trust score colors - cyberpunk themed
+        // NOTE: Source of truth is SCORE_COLORS in framework/schema/types.ts
+        // These are duplicated here for Tailwind class usage (e.g., bg-score-exceptional)
         score: {
-          exceptional: '#00ff41',
-          strong: '#00d9ff',
-          adequate: '#ffdd00',
-          concerning: '#ff6b35',
-          poor: '#ff006e',
+          exceptional: '#00ff41', // Matrix green
+          strong: '#00d9ff',      // Electric cyan
+          adequate: '#ffdd00',    // Terminal yellow
+          concerning: '#ff6b35',  // Warning orange
+          poor: '#ff006e',        // Neon magenta
         },
       },
       borderRadius: {

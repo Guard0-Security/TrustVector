@@ -70,27 +70,28 @@ export function EntityCard({ entity }: EntityCardProps) {
     <a
       href={`/${entity.type}s/${entity.id}`}
       className="group block relative"
+      aria-label={`${entity.name} by ${entity.provider} - Trust Score: ${overallScore} out of 100. Click to view full assessment.`}
     >
       {/* Outer glow effect on hover - terminal green */}
-      <div className="absolute -inset-1 bg-green-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse" />
+      <div className="absolute -inset-1 bg-green-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse" aria-hidden="true" />
 
       {/* Additional cyan glow */}
-      <div className="absolute -inset-1 bg-cyan-500/10 rounded-lg blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      <div className="absolute -inset-1 bg-cyan-500/10 rounded-lg blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700" aria-hidden="true" />
 
       {/* Terminal Window */}
       <div className="relative h-full rounded-lg border-2 border-green-500/50 bg-black/95 backdrop-blur-sm hover:border-green-400 transition-all duration-300 group-hover:translate-y-[-4px] overflow-hidden font-mono">
 
         {/* Scanline effect */}
-        <div className="absolute inset-0 pointer-events-none z-10 opacity-10">
+        <div className="absolute inset-0 pointer-events-none z-10 opacity-10" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/10 to-transparent animate-[scan_8s_linear_infinite]" />
           <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(34,197,94,0.03)_2px,rgba(34,197,94,0.03)_4px)]" />
         </div>
 
         {/* CRT screen curve effect */}
-        <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-radial from-transparent via-transparent to-black/30" />
+        <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-radial from-transparent via-transparent to-black/30" aria-hidden="true" />
 
         {/* Glitch effect on hover */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-75 pointer-events-none z-20">
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-75 pointer-events-none z-20" aria-hidden="true">
           <div className="absolute inset-0 bg-green-500/5 group-hover:animate-[glitch_0.3s_infinite]" />
         </div>
 
@@ -136,12 +137,12 @@ export function EntityCard({ entity }: EntityCardProps) {
               </div>
 
               {/* Overall Trust Score */}
-              <div className="text-right">
-                <div className="text-green-500/60 text-[10px] tracking-widest mb-1">TRUST_SCORE</div>
+              <div className="text-right" role="meter" aria-label={`Trust score: ${overallScore} out of 100`} aria-valuenow={overallScore} aria-valuemin={0} aria-valuemax={100}>
+                <div className="text-green-500/60 text-[10px] tracking-widest mb-1" aria-hidden="true">TRUST_SCORE</div>
                 <div className={`text-3xl font-bold ${getTerminalColor(overallScore)} ${getGlowColor(overallScore)} transition-all`}>
                   {overallScore}
                 </div>
-                <div className="text-green-500/40 text-xs">/100</div>
+                <div className="text-green-500/40 text-xs" aria-hidden="true">/100</div>
               </div>
             </div>
           </div>
@@ -215,7 +216,7 @@ export function EntityCard({ entity }: EntityCardProps) {
         </div>
 
         {/* Screen flicker effect */}
-        <div className="absolute inset-0 pointer-events-none opacity-10 bg-gradient-to-b from-green-500/5 via-transparent to-green-500/5 animate-[flicker_0.15s_infinite]" />
+        <div className="absolute inset-0 pointer-events-none opacity-10 bg-gradient-to-b from-green-500/5 via-transparent to-green-500/5 animate-[flicker_0.15s_infinite]" aria-hidden="true" />
 
       </div>
 
