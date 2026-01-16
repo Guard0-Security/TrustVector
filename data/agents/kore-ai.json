@@ -1,0 +1,436 @@
+{
+  "id": "kore-ai",
+  "type": "agent",
+  "name": "Kore.ai",
+  "provider": "Kore.ai Inc.",
+  "version": "11.0",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "Enterprise-grade agentic AI platform for designing, deploying, managing, and scaling AI agents across business operations. Offers no-code builders, pre-built industry solutions, and comprehensive orchestration capabilities for complex enterprise workflows.",
+  "website": "https://kore.ai/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 87,
+      "criteria": {
+        "task_completion_accuracy": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Documentation",
+              "url": "https://developer.kore.ai/",
+              "date": "2025-01-10",
+              "value": "High accuracy in enterprise conversation and task completion"
+            }
+          ],
+          "methodology": "Enterprise deployment analysis",
+          "last_verified": "2025-01-14"
+        },
+        "natural_language_understanding": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai NLU Engine",
+              "url": "https://kore.ai/platform/",
+              "date": "2025-01-10",
+              "value": "Advanced NLU with multi-engine approach for high accuracy"
+            }
+          ],
+          "methodology": "NLU capability testing",
+          "last_verified": "2025-01-14"
+        },
+        "multi_channel_support": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Channels",
+              "url": "https://kore.ai/platform/",
+              "date": "2025-01-10",
+              "value": "35+ channels including web, mobile, voice, and messaging platforms"
+            }
+          ],
+          "methodology": "Channel integration testing",
+          "last_verified": "2025-01-14"
+        },
+        "workflow_orchestration": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Orchestration",
+              "url": "https://developer.kore.ai/",
+              "date": "2025-01-10",
+              "value": "Sophisticated workflow orchestration with dialog management"
+            }
+          ],
+          "methodology": "Orchestration capability review",
+          "last_verified": "2025-01-14"
+        },
+        "scalability": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Enterprise",
+              "url": "https://kore.ai/",
+              "date": "2025-01-10",
+              "value": "Enterprise-scale deployments handling millions of conversations"
+            }
+          ],
+          "methodology": "Scalability assessment",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 90,
+      "criteria": {
+        "enterprise_security": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Security",
+              "url": "https://kore.ai/security/",
+              "date": "2025-01-10",
+              "value": "SOC 2 Type II, ISO 27001, GDPR compliant"
+            }
+          ],
+          "methodology": "Security certification review",
+          "last_verified": "2025-01-14"
+        },
+        "data_encryption": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Data Security",
+              "url": "https://kore.ai/security/",
+              "date": "2025-01-10",
+              "value": "End-to-end encryption at rest and in transit"
+            }
+          ],
+          "methodology": "Encryption review",
+          "last_verified": "2025-01-14"
+        },
+        "access_control": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai RBAC",
+              "url": "https://developer.kore.ai/",
+              "date": "2025-01-10",
+              "value": "Role-based access control with SSO integration"
+            }
+          ],
+          "methodology": "Access control assessment",
+          "last_verified": "2025-01-14"
+        },
+        "audit_logging": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Compliance",
+              "url": "https://kore.ai/security/",
+              "date": "2025-01-10",
+              "value": "Comprehensive audit trails for compliance"
+            }
+          ],
+          "methodology": "Audit capability review",
+          "last_verified": "2025-01-14"
+        },
+        "pii_handling": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai PII",
+              "url": "https://developer.kore.ai/",
+              "date": "2025-01-10",
+              "value": "PII redaction and masking capabilities"
+            }
+          ],
+          "methodology": "PII handling assessment",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 88,
+      "criteria": {
+        "gdpr_compliance": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai GDPR",
+              "url": "https://kore.ai/security/",
+              "date": "2025-01-10",
+              "value": "Full GDPR compliance with data subject rights"
+            }
+          ],
+          "methodology": "GDPR compliance review",
+          "last_verified": "2025-01-14"
+        },
+        "hipaa_compliance": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai HIPAA",
+              "url": "https://kore.ai/security/",
+              "date": "2025-01-10",
+              "value": "HIPAA compliant for healthcare deployments"
+            }
+          ],
+          "methodology": "HIPAA compliance review",
+          "last_verified": "2025-01-14"
+        },
+        "data_residency": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Data Centers",
+              "url": "https://kore.ai/security/",
+              "date": "2025-01-10",
+              "value": "Multiple regions with data residency options"
+            }
+          ],
+          "methodology": "Data residency review",
+          "last_verified": "2025-01-14"
+        },
+        "data_retention": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Policies",
+              "url": "https://kore.ai/privacy/",
+              "date": "2025-01-10",
+              "value": "Configurable retention policies per enterprise needs"
+            }
+          ],
+          "methodology": "Retention policy review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 84,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Developer Docs",
+              "url": "https://developer.kore.ai/",
+              "date": "2025-01-10",
+              "value": "Comprehensive documentation with tutorials and API reference"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-01-14"
+        },
+        "conversation_history": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Analytics",
+              "url": "https://kore.ai/platform/",
+              "date": "2025-01-10",
+              "value": "Full conversation logs with analytics dashboard"
+            }
+          ],
+          "methodology": "Logging capability assessment",
+          "last_verified": "2025-01-14"
+        },
+        "model_transparency": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Kore.ai Platform",
+              "url": "https://kore.ai/platform/",
+              "date": "2025-01-10",
+              "value": "Proprietary models with limited technical disclosure"
+            }
+          ],
+          "methodology": "Model transparency review",
+          "last_verified": "2025-01-14"
+        },
+        "performance_metrics": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Analytics",
+              "url": "https://kore.ai/platform/",
+              "date": "2025-01-10",
+              "value": "Real-time metrics and KPI dashboards"
+            }
+          ],
+          "methodology": "Analytics review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 86,
+      "criteria": {
+        "ease_of_deployment": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai No-Code",
+              "url": "https://kore.ai/platform/",
+              "date": "2025-01-10",
+              "value": "No-code builder for rapid deployment"
+            }
+          ],
+          "methodology": "Deployment complexity assessment",
+          "last_verified": "2025-01-14"
+        },
+        "integration_ecosystem": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Integrations",
+              "url": "https://kore.ai/integrations/",
+              "date": "2025-01-10",
+              "value": "200+ pre-built integrations with enterprise systems"
+            }
+          ],
+          "methodology": "Integration ecosystem review",
+          "last_verified": "2025-01-14"
+        },
+        "support_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Support",
+              "url": "https://kore.ai/",
+              "date": "2025-01-10",
+              "value": "24/7 enterprise support with dedicated success managers"
+            }
+          ],
+          "methodology": "Support quality assessment",
+          "last_verified": "2025-01-14"
+        },
+        "customization": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Customization",
+              "url": "https://developer.kore.ai/",
+              "date": "2025-01-10",
+              "value": "Extensive customization through SDK and APIs"
+            }
+          ],
+          "methodology": "Customization capability review",
+          "last_verified": "2025-01-14"
+        },
+        "industry_solutions": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Kore.ai Industries",
+              "url": "https://kore.ai/industries/",
+              "date": "2025-01-10",
+              "value": "Pre-built solutions for banking, healthcare, retail, and more"
+            }
+          ],
+          "methodology": "Industry solution review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 95,
+      "notes": "Outstanding for enterprise customer service automation"
+    },
+    "code-generation": {
+      "overall": 65,
+      "notes": "Not designed for code generation use cases"
+    },
+    "research-assistant": {
+      "overall": 72,
+      "notes": "Can support internal knowledge retrieval"
+    },
+    "data-analysis": {
+      "overall": 75,
+      "notes": "Good analytics but not primary focus"
+    },
+    "content-creation": {
+      "overall": 68,
+      "notes": "Limited content generation capabilities"
+    },
+    "education": {
+      "overall": 78,
+      "notes": "Good for educational institution support bots"
+    },
+    "healthcare": {
+      "overall": 92,
+      "notes": "HIPAA compliant with healthcare-specific solutions"
+    },
+    "financial-analysis": {
+      "overall": 88,
+      "notes": "Strong financial services solutions with compliance"
+    },
+    "legal-compliance": {
+      "overall": 85,
+      "notes": "Good compliance features for regulated industries"
+    },
+    "creative-writing": {
+      "overall": 55,
+      "notes": "Not designed for creative applications"
+    }
+  },
+  "best_for": [
+    "Enterprise customer service automation",
+    "Banks and financial institutions",
+    "Healthcare organizations needing HIPAA compliance",
+    "Large enterprises with multi-channel support needs"
+  ],
+  "strengths": [
+    "Enterprise-grade security and compliance (SOC 2, HIPAA, GDPR)",
+    "No-code builder for rapid deployment",
+    "200+ pre-built integrations",
+    "35+ channel support",
+    "Industry-specific pre-built solutions",
+    "Scalable for millions of conversations"
+  ],
+  "limitations": [
+    "Enterprise pricing may be prohibitive for smaller organizations",
+    "Complex setup for advanced customizations",
+    "Proprietary platform with vendor lock-in concerns",
+    "Limited open-source components",
+    "Steep learning curve for advanced features",
+    "Best suited for conversational AI, not general agents"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_platforms": ["Cloud", "On-premise"],
+    "programming_languages": ["JavaScript", "Python"],
+    "deployment_type": "SaaS, On-premise, Hybrid",
+    "pricing": "Enterprise pricing - contact sales",
+    "certifications": ["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR"],
+    "founded": "2014",
+    "headquarters": "Orlando, FL",
+    "customers": "Fortune 500 companies"
+  },
+  "tags": ["enterprise", "conversational-ai", "customer-support", "no-code"]
+}

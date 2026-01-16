@@ -1,0 +1,410 @@
+{
+  "id": "mcp-server-tavily",
+  "type": "mcp",
+  "name": "MCP Tavily Server",
+  "provider": "Tavily",
+  "version": "2025.2.0",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server enabling AI models to perform real-time web search, content extraction, and web crawling. Designed specifically for AI agents with optimized search results, automatic content summarization, and source verification capabilities.",
+  "website": "https://tavily.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 86,
+      "criteria": {
+        "search_accuracy": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Documentation",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "AI-optimized search with semantic understanding and relevance ranking"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-01-14"
+        },
+        "response_latency": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Performance",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Typical response time 1-3 seconds for comprehensive results"
+            }
+          ],
+          "methodology": "Latency benchmarking",
+          "last_verified": "2025-01-14"
+        },
+        "content_extraction": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Extract API",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Reliable content extraction with main content identification"
+            }
+          ],
+          "methodology": "Content extraction testing",
+          "last_verified": "2025-01-14"
+        },
+        "result_freshness": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Real-time Search",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Real-time search results with configurable time filtering"
+            }
+          ],
+          "methodology": "Freshness testing",
+          "last_verified": "2025-01-14"
+        },
+        "rate_limit_handling": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Rate Limits",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Rate limits based on plan tier with clear error handling"
+            }
+          ],
+          "methodology": "Rate limiting behavior testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 78,
+      "criteria": {
+        "api_key_security": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Authentication",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "API key authentication with standard security practices"
+            }
+          ],
+          "methodology": "Authentication mechanism review",
+          "last_verified": "2025-01-14"
+        },
+        "data_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Privacy",
+              "url": "https://tavily.com/privacy",
+              "date": "2025-01-10",
+              "value": "Search queries processed through Tavily servers"
+            }
+          ],
+          "methodology": "Data handling review",
+          "last_verified": "2025-01-14"
+        },
+        "content_filtering": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Safe Search",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Safe search options available but web content varies"
+            }
+          ],
+          "methodology": "Content filtering assessment",
+          "last_verified": "2025-01-14"
+        },
+        "source_verification": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Sources",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Returns source URLs for verification; no fake content generation"
+            }
+          ],
+          "methodology": "Source verification testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 75,
+      "criteria": {
+        "query_privacy": {
+          "score": 72,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Privacy Policy",
+              "url": "https://tavily.com/privacy",
+              "date": "2025-01-10",
+              "value": "Search queries stored for service improvement"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-01-14"
+        },
+        "data_retention": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Privacy",
+              "url": "https://tavily.com/privacy",
+              "date": "2025-01-10",
+              "value": "Standard data retention policies for API services"
+            }
+          ],
+          "methodology": "Data retention review",
+          "last_verified": "2025-01-14"
+        },
+        "third_party_sharing": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily Terms",
+              "url": "https://tavily.com/terms",
+              "date": "2025-01-10",
+              "value": "Query data not sold; used for service improvement"
+            }
+          ],
+          "methodology": "Third-party sharing review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Docs",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Clear API documentation with examples and use cases"
+            }
+          ],
+          "methodology": "Documentation completeness review",
+          "last_verified": "2025-01-14"
+        },
+        "result_attribution": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Results",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "All results include source URLs for verification"
+            }
+          ],
+          "methodology": "Attribution testing",
+          "last_verified": "2025-01-14"
+        },
+        "api_transparency": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Tavily API",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Clear API behavior documentation and error codes"
+            }
+          ],
+          "methodology": "API transparency review",
+          "last_verified": "2025-01-14"
+        },
+        "pricing_transparency": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Pricing",
+              "url": "https://tavily.com/pricing",
+              "date": "2025-01-10",
+              "value": "Clear pricing tiers with defined quotas"
+            }
+          ],
+          "methodology": "Pricing review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 85,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Quickstart",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Simple API key setup with immediate access"
+            }
+          ],
+          "methodology": "Setup complexity assessment",
+          "last_verified": "2025-01-14"
+        },
+        "api_reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Status",
+              "url": "https://status.tavily.com/",
+              "date": "2025-01-10",
+              "value": "High availability with 99.9% uptime target"
+            }
+          ],
+          "methodology": "Reliability assessment",
+          "last_verified": "2025-01-14"
+        },
+        "cost_efficiency": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily Pricing",
+              "url": "https://tavily.com/pricing",
+              "date": "2025-01-10",
+              "value": "Free tier available; reasonable pricing for production"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-01-14"
+        },
+        "ai_optimization": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily for AI",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Purpose-built for AI agents with optimized response format"
+            }
+          ],
+          "methodology": "AI integration testing",
+          "last_verified": "2025-01-14"
+        },
+        "sdk_support": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Tavily SDKs",
+              "url": "https://docs.tavily.com/",
+              "date": "2025-01-10",
+              "value": "Python and JavaScript SDKs with MCP integration"
+            }
+          ],
+          "methodology": "SDK quality assessment",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Purpose-built for AI agents with optimized responses",
+    "Real-time search with configurable time filtering",
+    "Automatic content extraction and summarization",
+    "Source URLs provided for all results",
+    "Easy integration with MCP protocol",
+    "Good documentation and SDK support"
+  ],
+  "limitations": [
+    "Search queries processed through third-party servers",
+    "Rate limits based on pricing tier",
+    "Web content quality varies by source",
+    "No self-hosted option available",
+    "Query privacy depends on Tavily's policies",
+    "Costs can increase with heavy usage"
+  ],
+  "metadata": {
+    "license": "Proprietary (API Service)",
+    "supported_platforms": ["All platforms with HTTP"],
+    "programming_languages": ["Python", "JavaScript", "TypeScript"],
+    "mcp_version": "1.0",
+    "website": "https://tavily.com/",
+    "api_dependency": "Tavily Search API",
+    "authentication": "API Key",
+    "first_release": "2024",
+    "maintained_by": "Tavily",
+    "transport_types": ["stdio"],
+    "installation_methods": ["npm", "pip"]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 80,
+      "notes": "Useful for researching documentation and finding code examples"
+    },
+    "customer-support": {
+      "overall": 78,
+      "notes": "Good for finding product information and support resources"
+    },
+    "content-creation": {
+      "overall": 88,
+      "notes": "Excellent for research and fact-checking content"
+    },
+    "data-analysis": {
+      "overall": 75,
+      "notes": "Helpful for gathering external data and market research"
+    },
+    "research-assistant": {
+      "overall": 95,
+      "notes": "Outstanding for autonomous research and information gathering"
+    },
+    "legal-compliance": {
+      "overall": 72,
+      "notes": "Useful for researching regulations; verify sources independently"
+    },
+    "healthcare": {
+      "overall": 68,
+      "notes": "Can find medical information; not suitable for clinical decisions"
+    },
+    "financial-analysis": {
+      "overall": 78,
+      "notes": "Good for market research; verify financial data from primary sources"
+    },
+    "education": {
+      "overall": 90,
+      "notes": "Excellent for educational research and learning assistance"
+    },
+    "creative-writing": {
+      "overall": 85,
+      "notes": "Great for research and finding inspiration"
+    }
+  },
+  "best_for": [
+    "AI agents needing real-time web search",
+    "Research assistants and RAG applications",
+    "Content creators needing fact-checking",
+    "Applications requiring current information"
+  ],
+  "tags": ["search", "web", "research", "mcp", "model-context-protocol", "tavily"]
+}

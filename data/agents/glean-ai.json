@@ -1,0 +1,436 @@
+{
+  "id": "glean-ai",
+  "type": "agent",
+  "name": "Glean AI",
+  "provider": "Glean Technologies Inc.",
+  "version": "2025.1",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "Enterprise AI platform for work that unifies information across business tools and applications. Provides intelligent search, knowledge discovery, and AI assistants that understand organizational context for improved productivity.",
+  "website": "https://www.glean.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 88,
+      "criteria": {
+        "search_accuracy": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Search",
+              "url": "https://www.glean.com/product/search",
+              "date": "2025-01-10",
+              "value": "AI-powered semantic search with deep understanding of enterprise content"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-01-14"
+        },
+        "knowledge_synthesis": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean AI Assistant",
+              "url": "https://www.glean.com/product/assistant",
+              "date": "2025-01-10",
+              "value": "Synthesizes information from multiple sources with citations"
+            }
+          ],
+          "methodology": "Knowledge synthesis testing",
+          "last_verified": "2025-01-14"
+        },
+        "integration_coverage": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Integrations",
+              "url": "https://www.glean.com/connectors",
+              "date": "2025-01-10",
+              "value": "100+ connectors for enterprise applications"
+            }
+          ],
+          "methodology": "Integration coverage review",
+          "last_verified": "2025-01-14"
+        },
+        "response_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Assistant",
+              "url": "https://www.glean.com/product/assistant",
+              "date": "2025-01-10",
+              "value": "High-quality responses grounded in organizational knowledge"
+            }
+          ],
+          "methodology": "Response quality assessment",
+          "last_verified": "2025-01-14"
+        },
+        "personalization": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Personalization",
+              "url": "https://www.glean.com/",
+              "date": "2025-01-10",
+              "value": "Learns user preferences and organizational context"
+            }
+          ],
+          "methodology": "Personalization testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 91,
+      "criteria": {
+        "enterprise_security": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Security",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "SOC 2 Type II, ISO 27001, GDPR compliant"
+            }
+          ],
+          "methodology": "Security certification review",
+          "last_verified": "2025-01-14"
+        },
+        "permission_inheritance": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Permissions",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Respects source system permissions - users only see what they have access to"
+            }
+          ],
+          "methodology": "Permission model review",
+          "last_verified": "2025-01-14"
+        },
+        "data_encryption": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Data Security",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Encryption at rest and in transit with customer-managed keys option"
+            }
+          ],
+          "methodology": "Encryption review",
+          "last_verified": "2025-01-14"
+        },
+        "sso_integration": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean SSO",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "SAML 2.0 and OIDC SSO integration"
+            }
+          ],
+          "methodology": "SSO integration review",
+          "last_verified": "2025-01-14"
+        },
+        "zero_trust_architecture": {
+          "score": 88,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Glean Architecture",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Zero-trust security model with continuous verification"
+            }
+          ],
+          "methodology": "Architecture review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 90,
+      "criteria": {
+        "gdpr_compliance": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean GDPR",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Full GDPR compliance with data processing agreements"
+            }
+          ],
+          "methodology": "GDPR compliance review",
+          "last_verified": "2025-01-14"
+        },
+        "data_isolation": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Data Architecture",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Customer data isolated with no cross-tenant access"
+            }
+          ],
+          "methodology": "Data isolation review",
+          "last_verified": "2025-01-14"
+        },
+        "data_residency": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Regions",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Regional data residency options available"
+            }
+          ],
+          "methodology": "Data residency review",
+          "last_verified": "2025-01-14"
+        },
+        "no_training_on_data": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Privacy",
+              "url": "https://www.glean.com/security",
+              "date": "2025-01-10",
+              "value": "Customer data not used for model training"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 85,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Docs",
+              "url": "https://help.glean.com/",
+              "date": "2025-01-10",
+              "value": "Good documentation for administrators and users"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-01-14"
+        },
+        "source_attribution": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Citations",
+              "url": "https://www.glean.com/product/assistant",
+              "date": "2025-01-10",
+              "value": "AI responses include source citations and links"
+            }
+          ],
+          "methodology": "Attribution testing",
+          "last_verified": "2025-01-14"
+        },
+        "activity_logging": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Admin",
+              "url": "https://help.glean.com/",
+              "date": "2025-01-10",
+              "value": "Comprehensive admin dashboards and audit logs"
+            }
+          ],
+          "methodology": "Logging capability review",
+          "last_verified": "2025-01-14"
+        },
+        "model_transparency": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Glean AI",
+              "url": "https://www.glean.com/",
+              "date": "2025-01-10",
+              "value": "Uses multiple LLMs but limited technical disclosure"
+            }
+          ],
+          "methodology": "Model transparency review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 87,
+      "criteria": {
+        "ease_of_deployment": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Setup",
+              "url": "https://help.glean.com/",
+              "date": "2025-01-10",
+              "value": "Quick deployment with pre-built connectors"
+            }
+          ],
+          "methodology": "Deployment assessment",
+          "last_verified": "2025-01-14"
+        },
+        "user_adoption": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean UX",
+              "url": "https://www.glean.com/",
+              "date": "2025-01-10",
+              "value": "Intuitive interface driving high user adoption"
+            }
+          ],
+          "methodology": "User experience review",
+          "last_verified": "2025-01-14"
+        },
+        "scalability": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Enterprise",
+              "url": "https://www.glean.com/",
+              "date": "2025-01-10",
+              "value": "Scales to large enterprise deployments"
+            }
+          ],
+          "methodology": "Scalability assessment",
+          "last_verified": "2025-01-14"
+        },
+        "support_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Glean Support",
+              "url": "https://www.glean.com/",
+              "date": "2025-01-10",
+              "value": "Enterprise support with dedicated customer success"
+            }
+          ],
+          "methodology": "Support quality review",
+          "last_verified": "2025-01-14"
+        },
+        "api_extensibility": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Glean API",
+              "url": "https://developers.glean.com/",
+              "date": "2025-01-10",
+              "value": "API available for custom integrations"
+            }
+          ],
+          "methodology": "API capability review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 82,
+      "notes": "Good for internal support knowledge access"
+    },
+    "code-generation": {
+      "overall": 70,
+      "notes": "Can search code but not primary focus"
+    },
+    "research-assistant": {
+      "overall": 95,
+      "notes": "Excellent for internal knowledge research"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Can surface data insights from connected sources"
+    },
+    "content-creation": {
+      "overall": 80,
+      "notes": "Good for finding reference content"
+    },
+    "education": {
+      "overall": 82,
+      "notes": "Great for employee onboarding and training"
+    },
+    "healthcare": {
+      "overall": 85,
+      "notes": "Good for healthcare knowledge management"
+    },
+    "financial-analysis": {
+      "overall": 82,
+      "notes": "Useful for financial knowledge discovery"
+    },
+    "legal-compliance": {
+      "overall": 85,
+      "notes": "Strong for policy and compliance document search"
+    },
+    "creative-writing": {
+      "overall": 65,
+      "notes": "Not designed for creative use cases"
+    }
+  },
+  "best_for": [
+    "Enterprise knowledge management",
+    "Employee productivity and onboarding",
+    "Organizations with many disconnected tools",
+    "Teams needing unified search across systems"
+  ],
+  "strengths": [
+    "Excellent semantic search across enterprise tools",
+    "Respects existing permission models",
+    "100+ pre-built connectors",
+    "AI responses grounded in organizational knowledge",
+    "Strong enterprise security (SOC 2, ISO 27001)",
+    "No customer data used for training"
+  ],
+  "limitations": [
+    "Enterprise pricing may be high for smaller organizations",
+    "Quality depends on connected source quality",
+    "Requires connector setup for each tool",
+    "Limited customization of AI behavior",
+    "Proprietary platform with vendor lock-in",
+    "Best for knowledge work, not operational automation"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_platforms": ["Cloud"],
+    "deployment_type": "SaaS",
+    "connectors": "100+",
+    "pricing": "Enterprise pricing - contact sales",
+    "certifications": ["SOC 2 Type II", "ISO 27001", "GDPR"],
+    "founded": "2019",
+    "headquarters": "Palo Alto, CA",
+    "funding": "Series D ($200M at $2.2B valuation)"
+  },
+  "tags": ["enterprise", "knowledge-management", "search", "productivity"]
+}

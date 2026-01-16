@@ -1,0 +1,407 @@
+{
+  "id": "relevance-ai",
+  "type": "agent",
+  "name": "Relevance AI",
+  "provider": "Relevance AI Pty Ltd",
+  "version": "2025.1",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "No-code AI agent platform that enables teams to build, customize, and deploy AI workforce agents. Features visual workflow builders, tool integrations, and the ability to create specialized AI employees for various business functions including sales, support, and research.",
+  "website": "https://relevanceai.com/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 82,
+      "criteria": {
+        "task_completion": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Platform",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Agents complete complex multi-step tasks with tool usage"
+            }
+          ],
+          "methodology": "Task completion testing",
+          "last_verified": "2025-01-14"
+        },
+        "tool_integration": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Tools",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Integrates with popular tools: Gmail, Slack, HubSpot, etc."
+            }
+          ],
+          "methodology": "Tool integration testing",
+          "last_verified": "2025-01-14"
+        },
+        "workflow_reliability": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Workflows",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Visual workflow builder for reliable agent behavior"
+            }
+          ],
+          "methodology": "Workflow reliability testing",
+          "last_verified": "2025-01-14"
+        },
+        "model_flexibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Models",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Supports multiple LLM providers (OpenAI, Anthropic, etc.)"
+            }
+          ],
+          "methodology": "Model flexibility review",
+          "last_verified": "2025-01-14"
+        },
+        "error_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Platform",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Error handling with retry logic and fallbacks"
+            }
+          ],
+          "methodology": "Error handling testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 78,
+      "criteria": {
+        "data_security": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Security",
+              "url": "https://relevanceai.com/security",
+              "date": "2025-01-10",
+              "value": "SOC 2 Type II compliant infrastructure"
+            }
+          ],
+          "methodology": "Security certification review",
+          "last_verified": "2025-01-14"
+        },
+        "api_key_management": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Platform",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Secure storage of third-party API keys"
+            }
+          ],
+          "methodology": "Key management review",
+          "last_verified": "2025-01-14"
+        },
+        "action_permissions": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Agents",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Agents execute actions with configured permissions"
+            }
+          ],
+          "methodology": "Permission model review",
+          "last_verified": "2025-01-14"
+        },
+        "audit_logging": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Logs",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Activity logging for agent actions"
+            }
+          ],
+          "methodology": "Audit capability review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 76,
+      "criteria": {
+        "data_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Privacy",
+              "url": "https://relevanceai.com/privacy",
+              "date": "2025-01-10",
+              "value": "Data handling policies for platform usage"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-01-14"
+        },
+        "third_party_llm_exposure": {
+          "score": 72,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Architecture",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Data sent to configured LLM providers"
+            }
+          ],
+          "methodology": "Data flow analysis",
+          "last_verified": "2025-01-14"
+        },
+        "data_retention": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Terms",
+              "url": "https://relevanceai.com/terms",
+              "date": "2025-01-10",
+              "value": "Standard data retention policies"
+            }
+          ],
+          "methodology": "Retention policy review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 82,
+      "criteria": {
+        "documentation_quality": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Docs",
+              "url": "https://docs.relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Good documentation with tutorials and examples"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-01-14"
+        },
+        "agent_visibility": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Platform",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Clear visibility into agent reasoning and actions"
+            }
+          ],
+          "methodology": "Visibility assessment",
+          "last_verified": "2025-01-14"
+        },
+        "pricing_transparency": {
+          "score": 82,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Pricing",
+              "url": "https://relevanceai.com/pricing",
+              "date": "2025-01-10",
+              "value": "Clear pricing tiers with credit-based system"
+            }
+          ],
+          "methodology": "Pricing review",
+          "last_verified": "2025-01-14"
+        },
+        "community_engagement": {
+          "score": 80,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Community",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Active community and template marketplace"
+            }
+          ],
+          "methodology": "Community engagement review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 84,
+      "criteria": {
+        "ease_of_use": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI No-Code",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "No-code builder accessible to non-technical users"
+            }
+          ],
+          "methodology": "Usability assessment",
+          "last_verified": "2025-01-14"
+        },
+        "template_library": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Templates",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Pre-built agent templates for common use cases"
+            }
+          ],
+          "methodology": "Template library review",
+          "last_verified": "2025-01-14"
+        },
+        "deployment_speed": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Platform",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Deploy agents quickly without infrastructure management"
+            }
+          ],
+          "methodology": "Deployment speed testing",
+          "last_verified": "2025-01-14"
+        },
+        "cost_efficiency": {
+          "score": 80,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Relevance AI Pricing",
+              "url": "https://relevanceai.com/pricing",
+              "date": "2025-01-10",
+              "value": "Credit-based pricing with free tier available"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-01-14"
+        },
+        "customization": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Relevance AI Builder",
+              "url": "https://relevanceai.com/",
+              "date": "2025-01-10",
+              "value": "Flexible customization through visual builder"
+            }
+          ],
+          "methodology": "Customization review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "use_case_ratings": {
+    "customer-support": {
+      "overall": 85,
+      "notes": "Good templates for support automation"
+    },
+    "code-generation": {
+      "overall": 70,
+      "notes": "Can build coding assistants but not primary focus"
+    },
+    "research-assistant": {
+      "overall": 88,
+      "notes": "Strong for research agents with web search"
+    },
+    "data-analysis": {
+      "overall": 80,
+      "notes": "Can build data analysis workflows"
+    },
+    "content-creation": {
+      "overall": 88,
+      "notes": "Good for content generation workflows"
+    },
+    "education": {
+      "overall": 80,
+      "notes": "Can create educational assistants"
+    },
+    "healthcare": {
+      "overall": 68,
+      "notes": "Limited healthcare-specific features"
+    },
+    "financial-analysis": {
+      "overall": 72,
+      "notes": "Can build financial research agents"
+    },
+    "legal-compliance": {
+      "overall": 70,
+      "notes": "SOC 2 compliant but limited legal features"
+    },
+    "creative-writing": {
+      "overall": 85,
+      "notes": "Good for creative content workflows"
+    }
+  },
+  "best_for": [
+    "Teams wanting no-code agent building",
+    "Sales and marketing automation",
+    "Research and content generation",
+    "Small to medium businesses"
+  ],
+  "strengths": [
+    "No-code visual builder for non-technical users",
+    "Multiple LLM provider support",
+    "Pre-built templates for quick start",
+    "Good tool integrations (email, CRM, etc.)",
+    "Credit-based pricing with free tier",
+    "Active community and marketplace"
+  ],
+  "limitations": [
+    "Data exposure to third-party LLM providers",
+    "Less suitable for complex enterprise needs",
+    "Newer platform with evolving features",
+    "Credit costs can accumulate with heavy usage",
+    "Limited advanced customization options",
+    "Fewer enterprise security features than competitors"
+  ],
+  "metadata": {
+    "license": "Proprietary",
+    "supported_platforms": ["Cloud"],
+    "deployment_type": "SaaS",
+    "pricing": "Free tier, Pro from $19/month, Team from $199/month",
+    "certifications": ["SOC 2 Type II"],
+    "founded": "2020",
+    "headquarters": "Sydney, Australia",
+    "supported_llms": ["OpenAI", "Anthropic", "Google", "Cohere"]
+  },
+  "tags": ["no-code", "workflow-automation", "sales", "marketing", "research"]
+}

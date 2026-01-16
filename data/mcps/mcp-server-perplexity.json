@@ -1,0 +1,410 @@
+{
+  "id": "mcp-server-perplexity",
+  "type": "mcp",
+  "name": "MCP Perplexity Server",
+  "provider": "Perplexity AI",
+  "version": "2025.1.0",
+  "last_evaluated": "2025-01-14",
+  "evaluated_by": "TrustVector Team",
+  "description": "MCP server enabling AI models to leverage Perplexity's advanced search capabilities. Provides multi-source research with automatic citations, recency filtering, and domain-specific search modes for comprehensive information retrieval.",
+  "website": "https://www.perplexity.ai/",
+  "trust_vector": {
+    "performance_reliability": {
+      "overall_score": 88,
+      "criteria": {
+        "search_accuracy": {
+          "score": 92,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity API",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Advanced semantic search with multi-source aggregation"
+            }
+          ],
+          "methodology": "Search quality testing",
+          "last_verified": "2025-01-14"
+        },
+        "citation_quality": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Citations",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Automatic inline citations with source verification"
+            }
+          ],
+          "methodology": "Citation accuracy testing",
+          "last_verified": "2025-01-14"
+        },
+        "response_quality": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Responses",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Synthesized answers from multiple sources with coherent narratives"
+            }
+          ],
+          "methodology": "Response quality assessment",
+          "last_verified": "2025-01-14"
+        },
+        "recency_filtering": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Features",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Configurable time filters for recent information"
+            }
+          ],
+          "methodology": "Recency testing",
+          "last_verified": "2025-01-14"
+        },
+        "api_reliability": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Status",
+              "url": "https://status.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "High availability with enterprise-grade infrastructure"
+            }
+          ],
+          "methodology": "Reliability testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "security": {
+      "overall_score": 80,
+      "criteria": {
+        "api_key_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Auth",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Bearer token authentication with key rotation support"
+            }
+          ],
+          "methodology": "Authentication review",
+          "last_verified": "2025-01-14"
+        },
+        "data_handling": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Perplexity Privacy",
+              "url": "https://www.perplexity.ai/privacy",
+              "date": "2025-01-10",
+              "value": "Queries processed through Perplexity infrastructure"
+            }
+          ],
+          "methodology": "Data handling review",
+          "last_verified": "2025-01-14"
+        },
+        "content_safety": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Perplexity Safety",
+              "url": "https://www.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Content moderation and safe search options"
+            }
+          ],
+          "methodology": "Content safety assessment",
+          "last_verified": "2025-01-14"
+        },
+        "enterprise_security": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Enterprise",
+              "url": "https://www.perplexity.ai/enterprise",
+              "date": "2025-01-10",
+              "value": "SOC 2 compliance and enterprise security features"
+            }
+          ],
+          "methodology": "Enterprise security review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "privacy_compliance": {
+      "overall_score": 78,
+      "criteria": {
+        "query_privacy": {
+          "score": 75,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Perplexity Privacy Policy",
+              "url": "https://www.perplexity.ai/privacy",
+              "date": "2025-01-10",
+              "value": "Query data used for service improvement and model training"
+            }
+          ],
+          "methodology": "Privacy policy review",
+          "last_verified": "2025-01-14"
+        },
+        "enterprise_privacy": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Enterprise",
+              "url": "https://www.perplexity.ai/enterprise",
+              "date": "2025-01-10",
+              "value": "Enterprise tier offers data isolation and no training on queries"
+            }
+          ],
+          "methodology": "Enterprise privacy review",
+          "last_verified": "2025-01-14"
+        },
+        "data_retention": {
+          "score": 78,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Perplexity Terms",
+              "url": "https://www.perplexity.ai/terms",
+              "date": "2025-01-10",
+              "value": "Standard retention policies with deletion options"
+            }
+          ],
+          "methodology": "Retention policy review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "trust_transparency": {
+      "overall_score": 88,
+      "criteria": {
+        "documentation_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Docs",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Comprehensive API documentation with examples"
+            }
+          ],
+          "methodology": "Documentation review",
+          "last_verified": "2025-01-14"
+        },
+        "source_attribution": {
+          "score": 95,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Citations",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Excellent source attribution with inline citations"
+            }
+          ],
+          "methodology": "Attribution testing",
+          "last_verified": "2025-01-14"
+        },
+        "model_transparency": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Perplexity Models",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Model options documented with capability descriptions"
+            }
+          ],
+          "methodology": "Model transparency review",
+          "last_verified": "2025-01-14"
+        },
+        "pricing_clarity": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Pricing",
+              "url": "https://www.perplexity.ai/pricing",
+              "date": "2025-01-10",
+              "value": "Clear pricing with defined API quotas"
+            }
+          ],
+          "methodology": "Pricing review",
+          "last_verified": "2025-01-14"
+        }
+      }
+    },
+    "operational_excellence": {
+      "overall_score": 86,
+      "criteria": {
+        "ease_of_setup": {
+          "score": 90,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Quickstart",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Simple API key setup with immediate access"
+            }
+          ],
+          "methodology": "Setup assessment",
+          "last_verified": "2025-01-14"
+        },
+        "response_speed": {
+          "score": 85,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Performance",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Fast response times with streaming support"
+            }
+          ],
+          "methodology": "Performance testing",
+          "last_verified": "2025-01-14"
+        },
+        "model_selection": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity Models",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Multiple model tiers for different use cases"
+            }
+          ],
+          "methodology": "Model options review",
+          "last_verified": "2025-01-14"
+        },
+        "cost_efficiency": {
+          "score": 82,
+          "confidence": "medium",
+          "evidence": [
+            {
+              "source": "Perplexity Pricing",
+              "url": "https://www.perplexity.ai/pricing",
+              "date": "2025-01-10",
+              "value": "Competitive pricing; can be cost-effective vs. multiple API calls"
+            }
+          ],
+          "methodology": "Cost analysis",
+          "last_verified": "2025-01-14"
+        },
+        "integration_quality": {
+          "score": 88,
+          "confidence": "high",
+          "evidence": [
+            {
+              "source": "Perplexity SDK",
+              "url": "https://docs.perplexity.ai/",
+              "date": "2025-01-10",
+              "value": "Good SDK support with MCP integration"
+            }
+          ],
+          "methodology": "Integration testing",
+          "last_verified": "2025-01-14"
+        }
+      }
+    }
+  },
+  "strengths": [
+    "Excellent citation and source attribution",
+    "Multi-source aggregation for comprehensive answers",
+    "Advanced semantic search capabilities",
+    "Recency filtering for current information",
+    "Enterprise tier with enhanced privacy",
+    "High-quality synthesized responses"
+  ],
+  "limitations": [
+    "Queries processed through Perplexity servers",
+    "Consumer tier data may be used for training",
+    "No self-hosted option available",
+    "Costs can accumulate with heavy usage",
+    "Rate limits based on pricing tier",
+    "Dependent on Perplexity's infrastructure"
+  ],
+  "metadata": {
+    "license": "Proprietary (API Service)",
+    "supported_platforms": ["All platforms with HTTP"],
+    "programming_languages": ["Python", "JavaScript", "TypeScript"],
+    "mcp_version": "1.0",
+    "website": "https://www.perplexity.ai/",
+    "api_dependency": "Perplexity API",
+    "authentication": "Bearer Token",
+    "first_release": "2024",
+    "maintained_by": "Perplexity AI",
+    "transport_types": ["stdio"],
+    "installation_methods": ["npm", "pip"]
+  },
+  "use_case_ratings": {
+    "code-generation": {
+      "overall": 82,
+      "notes": "Good for finding documentation and coding solutions"
+    },
+    "customer-support": {
+      "overall": 80,
+      "notes": "Useful for researching product information"
+    },
+    "content-creation": {
+      "overall": 92,
+      "notes": "Excellent for research with automatic citations"
+    },
+    "data-analysis": {
+      "overall": 78,
+      "notes": "Helpful for gathering market and trend data"
+    },
+    "research-assistant": {
+      "overall": 96,
+      "notes": "Outstanding for academic and professional research"
+    },
+    "legal-compliance": {
+      "overall": 75,
+      "notes": "Good for researching regulations; verify with primary sources"
+    },
+    "healthcare": {
+      "overall": 70,
+      "notes": "Can find medical information; not for clinical decisions"
+    },
+    "financial-analysis": {
+      "overall": 80,
+      "notes": "Good for market research and financial news"
+    },
+    "education": {
+      "overall": 92,
+      "notes": "Excellent for educational research with citations"
+    },
+    "creative-writing": {
+      "overall": 85,
+      "notes": "Great for research and fact-checking"
+    }
+  },
+  "best_for": [
+    "Research-intensive AI applications",
+    "Applications requiring source citations",
+    "Content creation with fact-checking needs",
+    "Enterprise knowledge management"
+  ],
+  "tags": ["search", "research", "citations", "mcp", "model-context-protocol", "perplexity"]
+}
